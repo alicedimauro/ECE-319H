@@ -12,10 +12,10 @@ CMD_SRCS += \
 ../mspm0g3507.cmd 
 
 C_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/I2C.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SSD1306.c \
+C:/Git/ECE-319H/inc/Clock.c \
+C:/Git/ECE-319H/inc/I2C.c \
+C:/Git/ECE-319H/inc/LaunchPad.c \
+C:/Git/ECE-319H/inc/SSD1306.c \
 ../SSD1306testmain.c 
 
 C_DEPS += \
@@ -50,10 +50,10 @@ EXE_SRCS__QUOTED += \
 "../BmpConvert.exe" 
 
 C_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/I2C.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SSD1306.c" \
+"C:/Git/ECE-319H/inc/Clock.c" \
+"C:/Git/ECE-319H/inc/I2C.c" \
+"C:/Git/ECE-319H/inc/LaunchPad.c" \
+"C:/Git/ECE-319H/inc/SSD1306.c" \
 "../SSD1306testmain.c" 
 
 

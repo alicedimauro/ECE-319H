@@ -6,15 +6,15 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.cpp \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/FIFO2.cpp \
+C:/Git/ECE-319H/inc/Clock.cpp \
+C:/Git/ECE-319H/inc/FIFO2.cpp \
 ../IRxmt.cpp \
 ../Lab8HMain.cpp \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.cpp \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SPI.cpp \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/ST7735.cpp \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SlidePot.cpp \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Timer.cpp \
+C:/Git/ECE-319H/inc/LaunchPad.cpp \
+C:/Git/ECE-319H/inc/SPI.cpp \
+C:/Git/ECE-319H/inc/ST7735.cpp \
+C:/Git/ECE-319H/inc/SlidePot.cpp \
+C:/Git/ECE-319H/inc/Timer.cpp \
 ../UART2.cpp 
 
 CMD_SRCS += \
@@ -69,15 +69,15 @@ CPP_DEPS__QUOTED += \
 "UART2.d" 
 
 CPP_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.cpp" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/FIFO2.cpp" \
+"C:/Git/ECE-319H/inc/Clock.cpp" \
+"C:/Git/ECE-319H/inc/FIFO2.cpp" \
 "../IRxmt.cpp" \
 "../Lab8HMain.cpp" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.cpp" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SPI.cpp" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/ST7735.cpp" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SlidePot.cpp" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Timer.cpp" \
+"C:/Git/ECE-319H/inc/LaunchPad.cpp" \
+"C:/Git/ECE-319H/inc/SPI.cpp" \
+"C:/Git/ECE-319H/inc/ST7735.cpp" \
+"C:/Git/ECE-319H/inc/SlidePot.cpp" \
+"C:/Git/ECE-319H/inc/Timer.cpp" \
 "../UART2.cpp" 
 
 

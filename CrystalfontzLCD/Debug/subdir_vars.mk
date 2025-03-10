@@ -9,12 +9,12 @@ CMD_SRCS += \
 ../mspm0g3507.cmd 
 
 C_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/ADC.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LCD.c \
+C:/Git/ECE-319H/inc/ADC.c \
+C:/Git/ECE-319H/inc/Clock.c \
+C:/Git/ECE-319H/inc/LCD.c \
 ../LCDtestmain.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SPI.c 
+C:/Git/ECE-319H/inc/LaunchPad.c \
+C:/Git/ECE-319H/inc/SPI.c 
 
 C_DEPS += \
 ./ADC.d \
@@ -49,11 +49,11 @@ C_DEPS__QUOTED += \
 "SPI.d" 
 
 C_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/ADC.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LCD.c" \
+"C:/Git/ECE-319H/inc/ADC.c" \
+"C:/Git/ECE-319H/inc/Clock.c" \
+"C:/Git/ECE-319H/inc/LCD.c" \
 "../LCDtestmain.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SPI.c" 
+"C:/Git/ECE-319H/inc/LaunchPad.c" \
+"C:/Git/ECE-319H/inc/SPI.c" 
 
 

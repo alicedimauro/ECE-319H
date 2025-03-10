@@ -12,15 +12,15 @@ O_SRCS += \
 ../myFifo.o 
 
 C_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/ADC1.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/FIFO1.c \
+C:/Git/ECE-319H/inc/ADC1.c \
+C:/Git/ECE-319H/inc/Clock.c \
+C:/Git/ECE-319H/inc/FIFO1.c \
 ../Lab8Main.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SPI.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/ST7735.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/TExaS.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Timer.c \
+C:/Git/ECE-319H/inc/LaunchPad.c \
+C:/Git/ECE-319H/inc/SPI.c \
+C:/Git/ECE-319H/inc/ST7735.c \
+C:/Git/ECE-319H/inc/TExaS.c \
+C:/Git/ECE-319H/inc/Timer.c \
 ../UART1.c \
 ../UART2.c 
 
@@ -77,15 +77,15 @@ C_DEPS__QUOTED += \
 "UART2.d" 
 
 C_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/ADC1.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/FIFO1.c" \
+"C:/Git/ECE-319H/inc/ADC1.c" \
+"C:/Git/ECE-319H/inc/Clock.c" \
+"C:/Git/ECE-319H/inc/FIFO1.c" \
 "../Lab8Main.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SPI.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/ST7735.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/TExaS.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Timer.c" \
+"C:/Git/ECE-319H/inc/LaunchPad.c" \
+"C:/Git/ECE-319H/inc/SPI.c" \
+"C:/Git/ECE-319H/inc/ST7735.c" \
+"C:/Git/ECE-319H/inc/TExaS.c" \
+"C:/Git/ECE-319H/inc/Timer.c" \
 "../UART1.c" \
 "../UART2.c" 
 

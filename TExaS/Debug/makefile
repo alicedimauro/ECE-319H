@@ -142,7 +142,7 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 TExaS.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: Arm Linker'
-	"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/bin/tiarmclang.exe" -march=thumbv6m -mcpu=cortex-m0plus -mfloat-abi=soft -mlittle-endian -mthumb -O0 -D__MSPM0G3507__ -gdwarf-3 -Wl,-m"TExaS.map" -Wl,--stack_size=512 -Wl,-i"C:/Git/ECE-319H/MSPM0_ValvanoWare/TExaS/Debug/syscfg" -Wl,-i"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib" -Wl,--diag_wrap=off -Wl,--display_error_number -Wl,--warn_sections -Wl,--xml_link_info="TExaS_linkInfo.xml" -Wl,--rom_model -o "TExaS.out" $(ORDERED_OBJS)
+	"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/bin/tiarmclang.exe" -march=thumbv6m -mcpu=cortex-m0plus -mfloat-abi=soft -mlittle-endian -mthumb -O0 -D__MSPM0G3507__ -gdwarf-3 -Wl,-m"TExaS.map" -Wl,--stack_size=512 -Wl,-i"C:/Git/ECE-319H/TExaS/Debug/syscfg" -Wl,-i"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib" -Wl,--diag_wrap=off -Wl,--display_error_number -Wl,--warn_sections -Wl,--xml_link_info="TExaS_linkInfo.xml" -Wl,--rom_model -o "TExaS.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 

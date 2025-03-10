@@ -12,11 +12,11 @@ CMD_SRCS += \
 ../mspm0g3507.cmd 
 
 C_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Arabic.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SPI.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/ST7735.c \
+C:/Git/ECE-319H/inc/Arabic.c \
+C:/Git/ECE-319H/inc/Clock.c \
+C:/Git/ECE-319H/inc/LaunchPad.c \
+C:/Git/ECE-319H/inc/SPI.c \
+C:/Git/ECE-319H/inc/ST7735.c \
 ../ST7735Rtestmain.c 
 
 C_DEPS += \
@@ -52,11 +52,11 @@ C_DEPS__QUOTED += \
 "ST7735Rtestmain.d" 
 
 C_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Arabic.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SPI.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/ST7735.c" \
+"C:/Git/ECE-319H/inc/Arabic.c" \
+"C:/Git/ECE-319H/inc/Clock.c" \
+"C:/Git/ECE-319H/inc/LaunchPad.c" \
+"C:/Git/ECE-319H/inc/SPI.c" \
+"C:/Git/ECE-319H/inc/ST7735.c" \
 "../ST7735Rtestmain.c" 
 
 EXE_SRCS__QUOTED += \

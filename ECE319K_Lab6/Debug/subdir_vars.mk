@@ -16,13 +16,13 @@ S_SRCS += \
 ../StringConversion.s 
 
 C_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c \
+C:/Git/ECE-319H/inc/Clock.c \
 ../Lab6Grader.c \
 ../Lab6Main.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SPI.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/ST7735.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Timer.c \
+C:/Git/ECE-319H/inc/LaunchPad.c \
+C:/Git/ECE-319H/inc/SPI.c \
+C:/Git/ECE-319H/inc/ST7735.c \
+C:/Git/ECE-319H/inc/Timer.c \
 ../UART.c \
 ../UARTbusywait.c 
 
@@ -87,13 +87,13 @@ S_SRCS__QUOTED += \
 "../StringConversion.s" 
 
 C_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c" \
+"C:/Git/ECE-319H/inc/Clock.c" \
 "../Lab6Grader.c" \
 "../Lab6Main.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SPI.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/ST7735.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Timer.c" \
+"C:/Git/ECE-319H/inc/LaunchPad.c" \
+"C:/Git/ECE-319H/inc/SPI.c" \
+"C:/Git/ECE-319H/inc/ST7735.c" \
+"C:/Git/ECE-319H/inc/Timer.c" \
 "../UART.c" \
 "../UARTbusywait.c" 
 

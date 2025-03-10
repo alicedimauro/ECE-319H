@@ -9,9 +9,9 @@ CMD_SRCS += \
 ../mspm0g3507.cmd 
 
 C_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Timer.c \
+C:/Git/ECE-319H/inc/Clock.c \
+C:/Git/ECE-319H/inc/LaunchPad.c \
+C:/Git/ECE-319H/inc/Timer.c \
 ../TimerPeriodicIntmain.c 
 
 C_DEPS += \
@@ -39,9 +39,9 @@ C_DEPS__QUOTED += \
 "TimerPeriodicIntmain.d" 
 
 C_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Timer.c" \
+"C:/Git/ECE-319H/inc/Clock.c" \
+"C:/Git/ECE-319H/inc/LaunchPad.c" \
+"C:/Git/ECE-319H/inc/Timer.c" \
 "../TimerPeriodicIntmain.c" 
 
 

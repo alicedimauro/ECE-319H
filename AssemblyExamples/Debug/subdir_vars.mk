@@ -12,7 +12,7 @@ S_SRCS += \
 ../AssemblyExamples.s 
 
 C_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c 
+C:/Git/ECE-319H/inc/Clock.c 
 
 S_DEPS += \
 ./AssemblyExamples.d 
@@ -38,6 +38,6 @@ S_SRCS__QUOTED += \
 "../AssemblyExamples.s" 
 
 C_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c" 
+"C:/Git/ECE-319H/inc/Clock.c" 
 
 

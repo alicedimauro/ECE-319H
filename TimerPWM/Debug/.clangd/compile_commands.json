@@ -1,27 +1,27 @@
 [
    {
-      "directory" : "C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM/Debug",
-      "command"   : "clang++ -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM/Debug/syscfg\"",
-      "file"      : "C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c"
+      "directory" : "C:/Git/ECE-319H/TimerPWM/Debug",
+      "command"   : "clang++ -I\"C:/Git/ECE-319H/TimerPWM\" -I\"C:/Git/ECE-319H/TimerPWM/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/TimerPWM/Debug/syscfg\"",
+      "file"      : "C:/Git/ECE-319H/inc/Clock.c"
    },
    {
-      "directory" : "C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM/Debug",
-      "command"   : "clang++ -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM/Debug/syscfg\"",
-      "file"      : "C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c"
+      "directory" : "C:/Git/ECE-319H/TimerPWM/Debug",
+      "command"   : "clang++ -I\"C:/Git/ECE-319H/TimerPWM\" -I\"C:/Git/ECE-319H/TimerPWM/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/TimerPWM/Debug/syscfg\"",
+      "file"      : "C:/Git/ECE-319H/inc/LaunchPad.c"
    },
    {
-      "directory" : "C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM/Debug",
-      "command"   : "clang++ -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM/Debug/syscfg\"",
-      "file"      : "C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/PWM.c"
+      "directory" : "C:/Git/ECE-319H/TimerPWM/Debug",
+      "command"   : "clang++ -I\"C:/Git/ECE-319H/TimerPWM\" -I\"C:/Git/ECE-319H/TimerPWM/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/TimerPWM/Debug/syscfg\"",
+      "file"      : "C:/Git/ECE-319H/inc/PWM.c"
    },
    {
-      "directory" : "C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM/Debug",
-      "command"   : "clang++ -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM/Debug/syscfg\"",
-      "file"      : "C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM/TimerPWMmain.c"
+      "directory" : "C:/Git/ECE-319H/TimerPWM/Debug",
+      "command"   : "clang++ -I\"C:/Git/ECE-319H/TimerPWM\" -I\"C:/Git/ECE-319H/TimerPWM/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/TimerPWM/Debug/syscfg\"",
+      "file"      : "C:/Git/ECE-319H/TimerPWM/TimerPWMmain.c"
    },
    {
-      "directory" : "C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM/Debug",
-      "command"   : "clang++ -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM/Debug/syscfg\"",
-      "file"      : "C:/Git/ECE-319H/MSPM0_ValvanoWare/TimerPWM/ticlang/startup_mspm0g3507_ticlang.c"
+      "directory" : "C:/Git/ECE-319H/TimerPWM/Debug",
+      "command"   : "clang++ -I\"C:/Git/ECE-319H/TimerPWM\" -I\"C:/Git/ECE-319H/TimerPWM/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/TimerPWM/Debug/syscfg\"",
+      "file"      : "C:/Git/ECE-319H/TimerPWM/ticlang/startup_mspm0g3507_ticlang.c"
    }
 ]

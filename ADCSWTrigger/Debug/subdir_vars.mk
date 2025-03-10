@@ -9,11 +9,11 @@ CMD_SRCS += \
 ../mspm0g3507.cmd 
 
 C_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/ADC.c \
+C:/Git/ECE-319H/inc/ADC.c \
 ../ADCSWtriggerTestmain.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/JoyStick.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c 
+C:/Git/ECE-319H/inc/Clock.c \
+C:/Git/ECE-319H/inc/JoyStick.c \
+C:/Git/ECE-319H/inc/LaunchPad.c 
 
 C_DEPS += \
 ./ADC.d \
@@ -44,10 +44,10 @@ C_DEPS__QUOTED += \
 "LaunchPad.d" 
 
 C_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/ADC.c" \
+"C:/Git/ECE-319H/inc/ADC.c" \
 "../ADCSWtriggerTestmain.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/JoyStick.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c" 
+"C:/Git/ECE-319H/inc/Clock.c" \
+"C:/Git/ECE-319H/inc/JoyStick.c" \
+"C:/Git/ECE-319H/inc/LaunchPad.c" 
 
 

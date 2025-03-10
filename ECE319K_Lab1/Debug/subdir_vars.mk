@@ -12,11 +12,11 @@ S_SRCS += \
 ../ECE319K_Lab1.s 
 
 C_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c \
+C:/Git/ECE-319H/inc/Clock.c \
 ../ECE319K_Lab1main.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/UART.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/UARTbusywait.c 
+C:/Git/ECE-319H/inc/LaunchPad.c \
+C:/Git/ECE-319H/inc/UART.c \
+C:/Git/ECE-319H/inc/UARTbusywait.c 
 
 S_DEPS += \
 ./ECE319K_Lab1.d 
@@ -55,11 +55,11 @@ S_DEPS__QUOTED += \
 "ECE319K_Lab1.d" 
 
 C_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c" \
+"C:/Git/ECE-319H/inc/Clock.c" \
 "../ECE319K_Lab1main.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/UART.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/UARTbusywait.c" 
+"C:/Git/ECE-319H/inc/LaunchPad.c" \
+"C:/Git/ECE-319H/inc/UART.c" \
+"C:/Git/ECE-319H/inc/UARTbusywait.c" 
 
 S_SRCS__QUOTED += \
 "../ECE319K_Lab1.s" 

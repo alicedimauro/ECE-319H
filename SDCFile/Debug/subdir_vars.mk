@@ -9,14 +9,14 @@ CMD_SRCS += \
 ../mspm0g3507.cmd 
 
 C_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/DAC.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c \
+C:/Git/ECE-319H/inc/Clock.c \
+C:/Git/ECE-319H/inc/DAC.c \
+C:/Git/ECE-319H/inc/LaunchPad.c \
 ../SDCFile.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SPI.c \
+C:/Git/ECE-319H/inc/SPI.c \
 ../ST7735_SDC.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/TExaS.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Timer.c \
+C:/Git/ECE-319H/inc/TExaS.c \
+C:/Git/ECE-319H/inc/Timer.c \
 ../diskio.c \
 ../ff.c 
 
@@ -69,14 +69,14 @@ C_DEPS__QUOTED += \
 "ff.d" 
 
 C_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/DAC.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c" \
+"C:/Git/ECE-319H/inc/Clock.c" \
+"C:/Git/ECE-319H/inc/DAC.c" \
+"C:/Git/ECE-319H/inc/LaunchPad.c" \
 "../SDCFile.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SPI.c" \
+"C:/Git/ECE-319H/inc/SPI.c" \
 "../ST7735_SDC.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/TExaS.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Timer.c" \
+"C:/Git/ECE-319H/inc/TExaS.c" \
+"C:/Git/ECE-319H/inc/Timer.c" \
 "../diskio.c" \
 "../ff.c" 
 

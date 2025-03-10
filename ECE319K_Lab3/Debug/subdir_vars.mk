@@ -9,14 +9,14 @@ CMD_SRCS += \
 ../mspm0g3507.cmd 
 
 C_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Dump.c \
+C:/Git/ECE-319H/inc/Clock.c \
+C:/Git/ECE-319H/inc/Dump.c \
 ../ECE319K_Lab3Grader.c \
 ../ECE319K_Lab3main.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Timer.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/UART.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/UARTbusywait.c 
+C:/Git/ECE-319H/inc/LaunchPad.c \
+C:/Git/ECE-319H/inc/Timer.c \
+C:/Git/ECE-319H/inc/UART.c \
+C:/Git/ECE-319H/inc/UARTbusywait.c 
 
 C_DEPS += \
 ./Clock.d \
@@ -59,13 +59,13 @@ C_DEPS__QUOTED += \
 "UARTbusywait.d" 
 
 C_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Dump.c" \
+"C:/Git/ECE-319H/inc/Clock.c" \
+"C:/Git/ECE-319H/inc/Dump.c" \
 "../ECE319K_Lab3Grader.c" \
 "../ECE319K_Lab3main.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Timer.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/UART.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/UARTbusywait.c" 
+"C:/Git/ECE-319H/inc/LaunchPad.c" \
+"C:/Git/ECE-319H/inc/Timer.c" \
+"C:/Git/ECE-319H/inc/UART.c" \
+"C:/Git/ECE-319H/inc/UARTbusywait.c" 
 
 

@@ -1,37 +1,37 @@
 [
    {
-      "directory" : "C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug",
-      "command"   : "clang++ -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug/syscfg\"",
-      "file"      : "C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/ADC.c"
+      "directory" : "C:/Git/ECE-319H/CrystalfontzLCD/Debug",
+      "command"   : "clang++ -I\"C:/Git/ECE-319H/CrystalfontzLCD\" -I\"C:/Git/ECE-319H/CrystalfontzLCD/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/CrystalfontzLCD/Debug/syscfg\"",
+      "file"      : "C:/Git/ECE-319H/inc/ADC.c"
    },
    {
-      "directory" : "C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug",
-      "command"   : "clang++ -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug/syscfg\"",
-      "file"      : "C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c"
+      "directory" : "C:/Git/ECE-319H/CrystalfontzLCD/Debug",
+      "command"   : "clang++ -I\"C:/Git/ECE-319H/CrystalfontzLCD\" -I\"C:/Git/ECE-319H/CrystalfontzLCD/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/CrystalfontzLCD/Debug/syscfg\"",
+      "file"      : "C:/Git/ECE-319H/inc/Clock.c"
    },
    {
-      "directory" : "C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug",
-      "command"   : "clang++ -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug/syscfg\"",
-      "file"      : "C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LCD.c"
+      "directory" : "C:/Git/ECE-319H/CrystalfontzLCD/Debug",
+      "command"   : "clang++ -I\"C:/Git/ECE-319H/CrystalfontzLCD\" -I\"C:/Git/ECE-319H/CrystalfontzLCD/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/CrystalfontzLCD/Debug/syscfg\"",
+      "file"      : "C:/Git/ECE-319H/inc/LCD.c"
    },
    {
-      "directory" : "C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug",
-      "command"   : "clang++ -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug/syscfg\"",
-      "file"      : "C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/LCDtestmain.c"
+      "directory" : "C:/Git/ECE-319H/CrystalfontzLCD/Debug",
+      "command"   : "clang++ -I\"C:/Git/ECE-319H/CrystalfontzLCD\" -I\"C:/Git/ECE-319H/CrystalfontzLCD/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/CrystalfontzLCD/Debug/syscfg\"",
+      "file"      : "C:/Git/ECE-319H/CrystalfontzLCD/LCDtestmain.c"
    },
    {
-      "directory" : "C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug",
-      "command"   : "clang++ -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug/syscfg\"",
-      "file"      : "C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c"
+      "directory" : "C:/Git/ECE-319H/CrystalfontzLCD/Debug",
+      "command"   : "clang++ -I\"C:/Git/ECE-319H/CrystalfontzLCD\" -I\"C:/Git/ECE-319H/CrystalfontzLCD/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/CrystalfontzLCD/Debug/syscfg\"",
+      "file"      : "C:/Git/ECE-319H/inc/LaunchPad.c"
    },
    {
-      "directory" : "C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug",
-      "command"   : "clang++ -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug/syscfg\"",
-      "file"      : "C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SPI.c"
+      "directory" : "C:/Git/ECE-319H/CrystalfontzLCD/Debug",
+      "command"   : "clang++ -I\"C:/Git/ECE-319H/CrystalfontzLCD\" -I\"C:/Git/ECE-319H/CrystalfontzLCD/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/CrystalfontzLCD/Debug/syscfg\"",
+      "file"      : "C:/Git/ECE-319H/inc/SPI.c"
    },
    {
-      "directory" : "C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug",
-      "command"   : "clang++ -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/Debug/syscfg\"",
-      "file"      : "C:/Git/ECE-319H/MSPM0_ValvanoWare/CrystalfontzLCD/ticlang/startup_mspm0g3507_ticlang.c"
+      "directory" : "C:/Git/ECE-319H/CrystalfontzLCD/Debug",
+      "command"   : "clang++ -I\"C:/Git/ECE-319H/CrystalfontzLCD\" -I\"C:/Git/ECE-319H/CrystalfontzLCD/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/CrystalfontzLCD/Debug/syscfg\"",
+      "file"      : "C:/Git/ECE-319H/CrystalfontzLCD/ticlang/startup_mspm0g3507_ticlang.c"
    }
 ]

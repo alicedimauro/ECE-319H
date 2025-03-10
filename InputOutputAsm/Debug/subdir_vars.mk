@@ -12,8 +12,8 @@ S_SRCS += \
 ../InputOutput.s 
 
 C_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c 
+C:/Git/ECE-319H/inc/Clock.c \
+C:/Git/ECE-319H/inc/LaunchPad.c 
 
 S_DEPS += \
 ./InputOutput.d 
@@ -40,8 +40,8 @@ S_DEPS__QUOTED += \
 "InputOutput.d" 
 
 C_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c" 
+"C:/Git/ECE-319H/inc/Clock.c" \
+"C:/Git/ECE-319H/inc/LaunchPad.c" 
 
 S_SRCS__QUOTED += \
 "../InputOutput.s" 

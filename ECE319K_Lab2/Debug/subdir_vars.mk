@@ -12,13 +12,13 @@ S_SRCS += \
 ../ECE319K_Lab2.s 
 
 C_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Dump.c \
+C:/Git/ECE-319H/inc/Clock.c \
+C:/Git/ECE-319H/inc/Dump.c \
 ../ECE319K_Lab2main.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Timer.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/UART.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/UARTbusywait.c 
+C:/Git/ECE-319H/inc/LaunchPad.c \
+C:/Git/ECE-319H/inc/Timer.c \
+C:/Git/ECE-319H/inc/UART.c \
+C:/Git/ECE-319H/inc/UARTbusywait.c 
 
 S_DEPS += \
 ./ECE319K_Lab2.d 
@@ -65,13 +65,13 @@ S_DEPS__QUOTED += \
 "ECE319K_Lab2.d" 
 
 C_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Dump.c" \
+"C:/Git/ECE-319H/inc/Clock.c" \
+"C:/Git/ECE-319H/inc/Dump.c" \
 "../ECE319K_Lab2main.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Timer.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/UART.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/UARTbusywait.c" 
+"C:/Git/ECE-319H/inc/LaunchPad.c" \
+"C:/Git/ECE-319H/inc/Timer.c" \
+"C:/Git/ECE-319H/inc/UART.c" \
+"C:/Git/ECE-319H/inc/UARTbusywait.c" 
 
 S_SRCS__QUOTED += \
 "../ECE319K_Lab2.s" 

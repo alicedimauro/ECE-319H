@@ -10,11 +10,11 @@ CMD_SRCS += \
 
 S_SRCS += \
 ../NotGate.s \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/msp.s 
+C:/Git/ECE-319H/inc/msp.s 
 
 C_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c 
+C:/Git/ECE-319H/inc/Clock.c \
+C:/Git/ECE-319H/inc/LaunchPad.c 
 
 S_DEPS += \
 ./NotGate.d \
@@ -45,11 +45,11 @@ S_DEPS__QUOTED += \
 "msp.d" 
 
 C_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c" 
+"C:/Git/ECE-319H/inc/Clock.c" \
+"C:/Git/ECE-319H/inc/LaunchPad.c" 
 
 S_SRCS__QUOTED += \
 "../NotGate.s" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/msp.s" 
+"C:/Git/ECE-319H/inc/msp.s" 
 
 

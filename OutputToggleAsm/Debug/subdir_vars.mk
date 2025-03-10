@@ -12,7 +12,7 @@ S_SRCS += \
 ../Toggle.s 
 
 C_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c 
+C:/Git/ECE-319H/inc/LaunchPad.c 
 
 S_DEPS += \
 ./Toggle.d 
@@ -35,7 +35,7 @@ S_DEPS__QUOTED += \
 "Toggle.d" 
 
 C_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c" 
+"C:/Git/ECE-319H/inc/LaunchPad.c" 
 
 S_SRCS__QUOTED += \
 "../Toggle.s" 

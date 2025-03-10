@@ -9,17 +9,17 @@ CMD_SRCS += \
 ../mspm0g3507.cmd 
 
 C_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/ADC.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Bump.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/I2C.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/InputCapture.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Motor.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/PWM1.c \
+C:/Git/ECE-319H/inc/ADC.c \
+C:/Git/ECE-319H/inc/Bump.c \
+C:/Git/ECE-319H/inc/Clock.c \
+C:/Git/ECE-319H/inc/I2C.c \
+C:/Git/ECE-319H/inc/InputCapture.c \
+C:/Git/ECE-319H/inc/LaunchPad.c \
+C:/Git/ECE-319H/inc/Motor.c \
+C:/Git/ECE-319H/inc/PWM1.c \
 ../RSLKmain.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SSD1306.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Timer.c 
+C:/Git/ECE-319H/inc/SSD1306.c \
+C:/Git/ECE-319H/inc/Timer.c 
 
 C_DEPS += \
 ./ADC.d \
@@ -74,16 +74,16 @@ C_DEPS__QUOTED += \
 "Timer.d" 
 
 C_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/ADC.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Bump.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/I2C.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/InputCapture.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Motor.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/PWM1.c" \
+"C:/Git/ECE-319H/inc/ADC.c" \
+"C:/Git/ECE-319H/inc/Bump.c" \
+"C:/Git/ECE-319H/inc/Clock.c" \
+"C:/Git/ECE-319H/inc/I2C.c" \
+"C:/Git/ECE-319H/inc/InputCapture.c" \
+"C:/Git/ECE-319H/inc/LaunchPad.c" \
+"C:/Git/ECE-319H/inc/Motor.c" \
+"C:/Git/ECE-319H/inc/PWM1.c" \
 "../RSLKmain.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/SSD1306.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Timer.c" 
+"C:/Git/ECE-319H/inc/SSD1306.c" \
+"C:/Git/ECE-319H/inc/Timer.c" 
 
 

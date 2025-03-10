@@ -9,10 +9,10 @@ CMD_SRCS += \
 ../mspm0g3507.cmd 
 
 C_SRCS += \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/UART.c \
-C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/UARTbusywait.c \
+C:/Git/ECE-319H/inc/Clock.c \
+C:/Git/ECE-319H/inc/LaunchPad.c \
+C:/Git/ECE-319H/inc/UART.c \
+C:/Git/ECE-319H/inc/UARTbusywait.c \
 ../UARTbusywaitTestmain.c 
 
 C_DEPS += \
@@ -44,10 +44,10 @@ C_DEPS__QUOTED += \
 "UARTbusywaitTestmain.d" 
 
 C_SRCS__QUOTED += \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/Clock.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/LaunchPad.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/UART.c" \
-"C:/Git/ECE-319H/MSPM0_ValvanoWare/inc/UARTbusywait.c" \
+"C:/Git/ECE-319H/inc/Clock.c" \
+"C:/Git/ECE-319H/inc/LaunchPad.c" \
+"C:/Git/ECE-319H/inc/UART.c" \
+"C:/Git/ECE-319H/inc/UARTbusywait.c" \
 "../UARTbusywaitTestmain.c" 
 
 

@@ -1,12 +1,12 @@
 [
    {
-      "directory" : "C:/Git/ECE-319H/MSPM0_ValvanoWare/ScratchAsm/Debug",
-      "command"   : "clang++ -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/ScratchAsm\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/ScratchAsm/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/ScratchAsm/Debug/syscfg\"",
-      "file"      : "C:/Git/ECE-319H/MSPM0_ValvanoWare/ScratchAsm/Scratch.s"
+      "directory" : "C:/Git/ECE-319H/ScratchAsm/Debug",
+      "command"   : "clang++ -I\"C:/Git/ECE-319H/ScratchAsm\" -I\"C:/Git/ECE-319H/ScratchAsm/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/ScratchAsm/Debug/syscfg\"",
+      "file"      : "C:/Git/ECE-319H/ScratchAsm/Scratch.s"
    },
    {
-      "directory" : "C:/Git/ECE-319H/MSPM0_ValvanoWare/ScratchAsm/Debug",
-      "command"   : "clang++ -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/ScratchAsm\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/ScratchAsm/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/MSPM0_ValvanoWare/ScratchAsm/Debug/syscfg\"",
-      "file"      : "C:/Git/ECE-319H/MSPM0_ValvanoWare/ScratchAsm/ticlang/startup_mspm0g3507_ticlang.c"
+      "directory" : "C:/Git/ECE-319H/ScratchAsm/Debug",
+      "command"   : "clang++ -I\"C:/Git/ECE-319H/ScratchAsm\" -I\"C:/Git/ECE-319H/ScratchAsm/Debug\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"C:/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"C:/Git/ECE-319H/ScratchAsm/Debug/syscfg\"",
+      "file"      : "C:/Git/ECE-319H/ScratchAsm/ticlang/startup_mspm0g3507_ticlang.c"
    }
 ]
