@@ -1,5 +1,5 @@
 // StringConversion.s
-// Student names: Alice Di Mauro, Ravi Shah
+// Student names: Alice Di Mauro and Ravi Shah
 // Last modification date: change this to the last modification date or look very silly
 // Runs on any Cortex M0
 // ECE319K lab 6 number to string conversion
