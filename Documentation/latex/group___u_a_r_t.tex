@@ -1,0 +1,374 @@
+\hypertarget{group___u_a_r_t}{}\doxysection{UART}
+\label{group___u_a_r_t}\index{UART@{UART}}
+
+
+Asynchronous serial communication.  
+
+
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{_u_a_r_t_8h}{UART.\+h}}
+\begin{DoxyCompactList}\small\item\em Initialize UART0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___u_a_r_t_ga876ce77f3c672c7162658151e648389e}\label{group___u_a_r_t_ga876ce77f3c672c7162658151e648389e}} 
+\#define \mbox{\hyperlink{group___u_a_r_t_ga876ce77f3c672c7162658151e648389e}{CR}}~0x0D
+\begin{DoxyCompactList}\small\item\em CR is carriage return. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___u_a_r_t_ga350c9d6cb81908d59427ee96844d1a9c}\label{group___u_a_r_t_ga350c9d6cb81908d59427ee96844d1a9c}} 
+\#define \mbox{\hyperlink{group___u_a_r_t_ga350c9d6cb81908d59427ee96844d1a9c}{LF}}~0x0A
+\begin{DoxyCompactList}\small\item\em LF is line feed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___u_a_r_t_ga580a88f98668df1ac5e1683cae31c0b3}\label{group___u_a_r_t_ga580a88f98668df1ac5e1683cae31c0b3}} 
+\#define \mbox{\hyperlink{group___u_a_r_t_ga580a88f98668df1ac5e1683cae31c0b3}{BS}}~0x08
+\begin{DoxyCompactList}\small\item\em BS is back space. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___u_a_r_t_ga4af1b6159e447ba72652bb7fcdfa726e}\label{group___u_a_r_t_ga4af1b6159e447ba72652bb7fcdfa726e}} 
+\#define \mbox{\hyperlink{group___u_a_r_t_ga4af1b6159e447ba72652bb7fcdfa726e}{ESC}}~0x1B
+\begin{DoxyCompactList}\small\item\em ESC is escape character. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___u_a_r_t_gaecd69d9a67487cc45c38eb184c50538a}\label{group___u_a_r_t_gaecd69d9a67487cc45c38eb184c50538a}} 
+\#define \mbox{\hyperlink{group___u_a_r_t_gaecd69d9a67487cc45c38eb184c50538a}{SP}}~0x20
+\begin{DoxyCompactList}\small\item\em SP is space. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___u_a_r_t_gad1e508e805e4ddbc05119be4bb260985}\label{group___u_a_r_t_gad1e508e805e4ddbc05119be4bb260985}} 
+\#define \mbox{\hyperlink{group___u_a_r_t_gad1e508e805e4ddbc05119be4bb260985}{DEL}}~0x7F
+\begin{DoxyCompactList}\small\item\em DEL is delete. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___u_a_r_t_gad5cbed2a2222bb84e8b5c1caaa50634e}{UART\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize UART0. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{group___u_a_r_t_ga00e894bb188320a2f4dcd5a78b80da52}{UART\+\_\+\+In\+Char}} (void)
+\begin{DoxyCompactList}\small\item\em input from UART0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_ga4ef2f92682b12a347cf1f81cccda4da7}{UART\+\_\+\+Out\+Char}} (char data)
+\begin{DoxyCompactList}\small\item\em output character to UART0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_ga2cbbed822dc8e6d801e6c9f21a2cd418}{UART\+\_\+\+Out\+String}} (char $\ast$pt)
+\begin{DoxyCompactList}\small\item\em output string to UART0 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___u_a_r_t_ga0a28a219c31df1bd2182e4b3afbcc5cd}{UART\+\_\+\+In\+UDec}} (void)
+\begin{DoxyCompactList}\small\item\em input a number from UART0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_ga9a53c5fe8486e0282990b11a218c2625}{UART\+\_\+\+Out\+UDec}} (uint32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em output a number to UART0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_gaf513c146e50210a3e8d560c3f7f4a61c}{UART\+\_\+\+Out\+SDec}} (int32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em output a signed number to UART0 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___u_a_r_t_ga5a7efc717f2c844f08689418dd50ee43}{UART\+\_\+\+In\+UHex}} (void)
+\begin{DoxyCompactList}\small\item\em input a hex number from UART0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_ga21661aabfda94ec88e9514856f062a41}{UART\+\_\+\+Out\+UHex}} (uint32\+\_\+t number)
+\begin{DoxyCompactList}\small\item\em output a hex number to UART0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_ga4278ab3463fadff60a5a84792707c3a3}{UART\+\_\+\+In\+String}} (char $\ast$buf\+Pt, uint16\+\_\+t max)
+\begin{DoxyCompactList}\small\item\em input a string from UART0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_ga8f712d5a0da62169816c832d148422dd}{UART\+\_\+\+Init\+Printf}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize UART0 to use printf. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_ga5c01e95ec3c881cdd00e311327126693}{UART1\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize UART1. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{group___u_a_r_t_ga952c67b026c15d0ae63b478f0c2b65a4}{UART1\+\_\+\+In\+Char}} (void)
+\begin{DoxyCompactList}\small\item\em input from UART1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_gab2b4650fa453ead2c95a88c468ae47e8}{UART1\+\_\+\+Out\+Char}} (char data)
+\begin{DoxyCompactList}\small\item\em output character to UART1 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Asynchronous serial communication. 
+
+\hypertarget{group___u_a_r_t_UARTpins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{UART pins on the MSPM0\+G3507}\label{group___u_a_r_t_UARTpins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-2}
+\endhead
+PA10 &UART0 Tx to XDS Rx \\\cline{1-2}
+PA11 &UART0 Rx from XDS Tx \\\cline{1-2}
+\end{longtabu}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___u_a_r_t_ga952c67b026c15d0ae63b478f0c2b65a4}\label{group___u_a_r_t_ga952c67b026c15d0ae63b478f0c2b65a4}} 
+\index{UART@{UART}!UART1\_InChar@{UART1\_InChar}}
+\index{UART1\_InChar@{UART1\_InChar}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART1\_InChar()}{UART1\_InChar()}}
+{\footnotesize\ttfamily char UART1\+\_\+\+In\+Char (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+input from UART1 
+
+Wait for new UART1 serial port input 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char ASCII code for key typed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___u_a_r_t_ga5c01e95ec3c881cdd00e311327126693}\label{group___u_a_r_t_ga5c01e95ec3c881cdd00e311327126693}} 
+\index{UART@{UART}!UART1\_Init@{UART1\_Init}}
+\index{UART1\_Init@{UART1\_Init}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART1\_Init()}{UART1\_Init()}}
+{\footnotesize\ttfamily void UART1\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize UART1. 
+
+initialize UART1 for 115200 baud rate.
+\begin{DoxyItemize}
+\item PA8 = UART1 Tx out from MSPM0
+\item PA9 = UART1 Rx in to MSPM0
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___u_a_r_t_gab2b4650fa453ead2c95a88c468ae47e8}\label{group___u_a_r_t_gab2b4650fa453ead2c95a88c468ae47e8}} 
+\index{UART@{UART}!UART1\_OutChar@{UART1\_OutChar}}
+\index{UART1\_OutChar@{UART1\_OutChar}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART1\_OutChar()}{UART1\_OutChar()}}
+{\footnotesize\ttfamily void UART1\+\_\+\+Out\+Char (\begin{DoxyParamCaption}\item[{char}]{data }\end{DoxyParamCaption})}
+
+
+
+output character to UART1 
+
+Output 8-\/bit to UART1 serial port 
+\begin{DoxyParams}{Parameters}
+{\em data} & is an 8-\/bit ASCII character to be transferred \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___u_a_r_t_ga00e894bb188320a2f4dcd5a78b80da52}\label{group___u_a_r_t_ga00e894bb188320a2f4dcd5a78b80da52}} 
+\index{UART@{UART}!UART\_InChar@{UART\_InChar}}
+\index{UART\_InChar@{UART\_InChar}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART\_InChar()}{UART\_InChar()}}
+{\footnotesize\ttfamily char UART\+\_\+\+In\+Char (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+input from UART0 
+
+Wait for new UART0 serial port input 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char ASCII code for key typed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___u_a_r_t_gad5cbed2a2222bb84e8b5c1caaa50634e}\label{group___u_a_r_t_gad5cbed2a2222bb84e8b5c1caaa50634e}} 
+\index{UART@{UART}!UART\_Init@{UART\_Init}}
+\index{UART\_Init@{UART\_Init}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART\_Init()}{UART\_Init()}}
+{\footnotesize\ttfamily void UART\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize UART0. 
+
+initialize 0 for 115200 baud rate.
+\begin{DoxyItemize}
+\item PA10 = UART0 Tx to XDS Rx
+\item PA11 = UART0 Rx from XDS Tx
+\end{DoxyItemize}
+
+There are two implementations\+:
+\begin{DoxyItemize}
+\item UART\+\_\+\+Init in {\bfseries{UARTbusywait.\+c}} implements busy-\/wait synchronization
+\item UART\+\_\+\+Init in {\bfseries{UARTints.\+c}} implements interrupt synchronization
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___u_a_r_t_ga8f712d5a0da62169816c832d148422dd}\label{group___u_a_r_t_ga8f712d5a0da62169816c832d148422dd}} 
+\index{UART@{UART}!UART\_InitPrintf@{UART\_InitPrintf}}
+\index{UART\_InitPrintf@{UART\_InitPrintf}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART\_InitPrintf()}{UART\_InitPrintf()}}
+{\footnotesize\ttfamily void UART\+\_\+\+Init\+Printf (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize UART0 to use printf. 
+
+Initialize the UART for 115,200 baud rate (assuming 48 MHz bus clock), 8 bit word length, no parity bits, one stop bit. Calls \mbox{\hyperlink{group___u_a_r_t_gad5cbed2a2222bb84e8b5c1caaa50634e}{UART\+\_\+\+Init()}} 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___u_a_r_t_ga4278ab3463fadff60a5a84792707c3a3}\label{group___u_a_r_t_ga4278ab3463fadff60a5a84792707c3a3}} 
+\index{UART@{UART}!UART\_InString@{UART\_InString}}
+\index{UART\_InString@{UART\_InString}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART\_InString()}{UART\_InString()}}
+{\footnotesize\ttfamily void UART\+\_\+\+In\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf\+Pt,  }\item[{uint16\+\_\+t}]{max }\end{DoxyParamCaption})}
+
+
+
+input a string from UART0 
+
+Accepts ASCII characters from the serial port and adds them to a string until $<$enter$>$ is typed or until max length of the string is reached. It echoes each character as it is inputted. If a backspace is inputted, the string is modified and the backspace is echoed terminates the string with a null character Calls UART\+\_\+\+In\+Char 
+\begin{DoxyParams}{Parameters}
+{\em buf\+Pt} & is a pointer to empty buffer, \\
+\hline
+{\em max} & is the size of the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Modified by Agustinus Darmawan + Mingjie Qiu -- 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___u_a_r_t_ga0a28a219c31df1bd2182e4b3afbcc5cd}\label{group___u_a_r_t_ga0a28a219c31df1bd2182e4b3afbcc5cd}} 
+\index{UART@{UART}!UART\_InUDec@{UART\_InUDec}}
+\index{UART\_InUDec@{UART\_InUDec}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART\_InUDec()}{UART\_InUDec()}}
+{\footnotesize\ttfamily uint32\+\_\+t UART\+\_\+\+In\+UDec (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+input a number from UART0 
+
+In\+UDec accepts ASCII input in unsigned decimal format and converts to a 32-\/bit unsigned number valid range is 0 to 4294967295 (2$^\wedge$32-\/1) 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+32-\/bit unsigned number 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If you enter a number above 4294967295, it will return an incorrect value Backspace will remove last digit typed 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___u_a_r_t_ga5a7efc717f2c844f08689418dd50ee43}\label{group___u_a_r_t_ga5a7efc717f2c844f08689418dd50ee43}} 
+\index{UART@{UART}!UART\_InUHex@{UART\_InUHex}}
+\index{UART\_InUHex@{UART\_InUHex}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART\_InUHex()}{UART\_InUHex()}}
+{\footnotesize\ttfamily uint32\+\_\+t UART\+\_\+\+In\+UHex (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+input a hex number from UART0 
+
+Accepts ASCII input in unsigned hexadecimal (base 16) format No \textquotesingle{}\$\textquotesingle{} or \textquotesingle{}0x\textquotesingle{} need be entered, just the 1 to 8 hex digits It will convert lower case a-\/f to uppercase A-\/F and converts to a 16 bit unsigned number value range is 0 to FFFFFFFF If you enter a number above FFFFFFFF, it will return an incorrect value Backspace will remove last digit typed 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+32-\/bit unsigned number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___u_a_r_t_ga4ef2f92682b12a347cf1f81cccda4da7}\label{group___u_a_r_t_ga4ef2f92682b12a347cf1f81cccda4da7}} 
+\index{UART@{UART}!UART\_OutChar@{UART\_OutChar}}
+\index{UART\_OutChar@{UART\_OutChar}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART\_OutChar()}{UART\_OutChar()}}
+{\footnotesize\ttfamily void UART\+\_\+\+Out\+Char (\begin{DoxyParamCaption}\item[{char}]{data }\end{DoxyParamCaption})}
+
+
+
+output character to UART0 
+
+Output 8-\/bit to UART0 serial port 
+\begin{DoxyParams}{Parameters}
+{\em data} & is an 8-\/bit ASCII character to be transferred \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___u_a_r_t_gaf513c146e50210a3e8d560c3f7f4a61c}\label{group___u_a_r_t_gaf513c146e50210a3e8d560c3f7f4a61c}} 
+\index{UART@{UART}!UART\_OutSDec@{UART\_OutSDec}}
+\index{UART\_OutSDec@{UART\_OutSDec}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART\_OutSDec()}{UART\_OutSDec()}}
+{\footnotesize\ttfamily void UART\+\_\+\+Out\+SDec (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+output a signed number to UART0 
+
+Output a 32-\/bit number in signed decimal format 
+\begin{DoxyParams}{Parameters}
+{\em n} & 32-\/bit signed number to be transferred \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Variable format 1-\/10 digits with no space before or after 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___u_a_r_t_ga2cbbed822dc8e6d801e6c9f21a2cd418}\label{group___u_a_r_t_ga2cbbed822dc8e6d801e6c9f21a2cd418}} 
+\index{UART@{UART}!UART\_OutString@{UART\_OutString}}
+\index{UART\_OutString@{UART\_OutString}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART\_OutString()}{UART\_OutString()}}
+{\footnotesize\ttfamily void UART\+\_\+\+Out\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{pt }\end{DoxyParamCaption})}
+
+
+
+output string to UART0 
+
+Output String with NULL termination 
+\begin{DoxyParams}{Parameters}
+{\em pt} & is pointer to a NULL-\/terminated string to be transferred \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___u_a_r_t_ga9a53c5fe8486e0282990b11a218c2625}\label{group___u_a_r_t_ga9a53c5fe8486e0282990b11a218c2625}} 
+\index{UART@{UART}!UART\_OutUDec@{UART\_OutUDec}}
+\index{UART\_OutUDec@{UART\_OutUDec}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART\_OutUDec()}{UART\_OutUDec()}}
+{\footnotesize\ttfamily void UART\+\_\+\+Out\+UDec (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+output a number to UART0 
+
+Output a 32-\/bit number in unsigned decimal format 
+\begin{DoxyParams}{Parameters}
+{\em n} & 32-\/bit unsigned number to be transferred \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Variable format 1-\/10 digits with no space before or after 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___u_a_r_t_ga21661aabfda94ec88e9514856f062a41}\label{group___u_a_r_t_ga21661aabfda94ec88e9514856f062a41}} 
+\index{UART@{UART}!UART\_OutUHex@{UART\_OutUHex}}
+\index{UART\_OutUHex@{UART\_OutUHex}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART\_OutUHex()}{UART\_OutUHex()}}
+{\footnotesize\ttfamily void UART\+\_\+\+Out\+UHex (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{number }\end{DoxyParamCaption})}
+
+
+
+output a hex number to UART0 
+
+Output a 32-\/bit number in unsigned hexadecimal format 
+\begin{DoxyParams}{Parameters}
+{\em number} & 32-\/bit unsigned number to be transferred \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Variable format 1 to 8 digits with no space before or after 
+\end{DoxyNote}

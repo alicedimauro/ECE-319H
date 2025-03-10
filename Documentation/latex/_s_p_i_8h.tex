@@ -1,0 +1,64 @@
+\hypertarget{_s_p_i_8h}{}\doxysection{inc/\+SPI.h File Reference}
+\label{_s_p_i_8h}\index{inc/SPI.h@{inc/SPI.h}}
+
+
+Synchronous serial communication.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_p_i_ga292196e767158c66f03cbcc244fc802b}{SPI\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em initialize SPI \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_p_i_gaed11530aee001ae938f496682af21e64}{SPI\+\_\+\+Out\+Data}} (char data)
+\begin{DoxyCompactList}\small\item\em Output data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_p_i_ga8ed2ce84f38ed615cb23dc97ceb7c85b}{SPI\+\_\+\+Out\+Command}} (char command)
+\begin{DoxyCompactList}\small\item\em Output command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_p_i_gae2772fcf7bc437d833f9784c6d184ab2}{SPI\+\_\+\+Reset}} (void)
+\begin{DoxyCompactList}\small\item\em Reset LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Synchronous serial communication. 
+
+SPI uses a chip select, clock, data out and data in. This interface does not use data in. This interface can be used for MKII LCD and the ST7735R LCD  \begin{DoxyVersion}{Version}
+ECE319K v1.\+2 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Daniel Valvano and Jonathan Valvano 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2023 by Jonathan W. Valvano, \href{mailto:valvano@mail.utexas.edu}{\texttt{ valvano@mail.\+utexas.\+edu}}, 
+\end{DoxyCopyright}
+\begin{DoxyWarning}{Warning}
+AS-\/\+IS 
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+For more information see \href{http://users.ece.utexas.edu/~valvano/}{\texttt{ http\+://users.\+ece.\+utexas.\+edu/$\sim$valvano/}} 
+\end{DoxyNote}
+\begin{DoxyDate}{Date}
+December 23, 2024 \hypertarget{_s_p_i_8h_SPIpins2}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{SPI-\/\+LCD pins }\label{_s_p_i_8h_SPIpins2}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Function }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Function }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endhead
+PB9 &SPI1 SCLK &J1.\+7 LCD SPI clock (SPI) ~\newline
+ \\\cline{1-3}
+PB6 &SPI1 CS0 &J2.\+13 LCD SPI CS (SPI) ~\newline
+ \\\cline{1-3}
+PB8 &SPI1 PICO &J2.\+15 LCD SPI data (SPI) ~\newline
+ \\\cline{1-3}
+PB15&GPIO &J2.\+17 LCD !\+RST =1 for run, =0 for reset ~\newline
+ \\\cline{1-3}
+PA13&GPIO &J4.\+31 LCD RS =1 for data, =0 for command ~\newline
+ \\\cline{1-3}
+\end{longtabu}
+
+\end{DoxyDate}

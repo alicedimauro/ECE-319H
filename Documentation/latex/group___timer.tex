@@ -1,0 +1,383 @@
+\hypertarget{group___timer}{}\doxysection{Timer}
+\label{group___timer}\index{Timer@{Timer}}
+
+
+Hardware timers.  
+
+
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{_timer_8h}{Timer.\+h}}
+\begin{DoxyCompactList}\small\item\em Initialize Periodic interrupt timers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___timer_ga556493acb0dfafab262cc468695d5373}{Timer\+G0\+\_\+\+Int\+Arm}} (uint16\+\_\+t period, uint32\+\_\+t prescale, uint32\+\_\+t priority)
+\begin{DoxyCompactList}\small\item\em Initialize Timer G0 interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___timer_gacee87504eeb64f8d48e1f8ec6b51fd8c}{Timer\+G8\+\_\+\+Int\+Arm}} (uint16\+\_\+t period, uint32\+\_\+t prescale, uint32\+\_\+t priority)
+\begin{DoxyCompactList}\small\item\em Initialize Timer G8 interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___timer_ga60b77407e7cfe94383bcfdfb091b7ecf}{Timer\+A0\+\_\+\+Int\+Arm}} (uint16\+\_\+t period, uint32\+\_\+t prescale, uint32\+\_\+t priority)
+\begin{DoxyCompactList}\small\item\em Initialize Timer A0 interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___timer_ga67baa0c3a225ede8e96dda0c178c25c2}{Timer\+A1\+\_\+\+Int\+Arm}} (uint16\+\_\+t period, uint32\+\_\+t prescale, uint32\+\_\+t priority)
+\begin{DoxyCompactList}\small\item\em Initialize Timer A1 interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___timer_gafd85ddb7435c216507fe10fb02d071cb}{Timer\+G7\+\_\+\+Int\+Arm}} (uint16\+\_\+t period, uint32\+\_\+t prescale, uint32\+\_\+t priority)
+\begin{DoxyCompactList}\small\item\em Initialize Timer G7 interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___timer_gacab8213ae33da79d0627f0e2dd8da8c4}{Timer\+G6\+\_\+\+Int\+Arm}} (uint16\+\_\+t period, uint32\+\_\+t prescale, uint32\+\_\+t priority)
+\begin{DoxyCompactList}\small\item\em Initialize Timer G6 interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___timer_gaa1283f4919260d85029bf9998a11c58d}{Timer\+G12\+\_\+\+Int\+Arm}} (uint32\+\_\+t period, uint32\+\_\+t priority)
+\begin{DoxyCompactList}\small\item\em Initialize Timer G12 interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___timer_ga2b8da0715991dfd23662f83897f25e18}{Timer\+G12\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize Timer G12. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hardware timers. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___timer_ga60b77407e7cfe94383bcfdfb091b7ecf}\label{group___timer_ga60b77407e7cfe94383bcfdfb091b7ecf}} 
+\index{Timer@{Timer}!TimerA0\_IntArm@{TimerA0\_IntArm}}
+\index{TimerA0\_IntArm@{TimerA0\_IntArm}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{TimerA0\_IntArm()}{TimerA0\_IntArm()}}
+{\footnotesize\ttfamily void Timer\+A0\+\_\+\+Int\+Arm (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{period,  }\item[{uint32\+\_\+t}]{prescale,  }\item[{uint32\+\_\+t}]{priority }\end{DoxyParamCaption})}
+
+
+
+Initialize Timer A0 interrupt. 
+
+Arm 16-\/bit periodic interrupts on Timer A0. Timer\+A0 is on power Domain PD1
+\begin{DoxyItemize}
+\item 32MHz bus clock, Timer clock is 32MHz
+\item 40MHz bus clock, Timer clock is ULPCLK 40MHz
+\item 80MHz bus clock, Timer clock is ULPCLK 80MHz
+\end{DoxyItemize}
+
+frequency = Timer\+Clock/prescale/period 
+\begin{DoxyParams}{Parameters}
+{\em period} & sets the interrupt 16-\/bit period \\
+\hline
+{\em prescale} & sets the timer prescale \\
+\hline
+{\em priority} & is 0(highest),1,2 or 3(lowest) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+interrupts will be enabled in main after all initialization User defines their own ISR like the following 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{uint32\_t count;}
+\DoxyCodeLine{\textcolor{keywordtype}{void} TIMA0\_IRQHandler(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{  \textcolor{keywordflow}{if}((TIMA0-\/>CPU\_INT.IIDX) == 1)\{ \textcolor{comment}{// this will acknowledge}}
+\DoxyCodeLine{    GPIOB-\/>DOUTTGL31\_0 = \mbox{\hyperlink{group___launch_pad_gacfbc006ea433ad708fdee3e82996e721}{GREEN}}; \textcolor{comment}{// toggle PB27}}
+\DoxyCodeLine{    count++;}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___timer_ga67baa0c3a225ede8e96dda0c178c25c2}\label{group___timer_ga67baa0c3a225ede8e96dda0c178c25c2}} 
+\index{Timer@{Timer}!TimerA1\_IntArm@{TimerA1\_IntArm}}
+\index{TimerA1\_IntArm@{TimerA1\_IntArm}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{TimerA1\_IntArm()}{TimerA1\_IntArm()}}
+{\footnotesize\ttfamily void Timer\+A1\+\_\+\+Int\+Arm (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{period,  }\item[{uint32\+\_\+t}]{prescale,  }\item[{uint32\+\_\+t}]{priority }\end{DoxyParamCaption})}
+
+
+
+Initialize Timer A1 interrupt. 
+
+Arm 16-\/bit periodic interrupts on Timer A1. Timer\+A1 is on power Domain PD1
+\begin{DoxyItemize}
+\item 32MHz bus clock, Timer clock is 32MHz
+\item 40MHz bus clock, Timer clock is ULPCLK 40MHz
+\item 80MHz bus clock, Timer clock is ULPCLK 80MHz
+\end{DoxyItemize}
+
+frequency = Timer\+Clock/prescale/period 
+\begin{DoxyParams}{Parameters}
+{\em period} & sets the interrupt 16-\/bit period \\
+\hline
+{\em prescale} & sets the timer prescale \\
+\hline
+{\em priority} & is 0(highest),1,2 or 3(lowest) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+interrupts will be enabled in main after all initialization User defines their own ISR like the following 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{uint32\_t count;}
+\DoxyCodeLine{\textcolor{keywordtype}{void} TIMA1\_IRQHandler(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{  \textcolor{keywordflow}{if}((TIMA1-\/>CPU\_INT.IIDX) == 1)\{ \textcolor{comment}{// this will acknowledge}}
+\DoxyCodeLine{    GPIOB-\/>DOUTTGL31\_0 = \mbox{\hyperlink{group___launch_pad_gacfbc006ea433ad708fdee3e82996e721}{GREEN}}; \textcolor{comment}{// toggle PB27}}
+\DoxyCodeLine{    count++;}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___timer_ga556493acb0dfafab262cc468695d5373}\label{group___timer_ga556493acb0dfafab262cc468695d5373}} 
+\index{Timer@{Timer}!TimerG0\_IntArm@{TimerG0\_IntArm}}
+\index{TimerG0\_IntArm@{TimerG0\_IntArm}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{TimerG0\_IntArm()}{TimerG0\_IntArm()}}
+{\footnotesize\ttfamily void Timer\+G0\+\_\+\+Int\+Arm (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{period,  }\item[{uint32\+\_\+t}]{prescale,  }\item[{uint32\+\_\+t}]{priority }\end{DoxyParamCaption})}
+
+
+
+Initialize Timer G0 interrupt. 
+
+Arm 16-\/bit periodic interrupts on Timer G0. Timer\+G0 is on power Domain PD0
+\begin{DoxyItemize}
+\item 32MHz bus clock, Timer clock is 32MHz
+\item 40MHz bus clock, Timer clock is ULPCLK 20MHz
+\item 80MHz bus clock, Timer clock is ULPCLK 40MHz
+\end{DoxyItemize}
+
+frequency = Timer\+Clock/prescale/period 
+\begin{DoxyParams}{Parameters}
+{\em period} & sets the interrupt 16-\/bit period \\
+\hline
+{\em prescale} & sets the timer prescale \\
+\hline
+{\em priority} & is 0(highest),1,2 or 3(lowest) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+interrupts will be enabled in main after all initialization User defines their own ISR like the following 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{uint32\_t count;}
+\DoxyCodeLine{\textcolor{keywordtype}{void} TIMG0\_IRQHandler(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{  \textcolor{keywordflow}{if}((TIMG0-\/>CPU\_INT.IIDX) == 1)\{ \textcolor{comment}{// this will acknowledge}}
+\DoxyCodeLine{    GPIOB-\/>DOUTTGL31\_0 = \mbox{\hyperlink{group___launch_pad_gacfbc006ea433ad708fdee3e82996e721}{GREEN}}; \textcolor{comment}{// toggle PB27}}
+\DoxyCodeLine{    count++;}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___timer_ga2b8da0715991dfd23662f83897f25e18}\label{group___timer_ga2b8da0715991dfd23662f83897f25e18}} 
+\index{Timer@{Timer}!TimerG12\_Init@{TimerG12\_Init}}
+\index{TimerG12\_Init@{TimerG12\_Init}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{TimerG12\_Init()}{TimerG12\_Init()}}
+{\footnotesize\ttfamily void Timer\+G12\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize Timer G12. 
+
+initialize G12 for continuous counting. No prescale~\newline
+ simply read TIMG12-\/$>$COUNTERREGS.\+CTR for 32 bit time
+\begin{DoxyItemize}
+\item resolution is bus clock, for 80 MHz clock, 12.\+5ns
+\item precision is 32 bits,
+\end{DoxyItemize}
+
+Timer\+G12 is on power Domain PD1
+\begin{DoxyItemize}
+\item 32MHz bus clock, Timer clock is 32MHz
+\item 40MHz bus clock, Timer clock is ULPCLK 40MHz
+\item 80MHz bus clock, Timer clock is ULPCLK 80MHz
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Example use to measure execution time of myfunction 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{uint32\_t elapsed,start,end;}
+\DoxyCodeLine{  \mbox{\hyperlink{group___timer_ga2b8da0715991dfd23662f83897f25e18}{TimerG12\_Init}}(); \textcolor{comment}{// start timer G12 }}
+\DoxyCodeLine{  start = TIMG12-\/>COUNTERREGS.CTR;}
+\DoxyCodeLine{  myfunction();}
+\DoxyCodeLine{  end = TIMG12-\/>COUNTERREGS.CTR;}
+\DoxyCodeLine{  elapsed = start-\/end; \textcolor{comment}{// 12.5ns resolution}}
+
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___timer_gaa1283f4919260d85029bf9998a11c58d}\label{group___timer_gaa1283f4919260d85029bf9998a11c58d}} 
+\index{Timer@{Timer}!TimerG12\_IntArm@{TimerG12\_IntArm}}
+\index{TimerG12\_IntArm@{TimerG12\_IntArm}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{TimerG12\_IntArm()}{TimerG12\_IntArm()}}
+{\footnotesize\ttfamily void Timer\+G12\+\_\+\+Int\+Arm (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{period,  }\item[{uint32\+\_\+t}]{priority }\end{DoxyParamCaption})}
+
+
+
+Initialize Timer G12 interrupt. 
+
+Arm 32-\/bit periodic interrupts on Timer G12. No prescale Timer\+G12 is on power Domain PD1
+\begin{DoxyItemize}
+\item 32MHz bus clock, Timer clock is 32MHz
+\item 40MHz bus clock, Timer clock is ULPCLK 40MHz
+\item 80MHz bus clock, Timer clock is ULPCLK 80MHz
+\end{DoxyItemize}
+
+frequency = Timer\+Clock/period 
+\begin{DoxyParams}{Parameters}
+{\em period} & 32-\/bit sets the interrupt period \\
+\hline
+{\em priority} & is 0(highest),1,2 or 3(lowest) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+interrupts will be enabled in main after all initialization User defines their own ISR like the following 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{uint32\_t count;}
+\DoxyCodeLine{\textcolor{keywordtype}{void} TIMG12\_IRQHandler(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{  \textcolor{keywordflow}{if}((TIMG12-\/>CPU\_INT.IIDX) == 1)\{ \textcolor{comment}{// this will acknowledge}}
+\DoxyCodeLine{    GPIOB-\/>DOUTTGL31\_0 = \mbox{\hyperlink{group___launch_pad_gacfbc006ea433ad708fdee3e82996e721}{GREEN}}; \textcolor{comment}{// toggle PB27}}
+\DoxyCodeLine{    count++;}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___timer_gacab8213ae33da79d0627f0e2dd8da8c4}\label{group___timer_gacab8213ae33da79d0627f0e2dd8da8c4}} 
+\index{Timer@{Timer}!TimerG6\_IntArm@{TimerG6\_IntArm}}
+\index{TimerG6\_IntArm@{TimerG6\_IntArm}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{TimerG6\_IntArm()}{TimerG6\_IntArm()}}
+{\footnotesize\ttfamily void Timer\+G6\+\_\+\+Int\+Arm (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{period,  }\item[{uint32\+\_\+t}]{prescale,  }\item[{uint32\+\_\+t}]{priority }\end{DoxyParamCaption})}
+
+
+
+Initialize Timer G6 interrupt. 
+
+Arm 16-\/bit periodic interrupts on Timer G6. Timer\+G6 is on power Domain PD1
+\begin{DoxyItemize}
+\item 32MHz bus clock, Timer clock is 32MHz
+\item 40MHz bus clock, Timer clock is ULPCLK 40MHz
+\item 80MHz bus clock, Timer clock is ULPCLK 80MHz
+\end{DoxyItemize}
+
+frequency = Timer\+Clock/prescale/period 
+\begin{DoxyParams}{Parameters}
+{\em period} & sets the interrupt 16-\/bit period \\
+\hline
+{\em prescale} & sets the timer prescale \\
+\hline
+{\em priority} & is 0(highest),1,2 or 3(lowest) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+interrupts will be enabled in main after all initialization User defines their own ISR like the following 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{uint32\_t count;}
+\DoxyCodeLine{\textcolor{keywordtype}{void} TIMG6\_IRQHandler(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{  \textcolor{keywordflow}{if}((TIMG6-\/>CPU\_INT.IIDX) == 1)\{ \textcolor{comment}{// this will acknowledge}}
+\DoxyCodeLine{    GPIOB-\/>DOUTTGL31\_0 = \mbox{\hyperlink{group___launch_pad_gacfbc006ea433ad708fdee3e82996e721}{GREEN}}; \textcolor{comment}{// toggle PB27}}
+\DoxyCodeLine{    count++;}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___timer_gafd85ddb7435c216507fe10fb02d071cb}\label{group___timer_gafd85ddb7435c216507fe10fb02d071cb}} 
+\index{Timer@{Timer}!TimerG7\_IntArm@{TimerG7\_IntArm}}
+\index{TimerG7\_IntArm@{TimerG7\_IntArm}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{TimerG7\_IntArm()}{TimerG7\_IntArm()}}
+{\footnotesize\ttfamily void Timer\+G7\+\_\+\+Int\+Arm (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{period,  }\item[{uint32\+\_\+t}]{prescale,  }\item[{uint32\+\_\+t}]{priority }\end{DoxyParamCaption})}
+
+
+
+Initialize Timer G7 interrupt. 
+
+Arm 16-\/bit periodic interrupts on Timer G7. Timer\+G7 is on power Domain PD1
+\begin{DoxyItemize}
+\item 32MHz bus clock, Timer clock is 32MHz
+\item 40MHz bus clock, Timer clock is ULPCLK 40MHz
+\item 80MHz bus clock, Timer clock is ULPCLK 80MHz
+\end{DoxyItemize}
+
+frequency = Timer\+Clock/prescale/period 
+\begin{DoxyParams}{Parameters}
+{\em period} & sets the interrupt 16-\/bit period \\
+\hline
+{\em prescale} & sets the timer prescale \\
+\hline
+{\em priority} & is 0(highest),1,2 or 3(lowest) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+interrupts will be enabled in main after all initialization User defines their own ISR like the following 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{uint32\_t count;}
+\DoxyCodeLine{\textcolor{keywordtype}{void} TIMG7\_IRQHandler(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{  \textcolor{keywordflow}{if}((TIMG7-\/>CPU\_INT.IIDX) == 1)\{ \textcolor{comment}{// this will acknowledge}}
+\DoxyCodeLine{    GPIOB-\/>DOUTTGL31\_0 = \mbox{\hyperlink{group___launch_pad_gacfbc006ea433ad708fdee3e82996e721}{GREEN}}; \textcolor{comment}{// toggle PB27}}
+\DoxyCodeLine{    count++;}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___timer_gacee87504eeb64f8d48e1f8ec6b51fd8c}\label{group___timer_gacee87504eeb64f8d48e1f8ec6b51fd8c}} 
+\index{Timer@{Timer}!TimerG8\_IntArm@{TimerG8\_IntArm}}
+\index{TimerG8\_IntArm@{TimerG8\_IntArm}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{TimerG8\_IntArm()}{TimerG8\_IntArm()}}
+{\footnotesize\ttfamily void Timer\+G8\+\_\+\+Int\+Arm (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{period,  }\item[{uint32\+\_\+t}]{prescale,  }\item[{uint32\+\_\+t}]{priority }\end{DoxyParamCaption})}
+
+
+
+Initialize Timer G8 interrupt. 
+
+Arm 16-\/bit periodic interrupts on Timer G8. Timer\+G8 is on power Domain PD0
+\begin{DoxyItemize}
+\item 32MHz bus clock, Timer clock is 32MHz
+\item 40MHz bus clock, Timer clock is ULPCLK 20MHz
+\item 80MHz bus clock, Timer clock is ULPCLK 40MHz
+\end{DoxyItemize}
+
+frequency = Timer\+Clock/prescale/period 
+\begin{DoxyParams}{Parameters}
+{\em period} & sets the interrupt 16-\/bit period \\
+\hline
+{\em prescale} & sets the timer prescale \\
+\hline
+{\em priority} & is 0(highest),1,2 or 3(lowest) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+interrupts will be enabled in main after all initialization User defines their own ISR like the following 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{uint32\_t count;}
+\DoxyCodeLine{\textcolor{keywordtype}{void} TIMG8\_IRQHandler(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{  \textcolor{keywordflow}{if}((TIMG8-\/>CPU\_INT.IIDX) == 1)\{ \textcolor{comment}{// this will acknowledge}}
+\DoxyCodeLine{    GPIOB-\/>DOUTTGL31\_0 = \mbox{\hyperlink{group___launch_pad_gacfbc006ea433ad708fdee3e82996e721}{GREEN}}; \textcolor{comment}{// toggle PB27}}
+\DoxyCodeLine{    count++;}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+\end{DoxyNote}

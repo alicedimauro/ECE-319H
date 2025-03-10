@@ -1,0 +1,73 @@
+\hypertarget{group___edge_triggered}{}\doxysection{Edge\+Triggered}
+\label{group___edge_triggered}\index{EdgeTriggered@{EdgeTriggered}}
+
+
+Edge triggered interrupts.  
+
+
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{_edge_triggered_8h}{Edge\+Triggered.\+h}}
+\begin{DoxyCompactList}\small\item\em Edge triggered interrupts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___edge_triggered_gaf5c75cb18ba9cddad40e9bcab89ee128}{Edge\+Triggered\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize edge-\/triggered interrupt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Edge triggered interrupts. 
+
+\hypertarget{group___edge_triggered_Edgepins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{Edge triggered pin}\label{group___edge_triggered_Edgepins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-2}
+\endhead
+PB21 &S3 negative logic switch \\\cline{1-2}
+\end{longtabu}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___edge_triggered_gaf5c75cb18ba9cddad40e9bcab89ee128}\label{group___edge_triggered_gaf5c75cb18ba9cddad40e9bcab89ee128}} 
+\index{EdgeTriggered@{EdgeTriggered}!EdgeTriggered\_Init@{EdgeTriggered\_Init}}
+\index{EdgeTriggered\_Init@{EdgeTriggered\_Init}!EdgeTriggered@{EdgeTriggered}}
+\doxysubsubsection{\texorpdfstring{EdgeTriggered\_Init()}{EdgeTriggered\_Init()}}
+{\footnotesize\ttfamily void Edge\+Triggered\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize edge-\/triggered interrupt. 
+
+Arm interrupts on rise and fall of PB21 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___launch_pad_gadd09bb41f83980522cc25042d9018b61}{Launch\+Pad\+\_\+\+Init()}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+interrupts will be enabled in main after all initialization User defines their own ISR like the following 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{uint32\_t Count;}
+\DoxyCodeLine{\textcolor{keywordtype}{void} GROUP1\_IRQHandler(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{  Count++; \textcolor{comment}{// number of touches}}
+\DoxyCodeLine{  GPIOB-\/>DOUTTGL31\_0 = \mbox{\hyperlink{group___launch_pad_ga8d23feea868a983c8c2b661e1e16972f}{RED}}; \textcolor{comment}{// toggle PB26}}
+\DoxyCodeLine{  GPIOB-\/>CPU\_INT.ICLR = 0x00200000;   \textcolor{comment}{// clear bit 21}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+\end{DoxyNote}

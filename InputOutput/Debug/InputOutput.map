@@ -1,0 +1,254 @@
+******************************************************************************
+            TI ARM Clang Linker PC v4.0.1                      
+******************************************************************************
+>> Linked Thu Dec 26 10:03:26 2024
+
+OUTPUT FILE NAME:   <InputOutput.out>
+ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 00000249
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00020000  000002e8  0001fd18  R  X
+  SRAM                  20200000   00008000  00000200  00007e00  RW X
+  BCR_CONFIG            41c00000   00000080  00000000  00000080  R   
+  BSL_CONFIG            41c00100   00000080  00000000  00000080  R   
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    000002e8   000002e8    r-x
+  00000000    00000000    000000c0   000000c0    r-- .intvecs
+  000000c0    000000c0    00000228   00000228    r-x .text
+20207e00    20207e00    00000200   00000000    rw-
+  20207e00    20207e00    00000200   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    000000c0     
+                  00000000    000000c0     startup_mspm0g3507_ticlang.o (.intvecs)
+
+.text      0    000000c0    00000228     
+                  000000c0    0000007c     LaunchPad.o (.text.LaunchPad_Init)
+                  0000013c    00000064     InputOutputmain.o (.text.main)
+                  000001a0    00000038     LaunchPad.o (.text.ActivatePortA_B)
+                  000001d8    00000028     LaunchPad.o (.text.LaunchPad_LED1)
+                  00000200    00000028     LaunchPad.o (.text.LaunchPad_LED)
+                  00000228    00000020     LaunchPad.o (.text.LaunchPad_InS3)
+                  00000248    00000020     libc.a : boot_cortex_m.c.obj (.text:_c_int00_noinit_noargs)
+                  00000268    0000001c     startup_mspm0g3507_ticlang.o (.text.Default_Handler)
+                  00000284    0000001c     startup_mspm0g3507_ticlang.o (.text.HardFault_Handler)
+                  000002a0    0000001c     LaunchPad.o (.text.LaunchPad_InS2)
+                  000002bc    00000010     Clock.o (.text.Clock_Delay)
+                  000002cc    00000010     LaunchPad.o (.text.Delay)
+                  000002dc    00000004     startup_mspm0g3507_ticlang.o (.text.Reset_Handler)
+                  000002e0    00000004     libc.a : pre_init.c.obj (.text._system_pre_init)
+                  000002e4    00000004            : exit.c.obj (.text:abort)
+
+.cinit     0    00000000    00000000     
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.binit     0    00000000    00000000     
+
+.stack     0    20207e00    00000200     UNINITIALIZED
+                  20207e00    00000004     libc.a : boot_cortex_m.c.obj (.stack)
+                  20207e04    000001fc     --HOLE--
+
+__llvm_prf_cnts 
+*          0    20200000    00000000     UNINITIALIZED
+
+__llvm_prf_bits 
+*          0    20200000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                         code   ro data   rw data
+       ------                         ----   -------   -------
+    .\
+       LaunchPad.o                    336    0         0      
+       InputOutputmain.o              100    0         0      
+       Clock.o                        16     0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         452    0         0      
+                                                              
+    .\ticlang\
+       startup_mspm0g3507_ticlang.o   60     192       0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         60     192       0      
+                                                              
+    C:\ti\ccs2000\ccs\tools\compiler\ti-cgt-armllvm_4.0.1.LTS\lib\armv6m-ti-none-eabi/c/libc.a
+       boot_cortex_m.c.obj            32     0         0      
+       exit.c.obj                     4      0         0      
+       pre_init.c.obj                 4      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         40     0         0      
+                                                              
+       Stack:                         0      0         512    
+    +--+------------------------------+------+---------+---------+
+       Grand Total:                   552    192       512    
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                    
+-------   ----                    
+00000269  ADC0_IRQHandler         
+00000269  ADC1_IRQHandler         
+00000269  AES_IRQHandler          
+000001a1  ActivatePortA_B         
+000002e4  C$$EXIT                 
+00000269  CANFD0_IRQHandler       
+000002bd  Clock_Delay             
+00000269  DAC0_IRQHandler         
+00000269  DMA_IRQHandler          
+00000269  Default_Handler         
+000002cd  Delay                   
+00000269  GROUP0_IRQHandler       
+00000269  GROUP1_IRQHandler       
+00000285  HardFault_Handler       
+00000269  I2C0_IRQHandler         
+00000269  I2C1_IRQHandler         
+000002a1  LaunchPad_InS2          
+00000229  LaunchPad_InS3          
+000000c1  LaunchPad_Init          
+00000201  LaunchPad_LED           
+000001d9  LaunchPad_LED1          
+00000269  NMI_Handler             
+00000269  PendSV_Handler          
+00000269  RTC_IRQHandler          
+000002dd  Reset_Handler           
+00000269  SPI0_IRQHandler         
+00000269  SPI1_IRQHandler         
+00000269  SVC_Handler             
+00000269  SysTick_Handler         
+00000269  TIMA0_IRQHandler        
+00000269  TIMA1_IRQHandler        
+00000269  TIMG0_IRQHandler        
+00000269  TIMG12_IRQHandler       
+00000269  TIMG6_IRQHandler        
+00000269  TIMG7_IRQHandler        
+00000269  TIMG8_IRQHandler        
+00000269  UART0_IRQHandler        
+00000269  UART1_IRQHandler        
+00000269  UART2_IRQHandler        
+00000269  UART3_IRQHandler        
+20208000  __STACK_END             
+00000200  __STACK_SIZE            
+00000000  __TI_ATRegion0_region_sz
+00000000  __TI_ATRegion0_src_addr 
+00000000  __TI_ATRegion0_trg_addr 
+00000000  __TI_ATRegion1_region_sz
+00000000  __TI_ATRegion1_src_addr 
+00000000  __TI_ATRegion1_trg_addr 
+00000000  __TI_ATRegion2_region_sz
+00000000  __TI_ATRegion2_src_addr 
+00000000  __TI_ATRegion2_trg_addr 
+00000000  __TI_CINIT_Base         
+00000000  __TI_CINIT_Limit        
+00000000  __TI_CINIT_Warm         
+ffffffff  __TI_pprof_out_hndl     
+ffffffff  __TI_prof_data_size     
+ffffffff  __TI_prof_data_start    
+00000000  __TI_static_base__      
+ffffffff  __binit__               
+UNDEFED   __mpu_init              
+20207e00  __stack                 
+20200000  __start___llvm_prf_bits 
+20200000  __start___llvm_prf_cnts 
+20200000  __stop___llvm_prf_bits  
+20200000  __stop___llvm_prf_cnts  
+00000249  _c_int00_noinit_noargs  
+000002e1  _system_pre_init        
+000002e5  abort                   
+ffffffff  binit                   
+00000000  interruptVectors        
+0000013d  main                    
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                    
+-------   ----                    
+00000000  __TI_ATRegion0_region_sz
+00000000  __TI_ATRegion0_src_addr 
+00000000  __TI_ATRegion0_trg_addr 
+00000000  __TI_ATRegion1_region_sz
+00000000  __TI_ATRegion1_src_addr 
+00000000  __TI_ATRegion1_trg_addr 
+00000000  __TI_ATRegion2_region_sz
+00000000  __TI_ATRegion2_src_addr 
+00000000  __TI_ATRegion2_trg_addr 
+00000000  __TI_CINIT_Base         
+00000000  __TI_CINIT_Limit        
+00000000  __TI_CINIT_Warm         
+00000000  __TI_static_base__      
+00000000  interruptVectors        
+000000c1  LaunchPad_Init          
+0000013d  main                    
+000001a1  ActivatePortA_B         
+000001d9  LaunchPad_LED1          
+00000200  __STACK_SIZE            
+00000201  LaunchPad_LED           
+00000229  LaunchPad_InS3          
+00000249  _c_int00_noinit_noargs  
+00000269  ADC0_IRQHandler         
+00000269  ADC1_IRQHandler         
+00000269  AES_IRQHandler          
+00000269  CANFD0_IRQHandler       
+00000269  DAC0_IRQHandler         
+00000269  DMA_IRQHandler          
+00000269  Default_Handler         
+00000269  GROUP0_IRQHandler       
+00000269  GROUP1_IRQHandler       
+00000269  I2C0_IRQHandler         
+00000269  I2C1_IRQHandler         
+00000269  NMI_Handler             
+00000269  PendSV_Handler          
+00000269  RTC_IRQHandler          
+00000269  SPI0_IRQHandler         
+00000269  SPI1_IRQHandler         
+00000269  SVC_Handler             
+00000269  SysTick_Handler         
+00000269  TIMA0_IRQHandler        
+00000269  TIMA1_IRQHandler        
+00000269  TIMG0_IRQHandler        
+00000269  TIMG12_IRQHandler       
+00000269  TIMG6_IRQHandler        
+00000269  TIMG7_IRQHandler        
+00000269  TIMG8_IRQHandler        
+00000269  UART0_IRQHandler        
+00000269  UART1_IRQHandler        
+00000269  UART2_IRQHandler        
+00000269  UART3_IRQHandler        
+00000285  HardFault_Handler       
+000002a1  LaunchPad_InS2          
+000002bd  Clock_Delay             
+000002cd  Delay                   
+000002dd  Reset_Handler           
+000002e1  _system_pre_init        
+000002e4  C$$EXIT                 
+000002e5  abort                   
+20200000  __start___llvm_prf_bits 
+20200000  __start___llvm_prf_cnts 
+20200000  __stop___llvm_prf_bits  
+20200000  __stop___llvm_prf_cnts  
+20207e00  __stack                 
+20208000  __STACK_END             
+ffffffff  __TI_pprof_out_hndl     
+ffffffff  __TI_prof_data_size     
+ffffffff  __TI_prof_data_start    
+ffffffff  __binit__               
+ffffffff  binit                   
+UNDEFED   __mpu_init              
+
+[71 symbols]

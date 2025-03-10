@@ -1,0 +1,99 @@
+\hypertarget{_key_8h}{}\doxysection{inc/\+Key.h File Reference}
+\label{_key_8h}\index{inc/Key.h@{inc/Key.h}}
+
+
+4-\/bit keyboard connected to PB19-\/\+PB16  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_key_8h_a3f147fc769d371775875ecc2dfe3934d}{Key\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize keyboard. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{_key_8h_a245fdce84b810764358c8abf438fde31}{Key\+\_\+\+In}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+4-\/bit keyboard connected to PB19-\/\+PB16 
+
+Lab 5. Digital Piano using a Digital to Analog Converter~\newline
+ For more information see~\newline
+ \href{https://docs.google.com/document/d/1DVmHjqsx24FvLp4x8KKyr5UmDeDlBlfeQPsVvKFQF_k/edit}{\texttt{ https\+://docs.\+google.\+com/document/d/1\+DVm\+Hjqsx24\+Fv\+Lp4x8\+KKyr5\+Um\+De\+Dl\+Blfe\+QPs\+Vv\+KFQF\+\_\+k/edit}}~\newline
+ \begin{DoxyVersion}{Version}
+ECE319K Spring 2025 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Your names go here 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Lab solution, do not post, 
+\end{DoxyCopyright}
+\begin{DoxyWarning}{Warning}
+AS-\/\+IS 
+\end{DoxyWarning}
+\begin{DoxyDate}{Date}
+December 23, 2024 \hypertarget{_key_8h_Lab5inputpins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{Pins on the 4-\/bit Keyboard}\label{_key_8h_Lab5inputpins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ GPIO}&\cellcolor{\tableheadbgcolor}\textbf{ Hardware }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ GPIO}&\cellcolor{\tableheadbgcolor}\textbf{ Hardware }\\\cline{1-3}
+\endhead
+PB19 &input&bit 3 (note with highest frequency) \\\cline{1-3}
+PB18 &input&bit 2 \\\cline{1-3}
+PB17 &input&bit 1 \\\cline{1-3}
+PB16 &input&bit 0 (note with lowest frequency) \\\cline{1-3}
+\end{longtabu}
+
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_key_8h_a245fdce84b810764358c8abf438fde31}\label{_key_8h_a245fdce84b810764358c8abf438fde31}} 
+\index{Key.h@{Key.h}!Key\_In@{Key\_In}}
+\index{Key\_In@{Key\_In}!Key.h@{Key.h}}
+\doxysubsubsection{\texorpdfstring{Key\_In()}{Key\_In()}}
+{\footnotesize\ttfamily uint32\+\_\+t Key\+\_\+\+In (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Input from piano key inputs on PB19-\/\+PB16 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 to 15 depending on keys 0x01 is just Key0, 0x02 is just Key1, 0x04 is just Key2, 0x08 is just Key3 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_key_8h_a3f147fc769d371775875ecc2dfe3934d}\label{_key_8h_a3f147fc769d371775875ecc2dfe3934d}} 
+\index{Key.h@{Key.h}!Key\_Init@{Key\_Init}}
+\index{Key\_Init@{Key\_Init}!Key.h@{Key.h}}
+\doxysubsubsection{\texorpdfstring{Key\_Init()}{Key\_Init()}}
+{\footnotesize\ttfamily void Key\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize keyboard. 
+
+Initialize 4-\/bit keyboard
+\begin{DoxyItemize}
+\item Piano key 3 PB19 (note with highest frequency)
+\item Piano key 2 PB18
+\item Piano key 1 PB17
+\item Piano key 0 PB16 (note with lowest frequency) 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Launch\+Pad\+\_\+\+Init has been called; this program should not reset Port B 
+\end{DoxyNote}
+
+\end{DoxyItemize}

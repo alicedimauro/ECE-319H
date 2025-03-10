@@ -1,0 +1,461 @@
+\hypertarget{group___launch_pad}{}\doxysection{Launch\+Pad}
+\label{group___launch_pad}\index{LaunchPad@{LaunchPad}}
+
+
+Launch\+Pad input/output.  
+
+
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{_launch_pad_8h}{Launch\+Pad.\+h}}
+\begin{DoxyCompactList}\small\item\em Initialize Launch\+Pad switches and LEDs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___launch_pad_gadbb57b492bb5968365dbbd89f9ce3036}\label{group___launch_pad_gadbb57b492bb5968365dbbd89f9ce3036}} 
+\#define \mbox{\hyperlink{group___launch_pad_gadbb57b492bb5968365dbbd89f9ce3036}{RED1}}~1
+\begin{DoxyCompactList}\small\item\em RED1 is a constant to select red LED1 on Port A, PA0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___launch_pad_ga79d10e672abb49ad63eeaa8aaef57c38}\label{group___launch_pad_ga79d10e672abb49ad63eeaa8aaef57c38}} 
+\#define \mbox{\hyperlink{group___launch_pad_ga79d10e672abb49ad63eeaa8aaef57c38}{BLUE}}~(1$<$$<$22)
+\begin{DoxyCompactList}\small\item\em BLUE is a constant to select blue LED2 on Port B, PB22. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___launch_pad_ga8d23feea868a983c8c2b661e1e16972f}\label{group___launch_pad_ga8d23feea868a983c8c2b661e1e16972f}} 
+\#define \mbox{\hyperlink{group___launch_pad_ga8d23feea868a983c8c2b661e1e16972f}{RED}}~(1$<$$<$26)
+\begin{DoxyCompactList}\small\item\em RED is a constant to select red LED2 on Port B, PB26. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___launch_pad_gacfbc006ea433ad708fdee3e82996e721}\label{group___launch_pad_gacfbc006ea433ad708fdee3e82996e721}} 
+\#define \mbox{\hyperlink{group___launch_pad_gacfbc006ea433ad708fdee3e82996e721}{GREEN}}~(1$<$$<$27)
+\begin{DoxyCompactList}\small\item\em GREEN is a constant to select green LED2 on Port B, PB27. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___launch_pad_gad5e70dee3c36d645b0eb1743b8a7d2bf}\label{group___launch_pad_gad5e70dee3c36d645b0eb1743b8a7d2bf}} 
+\#define \mbox{\hyperlink{group___launch_pad_gad5e70dee3c36d645b0eb1743b8a7d2bf}{S2}}~(1$<$$<$18)
+\begin{DoxyCompactList}\small\item\em S2 is a constant to select switch 2 on Port A, PA18. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___launch_pad_gab29872af8ce9dc9463b7f7ecfbea02ae}\label{group___launch_pad_gab29872af8ce9dc9463b7f7ecfbea02ae}} 
+\#define \mbox{\hyperlink{group___launch_pad_gab29872af8ce9dc9463b7f7ecfbea02ae}{S3}}~(1$<$$<$21)
+\begin{DoxyCompactList}\small\item\em S3 is a constant to select switch 3 on Port B, PB21. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___launch_pad_ga9fc443a053b5ad7b4e6f1825ca2acab9}\label{group___launch_pad_ga9fc443a053b5ad7b4e6f1825ca2acab9}} 
+\#define \mbox{\hyperlink{group___launch_pad_ga9fc443a053b5ad7b4e6f1825ca2acab9}{PA0\+INDEX}}~0
+\begin{DoxyCompactList}\small\item\em The following constants are used to index into the PINCM table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___launch_pad_ga679ef5780b61e9a6e10f932cce6df338}\label{group___launch_pad_ga679ef5780b61e9a6e10f932cce6df338}} 
+\#define {\bfseries PA1\+INDEX}~1
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga98c6af3dc5455af352992bb44af7964c}\label{group___launch_pad_ga98c6af3dc5455af352992bb44af7964c}} 
+\#define {\bfseries PA2\+INDEX}~6
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga86446b5fda8c32ec783a19e9000bd887}\label{group___launch_pad_ga86446b5fda8c32ec783a19e9000bd887}} 
+\#define {\bfseries PA3\+INDEX}~7
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga6404dd5c275a6c1d138efd1be5535b6a}\label{group___launch_pad_ga6404dd5c275a6c1d138efd1be5535b6a}} 
+\#define {\bfseries PA4\+INDEX}~8
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga9c86390f912ef094ec0fd28c2c3df2fc}\label{group___launch_pad_ga9c86390f912ef094ec0fd28c2c3df2fc}} 
+\#define {\bfseries PA5\+INDEX}~9
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga4ddd2418d27d57bb23eca64e30ea85e4}\label{group___launch_pad_ga4ddd2418d27d57bb23eca64e30ea85e4}} 
+\#define {\bfseries PA6\+INDEX}~10
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga82fbaa0609d74f1058235f269e0a2873}\label{group___launch_pad_ga82fbaa0609d74f1058235f269e0a2873}} 
+\#define {\bfseries PA7\+INDEX}~13
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga3bdbe0c7dfd64fe49cb44391b1e2ab89}\label{group___launch_pad_ga3bdbe0c7dfd64fe49cb44391b1e2ab89}} 
+\#define {\bfseries PA8\+INDEX}~18
+\item 
+\mbox{\Hypertarget{group___launch_pad_gafd3ed48443985c105918296e933ca6e6}\label{group___launch_pad_gafd3ed48443985c105918296e933ca6e6}} 
+\#define {\bfseries PA9\+INDEX}~19
+\item 
+\mbox{\Hypertarget{group___launch_pad_gab71a6e9b8308269cc0563fd4721f8609}\label{group___launch_pad_gab71a6e9b8308269cc0563fd4721f8609}} 
+\#define {\bfseries PA10\+INDEX}~20
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga714636ad0bf6254606d5f028cbebbbc3}\label{group___launch_pad_ga714636ad0bf6254606d5f028cbebbbc3}} 
+\#define {\bfseries PA11\+INDEX}~21
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga932addb0da05e07533cf0b85b1d6dd0b}\label{group___launch_pad_ga932addb0da05e07533cf0b85b1d6dd0b}} 
+\#define {\bfseries PA12\+INDEX}~33
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga58e31e354d4ed16380cb94bb76428280}\label{group___launch_pad_ga58e31e354d4ed16380cb94bb76428280}} 
+\#define {\bfseries PA13\+INDEX}~34
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga3de044dada74b224f4e869270db7e6ec}\label{group___launch_pad_ga3de044dada74b224f4e869270db7e6ec}} 
+\#define {\bfseries PA14\+INDEX}~35
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga892d64c6d7f59e1699c3f7460fc03c4e}\label{group___launch_pad_ga892d64c6d7f59e1699c3f7460fc03c4e}} 
+\#define {\bfseries PA15\+INDEX}~36
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga51609f4bfe79ea8360c80f78181f12f7}\label{group___launch_pad_ga51609f4bfe79ea8360c80f78181f12f7}} 
+\#define {\bfseries PA16\+INDEX}~37
+\item 
+\mbox{\Hypertarget{group___launch_pad_gadb3f4514822e3c6ed981502184c02ff3}\label{group___launch_pad_gadb3f4514822e3c6ed981502184c02ff3}} 
+\#define {\bfseries PA17\+INDEX}~38
+\item 
+\mbox{\Hypertarget{group___launch_pad_gad5a4ddf936ac84d2214371c06d3d95f8}\label{group___launch_pad_gad5a4ddf936ac84d2214371c06d3d95f8}} 
+\#define {\bfseries PA18\+INDEX}~39
+\item 
+\mbox{\Hypertarget{group___launch_pad_gaaff455cebc79fb85cef9da27425f1247}\label{group___launch_pad_gaaff455cebc79fb85cef9da27425f1247}} 
+\#define {\bfseries PA19\+INDEX}~40
+\item 
+\mbox{\Hypertarget{group___launch_pad_gab901c768a3426014f7bda2fa8805b3f0}\label{group___launch_pad_gab901c768a3426014f7bda2fa8805b3f0}} 
+\#define {\bfseries PA20\+INDEX}~41
+\item 
+\mbox{\Hypertarget{group___launch_pad_gac1c9e16666cc7b29387fc3f181967805}\label{group___launch_pad_gac1c9e16666cc7b29387fc3f181967805}} 
+\#define {\bfseries PA21\+INDEX}~45
+\item 
+\mbox{\Hypertarget{group___launch_pad_gac893c6d8247c5d24fd92b11a2d412c40}\label{group___launch_pad_gac893c6d8247c5d24fd92b11a2d412c40}} 
+\#define {\bfseries PA22\+INDEX}~46
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga730c4020d972efc30a80e2b88f8ccbfe}\label{group___launch_pad_ga730c4020d972efc30a80e2b88f8ccbfe}} 
+\#define {\bfseries PA23\+INDEX}~52
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga0d9201062c630869e8f988255f7ac631}\label{group___launch_pad_ga0d9201062c630869e8f988255f7ac631}} 
+\#define {\bfseries PA24\+INDEX}~53
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga4ede4d1570bf1f77c935db24f5ac5c50}\label{group___launch_pad_ga4ede4d1570bf1f77c935db24f5ac5c50}} 
+\#define {\bfseries PA25\+INDEX}~54
+\item 
+\mbox{\Hypertarget{group___launch_pad_gae8776d8474a24f3f983a034bc0ee4f79}\label{group___launch_pad_gae8776d8474a24f3f983a034bc0ee4f79}} 
+\#define {\bfseries PA26\+INDEX}~58
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga8f284e073cb8fd7a71963c25652dce4b}\label{group___launch_pad_ga8f284e073cb8fd7a71963c25652dce4b}} 
+\#define {\bfseries PA27\+INDEX}~59
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga6c4b4286cec9d9e1fffe16d961251580}\label{group___launch_pad_ga6c4b4286cec9d9e1fffe16d961251580}} 
+\#define {\bfseries PA28\+INDEX}~2
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga1558910176fb46b252234f3aa7f54a94}\label{group___launch_pad_ga1558910176fb46b252234f3aa7f54a94}} 
+\#define {\bfseries PA29\+INDEX}~3
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga38421a73308bccdf65487455dbc8d134}\label{group___launch_pad_ga38421a73308bccdf65487455dbc8d134}} 
+\#define {\bfseries PA30\+INDEX}~4
+\item 
+\mbox{\Hypertarget{group___launch_pad_gac70c0709ad7029e64618f5c693a8ba0b}\label{group___launch_pad_gac70c0709ad7029e64618f5c693a8ba0b}} 
+\#define {\bfseries PA31\+INDEX}~5
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga914c8d3647c4b29c953e469afcf4a2cd}\label{group___launch_pad_ga914c8d3647c4b29c953e469afcf4a2cd}} 
+\#define {\bfseries PB0\+INDEX}~11
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga978e2bd304753d14a4f2c6d8b5cfd249}\label{group___launch_pad_ga978e2bd304753d14a4f2c6d8b5cfd249}} 
+\#define {\bfseries PB1\+INDEX}~12
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga8cac75783ec9ba65006767a7849327f1}\label{group___launch_pad_ga8cac75783ec9ba65006767a7849327f1}} 
+\#define {\bfseries PB2\+INDEX}~14
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga5c9db40685093082fb730f4eb2500737}\label{group___launch_pad_ga5c9db40685093082fb730f4eb2500737}} 
+\#define {\bfseries PB3\+INDEX}~15
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga053db83e682e1e1811e8ea638399f793}\label{group___launch_pad_ga053db83e682e1e1811e8ea638399f793}} 
+\#define {\bfseries PB4\+INDEX}~16
+\item 
+\mbox{\Hypertarget{group___launch_pad_gacea34a658362974528d4532329f52da7}\label{group___launch_pad_gacea34a658362974528d4532329f52da7}} 
+\#define {\bfseries PB5\+INDEX}~17
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga24e36f085726fa2f4bd2354e0519a478}\label{group___launch_pad_ga24e36f085726fa2f4bd2354e0519a478}} 
+\#define {\bfseries PB6\+INDEX}~22
+\item 
+\mbox{\Hypertarget{group___launch_pad_gac2a2e3a71f909ecb41abc14391527b7a}\label{group___launch_pad_gac2a2e3a71f909ecb41abc14391527b7a}} 
+\#define {\bfseries PB7\+INDEX}~23
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga1ac1d23d81a0445c08eca2e06d15a954}\label{group___launch_pad_ga1ac1d23d81a0445c08eca2e06d15a954}} 
+\#define {\bfseries PB8\+INDEX}~24
+\item 
+\mbox{\Hypertarget{group___launch_pad_gaf660ef46db6640be27480cd9006fde9a}\label{group___launch_pad_gaf660ef46db6640be27480cd9006fde9a}} 
+\#define {\bfseries PB9\+INDEX}~25
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga2f15bf6eb9469a61302915e774e1f4b5}\label{group___launch_pad_ga2f15bf6eb9469a61302915e774e1f4b5}} 
+\#define {\bfseries PB10\+INDEX}~26
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga2dcd7d36064653f422b61c047be9d4c4}\label{group___launch_pad_ga2dcd7d36064653f422b61c047be9d4c4}} 
+\#define {\bfseries PB11\+INDEX}~27
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga36f5b884acbdd1df006bfed975e64876}\label{group___launch_pad_ga36f5b884acbdd1df006bfed975e64876}} 
+\#define {\bfseries PB12\+INDEX}~28
+\item 
+\mbox{\Hypertarget{group___launch_pad_gae62649a80c41dcbddd2df0666aa461e3}\label{group___launch_pad_gae62649a80c41dcbddd2df0666aa461e3}} 
+\#define {\bfseries PB13\+INDEX}~29
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga9264229ef2e40d08772c05ebfa233475}\label{group___launch_pad_ga9264229ef2e40d08772c05ebfa233475}} 
+\#define {\bfseries PB14\+INDEX}~30
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga44097c3b71a560f132d44f33dcc50d9a}\label{group___launch_pad_ga44097c3b71a560f132d44f33dcc50d9a}} 
+\#define {\bfseries PB15\+INDEX}~31
+\item 
+\mbox{\Hypertarget{group___launch_pad_gaeef00b6473a96fa71f385ae16d7a5a10}\label{group___launch_pad_gaeef00b6473a96fa71f385ae16d7a5a10}} 
+\#define {\bfseries PB16\+INDEX}~32
+\item 
+\mbox{\Hypertarget{group___launch_pad_gae3e8c67d0bdd59f34bb80c9ddcf2ee26}\label{group___launch_pad_gae3e8c67d0bdd59f34bb80c9ddcf2ee26}} 
+\#define {\bfseries PB17\+INDEX}~42
+\item 
+\mbox{\Hypertarget{group___launch_pad_gabc275d0b51c9512a4cc53ee789c8c3ff}\label{group___launch_pad_gabc275d0b51c9512a4cc53ee789c8c3ff}} 
+\#define {\bfseries PB18\+INDEX}~43
+\item 
+\mbox{\Hypertarget{group___launch_pad_gaf42a9f4d3c5a798702f7d15a3c3be7c4}\label{group___launch_pad_gaf42a9f4d3c5a798702f7d15a3c3be7c4}} 
+\#define {\bfseries PB19\+INDEX}~44
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga92e68dfba5bc33739a7e61c13e53739a}\label{group___launch_pad_ga92e68dfba5bc33739a7e61c13e53739a}} 
+\#define {\bfseries PB20\+INDEX}~47
+\item 
+\mbox{\Hypertarget{group___launch_pad_gaa44aa44c50ab720de037012f42964167}\label{group___launch_pad_gaa44aa44c50ab720de037012f42964167}} 
+\#define {\bfseries PB21\+INDEX}~48
+\item 
+\mbox{\Hypertarget{group___launch_pad_gad808aa5650013b078ff87ecb3ac60e4a}\label{group___launch_pad_gad808aa5650013b078ff87ecb3ac60e4a}} 
+\#define {\bfseries PB22\+INDEX}~49
+\item 
+\mbox{\Hypertarget{group___launch_pad_gafdbe06d9ce6c843457f8711caddf1b4b}\label{group___launch_pad_gafdbe06d9ce6c843457f8711caddf1b4b}} 
+\#define {\bfseries PB23\+INDEX}~50
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga96b80b0538ec5aa1cd14cf75fda584a5}\label{group___launch_pad_ga96b80b0538ec5aa1cd14cf75fda584a5}} 
+\#define {\bfseries PB24\+INDEX}~51
+\item 
+\mbox{\Hypertarget{group___launch_pad_gabdd9a211117205c568e4fc060e4216f0}\label{group___launch_pad_gabdd9a211117205c568e4fc060e4216f0}} 
+\#define {\bfseries PB25\+INDEX}~55
+\item 
+\mbox{\Hypertarget{group___launch_pad_ga17bbf088ab8033913e44296f99c422b9}\label{group___launch_pad_ga17bbf088ab8033913e44296f99c422b9}} 
+\#define {\bfseries PB26\+INDEX}~56
+\item 
+\mbox{\Hypertarget{group___launch_pad_gaea5b3a2d6d0bdd34ba15a63c485365ad}\label{group___launch_pad_gaea5b3a2d6d0bdd34ba15a63c485365ad}} 
+\#define {\bfseries PB27\+INDEX}~57
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___launch_pad_gadd09bb41f83980522cc25042d9018b61}{Launch\+Pad\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize Launch\+Pad. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___launch_pad_ga6174cc19ab7ce46c351687717b3ae40b}{Launch\+Pad\+\_\+\+In\+S2}} (void)
+\begin{DoxyCompactList}\small\item\em Input S2. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___launch_pad_gaaaf99ea292022ee6255c207392c36b8e}{Launch\+Pad\+\_\+\+In\+S3}} (void)
+\begin{DoxyCompactList}\small\item\em Input S2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___launch_pad_gaf35108b2b7086af6490531b08f1a058b}{Launch\+Pad\+\_\+\+LED1}} (uint32\+\_\+t led)
+\begin{DoxyCompactList}\small\item\em Output to LED1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___launch_pad_gaccd2418244c007f3d42f0d22f0d35761}{Launch\+Pad\+\_\+\+LED1on}} (void)
+\begin{DoxyCompactList}\small\item\em Turn on LED1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___launch_pad_ga60a40857a5562b38b907a931945ded59}{Launch\+Pad\+\_\+\+LED1off}} (void)
+\begin{DoxyCompactList}\small\item\em Turn off LED1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___launch_pad_gaa541fa804d37b3860684210b9718b94e}{Launch\+Pad\+\_\+\+LED}} (uint32\+\_\+t led)
+\begin{DoxyCompactList}\small\item\em Output to LED. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___launch_pad_ga9cb3c9fb7ade7955b292446385b140dc}{Launch\+Pad\+\_\+\+LEDwhite}} (void)
+\begin{DoxyCompactList}\small\item\em Make LED white. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___launch_pad_ga387e9d59ed4a60546a6aa8d868a34b75}{Launch\+Pad\+\_\+\+LEDoff}} (void)
+\begin{DoxyCompactList}\small\item\em Turn off LED. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Launch\+Pad input/output. 
+
+\hypertarget{group___launch_pad_LaunchPadpins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{Pins on the MSPM0\+G3507 Launch\+Pad}\label{group___launch_pad_LaunchPadpins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ GPIO}&\cellcolor{\tableheadbgcolor}\textbf{ Hardware }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ GPIO}&\cellcolor{\tableheadbgcolor}\textbf{ Hardware }\\\cline{1-3}
+\endhead
+PA0 &output&red LED1, index 0 in IOMUX PINCM table, negative logic \\\cline{1-3}
+PB22&output&BLUE LED2, index 49 in IOMUX PINCM table \\\cline{1-3}
+PB26&output&RED LED2, index 56 in IOMUX PINCM table \\\cline{1-3}
+PB27&output&GREEN LED2, index 57 in IOMUX PINCM table \\\cline{1-3}
+PA18&input &S2 positive logic switch, index 39 in IOMUX PINCM table \\\cline{1-3}
+PB21&input &S3 negative logic switch, index 48 in IOMUX PINCM table
+
+\\\cline{1-3}
+\end{longtabu}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___launch_pad_gadd09bb41f83980522cc25042d9018b61}\label{group___launch_pad_gadd09bb41f83980522cc25042d9018b61}} 
+\index{LaunchPad@{LaunchPad}!LaunchPad\_Init@{LaunchPad\_Init}}
+\index{LaunchPad\_Init@{LaunchPad\_Init}!LaunchPad@{LaunchPad}}
+\doxysubsubsection{\texorpdfstring{LaunchPad\_Init()}{LaunchPad\_Init()}}
+{\footnotesize\ttfamily void Launch\+Pad\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize Launch\+Pad. 
+
+Initialize LEDs and switches on MSPM0\+G3507 Launch\+Pad
+\begin{DoxyItemize}
+\item PA0 output RED LED1, negative logic
+\item PB22 output BLUE LED2, positive logic
+\item PB26 output RED LED2, positive logic
+\item PB27 output GREEN LED2,positive logic
+\item PA18 input S2 switch, positive logic
+\item PB21 input S3 switch, negative logic
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+In most ECE319K example code, this function is called first and will reset and enable power to Port A and Port B 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Do not call this twice 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group___launch_pad_ga6174cc19ab7ce46c351687717b3ae40b}\label{group___launch_pad_ga6174cc19ab7ce46c351687717b3ae40b}} 
+\index{LaunchPad@{LaunchPad}!LaunchPad\_InS2@{LaunchPad\_InS2}}
+\index{LaunchPad\_InS2@{LaunchPad\_InS2}!LaunchPad@{LaunchPad}}
+\doxysubsubsection{\texorpdfstring{LaunchPad\_InS2()}{LaunchPad\_InS2()}}
+{\footnotesize\ttfamily uint32\+\_\+t Launch\+Pad\+\_\+\+In\+S2 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Input S2. 
+
+Read S2, positive logic switch on PA18 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if S2 is not pressed, 0x00040000 if S2 is pressed 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___launch_pad_gadd09bb41f83980522cc25042d9018b61}{Launch\+Pad\+\_\+\+Init()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___launch_pad_gaaaf99ea292022ee6255c207392c36b8e}\label{group___launch_pad_gaaaf99ea292022ee6255c207392c36b8e}} 
+\index{LaunchPad@{LaunchPad}!LaunchPad\_InS3@{LaunchPad\_InS3}}
+\index{LaunchPad\_InS3@{LaunchPad\_InS3}!LaunchPad@{LaunchPad}}
+\doxysubsubsection{\texorpdfstring{LaunchPad\_InS3()}{LaunchPad\_InS3()}}
+{\footnotesize\ttfamily uint32\+\_\+t Launch\+Pad\+\_\+\+In\+S3 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Input S2. 
+
+Read S3, negative logic switch on PA18. The software converts to positive logic. 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if S3 is not pressed, 0x00200000 if S3 is pressed 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___launch_pad_gadd09bb41f83980522cc25042d9018b61}{Launch\+Pad\+\_\+\+Init()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___launch_pad_gaa541fa804d37b3860684210b9718b94e}\label{group___launch_pad_gaa541fa804d37b3860684210b9718b94e}} 
+\index{LaunchPad@{LaunchPad}!LaunchPad\_LED@{LaunchPad\_LED}}
+\index{LaunchPad\_LED@{LaunchPad\_LED}!LaunchPad@{LaunchPad}}
+\doxysubsubsection{\texorpdfstring{LaunchPad\_LED()}{LaunchPad\_LED()}}
+{\footnotesize\ttfamily void Launch\+Pad\+\_\+\+LED (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{led }\end{DoxyParamCaption})}
+
+
+
+Output to LED. 
+
+Set LED, 3-\/color positive logic LED on PB22,PB26,PB27
+\begin{DoxyItemize}
+\item led=0 to turn off LED
+\item led bit 22 sets blue color
+\item led bit 26 sets red color
+\item led bit 27 sets green color
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em led} & sets the color of LED \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___launch_pad_gaf35108b2b7086af6490531b08f1a058b}\label{group___launch_pad_gaf35108b2b7086af6490531b08f1a058b}} 
+\index{LaunchPad@{LaunchPad}!LaunchPad\_LED1@{LaunchPad\_LED1}}
+\index{LaunchPad\_LED1@{LaunchPad\_LED1}!LaunchPad@{LaunchPad}}
+\doxysubsubsection{\texorpdfstring{LaunchPad\_LED1()}{LaunchPad\_LED1()}}
+{\footnotesize\ttfamily void Launch\+Pad\+\_\+\+LED1 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{led }\end{DoxyParamCaption})}
+
+
+
+Output to LED1. 
+
+Set LED1, negative logic LED on PA0
+\begin{DoxyItemize}
+\item led=0 to PA0=1, turn off LED1
+\item led=1 to PA0=0, turn on LED1
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em led} & 1 to turn on, 0 to turn off \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___launch_pad_ga60a40857a5562b38b907a931945ded59}\label{group___launch_pad_ga60a40857a5562b38b907a931945ded59}} 
+\index{LaunchPad@{LaunchPad}!LaunchPad\_LED1off@{LaunchPad\_LED1off}}
+\index{LaunchPad\_LED1off@{LaunchPad\_LED1off}!LaunchPad@{LaunchPad}}
+\doxysubsubsection{\texorpdfstring{LaunchPad\_LED1off()}{LaunchPad\_LED1off()}}
+{\footnotesize\ttfamily void Launch\+Pad\+\_\+\+LED1off (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Turn off LED1. 
+
+Turn off LED1. Makes PA0=1 to turn off LED 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___launch_pad_gaccd2418244c007f3d42f0d22f0d35761}\label{group___launch_pad_gaccd2418244c007f3d42f0d22f0d35761}} 
+\index{LaunchPad@{LaunchPad}!LaunchPad\_LED1on@{LaunchPad\_LED1on}}
+\index{LaunchPad\_LED1on@{LaunchPad\_LED1on}!LaunchPad@{LaunchPad}}
+\doxysubsubsection{\texorpdfstring{LaunchPad\_LED1on()}{LaunchPad\_LED1on()}}
+{\footnotesize\ttfamily void Launch\+Pad\+\_\+\+LED1on (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Turn on LED1. 
+
+Turn on LED1. Makes PA0=0 to turn on LED1 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___launch_pad_ga387e9d59ed4a60546a6aa8d868a34b75}\label{group___launch_pad_ga387e9d59ed4a60546a6aa8d868a34b75}} 
+\index{LaunchPad@{LaunchPad}!LaunchPad\_LEDoff@{LaunchPad\_LEDoff}}
+\index{LaunchPad\_LEDoff@{LaunchPad\_LEDoff}!LaunchPad@{LaunchPad}}
+\doxysubsubsection{\texorpdfstring{LaunchPad\_LEDoff()}{LaunchPad\_LEDoff()}}
+{\footnotesize\ttfamily void Launch\+Pad\+\_\+\+LEDoff (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Turn off LED. 
+
+Turn off LED. Make PB22=0,PB26=0,PB27=0 to turn off LED 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___launch_pad_ga9cb3c9fb7ade7955b292446385b140dc}\label{group___launch_pad_ga9cb3c9fb7ade7955b292446385b140dc}} 
+\index{LaunchPad@{LaunchPad}!LaunchPad\_LEDwhite@{LaunchPad\_LEDwhite}}
+\index{LaunchPad\_LEDwhite@{LaunchPad\_LEDwhite}!LaunchPad@{LaunchPad}}
+\doxysubsubsection{\texorpdfstring{LaunchPad\_LEDwhite()}{LaunchPad\_LEDwhite()}}
+{\footnotesize\ttfamily void Launch\+Pad\+\_\+\+LEDwhite (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Make LED white. 
+
+Set LED to white. Make PB22=1,PB26=1,PB27=1 to create white 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}

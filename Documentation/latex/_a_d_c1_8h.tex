@@ -1,0 +1,137 @@
+\hypertarget{_a_d_c1_8h}{}\doxysection{inc/\+ADC1.h File Reference}
+\label{_a_d_c1_8h}\index{inc/ADC1.h@{inc/ADC1.h}}
+
+
+12-\/bit ADC input  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_a_d_c1_8h_a87ca87295975ff1dd9a6ad1a7a095e4d}{ADCinit}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize ADC. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{_a_d_c1_8h_a95724c0d032f9434c767375b9d95c134}{ADCin}} (void)
+\begin{DoxyCompactList}\small\item\em Input from PB18. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{_a_d_c1_8h_abdf351e0fc4e9c32a108eec8342cd6e7}{Convert}} (uint32\+\_\+t input)
+\begin{DoxyCompactList}\small\item\em Input from PB18. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_a_d_c1_8h_ad12a5321b365cd981ff053c47a376bbe}{Float\+Convert}} (uint32\+\_\+t input)
+\begin{DoxyCompactList}\small\item\em Input from PB18. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+12-\/bit ADC input 
+
+12-\/bit ADC input on ADC1 channel 5, PB18~\newline
+ \begin{DoxyVersion}{Version}
+ECE319K Spring 2025 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Your names go here 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Lab solution, do not post, 
+\end{DoxyCopyright}
+\begin{DoxyWarning}{Warning}
+AS-\/\+IS 
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+For more information see \href{http://users.ece.utexas.edu/~valvano/}{\texttt{ http\+://users.\+ece.\+utexas.\+edu/$\sim$valvano/}} 
+\end{DoxyNote}
+\begin{DoxyDate}{Date}
+December 23, 2024 \hypertarget{_a_d_c1_8h_Lab7pins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{Pins for the 12-\/bit ADC}\label{_a_d_c1_8h_Lab7pins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ GPIO}&\cellcolor{\tableheadbgcolor}\textbf{ Hardware }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ GPIO}&\cellcolor{\tableheadbgcolor}\textbf{ Hardware }\\\cline{1-3}
+\endhead
+PB18 &input&connected to slide-\/pot sensor \\\cline{1-3}
+\end{longtabu}
+
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_a_d_c1_8h_a95724c0d032f9434c767375b9d95c134}\label{_a_d_c1_8h_a95724c0d032f9434c767375b9d95c134}} 
+\index{ADC1.h@{ADC1.h}!ADCin@{ADCin}}
+\index{ADCin@{ADCin}!ADC1.h@{ADC1.h}}
+\doxysubsubsection{\texorpdfstring{ADCin()}{ADCin()}}
+{\footnotesize\ttfamily uint32\+\_\+t ADCin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Input from PB18. 
+
+Input from 12-\/bit ADC 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sample 12-\/bit conversion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_d_c1_8h_a87ca87295975ff1dd9a6ad1a7a095e4d}\label{_a_d_c1_8h_a87ca87295975ff1dd9a6ad1a7a095e4d}} 
+\index{ADC1.h@{ADC1.h}!ADCinit@{ADCinit}}
+\index{ADCinit@{ADCinit}!ADC1.h@{ADC1.h}}
+\doxysubsubsection{\texorpdfstring{ADCinit()}{ADCinit()}}
+{\footnotesize\ttfamily void ADCinit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize ADC. 
+
+Initialize 12-\/bit ADC
+\begin{DoxyItemize}
+\item PB18 analog input 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Launch\+Pad\+\_\+\+Init has been called; this program should not reset Port B 
+\end{DoxyNote}
+
+\end{DoxyItemize}\mbox{\Hypertarget{_a_d_c1_8h_abdf351e0fc4e9c32a108eec8342cd6e7}\label{_a_d_c1_8h_abdf351e0fc4e9c32a108eec8342cd6e7}} 
+\index{ADC1.h@{ADC1.h}!Convert@{Convert}}
+\index{Convert@{Convert}!ADC1.h@{ADC1.h}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}}
+{\footnotesize\ttfamily uint32\+\_\+t Convert (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{input }\end{DoxyParamCaption})}
+
+
+
+Input from PB18. 
+
+Convert raw 12-\/bit ADC to fixed point distance 
+\begin{DoxyParams}{Parameters}
+{\em input} & 12-\/bit ADC raw sample \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+distance as 0.\+001cm fixed point number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_d_c1_8h_ad12a5321b365cd981ff053c47a376bbe}\label{_a_d_c1_8h_ad12a5321b365cd981ff053c47a376bbe}} 
+\index{ADC1.h@{ADC1.h}!FloatConvert@{FloatConvert}}
+\index{FloatConvert@{FloatConvert}!ADC1.h@{ADC1.h}}
+\doxysubsubsection{\texorpdfstring{FloatConvert()}{FloatConvert()}}
+{\footnotesize\ttfamily float Float\+Convert (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{input }\end{DoxyParamCaption})}
+
+
+
+Input from PB18. 
+
+Convert raw 12-\/bit ADC to distance 
+\begin{DoxyParams}{Parameters}
+{\em input} & 12-\/bit ADC raw sample \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+distance as a floating-\/point number in cm 
+\end{DoxyReturn}

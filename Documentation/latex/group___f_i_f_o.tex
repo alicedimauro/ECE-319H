@@ -1,0 +1,323 @@
+\hypertarget{group___f_i_f_o}{}\doxysection{FIFO}
+\label{group___f_i_f_o}\index{FIFO@{FIFO}}
+
+
+First in first out queue.  
+
+
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{_f_i_f_o_8h}{FIFO.\+h}}
+\begin{DoxyCompactList}\small\item\em Provide functions for a first in first out queue. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{_f_i_f_o1_8h}{FIFO1.\+h}}
+\begin{DoxyCompactList}\small\item\em Provide functions for a first in first out queue. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{_f_i_f_o2_8h}{FIFO2.\+h}}
+\begin{DoxyCompactList}\small\item\em Provide functions for a first in first out queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_queue}{Queue}}
+\begin{DoxyCompactList}\small\item\em C++ FIFO queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___f_i_f_o_gacac935f876812a013763d9b9a710ce90}\label{group___f_i_f_o_gacac935f876812a013763d9b9a710ce90}} 
+\#define \mbox{\hyperlink{group___f_i_f_o_gacac935f876812a013763d9b9a710ce90}{TXFIFOSIZE}}~64
+\begin{DoxyCompactList}\small\item\em TXFIFOSIZE the size of the transmit FIFO, which can hold 0 to TXFIFOSIZE-\/1 elements. The size must be a power of 2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___f_i_f_o_ga7db362029bfc1133f544334692c6d9cb}\label{group___f_i_f_o_ga7db362029bfc1133f544334692c6d9cb}} 
+\#define \mbox{\hyperlink{group___f_i_f_o_ga7db362029bfc1133f544334692c6d9cb}{RXFIFOSIZE}}~16
+\begin{DoxyCompactList}\small\item\em RXFIFOSIZE the size of the receive FIFO, which can hold 0 to RXFIFOSIZE-\/1 elements The size must be a power of 2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___f_i_f_o_ga00e4b24f65356027c6f71613e419acd6}\label{group___f_i_f_o_ga00e4b24f65356027c6f71613e419acd6}} 
+\#define \mbox{\hyperlink{group___f_i_f_o_ga00e4b24f65356027c6f71613e419acd6}{FIFOSIZE}}~32
+\begin{DoxyCompactList}\small\item\em FIFOSIZE the size of the Lab 8 FIFO, which can hold 0 to FIFOSIZE-\/1 elements. The size must be a power of 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___f_i_f_o_ga12f98aad5544d637df30127479c3ad0a}{Tx\+Fifo\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize FIFO. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___f_i_f_o_gad88cce6fdfe0b28cc009844c3707349c}{Tx\+Fifo\+\_\+\+Put}} (char data)
+\begin{DoxyCompactList}\small\item\em Put FIFO. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{group___f_i_f_o_ga847a7a2b184edc97682f81f6eb920a87}{Tx\+Fifo\+\_\+\+Get}} (void)
+\begin{DoxyCompactList}\small\item\em Get FIFO. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___f_i_f_o_ga6bddd7794716cb6c25fd532aa2402b51}{Tx\+Fifo\+\_\+\+Size}} (void)
+\begin{DoxyCompactList}\small\item\em number of elements in FIFO \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___f_i_f_o_ga6cbc225d9f8a8b4548578117f180d656}{Rx\+Fifo\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize FIFO. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___f_i_f_o_gac964616ddfe5d9ac964a45edaed99035}{Rx\+Fifo\+\_\+\+Put}} (char data)
+\begin{DoxyCompactList}\small\item\em Put FIFO. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{group___f_i_f_o_ga65360c4fc119e55405acc5eac6dcd150}{Rx\+Fifo\+\_\+\+Get}} (void)
+\begin{DoxyCompactList}\small\item\em Get FIFO. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___f_i_f_o_ga926d96cfdd46ff110c52ed6c8a3bd975}{Rx\+Fifo\+\_\+\+Size}} (void)
+\begin{DoxyCompactList}\small\item\em number of elements in FIFO \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___f_i_f_o_ga5cb0668541bb9355cc76137cc5c9be9e}{Fifo1\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize FIFO. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___f_i_f_o_ga27bae712463ef0c9676cf9157d3557fe}{Fifo1\+\_\+\+Put}} (char data)
+\begin{DoxyCompactList}\small\item\em Put FIFO. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{group___f_i_f_o_ga15c335f7145fdaee713f17b5a8b7ee63}{Fifo1\+\_\+\+Get}} (void)
+\begin{DoxyCompactList}\small\item\em Get FIFO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+First in first out queue. 
+
+Lab 8H First in first out queue, C++.
+
+Lab 8 First in first out queue.
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___f_i_f_o_ga15c335f7145fdaee713f17b5a8b7ee63}\label{group___f_i_f_o_ga15c335f7145fdaee713f17b5a8b7ee63}} 
+\index{FIFO@{FIFO}!Fifo1\_Get@{Fifo1\_Get}}
+\index{Fifo1\_Get@{Fifo1\_Get}!FIFO@{FIFO}}
+\doxysubsubsection{\texorpdfstring{Fifo1\_Get()}{Fifo1\_Get()}}
+{\footnotesize\ttfamily char Fifo1\+\_\+\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get FIFO. 
+
+Get character from ECE319K Lab 8 FIFO 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for fail because empty, nonzero is data 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___f_i_f_o_ga5cb0668541bb9355cc76137cc5c9be9e}{Fifo1\+\_\+\+Init()}} \mbox{\hyperlink{group___f_i_f_o_ga27bae712463ef0c9676cf9157d3557fe}{Fifo1\+\_\+\+Put()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___f_i_f_o_ga5cb0668541bb9355cc76137cc5c9be9e}\label{group___f_i_f_o_ga5cb0668541bb9355cc76137cc5c9be9e}} 
+\index{FIFO@{FIFO}!Fifo1\_Init@{Fifo1\_Init}}
+\index{Fifo1\_Init@{Fifo1\_Init}!FIFO@{FIFO}}
+\doxysubsubsection{\texorpdfstring{Fifo1\_Init()}{Fifo1\_Init()}}
+{\footnotesize\ttfamily void Fifo1\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize FIFO. 
+
+Initialize the ECE319K Lab 8 FIFO 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___f_i_f_o_ga27bae712463ef0c9676cf9157d3557fe}{Fifo1\+\_\+\+Put()}} \mbox{\hyperlink{group___f_i_f_o_ga15c335f7145fdaee713f17b5a8b7ee63}{Fifo1\+\_\+\+Get()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___f_i_f_o_ga27bae712463ef0c9676cf9157d3557fe}\label{group___f_i_f_o_ga27bae712463ef0c9676cf9157d3557fe}} 
+\index{FIFO@{FIFO}!Fifo1\_Put@{Fifo1\_Put}}
+\index{Fifo1\_Put@{Fifo1\_Put}!FIFO@{FIFO}}
+\doxysubsubsection{\texorpdfstring{Fifo1\_Put()}{Fifo1\_Put()}}
+{\footnotesize\ttfamily uint32\+\_\+t Fifo1\+\_\+\+Put (\begin{DoxyParamCaption}\item[{char}]{data }\end{DoxyParamCaption})}
+
+
+
+Put FIFO. 
+
+Put character into ECE319K Lab 8 FIFO 
+\begin{DoxyParams}{Parameters}
+{\em data} & is a new character to save \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for fail because full, 1 for success 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___f_i_f_o_ga5cb0668541bb9355cc76137cc5c9be9e}{Fifo1\+\_\+\+Init()}} \mbox{\hyperlink{group___f_i_f_o_ga15c335f7145fdaee713f17b5a8b7ee63}{Fifo1\+\_\+\+Get()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___f_i_f_o_ga65360c4fc119e55405acc5eac6dcd150}\label{group___f_i_f_o_ga65360c4fc119e55405acc5eac6dcd150}} 
+\index{FIFO@{FIFO}!RxFifo\_Get@{RxFifo\_Get}}
+\index{RxFifo\_Get@{RxFifo\_Get}!FIFO@{FIFO}}
+\doxysubsubsection{\texorpdfstring{RxFifo\_Get()}{RxFifo\_Get()}}
+{\footnotesize\ttfamily char Rx\+Fifo\+\_\+\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get FIFO. 
+
+Get character from the receive FIFO 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for fail because empty, nonzero is data 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___f_i_f_o_ga6cbc225d9f8a8b4548578117f180d656}{Rx\+Fifo\+\_\+\+Init()}} \mbox{\hyperlink{group___f_i_f_o_gac964616ddfe5d9ac964a45edaed99035}{Rx\+Fifo\+\_\+\+Put()}} \mbox{\hyperlink{group___f_i_f_o_ga926d96cfdd46ff110c52ed6c8a3bd975}{Rx\+Fifo\+\_\+\+Size()}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+RXFIFOSIZE the size of the receive FIFO 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___f_i_f_o_ga6cbc225d9f8a8b4548578117f180d656}\label{group___f_i_f_o_ga6cbc225d9f8a8b4548578117f180d656}} 
+\index{FIFO@{FIFO}!RxFifo\_Init@{RxFifo\_Init}}
+\index{RxFifo\_Init@{RxFifo\_Init}!FIFO@{FIFO}}
+\doxysubsubsection{\texorpdfstring{RxFifo\_Init()}{RxFifo\_Init()}}
+{\footnotesize\ttfamily void Rx\+Fifo\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize FIFO. 
+
+Initialize the receive FIFO 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___f_i_f_o_gac964616ddfe5d9ac964a45edaed99035}{Rx\+Fifo\+\_\+\+Put()}} \mbox{\hyperlink{group___f_i_f_o_ga65360c4fc119e55405acc5eac6dcd150}{Rx\+Fifo\+\_\+\+Get()}} \mbox{\hyperlink{group___f_i_f_o_ga926d96cfdd46ff110c52ed6c8a3bd975}{Rx\+Fifo\+\_\+\+Size()}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+RXFIFOSIZE the size of the receive FIFO 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___f_i_f_o_gac964616ddfe5d9ac964a45edaed99035}\label{group___f_i_f_o_gac964616ddfe5d9ac964a45edaed99035}} 
+\index{FIFO@{FIFO}!RxFifo\_Put@{RxFifo\_Put}}
+\index{RxFifo\_Put@{RxFifo\_Put}!FIFO@{FIFO}}
+\doxysubsubsection{\texorpdfstring{RxFifo\_Put()}{RxFifo\_Put()}}
+{\footnotesize\ttfamily int Rx\+Fifo\+\_\+\+Put (\begin{DoxyParamCaption}\item[{char}]{data }\end{DoxyParamCaption})}
+
+
+
+Put FIFO. 
+
+Put character into the receive FIFO 
+\begin{DoxyParams}{Parameters}
+{\em data} & is a new character to save \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for fail because full, 1 for success 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___f_i_f_o_ga6cbc225d9f8a8b4548578117f180d656}{Rx\+Fifo\+\_\+\+Init()}} \mbox{\hyperlink{group___f_i_f_o_ga65360c4fc119e55405acc5eac6dcd150}{Rx\+Fifo\+\_\+\+Get()}} \mbox{\hyperlink{group___f_i_f_o_ga926d96cfdd46ff110c52ed6c8a3bd975}{Rx\+Fifo\+\_\+\+Size()}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+RXFIFOSIZE the size of the receive FIFO 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___f_i_f_o_ga926d96cfdd46ff110c52ed6c8a3bd975}\label{group___f_i_f_o_ga926d96cfdd46ff110c52ed6c8a3bd975}} 
+\index{FIFO@{FIFO}!RxFifo\_Size@{RxFifo\_Size}}
+\index{RxFifo\_Size@{RxFifo\_Size}!FIFO@{FIFO}}
+\doxysubsubsection{\texorpdfstring{RxFifo\_Size()}{RxFifo\_Size()}}
+{\footnotesize\ttfamily uint32\+\_\+t Rx\+Fifo\+\_\+\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+number of elements in FIFO 
+
+Determine how many elements are currently stored in the receive FIFO 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of elements in FIFO 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___f_i_f_o_ga6cbc225d9f8a8b4548578117f180d656}{Rx\+Fifo\+\_\+\+Init()}} \mbox{\hyperlink{group___f_i_f_o_gac964616ddfe5d9ac964a45edaed99035}{Rx\+Fifo\+\_\+\+Put()}} \mbox{\hyperlink{group___f_i_f_o_ga65360c4fc119e55405acc5eac6dcd150}{Rx\+Fifo\+\_\+\+Get()}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Does not change the FIFO 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___f_i_f_o_ga847a7a2b184edc97682f81f6eb920a87}\label{group___f_i_f_o_ga847a7a2b184edc97682f81f6eb920a87}} 
+\index{FIFO@{FIFO}!TxFifo\_Get@{TxFifo\_Get}}
+\index{TxFifo\_Get@{TxFifo\_Get}!FIFO@{FIFO}}
+\doxysubsubsection{\texorpdfstring{TxFifo\_Get()}{TxFifo\_Get()}}
+{\footnotesize\ttfamily char Tx\+Fifo\+\_\+\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get FIFO. 
+
+Get character from the transmit FIFO 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for fail because empty, nonzero is data 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___f_i_f_o_ga12f98aad5544d637df30127479c3ad0a}{Tx\+Fifo\+\_\+\+Init()}} \mbox{\hyperlink{group___f_i_f_o_gad88cce6fdfe0b28cc009844c3707349c}{Tx\+Fifo\+\_\+\+Put()}} \mbox{\hyperlink{group___f_i_f_o_ga6bddd7794716cb6c25fd532aa2402b51}{Tx\+Fifo\+\_\+\+Size()}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+TXFIFOSIZE the size of the transmit FIFO 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___f_i_f_o_ga12f98aad5544d637df30127479c3ad0a}\label{group___f_i_f_o_ga12f98aad5544d637df30127479c3ad0a}} 
+\index{FIFO@{FIFO}!TxFifo\_Init@{TxFifo\_Init}}
+\index{TxFifo\_Init@{TxFifo\_Init}!FIFO@{FIFO}}
+\doxysubsubsection{\texorpdfstring{TxFifo\_Init()}{TxFifo\_Init()}}
+{\footnotesize\ttfamily void Tx\+Fifo\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize FIFO. 
+
+Initialize the transmit FIFO 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___f_i_f_o_gad88cce6fdfe0b28cc009844c3707349c}{Tx\+Fifo\+\_\+\+Put()}} \mbox{\hyperlink{group___f_i_f_o_ga847a7a2b184edc97682f81f6eb920a87}{Tx\+Fifo\+\_\+\+Get()}} \mbox{\hyperlink{group___f_i_f_o_ga6bddd7794716cb6c25fd532aa2402b51}{Tx\+Fifo\+\_\+\+Size()}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+TXFIFOSIZE the size of the transmit FIFO 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___f_i_f_o_gad88cce6fdfe0b28cc009844c3707349c}\label{group___f_i_f_o_gad88cce6fdfe0b28cc009844c3707349c}} 
+\index{FIFO@{FIFO}!TxFifo\_Put@{TxFifo\_Put}}
+\index{TxFifo\_Put@{TxFifo\_Put}!FIFO@{FIFO}}
+\doxysubsubsection{\texorpdfstring{TxFifo\_Put()}{TxFifo\_Put()}}
+{\footnotesize\ttfamily int Tx\+Fifo\+\_\+\+Put (\begin{DoxyParamCaption}\item[{char}]{data }\end{DoxyParamCaption})}
+
+
+
+Put FIFO. 
+
+Put character into the transmit FIFO 
+\begin{DoxyParams}{Parameters}
+{\em data} & is a new character to save \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for fail because full, 1 for success 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___f_i_f_o_ga12f98aad5544d637df30127479c3ad0a}{Tx\+Fifo\+\_\+\+Init()}} \mbox{\hyperlink{group___f_i_f_o_ga847a7a2b184edc97682f81f6eb920a87}{Tx\+Fifo\+\_\+\+Get()}} \mbox{\hyperlink{group___f_i_f_o_ga6bddd7794716cb6c25fd532aa2402b51}{Tx\+Fifo\+\_\+\+Size()}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+TXFIFOSIZE the size of the transmit FIFO 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___f_i_f_o_ga6bddd7794716cb6c25fd532aa2402b51}\label{group___f_i_f_o_ga6bddd7794716cb6c25fd532aa2402b51}} 
+\index{FIFO@{FIFO}!TxFifo\_Size@{TxFifo\_Size}}
+\index{TxFifo\_Size@{TxFifo\_Size}!FIFO@{FIFO}}
+\doxysubsubsection{\texorpdfstring{TxFifo\_Size()}{TxFifo\_Size()}}
+{\footnotesize\ttfamily uint32\+\_\+t Tx\+Fifo\+\_\+\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+number of elements in FIFO 
+
+Determine how many elements are currently stored in the transmit FIFO 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of elements in FIFO 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___f_i_f_o_ga12f98aad5544d637df30127479c3ad0a}{Tx\+Fifo\+\_\+\+Init()}} \mbox{\hyperlink{group___f_i_f_o_gad88cce6fdfe0b28cc009844c3707349c}{Tx\+Fifo\+\_\+\+Put()}} \mbox{\hyperlink{group___f_i_f_o_ga847a7a2b184edc97682f81f6eb920a87}{Tx\+Fifo\+\_\+\+Get()}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Does not change the FIFO 
+\end{DoxyNote}

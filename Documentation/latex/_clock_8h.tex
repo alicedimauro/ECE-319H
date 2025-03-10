@@ -1,0 +1,77 @@
+\hypertarget{_clock_8h}{}\doxysection{inc/\+Clock.h File Reference}
+\label{_clock_8h}\index{inc/Clock.h@{inc/Clock.h}}
+
+
+Provide functions that initialize the MSPM0 clock module.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___clock_ga3d159627b49ae4c7f3a9351e1d3cb3d3}{OSCFREQ32\+MHZ}}~0
+\begin{DoxyCompactList}\small\item\em using OSCFREQ32\+MHZ Clock\+\_\+\+Init will create 32 MHz bus clock \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___clock_ga5491bd7884ead39ef78539bf8872cb01}{OSCFREQ4\+MHZ}}~1
+\begin{DoxyCompactList}\small\item\em using OSCFREQ4\+MHZ Clock\+\_\+\+Init will create 4 MHz bus clock \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___clock_gad6e8e509995ef7c2959d435cd1dc69c3}{Clock\+\_\+\+Init80\+MHz}} (int enable\+PA14)
+\begin{DoxyCompactList}\small\item\em Initialize clock to 80 MHz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___clock_ga20a9d54a19475c579f9652770abaa9d2}{Clock\+\_\+\+Init40\+MHz}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize clock to 40 MHz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___clock_ga88bfe875e8c76367e3bb05f7fce745db}{Clock\+\_\+\+Init}} (uint32\+\_\+t freq)
+\begin{DoxyCompactList}\small\item\em Initialize clock to 4 or 32 MHz. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___clock_ga0f256511d308343ce429ae2a9aabb29b}{Clock\+\_\+\+Freq}} (void)
+\begin{DoxyCompactList}\small\item\em Returns current clock bus frequency in Hz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___clock_ga03c471a7dd41a6d3fd23149fab515836}{Clock\+\_\+\+Delay}} (uint32\+\_\+t cycles) \+\_\+\+\_\+attribute\+\_\+\+\_\+((noinline))
+\begin{DoxyCompactList}\small\item\em Software implementation of a busy-\/wait delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___clock_gad00b9da3218943c379accd422f86826e}{Clock\+\_\+\+Delay1ms}} (uint32\+\_\+t ms)
+\begin{DoxyCompactList}\small\item\em Software implementation of a busy-\/wait delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___clock_gaeb71ef4b996788e4aa8cda6ef617f58f}{Sys\+Tick\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Sys\+Tick for busy-\/wait delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___clock_ga8bf6781e1bcf2aac3a3a4ab5f686b972}{Sys\+Tick\+\_\+\+Wait}} (uint32\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em Sys\+Tick implementation of a busy-\/wait delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___clock_ga20e5fc17295570c04c35e77a8eedc1b6}{Sys\+Tick\+\_\+\+Wait10ms}} (uint32\+\_\+t t)
+\begin{DoxyCompactList}\small\item\em Sys\+Tick implementation of a busy-\/wait delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___clock_gae7ab7561bd7c200c0f5180d85e801f97}{Timer\+G8\+\_\+\+Init}} (uint32\+\_\+t divider, uint32\+\_\+t prescale)
+\begin{DoxyCompactList}\small\item\em Sys\+Tick for busy-\/wait delay. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provide functions that initialize the MSPM0 clock module. 
+
+Reconfigure MSPM0 to run at 4, 32, 40 or 80 MHz \begin{DoxyVersion}{Version}
+ECE319K v1.\+2 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Daniel Valvano and Jonathan Valvano 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2025 by Jonathan W. Valvano, \href{mailto:valvano@mail.utexas.edu}{\texttt{ valvano@mail.\+utexas.\+edu}}, 
+\end{DoxyCopyright}
+\begin{DoxyWarning}{Warning}
+AS-\/\+IS 
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+For more information see \href{http://users.ece.utexas.edu/~valvano/}{\texttt{ http\+://users.\+ece.\+utexas.\+edu/$\sim$valvano/}} 
+\end{DoxyNote}
+\begin{DoxyDate}{Date}
+December 23, 2024 \hypertarget{_clock_8h_Clockpins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{Clock pins}\label{_clock_8h_Clockpins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-2}
+\endhead
+PA5 &HFXIN crystal \\\cline{1-2}
+PA6 &HFXOUT crystal \\\cline{1-2}
+PA14 &Possible clock output \\\cline{1-2}
+\end{longtabu}
+
+\end{DoxyDate}

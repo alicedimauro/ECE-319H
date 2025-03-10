@@ -1,0 +1,412 @@
+******************************************************************************
+            TI ARM Clang Linker PC v4.0.1                      
+******************************************************************************
+>> Linked Thu Dec 26 11:14:48 2024
+
+OUTPUT FILE NAME:   <ECE319K_Lab8.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00000879
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00020000  00000a70  0001f590  R  X
+  SRAM                  20200000   00008000  00000620  000079e0  RW X
+  BCR_CONFIG            41c00000   00000080  00000000  00000080  R   
+  BSL_CONFIG            41c00100   00000080  00000000  00000080  R   
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00000a70   00000a70    r-x
+  00000000    00000000    000000c0   000000c0    r-- .intvecs
+  000000c0    000000c0    00000950   00000950    r-x .text
+  00000a10    00000a10    00000030   00000030    r-- .rodata
+  00000a40    00000a40    00000030   00000030    r-- .cinit
+20200000    20200000    00000420   00000000    rw-
+  20200000    20200000    0000021c   00000000    rw- .bss
+  2020021c    2020021c    00000004   00000000    rw- .data
+  20200220    20200220    00000200   00000000    rw- .sysmem
+20207e00    20207e00    00000200   00000000    rw-
+  20207e00    20207e00    00000200   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    000000c0     
+                  00000000    000000c0     startup_mspm0g3507_ticlang.o (.intvecs)
+
+.text      0    000000c0    00000950     
+                  000000c0    0000021c     Lab8Main.o (.text.main)
+                  000002dc    000001b4     Clock.o (.text.Clock_Init80MHz)
+                  00000490    000000e8     TExaS.o (.text.UART_Init)
+                  00000578    0000007c     LaunchPad.o (.text.LaunchPad_Init)
+                  000005f4    0000007c     libc.a : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  00000670    00000064     myFifo.o (.text.myFifo_Put)
+                  000006d4    0000005c     myFifo.o (.text.myFifo_Get)
+                  00000730    00000040     TExaS.o (.text.TIMG7_IRQHandler)
+                  00000770    00000040     libclang_rt.builtins.a : aeabi_uidivmod.S.obj (.text.__aeabi_uidivmod)
+                  000007b0    0000003c     libc.a : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
+                  000007ec    00000038     LaunchPad.o (.text.ActivatePortA_B)
+                  00000824    0000002c     TExaS.o (.text.UART_OutChar)
+                  00000850    00000028     Lab8Main.o (.text.TIMG12_IRQHandler)
+                  00000878    00000028     libc.a : boot_cortex_m.c.obj (.text:_c_int00_noargs)
+                  000008a0    00000026     Lab8Main.o (.text.UART_OutString)
+                  000008c6    00000002     FIFO1.o (.text.Fifo1_Init)
+                  000008c8    00000024     myFifo.o (.text.myFifo_Init)
+                  000008ec    00000020     Lab8Main.o (.text.Random32)
+                  0000090c    0000001c     startup_mspm0g3507_ticlang.o (.text.Default_Handler)
+                  00000928    0000001c     startup_mspm0g3507_ticlang.o (.text.HardFault_Handler)
+                  00000944    00000018     Lab8Main.o (.text.Random)
+                  0000095c    00000018     UART2.o (.text.UART2_IRQHandler)
+                  00000974    00000016     libc.a : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
+                  0000098a    00000012            : memcpy16.S.obj (.text:TI_memcpy_small)
+                  0000099c    00000012            : copy_decompress_none.c.obj (.text:decompress:none)
+                  000009ae    00000010     Clock.o (.text.Clock_Delay)
+                  000009be    00000010     LaunchPad.o (.text.Delay)
+                  000009ce    00000002     libclang_rt.builtins.a : aeabi_div0.c.obj (.text.__aeabi_idiv0)
+                  000009d0    0000000c     Clock.o (.text.Clock_Freq)
+                  000009dc    0000000c     FIFO1.o (.text.Fifo1_Put)
+                  000009e8    0000000a     Lab8Main.o (.text.PLL_Init)
+                  000009f2    00000002     --HOLE-- [fill = 0]
+                  000009f4    00000008     libclang_rt.builtins.a : aeabi_memcpy.S.obj (.text.__aeabi_memcpy)
+                  000009fc    00000004     FIFO1.o (.text.Fifo1_Get)
+                  00000a00    00000004     startup_mspm0g3507_ticlang.o (.text.Reset_Handler)
+                  00000a04    00000004     libc.a : pre_init.c.obj (.text._system_pre_init)
+                  00000a08    00000004            : exit.c.obj (.text:abort)
+                  00000a0c    00000004     --HOLE-- [fill = 0]
+
+.cinit     0    00000a40    00000030     
+                  00000a40    0000000c     (__TI_handler_table)
+                  00000a4c    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00000a54    00000008     (.cinit..data.load) [load image, compression = lzss]
+                  00000a5c    00000010     (__TI_cinit_table)
+                  00000a6c    00000004     --HOLE-- [fill = 0]
+
+.rodata    0    00000a10    00000030     
+                  00000a10    00000017     Lab8Main.o (.rodata.str1.50250252269817253871)
+                  00000a27    0000000a     Lab8Main.o (.rodata.str1.128552832930546284941)
+                  00000a31    0000000a     Lab8Main.o (.rodata.str1.5762731133515739511)
+                  00000a3b    00000005     --HOLE-- [fill = 0]
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.binit     0    00000000    00000000     
+
+.bss       0    20200000    0000021c     UNINITIALIZED
+                  20200000    00000200     myFifo.o (.bss.myFifo)
+                  20200200    00000004     myFifo.o (.bss.myGetI)
+                  20200204    00000004     myFifo.o (.bss.myPutI)
+                  20200208    00000004     (.common:FifoError)
+                  2020020c    00000004     (.common:M)
+                  20200210    00000004     (.common:TExaSLogic)
+                  20200214    00000004     (.common:TExaSadc)
+                  20200218    00000004     (.common:myFIFO_SIZE)
+
+.data      0    2020021c    00000004     UNINITIALIZED
+                  2020021c    00000004     Clock.o (.data.BusFreq)
+
+.sysmem    0    20200220    00000200     UNINITIALIZED
+                  20200220    00000010     libc.a : memory.c.obj (.sysmem)
+                  20200230    000001f0     --HOLE--
+
+.stack     0    20207e00    00000200     UNINITIALIZED
+                  20207e00    00000004     libc.a : boot_cortex_m.c.obj (.stack)
+                  20207e04    000001fc     --HOLE--
+
+__llvm_prf_cnts 
+*          0    20200000    00000000     UNINITIALIZED
+
+__llvm_prf_bits 
+*          0    20200000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                         code   ro data   rw data
+       ------                         ----   -------   -------
+    ..\
+       myFifo.o                       228    0         524    
+    +--+------------------------------+------+---------+---------+
+       Total:                         228    0         524    
+                                                              
+    .\
+       Lab8Main.o                     684    43        8      
+       Clock.o                        464    0         4      
+       TExaS.o                        340    0         8      
+       LaunchPad.o                    196    0         0      
+       UART2.o                        24     0         0      
+       FIFO1.o                        18     0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         1726   43        20     
+                                                              
+    .\ticlang\
+       startup_mspm0g3507_ticlang.o   60     192       0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         60     192       0      
+                                                              
+    C:\ti\ccs2000\ccs\tools\compiler\ti-cgt-armllvm_4.0.1.LTS\lib\armv6m-ti-none-eabi/c/libc.a
+       copy_decompress_lzss.c.obj     124    0         0      
+       autoinit.c.obj                 60     0         0      
+       boot_cortex_m.c.obj            40     0         0      
+       copy_zero_init.c.obj           22     0         0      
+       copy_decompress_none.c.obj     18     0         0      
+       memcpy16.S.obj                 18     0         0      
+       exit.c.obj                     4      0         0      
+       pre_init.c.obj                 4      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         290    0         0      
+                                                              
+    C:\ti\ccs2000\ccs\tools\compiler\ti-cgt-armllvm_4.0.1.LTS\lib\armv6m-ti-none-eabi/libclang_rt.builtins.a
+       aeabi_uidivmod.S.obj           64     0         0      
+       aeabi_memcpy.S.obj             8      0         0      
+       aeabi_div0.c.obj               2      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         74     0         0      
+                                                              
+       Heap:                          0      0         512    
+       Stack:                         0      0         512    
+       Linker Generated:              0      44        0      
+    +--+------------------------------+------+---------+---------+
+       Grand Total:                   2378   279       1568   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00000a5c records: 2, size/record: 8, table size: 16
+	.bss: load addr=00000a4c, load size=00000008 bytes, run addr=20200000, run size=0000021c bytes, compression=zero_init
+	.data: load addr=00000a54, load size=00000008 bytes, run addr=2020021c, run size=00000004 bytes, compression=lzss
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00000a40 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                          
+-------   ----                          
+0000090d  ADC0_IRQHandler               
+0000090d  ADC1_IRQHandler               
+0000090d  AES_IRQHandler                
+000007ed  ActivatePortA_B               
+2020021c  BusFreq                       
+00000a08  C$$EXIT                       
+0000090d  CANFD0_IRQHandler             
+000009af  Clock_Delay                   
+000009d1  Clock_Freq                    
+000002dd  Clock_Init80MHz               
+0000090d  DAC0_IRQHandler               
+0000090d  DMA_IRQHandler                
+0000090d  Default_Handler               
+000009bf  Delay                         
+000009fd  Fifo1_Get                     
+000008c7  Fifo1_Init                    
+000009dd  Fifo1_Put                     
+20200208  FifoError                     
+0000090d  GROUP0_IRQHandler             
+0000090d  GROUP1_IRQHandler             
+00000929  HardFault_Handler             
+0000090d  I2C0_IRQHandler               
+0000090d  I2C1_IRQHandler               
+00000579  LaunchPad_Init                
+2020020c  M                             
+0000090d  NMI_Handler                   
+000009e9  PLL_Init                      
+0000090d  PendSV_Handler                
+0000090d  RTC_IRQHandler                
+00000945  Random                        
+000008ed  Random32                      
+00000a01  Reset_Handler                 
+0000090d  SPI0_IRQHandler               
+0000090d  SPI1_IRQHandler               
+0000090d  SVC_Handler                   
+0000090d  SysTick_Handler               
+20200210  TExaSLogic                    
+20200214  TExaSadc                      
+0000090d  TIMA0_IRQHandler              
+0000090d  TIMA1_IRQHandler              
+0000090d  TIMG0_IRQHandler              
+00000851  TIMG12_IRQHandler             
+0000090d  TIMG6_IRQHandler              
+00000731  TIMG7_IRQHandler              
+0000090d  TIMG8_IRQHandler              
+0000098b  TI_memcpy_small               
+0000090d  UART0_IRQHandler              
+0000090d  UART1_IRQHandler              
+0000095d  UART2_IRQHandler              
+0000090d  UART3_IRQHandler              
+00000491  UART_Init                     
+00000825  UART_OutChar                  
+000008a1  UART_OutString                
+20208000  __STACK_END                   
+00000200  __STACK_SIZE                  
+00000200  __SYSMEM_SIZE                 
+00000000  __TI_ATRegion0_region_sz      
+00000000  __TI_ATRegion0_src_addr       
+00000000  __TI_ATRegion0_trg_addr       
+00000000  __TI_ATRegion1_region_sz      
+00000000  __TI_ATRegion1_src_addr       
+00000000  __TI_ATRegion1_trg_addr       
+00000000  __TI_ATRegion2_region_sz      
+00000000  __TI_ATRegion2_src_addr       
+00000000  __TI_ATRegion2_trg_addr       
+00000a5c  __TI_CINIT_Base               
+00000a6c  __TI_CINIT_Limit              
+00000a6c  __TI_CINIT_Warm               
+00000a40  __TI_Handler_Table_Base       
+00000a4c  __TI_Handler_Table_Limit      
+000007b1  __TI_auto_init_nobinit_nopinit
+000005f5  __TI_decompress_lzss          
+0000099d  __TI_decompress_none          
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+00000000  __TI_static_base__            
+00000975  __TI_zero_init_nomemset       
+000009cf  __aeabi_idiv0                 
+000009f5  __aeabi_memcpy                
+000009f5  __aeabi_memcpy4               
+000009f5  __aeabi_memcpy8               
+00000771  __aeabi_uidiv                 
+00000771  __aeabi_uidivmod              
+ffffffff  __binit__                     
+UNDEFED   __mpu_init                    
+20207e00  __stack                       
+20200000  __start___llvm_prf_bits       
+20200000  __start___llvm_prf_cnts       
+20200000  __stop___llvm_prf_bits        
+20200000  __stop___llvm_prf_cnts        
+00000879  _c_int00_noargs               
+20200220  _sys_memory                   
+UNDEFED   _system_post_cinit            
+00000a05  _system_pre_init              
+00000a09  abort                         
+ffffffff  binit                         
+00000000  interruptVectors              
+000000c1  main                          
+20200218  myFIFO_SIZE                   
+000006d5  myFifo_Get                    
+000008c9  myFifo_Init                   
+00000671  myFifo_Put                    
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                          
+-------   ----                          
+00000000  __TI_ATRegion0_region_sz      
+00000000  __TI_ATRegion0_src_addr       
+00000000  __TI_ATRegion0_trg_addr       
+00000000  __TI_ATRegion1_region_sz      
+00000000  __TI_ATRegion1_src_addr       
+00000000  __TI_ATRegion1_trg_addr       
+00000000  __TI_ATRegion2_region_sz      
+00000000  __TI_ATRegion2_src_addr       
+00000000  __TI_ATRegion2_trg_addr       
+00000000  __TI_static_base__            
+00000000  interruptVectors              
+000000c1  main                          
+00000200  __STACK_SIZE                  
+00000200  __SYSMEM_SIZE                 
+000002dd  Clock_Init80MHz               
+00000491  UART_Init                     
+00000579  LaunchPad_Init                
+000005f5  __TI_decompress_lzss          
+00000671  myFifo_Put                    
+000006d5  myFifo_Get                    
+00000731  TIMG7_IRQHandler              
+00000771  __aeabi_uidiv                 
+00000771  __aeabi_uidivmod              
+000007b1  __TI_auto_init_nobinit_nopinit
+000007ed  ActivatePortA_B               
+00000825  UART_OutChar                  
+00000851  TIMG12_IRQHandler             
+00000879  _c_int00_noargs               
+000008a1  UART_OutString                
+000008c7  Fifo1_Init                    
+000008c9  myFifo_Init                   
+000008ed  Random32                      
+0000090d  ADC0_IRQHandler               
+0000090d  ADC1_IRQHandler               
+0000090d  AES_IRQHandler                
+0000090d  CANFD0_IRQHandler             
+0000090d  DAC0_IRQHandler               
+0000090d  DMA_IRQHandler                
+0000090d  Default_Handler               
+0000090d  GROUP0_IRQHandler             
+0000090d  GROUP1_IRQHandler             
+0000090d  I2C0_IRQHandler               
+0000090d  I2C1_IRQHandler               
+0000090d  NMI_Handler                   
+0000090d  PendSV_Handler                
+0000090d  RTC_IRQHandler                
+0000090d  SPI0_IRQHandler               
+0000090d  SPI1_IRQHandler               
+0000090d  SVC_Handler                   
+0000090d  SysTick_Handler               
+0000090d  TIMA0_IRQHandler              
+0000090d  TIMA1_IRQHandler              
+0000090d  TIMG0_IRQHandler              
+0000090d  TIMG6_IRQHandler              
+0000090d  TIMG8_IRQHandler              
+0000090d  UART0_IRQHandler              
+0000090d  UART1_IRQHandler              
+0000090d  UART3_IRQHandler              
+00000929  HardFault_Handler             
+00000945  Random                        
+0000095d  UART2_IRQHandler              
+00000975  __TI_zero_init_nomemset       
+0000098b  TI_memcpy_small               
+0000099d  __TI_decompress_none          
+000009af  Clock_Delay                   
+000009bf  Delay                         
+000009cf  __aeabi_idiv0                 
+000009d1  Clock_Freq                    
+000009dd  Fifo1_Put                     
+000009e9  PLL_Init                      
+000009f5  __aeabi_memcpy                
+000009f5  __aeabi_memcpy4               
+000009f5  __aeabi_memcpy8               
+000009fd  Fifo1_Get                     
+00000a01  Reset_Handler                 
+00000a05  _system_pre_init              
+00000a08  C$$EXIT                       
+00000a09  abort                         
+00000a40  __TI_Handler_Table_Base       
+00000a4c  __TI_Handler_Table_Limit      
+00000a5c  __TI_CINIT_Base               
+00000a6c  __TI_CINIT_Limit              
+00000a6c  __TI_CINIT_Warm               
+20200000  __start___llvm_prf_bits       
+20200000  __start___llvm_prf_cnts       
+20200000  __stop___llvm_prf_bits        
+20200000  __stop___llvm_prf_cnts        
+20200208  FifoError                     
+2020020c  M                             
+20200210  TExaSLogic                    
+20200214  TExaSadc                      
+20200218  myFIFO_SIZE                   
+2020021c  BusFreq                       
+20200220  _sys_memory                   
+20207e00  __stack                       
+20208000  __STACK_END                   
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+ffffffff  __binit__                     
+ffffffff  binit                         
+UNDEFED   __mpu_init                    
+UNDEFED   _system_post_cinit            
+
+[103 symbols]

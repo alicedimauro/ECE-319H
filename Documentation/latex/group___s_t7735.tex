@@ -1,0 +1,1643 @@
+\hypertarget{group___s_t7735}{}\doxysection{ST7735}
+\label{group___s_t7735}\index{ST7735@{ST7735}}
+
+
+ST7735 LCD.  
+
+
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{_arabic_8h}{Arabic.\+h}}
+\begin{DoxyCompactList}\small\item\em Arabic output to LCD. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{_s_t7735_8h}{ST7735.\+h}}
+\begin{DoxyCompactList}\small\item\em 160 by 128 pixel LCD \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_t7735_ga17fb18a972efbcba457b22ac53ab39bf}\label{group___s_t7735_ga17fb18a972efbcba457b22ac53ab39bf}} 
+\#define \mbox{\hyperlink{group___s_t7735_ga17fb18a972efbcba457b22ac53ab39bf}{ST7735\+\_\+\+TFTWIDTH}}~128
+\begin{DoxyCompactList}\small\item\em 128 pixels wide \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_t7735_gae39c2160287830a930ae303f4d9eb102}\label{group___s_t7735_gae39c2160287830a930ae303f4d9eb102}} 
+\#define \mbox{\hyperlink{group___s_t7735_gae39c2160287830a930ae303f4d9eb102}{ST7735\+\_\+\+TFTHEIGHT}}~160
+\begin{DoxyCompactList}\small\item\em 160 pixels tall \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_t7735_gaaa96c65299e5f6da446f29dc44362df4}\label{group___s_t7735_gaaa96c65299e5f6da446f29dc44362df4}} 
+\#define \mbox{\hyperlink{group___s_t7735_gaaa96c65299e5f6da446f29dc44362df4}{ST7735\+\_\+\+BLACK}}~0x0000
+\begin{DoxyCompactList}\small\item\em The following constants are possible colors for the LCD in RGB format. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_t7735_ga16ebfdbf93e5ef70d658bf2c38a95939}\label{group___s_t7735_ga16ebfdbf93e5ef70d658bf2c38a95939}} 
+\#define {\bfseries ST7735\+\_\+\+BLUE}~0x\+F800
+\item 
+\mbox{\Hypertarget{group___s_t7735_ga2449a6653137f07d2feb059750c7a0e0}\label{group___s_t7735_ga2449a6653137f07d2feb059750c7a0e0}} 
+\#define {\bfseries ST7735\+\_\+\+RED}~0x001F
+\item 
+\mbox{\Hypertarget{group___s_t7735_gaaa6015ded61cf7d99ef6d59f1516853a}\label{group___s_t7735_gaaa6015ded61cf7d99ef6d59f1516853a}} 
+\#define {\bfseries ST7735\+\_\+\+GREEN}~0x07\+E0
+\item 
+\mbox{\Hypertarget{group___s_t7735_gad810da70a616c774959a2b8e01bdbccd}\label{group___s_t7735_gad810da70a616c774959a2b8e01bdbccd}} 
+\#define {\bfseries ST7735\+\_\+\+CYAN}~0x\+FFE0
+\item 
+\mbox{\Hypertarget{group___s_t7735_gafeb931b9ea5b9e7d1d3034f68da9ca64}\label{group___s_t7735_gafeb931b9ea5b9e7d1d3034f68da9ca64}} 
+\#define {\bfseries ST7735\+\_\+\+MAGENTA}~0x\+F81F
+\item 
+\mbox{\Hypertarget{group___s_t7735_gab45f6510169efe9c541a881c8ed56f1c}\label{group___s_t7735_gab45f6510169efe9c541a881c8ed56f1c}} 
+\#define {\bfseries ST7735\+\_\+\+YELLOW}~0x07\+FF
+\item 
+\mbox{\Hypertarget{group___s_t7735_gaf8065f00d6684d4af187dc58b0611af3}\label{group___s_t7735_gaf8065f00d6684d4af187dc58b0611af3}} 
+\#define {\bfseries ST7735\+\_\+\+WHITE}~0x\+FFFF
+\item 
+\mbox{\Hypertarget{group___s_t7735_gaaf04b12dd0921bffb67dd328bae06de2}\label{group___s_t7735_gaaf04b12dd0921bffb67dd328bae06de2}} 
+\#define {\bfseries ST7735\+\_\+\+LIGHTGREY}~\mbox{\hyperlink{group___s_t7735_ga29294596f660f05ad8738db73ee07cfa}{ST7735\+\_\+\+Color565}}(228,228,228)
+\item 
+\mbox{\Hypertarget{group___s_t7735_ga7e7a749261311c2f1ab224a090af0a56}\label{group___s_t7735_ga7e7a749261311c2f1ab224a090af0a56}} 
+\#define {\bfseries ST7735\+\_\+\+DARKGREY}~\mbox{\hyperlink{group___s_t7735_ga29294596f660f05ad8738db73ee07cfa}{ST7735\+\_\+\+Color565}}(32,32,32)
+\item 
+\mbox{\Hypertarget{group___s_t7735_gac7e77407665d5d65be802492793b2562}\label{group___s_t7735_gac7e77407665d5d65be802492793b2562}} 
+\#define {\bfseries ST7735\+\_\+\+ORANGE}~\mbox{\hyperlink{group___s_t7735_ga29294596f660f05ad8738db73ee07cfa}{ST7735\+\_\+\+Color565}}(255,102,0)
+\item 
+\mbox{\Hypertarget{group___s_t7735_gacbe2e68e59005f809855b28fc77e35cc}\label{group___s_t7735_gacbe2e68e59005f809855b28fc77e35cc}} 
+\#define {\bfseries ST7735\+\_\+\+PURPLE}~\mbox{\hyperlink{group___s_t7735_ga29294596f660f05ad8738db73ee07cfa}{ST7735\+\_\+\+Color565}}(106,13,173)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_t7735_gae767fd15e422bf7184563e9b4dbb04ea}\label{group___s_t7735_gae767fd15e422bf7184563e9b4dbb04ea}} 
+enum \mbox{\hyperlink{group___s_t7735_gae767fd15e422bf7184563e9b4dbb04ea}{Arabic\+\_\+t}} \{ \newline
+{\bfseries null}
+, {\bfseries alif}
+, {\bfseries ayh}
+, {\bfseries baa}
+, \newline
+{\bfseries daad}
+, {\bfseries daal}
+, {\bfseries dhaa}
+, {\bfseries dhaal}
+, \newline
+{\bfseries faa}
+, {\bfseries ghayh}
+, {\bfseries haa}
+, {\bfseries ha}
+, \newline
+{\bfseries jeem}
+, {\bfseries kaaf}
+, {\bfseries khaa}
+, {\bfseries laam}
+, \newline
+{\bfseries meem}
+, {\bfseries noon}
+, {\bfseries qaaf}
+, {\bfseries raa}
+, \newline
+{\bfseries saad}
+, {\bfseries seen}
+, {\bfseries sheen}
+, {\bfseries ta}
+, \newline
+{\bfseries thaa}
+, {\bfseries twe}
+, {\bfseries waaw}
+, {\bfseries yaa}
+, \newline
+{\bfseries zaa}
+, {\bfseries space}
+, {\bfseries dot}
+ \}
+\begin{DoxyCompactList}\small\item\em Arabic character set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_t7735_ga9568e103412377d5867f1f367ac7f424}\label{group___s_t7735_ga9568e103412377d5867f1f367ac7f424}} 
+enum \mbox{\hyperlink{group___s_t7735_ga9568e103412377d5867f1f367ac7f424}{init\+RFlags}} \{ {\bfseries none}
+, {\bfseries INITR\+\_\+\+GREENTAB}
+, {\bfseries INITR\+\_\+\+REDTAB}
+, {\bfseries INITR\+\_\+\+BLACKTAB}
+ \}
+\begin{DoxyCompactList}\small\item\em some flags for \mbox{\hyperlink{group___s_t7735_ga204a442207d7367ace616bd6bfd79348}{ST7735\+\_\+\+Init\+R()}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_t7735_gaa6c9e4542c04e32e57f95838fde7d4f2}{Arabic\+\_\+\+Set\+Cursor}} (uint32\+\_\+t newX, uint32\+\_\+t newY)
+\begin{DoxyCompactList}\small\item\em Move Arabic cursor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga3b8025b0e0f8b5bc043e1f3355d1f0d6}{Arabic\+\_\+\+Out\+Char}} (\mbox{\hyperlink{group___s_t7735_gae767fd15e422bf7184563e9b4dbb04ea}{Arabic\+\_\+t}} ch)
+\begin{DoxyCompactList}\small\item\em Output an Arabic character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gace8825b3c2dd7f17902847f25578a4d0}{Arabic\+\_\+\+Out\+String}} (\mbox{\hyperlink{group___s_t7735_gae767fd15e422bf7184563e9b4dbb04ea}{Arabic\+\_\+t}} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Output an Arabic string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gaec8e637c759ad0adde0758c0935f383a}{ST7735\+\_\+\+InitB}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize ST7735B LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga204a442207d7367ace616bd6bfd79348}{ST7735\+\_\+\+InitR}} (enum \mbox{\hyperlink{group___s_t7735_ga9568e103412377d5867f1f367ac7f424}{init\+RFlags}} option)
+\begin{DoxyCompactList}\small\item\em Initialize ST7735R LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gaa2dc768f637489753a7b70eac676c4a5}{ST7735\+\_\+\+Draw\+Pixel}} (int16\+\_\+t x, int16\+\_\+t y, uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Color one pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga2c091bb2f7905e4464a6152015a49989}{ST7735\+\_\+\+Draw\+Fast\+VLine}} (int16\+\_\+t x, int16\+\_\+t y, int16\+\_\+t h, uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw a vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga05c18aa8dd363fe991d5bc73a02e7abc}{ST7735\+\_\+\+Draw\+Fast\+HLine}} (int16\+\_\+t x, int16\+\_\+t y, int16\+\_\+t w, uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw a horizontal line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga3a14506207ab49aee2c40700b5036271}{ST7735\+\_\+\+Fill\+Screen}} (uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Fill the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gada283d88275b972d188afad1c8649829}{ST7735\+\_\+\+Fill\+Rect}} (int16\+\_\+t x, int16\+\_\+t y, int16\+\_\+t w, int16\+\_\+t h, uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw a filled rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga97a986b0ae675970952cc4b60529c14f}{ST7735\+\_\+\+Draw\+Small\+Circle}} (int16\+\_\+t x, int16\+\_\+t y, uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw a small circle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gae0f85a269728541200c12b7a144f4d9a}{ST7735\+\_\+\+Draw\+Circle}} (int16\+\_\+t x, int16\+\_\+t y, uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw a circle. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t7735_ga29294596f660f05ad8738db73ee07cfa}{ST7735\+\_\+\+Color565}} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em RGB to color creation. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t7735_gacd13666f7002b9b8cb7a11164b2203ca}{ST7735\+\_\+\+Swap\+Color}} (uint16\+\_\+t x)
+\begin{DoxyCompactList}\small\item\em Swaps red and blue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gaaf5af072e5213fcc3d6b852a2553e048}{ST7735\+\_\+\+Draw\+Bitmap}} (int16\+\_\+t x, int16\+\_\+t y, const uint16\+\_\+t $\ast$image, int16\+\_\+t w, int16\+\_\+t h)
+\begin{DoxyCompactList}\small\item\em Displays a BMP image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga0d092afe5e5a087662adc8e5befa0078}{ST7735\+\_\+\+Draw\+CharS}} (int16\+\_\+t x, int16\+\_\+t y, char c, int16\+\_\+t text\+Color, int16\+\_\+t bg\+Color, uint8\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Draw a character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga66c54533bdb1555b1e488bb9fcf9885b}{ST7735\+\_\+\+Draw\+Char}} (int16\+\_\+t x, int16\+\_\+t y, char c, int16\+\_\+t text\+Color, int16\+\_\+t bg\+Color, uint8\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Draw a character. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t7735_ga8b1c0041f452392eae6adcab4db6251a}{ST7735\+\_\+\+Draw\+String}} (uint16\+\_\+t x, uint16\+\_\+t y, char $\ast$pt, int16\+\_\+t text\+Color)
+\begin{DoxyCompactList}\small\item\em Draw a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga6edc4479f68eb34624157cc1dda2cbb3}{ST7735\+\_\+\+Set\+Cursor}} (uint32\+\_\+t newX, uint32\+\_\+t newY)
+\begin{DoxyCompactList}\small\item\em Move the cursor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga072f5f963df6e48f5985977526d2466c}{ST7735\+\_\+\+Out\+UDec}} (uint32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Output an unsigned decimal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gae82806e8e3e4469be36a4844c8866576}{ST7735\+\_\+\+Out\+UDec4}} (uint32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Output a 4-\/digit unsigned decimal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gaf568cc052853f7a3a5bdf0e36c81dbb6}{ST7735\+\_\+\+Out\+UDec5}} (uint32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Output a 5-\/digit unsigned decimal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gac898f09a4415cdb236dcb6b09b337d89}{ST7735\+\_\+\+Out\+UFix2\+\_\+1}} (uint32\+\_\+t n, int16\+\_\+t text\+Color)
+\begin{DoxyCompactList}\small\item\em Output a 2-\/digit fixed-\/point decimal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga61ae52ab2f2a79cec0c9bd6b58563582}{ST7735\+\_\+\+Out\+UHex2}} (uint32\+\_\+t n, int16\+\_\+t text\+Color)
+\begin{DoxyCompactList}\small\item\em Output a 2-\/digit hexadecimal number. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gac07019a4990ece959dd04dd58339f839}{ST7735\+\_\+\+Set\+Rotation}} (uint8\+\_\+t m)
+\begin{DoxyCompactList}\small\item\em Change rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga2138bd237e97da48ad87137fb616be37}{ST7735\+\_\+\+Invert\+Display}} (int i)
+\begin{DoxyCompactList}\small\item\em invert display \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga9d73adde861d0adbb12831f818d73321}{ST7735\+\_\+\+Drawaxes}} (uint16\+\_\+t axis\+Color, uint16\+\_\+t bg\+Color, char $\ast$x\+Label, char $\ast$y\+Label1, uint16\+\_\+t label1\+Color, char $\ast$y\+Label2, uint16\+\_\+t label2\+Color, int32\+\_\+t ymax, int32\+\_\+t ymin)
+\begin{DoxyCompactList}\small\item\em Initializes a plot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gaffbb292ebbf7082c331ab6195da3385c}{ST7735\+\_\+\+Plot\+Clear}} (int32\+\_\+t ymin, int32\+\_\+t ymax)
+\begin{DoxyCompactList}\small\item\em Clear plot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga1ae5c293f7cf004c66ca1c0f0d365fcd}{ST7735\+\_\+\+Plot\+Point}} (int32\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Plot one point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga182e839d2ae31a725569e375a10ffe89}{ST7735\+\_\+\+Plot\+Point2}} (int32\+\_\+t data1, uint16\+\_\+t color1)
+\begin{DoxyCompactList}\small\item\em Plot one point with color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga8d6be97f1d5363a69191eea02b023b54}{ST7735\+Plot\+Increment}} (void)
+\begin{DoxyCompactList}\small\item\em Moves the plot cursor in time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga3b19f449b1072070e3dd7f92ce8150fa}{ST7735\+\_\+\+Plot\+Line}} (int32\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Plot one line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gaf8a878e2129edc09d38b3f3aadcad42f}{ST7735\+\_\+\+Plot\+Points}} (int32\+\_\+t y1, int32\+\_\+t y2)
+\begin{DoxyCompactList}\small\item\em Plot two points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gadff58b909cb89f694117603da4ab7a1b}{ST7735\+\_\+\+Plot\+Bar}} (int32\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Plot one bar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga179ccebd4bfe4529903a02ce797e78ea}{ST7735\+\_\+\+Plotd\+Bfs}} (int32\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Plot one bar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gafc91fa494b54f542c2d7cc7ef1fed3e9}{ST7735\+\_\+\+Plot\+Next}} (void)
+\begin{DoxyCompactList}\small\item\em Move x-\/axis parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga3c7b330d12b052f9334781dba849aa0e}{ST7735\+\_\+\+Plot\+Next\+Erase}} (void)
+\begin{DoxyCompactList}\small\item\em Move X coordinate ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga49a0a636404c51a7fe1b54768e47d1eb}{ST7735\+\_\+\+Out\+Char}} (char ch)
+\begin{DoxyCompactList}\small\item\em Output a character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga0801d1839b5f0d63482e8ec90c8b8d37}{ST7735\+\_\+\+Out\+Char\+Transparent}} (char ch)
+\begin{DoxyCompactList}\small\item\em Output a character transparently. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga6bd647233ed938c4006694552b8fd9a0}{ST7735\+\_\+\+Out\+String}} (char $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Output a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga3dc5b6e42bbfce1a62895504496fdc96}{ST7735\+\_\+\+Out\+String\+Transparent}} (char $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Output a string transparently. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga749b305138c366373f55e39a2ae15f17}{ST7735\+\_\+\+Set\+Text\+Color}} (uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em sets the text color \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gabf180e277a49625290f25a01dc7a64b2}{ST7735\+\_\+\+Init\+Printf}} (void)
+\begin{DoxyCompactList}\small\item\em use ST7735 LCD to output from printf \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gaca253dde436e20d4d40d60e74f09992e}{ST7735\+\_\+s\+Dec\+Out2}} (int32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em fixed point output resolution 0.\+01 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga5bd52f02e8c9906242d7270e65133b9a}{ST7735\+\_\+u\+Bin\+Out6}} (uint32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em fixed point output resolution 1/64 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gab1cc9a98dc66976026c3f0ed32988fa7}{ST7735\+\_\+\+XYplot\+Init}} (char $\ast$title, int32\+\_\+t minX, int32\+\_\+t maxX, int32\+\_\+t minY, int32\+\_\+t maxY)
+\begin{DoxyCompactList}\small\item\em initialize XY plot \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gafeb12b9ade1d4487db1b2382a6cd188b}{ST7735\+\_\+\+XYplot}} (uint32\+\_\+t num, int32\+\_\+t bufX\mbox{[}$\,$\mbox{]}, int32\+\_\+t bufY\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em XY plot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga38285646e5ac9f8787f64905d18eacd7}{ST7735\+\_\+\+Line}} (uint16\+\_\+t x1, uint16\+\_\+t y1, uint16\+\_\+t x2, uint16\+\_\+t y2, uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gad00bac301464119c1f7688cc3fedaf23}{ST7735\+\_\+\+SetX}} (int32\+\_\+t newX)
+\begin{DoxyCompactList}\small\item\em set X-\/position \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+ST7735 LCD. 
+
+ST7735R LCD.
+
+\hypertarget{group___s_t7735_ArabicAdafruitLCDpins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{Adafruit ST7735R pins }\label{group___s_t7735_ArabicAdafruitLCDpins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Connection }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Connection }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endhead
+10&+3.\+3&Backlight \\\cline{1-3}
+9 &nc &SPI1 MISO (used for SDC) \\\cline{1-3}
+8 &PB9 &SPI1 SCLK clock out \\\cline{1-3}
+7 &PB8 &SPI1 PICO data out \\\cline{1-3}
+6 &PB6 &SPI1 CS0=TFT\+\_\+\+CS \\\cline{1-3}
+5 &nc &CARD\+\_\+\+CS (used for SDC) \\\cline{1-3}
+4 &PA13&Data/\+Command(GPIO), high for data, low for command \\\cline{1-3}
+3 &PB15&RESET, low to reset, (GPIO) \\\cline{1-3}
+2 &+3.\+3&VCC \\\cline{1-3}
+1 &Gnd &ground \\\cline{1-3}
+\end{longtabu}
+
+
+\hypertarget{group___s_t7735_Arabicwidehkpins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{wide.\+hk ST7735R with ADXL345 accelerometer pins }\label{group___s_t7735_Arabicwidehkpins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-2}
+\endhead
+VCC &+3.\+3 V \\\cline{1-2}
+GND &Ground \\\cline{1-2}
+!\+SCL &SPI1 SCLK\+: PB9 clock \\\cline{1-2}
+!\+SDA &SPI1 PICO\+: PB8 MOSI SPI data from microcontroller to TFT or SDC \\\cline{1-2}
+DC &GPIO PA13 TFT data/command \\\cline{1-2}
+RES &GPIO PB15 TFT reset \\\cline{1-2}
+CS &SPI1 CS0\+: PB6 TFT\+\_\+\+CS, active low to enable TFT \\\cline{1-2}
+$\ast$\+CS &(NC) SDC\+\_\+\+CS, active low to enable SDC \\\cline{1-2}
+MISO &(NC) MISO SPI data from SDC to microcontroller \\\cline{1-2}
+SDA &(NC) I2C data for ADXL345 accelerometer \\\cline{1-2}
+SCL &(NC) I2C clock for ADXL345 accelerometer \\\cline{1-2}
+SDO &(NC) I2C alternate address for ADXL345 accelerometer \\\cline{1-2}
+Backlight + -\/ Light, backlight connected to +3.\+3 V \\\cline{1-2}
+\end{longtabu}
+
+
+\hypertarget{group___s_t7735_Arabicwidehkpins335}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{wide.\+hk ST7735R with ADXL335 accelerometer pins }\label{group___s_t7735_Arabicwidehkpins335}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-2}
+\endhead
+VCC &+3.\+3 V \\\cline{1-2}
+GND &Ground /\\\cline{1-2}
+!\+SCL&SPI1 SCLK\+: PB9 \\\cline{1-2}
+!\+SDA &SPI1 PICO\+: PB8 MOSI SPI data from microcontroller to TFT or SDC \\\cline{1-2}
+DC &GPIO PA13 TFT data/command \\\cline{1-2}
+RES &GPIO PB15 TFT reset \\\cline{1-2}
+CS &SPI1 CS0\+: PB6 TFT\+\_\+\+CS, active low to enable TFT \\\cline{1-2}
+$\ast$\+CS &(NC) SDC\+\_\+\+CS, active low to enable SDC \\\cline{1-2}
+MISO &(NC) MISO SPI data from SDC to microcontroller \\\cline{1-2}
+X&(NC) analog input X-\/axis from ADXL335 accelerometer \\\cline{1-2}
+Y&(NC) analog input Y-\/axis from ADXL335 accelerometer \\\cline{1-2}
+Z&(NC) analog input Z-\/axis from ADXL335 accelerometer \\\cline{1-2}
+Backlight + &Light, backlight connected to +3.\+3 V \\\cline{1-2}
+\end{longtabu}
+
+
+\hypertarget{group___s_t7735_ArabicHiLetgopins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{Hi\+Letgo ST7735 TFT and SDC pins }\label{group___s_t7735_ArabicHiLetgopins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ signal}&\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ signal}&\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-3}
+\endhead
+LED-\/ &16&TFT, to ground \\\cline{1-3}
+LED+ &15&TFT, to +3.\+3 V \\\cline{1-3}
+SD\+\_\+\+CS &14&SDC, to chip select \\\cline{1-3}
+MOSI &13&SDC, to MOSI \\\cline{1-3}
+MISO &12&SDC, to MISO \\\cline{1-3}
+SCK &11&SDC, to serial clock \\\cline{1-3}
+CS &10&TFT, to PB6 SPI1 CS0 \\\cline{1-3}
+SCL &9&TFT, to PB9 SPI1 SCLK \\\cline{1-3}
+SDA &8&TFT, to PB8 MOSI SPI1 PICO \\\cline{1-3}
+A0 &7&TFT, to PA13 Data/\+Command, high for data, low for command \\\cline{1-3}
+RESET &6&TFT, to PB15 reset (GPIO), low to reset \\\cline{1-3}
+NC &3,4,5&not connected \\\cline{1-3}
+VCC &2&to +3.\+3 V \\\cline{1-3}
+GND &1&to ground \\\cline{1-3}
+\end{longtabu}
+
+
+\hypertarget{group___s_t7735_ArabicTyenazapins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{Tyenaza Tyenazaqhf72mi9s3 pins }\label{group___s_t7735_ArabicTyenazapins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ signal}&\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ signal}&\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-3}
+\endhead
+LED &8&to +3.\+3 V \\\cline{1-3}
+SCK &7&SCLK to PB9 SPI1 SCLK \\\cline{1-3}
+SDA &6&MOSI, to PB8 SPI1 PICO \\\cline{1-3}
+A0 &5&Data/\+Command to PA13 (GPIO), high for data, low for command \\\cline{1-3}
+RESET &4&to PB15 (GPIO), low to reset \\\cline{1-3}
+CS &3&to PB6 SPI1 CS0\+: \\\cline{1-3}
+Gnd &2&to ground \\\cline{1-3}
+VCC &1&to +3.\+3 V \\\cline{1-3}
+\end{longtabu}
+
+
+\hypertarget{group___s_t7735_AdafruitLCDpins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{Adafruit ST7735R pins }\label{group___s_t7735_AdafruitLCDpins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Connection }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Connection }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endhead
+10&+3.\+3&Backlight ~\newline
+ \\\cline{1-3}
+9 &nc &SPI1 MISO (used for SDC) ~\newline
+ \\\cline{1-3}
+8 &PB9 &SPI1 SCLK clock out \\\cline{1-3}
+7 &PB8 &SPI1 PICO data out ~\newline
+ \\\cline{1-3}
+6 &PB6 &SPI1 CS0=TFT\+\_\+\+CS ~\newline
+ \\\cline{1-3}
+5 &nc &CARD\+\_\+\+CS (used for SDC) ~\newline
+ \\\cline{1-3}
+4 &PA13&Data/\+Command(GPIO), high for data, low for command ~\newline
+ \\\cline{1-3}
+3 &PB15&RESET, low to reset, (GPIO) ~\newline
+ \\\cline{1-3}
+2 &+3.\+3&VCC ~\newline
+ \\\cline{1-3}
+1 &Gnd &ground ~\newline
+ \\\cline{1-3}
+\end{longtabu}
+
+
+\hypertarget{group___s_t7735_widehkpins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{wide.\+hk ST7735R with ADXL345 accelerometer pins }\label{group___s_t7735_widehkpins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-2}
+\endhead
+VCC &+3.\+3 V \\\cline{1-2}
+GND &Ground \\\cline{1-2}
+!\+SCL &SPI1 SCLK\+: PB9 clock \\\cline{1-2}
+!\+SDA &SPI1 PICO\+: PB8 MOSI SPI data from microcontroller to TFT or SDC \\\cline{1-2}
+DC &GPIO PA13 TFT data/command \\\cline{1-2}
+RES &GPIO PB15 TFT reset \\\cline{1-2}
+CS &SPI1 CS0\+: PB6 TFT\+\_\+\+CS, active low to enable TFT \\\cline{1-2}
+$\ast$\+CS &(NC) SDC\+\_\+\+CS, active low to enable SDC \\\cline{1-2}
+MISO &(NC) MISO SPI data from SDC to microcontroller \\\cline{1-2}
+SDA &(NC) I2C data for ADXL345 accelerometer \\\cline{1-2}
+SCL &(NC) I2C clock for ADXL345 accelerometer \\\cline{1-2}
+SDO &(NC) I2C alternate address for ADXL345 accelerometer \\\cline{1-2}
+Backlight + -\/ Light, backlight connected to +3.\+3 V ~\newline
+ \\\cline{1-2}
+\end{longtabu}
+
+
+\hypertarget{group___s_t7735_widehkpins335}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{wide.\+hk ST7735R with ADXL335 accelerometer pins }\label{group___s_t7735_widehkpins335}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-2}
+\endhead
+VCC &+3.\+3 V \\\cline{1-2}
+GND &Ground /\\\cline{1-2}
+!\+SCL&SPI1 SCLK\+: PB9 \\\cline{1-2}
+!\+SDA &SPI1 PICO\+: PB8 MOSI SPI data from microcontroller to TFT or SDC \\\cline{1-2}
+DC &GPIO PA13 TFT data/command \\\cline{1-2}
+RES &GPIO PB15 TFT reset \\\cline{1-2}
+CS &SPI1 CS0\+: PB6 TFT\+\_\+\+CS, active low to enable TFT \\\cline{1-2}
+$\ast$\+CS &(NC) SDC\+\_\+\+CS, active low to enable SDC \\\cline{1-2}
+MISO &(NC) MISO SPI data from SDC to microcontroller \\\cline{1-2}
+X&(NC) analog input X-\/axis from ADXL335 accelerometer \\\cline{1-2}
+Y&(NC) analog input Y-\/axis from ADXL335 accelerometer \\\cline{1-2}
+Z&(NC) analog input Z-\/axis from ADXL335 accelerometer \\\cline{1-2}
+Backlight + &Light, backlight connected to +3.\+3 V \\\cline{1-2}
+\end{longtabu}
+
+
+\hypertarget{group___s_t7735_HiLetgopins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{Hi\+Letgo ST7735 TFT and SDC pins }\label{group___s_t7735_HiLetgopins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ signal}&\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ signal}&\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-3}
+\endhead
+LED-\/ &16&TFT, to ground \\\cline{1-3}
+LED+ &15&TFT, to +3.\+3 V \\\cline{1-3}
+SD\+\_\+\+CS &14&SDC, to chip select \\\cline{1-3}
+MOSI &13&SDC, to MOSI \\\cline{1-3}
+MISO &12&SDC, to MISO \\\cline{1-3}
+SCK &11&SDC, to serial clock \\\cline{1-3}
+CS &10&TFT, to PB6 SPI1 CS0 \\\cline{1-3}
+SCL &9&TFT, to PB9 SPI1 SCLK \\\cline{1-3}
+SDA &8&TFT, to PB8 MOSI SPI1 PICO \\\cline{1-3}
+A0 &7&TFT, to PA13 Data/\+Command, high for data, low for command \\\cline{1-3}
+RESET &6&TFT, to PB15 reset (GPIO), low to reset \\\cline{1-3}
+NC &3,4,5&not connected \\\cline{1-3}
+VCC &2&to +3.\+3 V \\\cline{1-3}
+GND &1&to ground \\\cline{1-3}
+\end{longtabu}
+
+
+\hypertarget{group___s_t7735_Tyenazapins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{Tyenaza Tyenazaqhf72mi9s3 pins }\label{group___s_t7735_Tyenazapins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ signal}&\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ signal}&\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-3}
+\endhead
+LED &8&to +3.\+3 V \\\cline{1-3}
+SCK &7&SCLK to PB9 SPI1 SCLK \\\cline{1-3}
+SDA &6&MOSI, to PB8 SPI1 PICO \\\cline{1-3}
+A0 &5&Data/\+Command to PA13 (GPIO), high for data, low for command \\\cline{1-3}
+RESET &4&to PB15 (GPIO), low to reset \\\cline{1-3}
+CS &3&to PB6 SPI1 CS0\+: \\\cline{1-3}
+Gnd &2&to ground \\\cline{1-3}
+VCC &1&to +3.\+3 V \\\cline{1-3}
+\end{longtabu}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___s_t7735_ga3b8025b0e0f8b5bc043e1f3355d1f0d6}\label{group___s_t7735_ga3b8025b0e0f8b5bc043e1f3355d1f0d6}} 
+\index{ST7735@{ST7735}!Arabic\_OutChar@{Arabic\_OutChar}}
+\index{Arabic\_OutChar@{Arabic\_OutChar}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{Arabic\_OutChar()}{Arabic\_OutChar()}}
+{\footnotesize\ttfamily void Arabic\+\_\+\+Out\+Char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___s_t7735_gae767fd15e422bf7184563e9b4dbb04ea}{Arabic\+\_\+t}}}]{ch }\end{DoxyParamCaption})}
+
+
+
+Output an Arabic character. 
+
+Output one Arabic character to the LCD Position determined by Arabic\+\_\+\+Set\+Cursor command Color set by ST7735\+\_\+\+Set\+Text\+Color 
+\begin{DoxyParams}{Parameters}
+{\em ch} & 8-\/bit Arabic character \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_gace8825b3c2dd7f17902847f25578a4d0}\label{group___s_t7735_gace8825b3c2dd7f17902847f25578a4d0}} 
+\index{ST7735@{ST7735}!Arabic\_OutString@{Arabic\_OutString}}
+\index{Arabic\_OutString@{Arabic\_OutString}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{Arabic\_OutString()}{Arabic\_OutString()}}
+{\footnotesize\ttfamily void Arabic\+\_\+\+Out\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___s_t7735_gae767fd15e422bf7184563e9b4dbb04ea}{Arabic\+\_\+t}} $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Output an Arabic string. 
+
+Output an Arabic string to the LCD Position determined by Arabic\+\_\+\+Set\+Cursor command Color set by ST7735\+\_\+\+Set\+Text\+Color. The string will automatically wrap. 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & pointer to null-\/terminated Arabic string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_gaa6c9e4542c04e32e57f95838fde7d4f2}\label{group___s_t7735_gaa6c9e4542c04e32e57f95838fde7d4f2}} 
+\index{ST7735@{ST7735}!Arabic\_SetCursor@{Arabic\_SetCursor}}
+\index{Arabic\_SetCursor@{Arabic\_SetCursor}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{Arabic\_SetCursor()}{Arabic\_SetCursor()}}
+{\footnotesize\ttfamily void Arabic\+\_\+\+Set\+Cursor (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{newX,  }\item[{uint32\+\_\+t}]{newY }\end{DoxyParamCaption})}
+
+
+
+Move Arabic cursor. 
+
+Move the cursor to the desired X-\/ and Y-\/position. The next character will be printed here. X=0 is the leftmost column. Y=0 is the top row. $\ast$ 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+{\em newX} & new X-\/position of the cursor (0$<$=newX$<$=7) \\
+\hline
+{\em newY} & new Y-\/position of the cursor (0$<$=newY$<$=9) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga29294596f660f05ad8738db73ee07cfa}\label{group___s_t7735_ga29294596f660f05ad8738db73ee07cfa}} 
+\index{ST7735@{ST7735}!ST7735\_Color565@{ST7735\_Color565}}
+\index{ST7735\_Color565@{ST7735\_Color565}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_Color565()}{ST7735\_Color565()}}
+{\footnotesize\ttfamily uint16\+\_\+t ST7735\+\_\+\+Color565 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+
+
+RGB to color creation. 
+
+Pass 8-\/bit (each) R,G,B and get back 16-\/bit packed color. 
+\begin{DoxyParams}{Parameters}
+{\em r} & red value \\
+\hline
+{\em g} & green value \\
+\hline
+{\em b} & blue value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+16-\/bit color 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga9d73adde861d0adbb12831f818d73321}\label{group___s_t7735_ga9d73adde861d0adbb12831f818d73321}} 
+\index{ST7735@{ST7735}!ST7735\_Drawaxes@{ST7735\_Drawaxes}}
+\index{ST7735\_Drawaxes@{ST7735\_Drawaxes}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_Drawaxes()}{ST7735\_Drawaxes()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Drawaxes (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{axis\+Color,  }\item[{uint16\+\_\+t}]{bg\+Color,  }\item[{char $\ast$}]{x\+Label,  }\item[{char $\ast$}]{y\+Label1,  }\item[{uint16\+\_\+t}]{label1\+Color,  }\item[{char $\ast$}]{y\+Label2,  }\item[{uint16\+\_\+t}]{label2\+Color,  }\item[{int32\+\_\+t}]{ymax,  }\item[{int32\+\_\+t}]{ymin }\end{DoxyParamCaption})}
+
+
+
+Initializes a plot. 
+
+Set up the axes, labels, and other variables to allow data to be plotted in a chart using the functions \mbox{\hyperlink{group___s_t7735_ga1ae5c293f7cf004c66ca1c0f0d365fcd}{ST7735\+\_\+\+Plot\+Point()}} and ST7735\+\_\+\+Plot\+Increment(). If y\+Label2 is empty string, no y\+Label2 is printed, and y\+Label1 is centered
+\begin{DoxyItemize}
+\item graphics routines
+\begin{DoxyItemize}
+\item y coordinates 0 to 31 used for labels and messages
+\item y coordinates 32 to 159 128 pixels high
+\item x coordinates 0 to 127 128 pixels wide
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis\+Color} & 16-\/bit color for axes, which can be produced by \mbox{\hyperlink{group___m_k_i_i_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565()}} \\
+\hline
+{\em bg\+Color} & 16-\/bit color for plot background, which can be produced by \mbox{\hyperlink{group___m_k_i_i_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565()}} \\
+\hline
+{\em x\+Label} & pointer to a null terminated string for x-\/axis ($\sim$4 character space) \\
+\hline
+{\em y\+Label1} & pointer to a null terminated string for top of y-\/axis ($\sim$3-\/5 character space) \\
+\hline
+{\em label1\+Color} & 16-\/bit color for y-\/axis label1, which can be produced by \mbox{\hyperlink{group___m_k_i_i_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565()}} \\
+\hline
+{\em y\+Label2} & pointer to a null terminated string for bottom of y-\/axis ($\sim$3 character space) \\
+\hline
+{\em label2\+Color} & 16-\/bit color for y-\/axis label2, which can be produced by \mbox{\hyperlink{group___m_k_i_i_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565()}} \\
+\hline
+{\em ymax} & maximum value to be printed \\
+\hline
+{\em ymin} & minimum value to be printed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes\+: \mbox{\hyperlink{group___s_t7735_ga204a442207d7367ace616bd6bfd79348}{ST7735\+\_\+\+Init\+R()}} has been called 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_gaaf5af072e5213fcc3d6b852a2553e048}\label{group___s_t7735_gaaf5af072e5213fcc3d6b852a2553e048}} 
+\index{ST7735@{ST7735}!ST7735\_DrawBitmap@{ST7735\_DrawBitmap}}
+\index{ST7735\_DrawBitmap@{ST7735\_DrawBitmap}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_DrawBitmap()}{ST7735\_DrawBitmap()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Draw\+Bitmap (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{const uint16\+\_\+t $\ast$}]{image,  }\item[{int16\+\_\+t}]{w,  }\item[{int16\+\_\+t}]{h }\end{DoxyParamCaption})}
+
+
+
+Displays a BMP image. 
+
+Displays a 16-\/bit color BMP image. A bitmap file that is created by a PC image processing program has a header and may be padded with dummy columns so the data have four byte alignment. This function assumes that all of that has been stripped out, and the array image\mbox{[}\mbox{]} has one 16-\/bit halfword for each pixel to be displayed on the screen (encoded in reverse order, which is standard for bitmap files). An array can be created in this format from a 24-\/bit-\/per-\/pixel .bmp file using the associated {\bfseries{Bmp\+Convert16.\+exe}} converter program. (x,y) is the screen location of the lower left corner of BMP image~\newline
+ Requires (11 + 2$\ast$w$\ast$h) bytes of transmission (assuming image fully on screen) 
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal position of the bottom left corner of the image, columns from the left edge \\
+\hline
+{\em y} & vertical position of the bottom left corner of the image, rows from the top edge \\
+\hline
+{\em image} & pointer to a 16-\/bit color BMP image \\
+\hline
+{\em w} & number of pixels wide \\
+\hline
+{\em h} & number of pixels tall \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Must be less than or equal to 128 pixels wide by 160 pixels high 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga66c54533bdb1555b1e488bb9fcf9885b}\label{group___s_t7735_ga66c54533bdb1555b1e488bb9fcf9885b}} 
+\index{ST7735@{ST7735}!ST7735\_DrawChar@{ST7735\_DrawChar}}
+\index{ST7735\_DrawChar@{ST7735\_DrawChar}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_DrawChar()}{ST7735\_DrawChar()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Draw\+Char (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{char}]{c,  }\item[{int16\+\_\+t}]{text\+Color,  }\item[{int16\+\_\+t}]{bg\+Color,  }\item[{uint8\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Draw a character. 
+
+Advanced character draw function. This is similar to the function from Adafruit\+\_\+\+GFX.\+c but adapted for this processor. However, this function only uses one call to set\+Addr\+Window(), which allows it to run at least twice as fast.~\newline
+ Requires (11 + size$\ast$size$\ast$6$\ast$8) bytes of transmission (assuming image fully on screen) 
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal position of the top left corner of the character, columns from the left edge \\
+\hline
+{\em y} & vertical position of the top left corner of the character, rows from the top edge \\
+\hline
+{\em c} & character to be printed \\
+\hline
+{\em text\+Color} & 16-\/bit color of the character \\
+\hline
+{\em bg\+Color} & 16-\/bit color of the background \\
+\hline
+{\em size} & number of pixels per character pixel (e.\+g. size==2 prints each pixel of font as 2x2 square) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga0d092afe5e5a087662adc8e5befa0078}\label{group___s_t7735_ga0d092afe5e5a087662adc8e5befa0078}} 
+\index{ST7735@{ST7735}!ST7735\_DrawCharS@{ST7735\_DrawCharS}}
+\index{ST7735\_DrawCharS@{ST7735\_DrawCharS}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_DrawCharS()}{ST7735\_DrawCharS()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Draw\+CharS (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{char}]{c,  }\item[{int16\+\_\+t}]{text\+Color,  }\item[{int16\+\_\+t}]{bg\+Color,  }\item[{uint8\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Draw a character. 
+
+Simple character draw function. This is the same function from Adafruit\+\_\+\+GFX.\+c but adapted for this processor. However, each call to \mbox{\hyperlink{group___s_t7735_gaa2dc768f637489753a7b70eac676c4a5}{ST7735\+\_\+\+Draw\+Pixel()}} calls set\+Addr\+Window(), which needs to send many extra data and commands. If the background color is the same as the text color, no background will be printed, and text can be drawn right over existing images without covering them with a box.~\newline
+ Requires (11 + 2$\ast$size$\ast$size)$\ast$6$\ast$8 bytes of transmission (image fully on screen; textcolor != bg\+Color) 
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal position of the top left corner of the character, columns from the left edge \\
+\hline
+{\em y} & vertical position of the top left corner of the character, rows from the top edge \\
+\hline
+{\em c} & character to be printed \\
+\hline
+{\em text\+Color} & 16-\/bit color of the character \\
+\hline
+{\em bg\+Color} & 16-\/bit color of the background \\
+\hline
+{\em size} & number of pixels per character pixel (e.\+g. size==2 prints each pixel of font as 2x2 square) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_gae0f85a269728541200c12b7a144f4d9a}\label{group___s_t7735_gae0f85a269728541200c12b7a144f4d9a}} 
+\index{ST7735@{ST7735}!ST7735\_DrawCircle@{ST7735\_DrawCircle}}
+\index{ST7735\_DrawCircle@{ST7735\_DrawCircle}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_DrawCircle()}{ST7735\_DrawCircle()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Draw\+Circle (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draw a circle. 
+
+Draw a circle (diameter of 10 pixels) at the given coordinates with the given color.~\newline
+ Requires (11$\ast$10+68$\ast$2)=178 bytes of transmission (assuming image on screen) 
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal position of the top left corner of the circle, columns from the left edge \\
+\hline
+{\em y} & vertical position of the top left corner of the circle, rows from the top edge \\
+\hline
+{\em color} & 16-\/bit color, which can be produced by \mbox{\hyperlink{group___s_t7735_ga29294596f660f05ad8738db73ee07cfa}{ST7735\+\_\+\+Color565()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga05c18aa8dd363fe991d5bc73a02e7abc}\label{group___s_t7735_ga05c18aa8dd363fe991d5bc73a02e7abc}} 
+\index{ST7735@{ST7735}!ST7735\_DrawFastHLine@{ST7735\_DrawFastHLine}}
+\index{ST7735\_DrawFastHLine@{ST7735\_DrawFastHLine}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_DrawFastHLine()}{ST7735\_DrawFastHLine()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Draw\+Fast\+HLine (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{int16\+\_\+t}]{w,  }\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draw a horizontal line. 
+
+Draw a horizontal line at the given coordinates with the given width and color. A horizontal line is parallel to the shorter side of the rectangular display~\newline
+ Requires (11 + 2$\ast$w) bytes of transmission (assuming image fully on screen) 
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal position of the start of the line, columns from the left edge \\
+\hline
+{\em y} & vertical position of the start of the line, rows from the top edge \\
+\hline
+{\em w} & horizontal width of the line \\
+\hline
+{\em color} & 16-\/bit color, which can be produced by \mbox{\hyperlink{group___m_k_i_i_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga2c091bb2f7905e4464a6152015a49989}\label{group___s_t7735_ga2c091bb2f7905e4464a6152015a49989}} 
+\index{ST7735@{ST7735}!ST7735\_DrawFastVLine@{ST7735\_DrawFastVLine}}
+\index{ST7735\_DrawFastVLine@{ST7735\_DrawFastVLine}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_DrawFastVLine()}{ST7735\_DrawFastVLine()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Draw\+Fast\+VLine (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{int16\+\_\+t}]{h,  }\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draw a vertical line. 
+
+Draw a vertical line at the given coordinates with the given height and color.~\newline
+ A vertical line is parallel to the longer side of the rectangular display~\newline
+ Requires (11 + 2$\ast$h) bytes of transmission (assuming image fully on screen) 
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal position of the start of the line, columns from the left edge \\
+\hline
+{\em y} & vertical position of the start of the line, rows from the top edge \\
+\hline
+{\em h} & vertical height of the line \\
+\hline
+{\em color} & 16-\/bit color, which can be produced by \mbox{\hyperlink{group___m_k_i_i_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_gaa2dc768f637489753a7b70eac676c4a5}\label{group___s_t7735_gaa2dc768f637489753a7b70eac676c4a5}} 
+\index{ST7735@{ST7735}!ST7735\_DrawPixel@{ST7735\_DrawPixel}}
+\index{ST7735\_DrawPixel@{ST7735\_DrawPixel}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_DrawPixel()}{ST7735\_DrawPixel()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Draw\+Pixel (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Color one pixel. 
+
+Color the pixel at the given coordinates with the given color.~\newline
+ Requires 13 bytes of transmission~\newline
+ x must be less than 128~\newline
+ x 0 is on the left, 126 is near the right ~\newline
+ y must be less than 160 y 159 is near the wires, 0 is the side opposite the wires 
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal position of the pixel, columns from the left edge \\
+\hline
+{\em y} & vertical position of the pixel, rows from the top edge \\
+\hline
+{\em color} & 16-\/bit color, which can be produced by \mbox{\hyperlink{group___m_k_i_i_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga97a986b0ae675970952cc4b60529c14f}\label{group___s_t7735_ga97a986b0ae675970952cc4b60529c14f}} 
+\index{ST7735@{ST7735}!ST7735\_DrawSmallCircle@{ST7735\_DrawSmallCircle}}
+\index{ST7735\_DrawSmallCircle@{ST7735\_DrawSmallCircle}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_DrawSmallCircle()}{ST7735\_DrawSmallCircle()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Draw\+Small\+Circle (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draw a small circle. 
+
+Draw a small circle (diameter of 6 pixels) at the given coordinates with the given color.~\newline
+ Requires (11$\ast$6+24$\ast$2)=114 bytes of transmission (assuming image fully on screen) 
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal position of the top left corner of the circle, columns from the left edge \\
+\hline
+{\em y} & vertical position of the top left corner of the circle, rows from the top edge \\
+\hline
+{\em color} & 16-\/bit color, which can be produced by \mbox{\hyperlink{group___s_t7735_ga29294596f660f05ad8738db73ee07cfa}{ST7735\+\_\+\+Color565()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga8b1c0041f452392eae6adcab4db6251a}\label{group___s_t7735_ga8b1c0041f452392eae6adcab4db6251a}} 
+\index{ST7735@{ST7735}!ST7735\_DrawString@{ST7735\_DrawString}}
+\index{ST7735\_DrawString@{ST7735\_DrawString}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_DrawString()}{ST7735\_DrawString()}}
+{\footnotesize\ttfamily uint32\+\_\+t ST7735\+\_\+\+Draw\+String (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{char $\ast$}]{pt,  }\item[{int16\+\_\+t}]{text\+Color }\end{DoxyParamCaption})}
+
+
+
+Draw a string. 
+
+String draw function. 16 rows (0 to 15) and 21 characters (0 to 20)~\newline
+ Requires (11 + size$\ast$size$\ast$6$\ast$8) bytes of transmission for each character 
+\begin{DoxyParams}{Parameters}
+{\em x} & columns from the left edge (0 to 20) \\
+\hline
+{\em y} & rows from the top edge (0 to 12) \\
+\hline
+{\em pt} & pointer to a null terminated string to be printed \\
+\hline
+{\em text\+Color} & 16-\/bit color of the characters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of characters printed 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+bg\+Color is Black and size is 1 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_gada283d88275b972d188afad1c8649829}\label{group___s_t7735_gada283d88275b972d188afad1c8649829}} 
+\index{ST7735@{ST7735}!ST7735\_FillRect@{ST7735\_FillRect}}
+\index{ST7735\_FillRect@{ST7735\_FillRect}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_FillRect()}{ST7735\_FillRect()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Fill\+Rect (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{int16\+\_\+t}]{w,  }\item[{int16\+\_\+t}]{h,  }\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draw a filled rectangle. 
+
+Draw a filled rectangle at the given coordinates with the given width, height, and color.~\newline
+ Requires (11 + 2$\ast$w$\ast$h) bytes of transmission (assuming image fully on screen) 
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal position of the top left corner of the rectangle, columns from the left edge \\
+\hline
+{\em y} & vertical position of the top left corner of the rectangle, rows from the top edge \\
+\hline
+{\em w} & horizontal width of the rectangle \\
+\hline
+{\em h} & vertical height of the rectangle \\
+\hline
+{\em color} & 16-\/bit color, which can be produced by \mbox{\hyperlink{group___s_t7735_ga29294596f660f05ad8738db73ee07cfa}{ST7735\+\_\+\+Color565()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga3a14506207ab49aee2c40700b5036271}\label{group___s_t7735_ga3a14506207ab49aee2c40700b5036271}} 
+\index{ST7735@{ST7735}!ST7735\_FillScreen@{ST7735\_FillScreen}}
+\index{ST7735\_FillScreen@{ST7735\_FillScreen}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_FillScreen()}{ST7735\_FillScreen()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Fill\+Screen (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Fill the screen. 
+
+Fill the screen with the given color.~\newline
+ Requires 40,971 bytes of transmission 
+\begin{DoxyParams}{Parameters}
+{\em color} & 16-\/bit color, which can be produced by \mbox{\hyperlink{group___s_t7735_ga29294596f660f05ad8738db73ee07cfa}{ST7735\+\_\+\+Color565()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_gaec8e637c759ad0adde0758c0935f383a}\label{group___s_t7735_gaec8e637c759ad0adde0758c0935f383a}} 
+\index{ST7735@{ST7735}!ST7735\_InitB@{ST7735\_InitB}}
+\index{ST7735\_InitB@{ST7735\_InitB}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_InitB()}{ST7735\_InitB()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+InitB (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize ST7735B LCD. 
+
+Initialize ST7735B color 128x160-\/pixel TFT LCD 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+assumes GPIOA and GPIOB are reset and powered previously 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_gabf180e277a49625290f25a01dc7a64b2}\label{group___s_t7735_gabf180e277a49625290f25a01dc7a64b2}} 
+\index{ST7735@{ST7735}!ST7735\_InitPrintf@{ST7735\_InitPrintf}}
+\index{ST7735\_InitPrintf@{ST7735\_InitPrintf}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_InitPrintf()}{ST7735\_InitPrintf()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Init\+Printf (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+use ST7735 LCD to output from printf 
+
+Initialize the ST7735 for printf 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga204a442207d7367ace616bd6bfd79348}\label{group___s_t7735_ga204a442207d7367ace616bd6bfd79348}} 
+\index{ST7735@{ST7735}!ST7735\_InitR@{ST7735\_InitR}}
+\index{ST7735\_InitR@{ST7735\_InitR}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_InitR()}{ST7735\_InitR()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+InitR (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{group___s_t7735_ga9568e103412377d5867f1f367ac7f424}{init\+RFlags}}}]{option }\end{DoxyParamCaption})}
+
+
+
+Initialize ST7735R LCD. 
+
+Initialize ST7735R color 128x160-\/pixel TFT LCD 
+\begin{DoxyParams}{Parameters}
+{\em option} & one of none,INITR\+\_\+\+GREENTAB,INITR\+\_\+\+REDTAB,INITR\+\_\+\+BLACKTAB \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+assumes GPIOA and GPIOB are reset and powered previously 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_ga2138bd237e97da48ad87137fb616be37}\label{group___s_t7735_ga2138bd237e97da48ad87137fb616be37}} 
+\index{ST7735@{ST7735}!ST7735\_InvertDisplay@{ST7735\_InvertDisplay}}
+\index{ST7735\_InvertDisplay@{ST7735\_InvertDisplay}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_InvertDisplay()}{ST7735\_InvertDisplay()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Invert\+Display (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+invert display 
+
+Send the command to invert all of the colors. Requires 1 byte of transmission 
+\begin{DoxyParams}{Parameters}
+{\em i} & 0 to disable inversion; non-\/zero to enable inversion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga38285646e5ac9f8787f64905d18eacd7}\label{group___s_t7735_ga38285646e5ac9f8787f64905d18eacd7}} 
+\index{ST7735@{ST7735}!ST7735\_Line@{ST7735\_Line}}
+\index{ST7735\_Line@{ST7735\_Line}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_Line()}{ST7735\_Line()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Line (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x1,  }\item[{uint16\+\_\+t}]{y1,  }\item[{uint16\+\_\+t}]{x2,  }\item[{uint16\+\_\+t}]{y2,  }\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws line. 
+
+Draws one line on the ST7735 color LCD~\newline
+
+\begin{DoxyItemize}
+\item (x1,y1) is the start point
+\item (x2,y2) is the end point
+\item x1 x2 must be less than 128, 0 is on the left, 126 is near the right
+\item y1 y2 must be less than 160, 159 is near the wires, 0 is the side opposite the wires
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & horizonal position \\
+\hline
+{\em x2} & horizonal position ~\newline
+ \\
+\hline
+{\em y1} & vertical position \\
+\hline
+{\em y2} & vertical position \\
+\hline
+{\em color} & 16-\/bit color, which can be produced by \mbox{\hyperlink{group___s_t7735_ga29294596f660f05ad8738db73ee07cfa}{ST7735\+\_\+\+Color565()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga49a0a636404c51a7fe1b54768e47d1eb}\label{group___s_t7735_ga49a0a636404c51a7fe1b54768e47d1eb}} 
+\index{ST7735@{ST7735}!ST7735\_OutChar@{ST7735\_OutChar}}
+\index{ST7735\_OutChar@{ST7735\_OutChar}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_OutChar()}{ST7735\_OutChar()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Out\+Char (\begin{DoxyParamCaption}\item[{char}]{ch }\end{DoxyParamCaption})}
+
+
+
+Output a character. 
+
+Output one character to the LCD Position determined by ST7735\+\_\+\+Set\+Cursor command Color set by ST7735\+\_\+\+Set\+Text\+Color 
+\begin{DoxyParams}{Parameters}
+{\em ch} & 8-\/bit ASCII character \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga0801d1839b5f0d63482e8ec90c8b8d37}\label{group___s_t7735_ga0801d1839b5f0d63482e8ec90c8b8d37}} 
+\index{ST7735@{ST7735}!ST7735\_OutCharTransparent@{ST7735\_OutCharTransparent}}
+\index{ST7735\_OutCharTransparent@{ST7735\_OutCharTransparent}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_OutCharTransparent()}{ST7735\_OutCharTransparent()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Out\+Char\+Transparent (\begin{DoxyParamCaption}\item[{char}]{ch }\end{DoxyParamCaption})}
+
+
+
+Output a character transparently. 
+
+Output one character to the LCD Position determined by ST7735\+\_\+\+Set\+Cursor command Color set by ST7735\+\_\+\+Set\+Text\+Color, background is transparent 
+\begin{DoxyParams}{Parameters}
+{\em ch} & 8-\/bit ASCII character \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga6bd647233ed938c4006694552b8fd9a0}\label{group___s_t7735_ga6bd647233ed938c4006694552b8fd9a0}} 
+\index{ST7735@{ST7735}!ST7735\_OutString@{ST7735\_OutString}}
+\index{ST7735\_OutString@{ST7735\_OutString}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_OutString()}{ST7735\_OutString()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Out\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Output a string. 
+
+Print a string of characters to the ST7735 LCD. Position determined by ST7735\+\_\+\+Set\+Cursor command Color set by ST7735\+\_\+\+Set\+Text\+Color The string will not automatically wrap. 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & pointer to NULL-\/terminated ASCII string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga3dc5b6e42bbfce1a62895504496fdc96}\label{group___s_t7735_ga3dc5b6e42bbfce1a62895504496fdc96}} 
+\index{ST7735@{ST7735}!ST7735\_OutStringTransparent@{ST7735\_OutStringTransparent}}
+\index{ST7735\_OutStringTransparent@{ST7735\_OutStringTransparent}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_OutStringTransparent()}{ST7735\_OutStringTransparent()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Out\+String\+Transparent (\begin{DoxyParamCaption}\item[{char $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Output a string transparently. 
+
+Print a string of characters to the ST7735 LCD. Position determined by ST7735\+\_\+\+Set\+Cursor command Color set by ST7735\+\_\+\+Set\+Text\+Color, background is transparent The string will not automatically wrap. 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & pointer to NULL-\/terminated ASCII string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga072f5f963df6e48f5985977526d2466c}\label{group___s_t7735_ga072f5f963df6e48f5985977526d2466c}} 
+\index{ST7735@{ST7735}!ST7735\_OutUDec@{ST7735\_OutUDec}}
+\index{ST7735\_OutUDec@{ST7735\_OutUDec}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_OutUDec()}{ST7735\_OutUDec()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Out\+UDec (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Output an unsigned decimal. 
+
+Output a 32-\/bit number in unsigned decimal format. Position determined by ST7735\+\_\+\+Set\+Cursor command. Color set by ST7735\+\_\+\+Set\+Text\+Color. 
+\begin{DoxyParams}{Parameters}
+{\em n} & 32-\/bit number to be transferred \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Variable format 1-\/10 digits with no space before or after 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_gae82806e8e3e4469be36a4844c8866576}\label{group___s_t7735_gae82806e8e3e4469be36a4844c8866576}} 
+\index{ST7735@{ST7735}!ST7735\_OutUDec4@{ST7735\_OutUDec4}}
+\index{ST7735\_OutUDec4@{ST7735\_OutUDec4}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_OutUDec4()}{ST7735\_OutUDec4()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Out\+UDec4 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Output a 4-\/digit unsigned decimal. 
+
+Output a 32-\/bit number in unsigned 4-\/digit decimal format with no space before or after. Color set by ST7735\+\_\+\+Set\+Text\+Color. Position determined by ST7735\+\_\+\+Set\+Cursor command 
+\begin{DoxyParams}{Parameters}
+{\em n} & 32-\/bit number to be transferred \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Fixed format 4 digits with no space before or after 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_gaf568cc052853f7a3a5bdf0e36c81dbb6}\label{group___s_t7735_gaf568cc052853f7a3a5bdf0e36c81dbb6}} 
+\index{ST7735@{ST7735}!ST7735\_OutUDec5@{ST7735\_OutUDec5}}
+\index{ST7735\_OutUDec5@{ST7735\_OutUDec5}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_OutUDec5()}{ST7735\_OutUDec5()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Out\+UDec5 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Output a 5-\/digit unsigned decimal. 
+
+Output a 32-\/bit number in unsigned 5-\/digit decimal format with no space before or after. Color set by ST7735\+\_\+\+Set\+Text\+Color. Position determined by ST7735\+\_\+\+Set\+Cursor command 
+\begin{DoxyParams}{Parameters}
+{\em n} & 32-\/bit number to be transferred \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Fixed format 5 digits with no space before or after 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_gac898f09a4415cdb236dcb6b09b337d89}\label{group___s_t7735_gac898f09a4415cdb236dcb6b09b337d89}} 
+\index{ST7735@{ST7735}!ST7735\_OutUFix2\_1@{ST7735\_OutUFix2\_1}}
+\index{ST7735\_OutUFix2\_1@{ST7735\_OutUFix2\_1}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_OutUFix2\_1()}{ST7735\_OutUFix2\_1()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Out\+UFix2\+\_\+1 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{n,  }\item[{int16\+\_\+t}]{text\+Color }\end{DoxyParamCaption})}
+
+
+
+Output a 2-\/digit fixed-\/point decimal. 
+
+Output a 32-\/bit number in unsigned 3-\/digit fixed point, 0.\+1 resolution numbers 0 to 999 printed as \char`\"{} 0.\+0\char`\"{} to \char`\"{}99.\+9\char`\"{} Position determined by ST7735\+\_\+\+Set\+Cursor command 
+\begin{DoxyParams}{Parameters}
+{\em n} & 32-\/bit number to be transferred \\
+\hline
+{\em text\+Color} & 16-\/bit color of the numbers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Fixed format 4 characters with no space before or after 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_ga61ae52ab2f2a79cec0c9bd6b58563582}\label{group___s_t7735_ga61ae52ab2f2a79cec0c9bd6b58563582}} 
+\index{ST7735@{ST7735}!ST7735\_OutUHex2@{ST7735\_OutUHex2}}
+\index{ST7735\_OutUHex2@{ST7735\_OutUHex2}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_OutUHex2()}{ST7735\_OutUHex2()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Out\+UHex2 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{n,  }\item[{int16\+\_\+t}]{text\+Color }\end{DoxyParamCaption})}
+
+
+
+Output a 2-\/digit hexadecimal number. 
+
+Output a 32-\/bit number in unsigned 2-\/digit hexadecimal format numbers 0 to 255 printed as \char`\"{}00,\char`\"{} to \char`\"{}\+FF,\char`\"{} Position determined by ST7735\+\_\+\+Set\+Cursor command 
+\begin{DoxyParams}{Parameters}
+{\em n} & 32-\/bit number to be transferred \\
+\hline
+{\em text\+Color} & 16-\/bit color of the numbers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Fixed format 3 characters with comma after 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_gadff58b909cb89f694117603da4ab7a1b}\label{group___s_t7735_gadff58b909cb89f694117603da4ab7a1b}} 
+\index{ST7735@{ST7735}!ST7735\_PlotBar@{ST7735\_PlotBar}}
+\index{ST7735\_PlotBar@{ST7735\_PlotBar}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_PlotBar()}{ST7735\_PlotBar()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Plot\+Bar (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+Plot one bar. 
+
+Used in the voltage versus time bar plot, plot one bar at y It does output to display. The units of the data are the same as the ymax and ymin values specified in the initialization function. Call ST7735\+\_\+\+Plot\+Increment() to move time. 
+\begin{DoxyParams}{Parameters}
+{\em y} & is the y coordinate of the bar plotted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes\+: \mbox{\hyperlink{group___s_t7735_ga204a442207d7367ace616bd6bfd79348}{ST7735\+\_\+\+Init\+R()}} and \mbox{\hyperlink{group___s_t7735_ga9d73adde861d0adbb12831f818d73321}{ST7735\+\_\+\+Drawaxes()}} have been called 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_gaffbb292ebbf7082c331ab6195da3385c}\label{group___s_t7735_gaffbb292ebbf7082c331ab6195da3385c}} 
+\index{ST7735@{ST7735}!ST7735\_PlotClear@{ST7735\_PlotClear}}
+\index{ST7735\_PlotClear@{ST7735\_PlotClear}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_PlotClear()}{ST7735\_PlotClear()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Plot\+Clear (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{ymin,  }\item[{int32\+\_\+t}]{ymax }\end{DoxyParamCaption})}
+
+
+
+Clear plot. 
+
+Clear the graphics buffer, set X coordinate to 0 This routine clears the display 
+\begin{DoxyParams}{Parameters}
+{\em ymin} & minimum plot value \\
+\hline
+{\em ymax} & maximum plot value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga179ccebd4bfe4529903a02ce797e78ea}\label{group___s_t7735_ga179ccebd4bfe4529903a02ce797e78ea}} 
+\index{ST7735@{ST7735}!ST7735\_PlotdBfs@{ST7735\_PlotdBfs}}
+\index{ST7735\_PlotdBfs@{ST7735\_PlotdBfs}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_PlotdBfs()}{ST7735\_PlotdBfs()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Plotd\+Bfs (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+Plot one bar. 
+
+Used in the amplitude versus frequency plot, plot one bar at y It does output to display. 0 to 0.\+625V scaled on a log plot from min to max. Call ST7735\+\_\+\+Plot\+Increment() to move x axis. 
+\begin{DoxyParams}{Parameters}
+{\em y} & is the y ADC value of the bar plotted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes\+: \mbox{\hyperlink{group___s_t7735_ga204a442207d7367ace616bd6bfd79348}{ST7735\+\_\+\+Init\+R()}} and \mbox{\hyperlink{group___s_t7735_ga9d73adde861d0adbb12831f818d73321}{ST7735\+\_\+\+Drawaxes()}} have been called 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_ga3b19f449b1072070e3dd7f92ce8150fa}\label{group___s_t7735_ga3b19f449b1072070e3dd7f92ce8150fa}} 
+\index{ST7735@{ST7735}!ST7735\_PlotLine@{ST7735\_PlotLine}}
+\index{ST7735\_PlotLine@{ST7735\_PlotLine}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_PlotLine()}{ST7735\_PlotLine()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Plot\+Line (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+Plot one line. 
+
+Used in the voltage versus time plot, plot line to new point It does output to display 
+\begin{DoxyParams}{Parameters}
+{\em y} & value to be plotted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes\+: \mbox{\hyperlink{group___s_t7735_ga204a442207d7367ace616bd6bfd79348}{ST7735\+\_\+\+Init\+R()}} and \mbox{\hyperlink{group___s_t7735_ga9d73adde861d0adbb12831f818d73321}{ST7735\+\_\+\+Drawaxes()}} have been called 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_gafc91fa494b54f542c2d7cc7ef1fed3e9}\label{group___s_t7735_gafc91fa494b54f542c2d7cc7ef1fed3e9}} 
+\index{ST7735@{ST7735}!ST7735\_PlotNext@{ST7735\_PlotNext}}
+\index{ST7735\_PlotNext@{ST7735\_PlotNext}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_PlotNext()}{ST7735\_PlotNext()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Plot\+Next (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Move x-\/axis parameter. 
+
+Used in all the plots to step the X coordinate one pixel. ST7735\+\_\+\+Plot\+Increment will erase the new line (clearing the display as it goes). ST7735\+\_\+\+Plot\+Next does not erase the new line (plots over itself as it wraps). X steps from 0 to 127, then back to 0 again It does not output to display 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga3c7b330d12b052f9334781dba849aa0e}\label{group___s_t7735_ga3c7b330d12b052f9334781dba849aa0e}} 
+\index{ST7735@{ST7735}!ST7735\_PlotNextErase@{ST7735\_PlotNextErase}}
+\index{ST7735\_PlotNextErase@{ST7735\_PlotNextErase}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_PlotNextErase()}{ST7735\_PlotNextErase()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Plot\+Next\+Erase (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Move X coordinate ~\newline
+ 
+
+Used in all the plots to step the X coordinate one pixel X steps from 0 to 127, then back to 0 again It clears the vertical space into which the next pixel will be drawn 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga1ae5c293f7cf004c66ca1c0f0d365fcd}\label{group___s_t7735_ga1ae5c293f7cf004c66ca1c0f0d365fcd}} 
+\index{ST7735@{ST7735}!ST7735\_PlotPoint@{ST7735\_PlotPoint}}
+\index{ST7735\_PlotPoint@{ST7735\_PlotPoint}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_PlotPoint()}{ST7735\_PlotPoint()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Plot\+Point (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+Plot one point. 
+
+Plot a point on the chart. To plot several points in the same column, call this function repeatedly before calling \mbox{\hyperlink{group___s_t7735_ga8d6be97f1d5363a69191eea02b023b54}{ST7735\+Plot\+Increment()}}. The units of the data are the same as the ymax and ymin values specified in the initialization function. 
+\begin{DoxyParams}{Parameters}
+{\em y} & value to be plotted (units not specified) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes\+: \mbox{\hyperlink{group___s_t7735_ga204a442207d7367ace616bd6bfd79348}{ST7735\+\_\+\+Init\+R()}} and \mbox{\hyperlink{group___s_t7735_ga9d73adde861d0adbb12831f818d73321}{ST7735\+\_\+\+Drawaxes()}} have been called 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_ga182e839d2ae31a725569e375a10ffe89}\label{group___s_t7735_ga182e839d2ae31a725569e375a10ffe89}} 
+\index{ST7735@{ST7735}!ST7735\_PlotPoint2@{ST7735\_PlotPoint2}}
+\index{ST7735\_PlotPoint2@{ST7735\_PlotPoint2}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_PlotPoint2()}{ST7735\_PlotPoint2()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Plot\+Point2 (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{data1,  }\item[{uint16\+\_\+t}]{color1 }\end{DoxyParamCaption})}
+
+
+
+Plot one point with color. 
+
+Plot a point on the chart. To plot several points in the same column, call this function repeatedly before calling ST7735\+\_\+\+Plot\+Increment(). The units of the data are the same as the ymax and ymin values specified in the initialization function. 
+\begin{DoxyParams}{Parameters}
+{\em data1} & value to be plotted (units not specified) \\
+\hline
+{\em color1} & 16-\/bit color for the point, which can be produced by \mbox{\hyperlink{group___s_t7735_ga29294596f660f05ad8738db73ee07cfa}{ST7735\+\_\+\+Color565()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes\+: \mbox{\hyperlink{group___s_t7735_ga204a442207d7367ace616bd6bfd79348}{ST7735\+\_\+\+Init\+R()}} and \mbox{\hyperlink{group___s_t7735_ga9d73adde861d0adbb12831f818d73321}{ST7735\+\_\+\+Drawaxes()}} have been called 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_gaf8a878e2129edc09d38b3f3aadcad42f}\label{group___s_t7735_gaf8a878e2129edc09d38b3f3aadcad42f}} 
+\index{ST7735@{ST7735}!ST7735\_PlotPoints@{ST7735\_PlotPoints}}
+\index{ST7735\_PlotPoints@{ST7735\_PlotPoints}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_PlotPoints()}{ST7735\_PlotPoints()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Plot\+Points (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{y1,  }\item[{int32\+\_\+t}]{y2 }\end{DoxyParamCaption})}
+
+
+
+Plot two points. 
+
+Used in the voltage versus time plot, plot two points at y1, y2 It does output to display. The units of the data are the same as the ymax and ymin values specified in the initialization function. Call ST7735\+\_\+\+Plot\+Increment() to move time. 
+\begin{DoxyParams}{Parameters}
+{\em y1} & is the y coordinate of the first point plotted \\
+\hline
+{\em y2} & is the y coordinate of the second point plotted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes\+: \mbox{\hyperlink{group___s_t7735_ga204a442207d7367ace616bd6bfd79348}{ST7735\+\_\+\+Init\+R()}} and \mbox{\hyperlink{group___s_t7735_ga9d73adde861d0adbb12831f818d73321}{ST7735\+\_\+\+Drawaxes()}} have been called 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_gaca253dde436e20d4d40d60e74f09992e}\label{group___s_t7735_gaca253dde436e20d4d40d60e74f09992e}} 
+\index{ST7735@{ST7735}!ST7735\_sDecOut2@{ST7735\_sDecOut2}}
+\index{ST7735\_sDecOut2@{ST7735\_sDecOut2}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_sDecOut2()}{ST7735\_sDecOut2()}}
+{\footnotesize\ttfamily void ST7735\+\_\+s\+Dec\+Out2 (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+fixed point output resolution 0.\+01 
+
+Outputs signed fixed point number to LCD. The format signed 32-\/bit with resolution 0.\+01. The range -\/99.\+99 to +99.\+99 \hypertarget{group___s_t7735_ST7735_sDecOut2}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{ST7735\+\_\+s\+Dec\+Out2 }\label{group___s_t7735_ST7735_sDecOut2}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Parameter }&\cellcolor{\tableheadbgcolor}\textbf{ LCD display }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Parameter }&\cellcolor{\tableheadbgcolor}\textbf{ LCD display }\\\cline{1-3}
+\endhead
+12345 &\char`\"{} $\ast$$\ast$.$\ast$$\ast$\char`\"{} \\\cline{1-3}
+2345 &\char`\"{} 23.\+45\char`\"{} ~\newline
+ \\\cline{1-3}
+-\/8100 &&\char`\"{}-\/81.\+00\char`\"{} \\\cline{1-3}
+-\/102 &\char`\"{} -\/1.\+02\char`\"{} \\\cline{1-3}
+31 &\char`\"{}  0.\+31\char`\"{} \\\cline{1-3}
+-\/12345 &\char`\"{}-\/$\ast$$\ast$.$\ast$$\ast$\char`\"{} \\\cline{1-3}
+\end{longtabu}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & signed 32-\/bit integer part of fixed-\/point number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+send exactly 6 characters to the LCD 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_ga6edc4479f68eb34624157cc1dda2cbb3}\label{group___s_t7735_ga6edc4479f68eb34624157cc1dda2cbb3}} 
+\index{ST7735@{ST7735}!ST7735\_SetCursor@{ST7735\_SetCursor}}
+\index{ST7735\_SetCursor@{ST7735\_SetCursor}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_SetCursor()}{ST7735\_SetCursor()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Set\+Cursor (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{newX,  }\item[{uint32\+\_\+t}]{newY }\end{DoxyParamCaption})}
+
+
+
+Move the cursor. 
+
+Move the cursor to the desired X-\/ and Y-\/position. The next character of the next unsigned decimal will be printed here. X=0 is the leftmost column. Y=0 is the top row. The cursor is used by the \char`\"{}\+Out\char`\"{} functions, but not the \char`\"{}\+Draw\char`\"{} functions 
+\begin{DoxyParams}{Parameters}
+{\em newX} & new X-\/position of the cursor (0$<$=newX$<$=20) \\
+\hline
+{\em newY} & new Y-\/position of the cursor (0$<$=newY$<$=15) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_gac07019a4990ece959dd04dd58339f839}\label{group___s_t7735_gac07019a4990ece959dd04dd58339f839}} 
+\index{ST7735@{ST7735}!ST7735\_SetRotation@{ST7735\_SetRotation}}
+\index{ST7735\_SetRotation@{ST7735\_SetRotation}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_SetRotation()}{ST7735\_SetRotation()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Set\+Rotation (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{m }\end{DoxyParamCaption})}
+
+
+
+Change rotation. 
+
+Change the image rotation. Requires 2 bytes of transmission 
+\begin{DoxyParams}{Parameters}
+{\em m} & new rotation value (0 to 3) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga749b305138c366373f55e39a2ae15f17}\label{group___s_t7735_ga749b305138c366373f55e39a2ae15f17}} 
+\index{ST7735@{ST7735}!ST7735\_SetTextColor@{ST7735\_SetTextColor}}
+\index{ST7735\_SetTextColor@{ST7735\_SetTextColor}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_SetTextColor()}{ST7735\_SetTextColor()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+Set\+Text\+Color (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+sets the text color 
+
+Sets the color in which the characters will be printed Background color is fixed at black 
+\begin{DoxyParams}{Parameters}
+{\em color} & 16-\/bit packed color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_gad00bac301464119c1f7688cc3fedaf23}\label{group___s_t7735_gad00bac301464119c1f7688cc3fedaf23}} 
+\index{ST7735@{ST7735}!ST7735\_SetX@{ST7735\_SetX}}
+\index{ST7735\_SetX@{ST7735\_SetX}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_SetX()}{ST7735\_SetX()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+SetX (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{newX }\end{DoxyParamCaption})}
+
+
+
+set X-\/position 
+
+Used in all the plots to change the X coordinate to new location X exists in the range from 0 to 127, Input values less than 0 get changed to 0, Input values greater than 127 get changed to 127 It does not output to display 
+\begin{DoxyParams}{Parameters}
+{\em newX} & is the new value that the global X will be \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_gacd13666f7002b9b8cb7a11164b2203ca}\label{group___s_t7735_gacd13666f7002b9b8cb7a11164b2203ca}} 
+\index{ST7735@{ST7735}!ST7735\_SwapColor@{ST7735\_SwapColor}}
+\index{ST7735\_SwapColor@{ST7735\_SwapColor}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_SwapColor()}{ST7735\_SwapColor()}}
+{\footnotesize\ttfamily uint16\+\_\+t ST7735\+\_\+\+Swap\+Color (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x }\end{DoxyParamCaption})}
+
+
+
+Swaps red and blue. 
+
+Swaps the red and blue values of the given 16-\/bit packed color; green is unchanged. 
+\begin{DoxyParams}{Parameters}
+{\em x} & 16-\/bit color in format B, G, R \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+16-\/bit color in format R, G, B 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_t7735_ga5bd52f02e8c9906242d7270e65133b9a}\label{group___s_t7735_ga5bd52f02e8c9906242d7270e65133b9a}} 
+\index{ST7735@{ST7735}!ST7735\_uBinOut6@{ST7735\_uBinOut6}}
+\index{ST7735\_uBinOut6@{ST7735\_uBinOut6}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_uBinOut6()}{ST7735\_uBinOut6()}}
+{\footnotesize\ttfamily void ST7735\+\_\+u\+Bin\+Out6 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+fixed point output resolution 1/64 
+
+unsigned 32-\/bit binary fixed-\/point with a resolution of 1/64. The full-\/scale range is from 0 to 999.\+99. If the integer part is larger than 63999, it signifies an error. The ST7735\+\_\+u\+Bin\+Out6 function takes an unsigned 32-\/bit integer part of the binary fixed-\/point number and outputs the fixed-\/point value on the LCD \hypertarget{group___s_t7735_ST7735_uBinOut6}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{ST7735\+\_\+u\+Bin\+Out6 }\label{group___s_t7735_ST7735_uBinOut6}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Parameter }&\cellcolor{\tableheadbgcolor}\textbf{ LCD display }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Parameter }&\cellcolor{\tableheadbgcolor}\textbf{ LCD display }\\\cline{1-2}
+\endhead
+0 &\char`\"{}  0.\+00\char`\"{} \\\cline{1-2}
+1 &\char`\"{}  0.\+01\char`\"{} \\\cline{1-2}
+16 &\char`\"{}  0.\+25\char`\"{} \\\cline{1-2}
+25 &\char`\"{}  0.\+39\char`\"{} \\\cline{1-2}
+125 &\char`\"{}  1.\+95\char`\"{} \\\cline{1-2}
+128 &\char`\"{}  2.\+00\char`\"{} \\\cline{1-2}
+1250 &\char`\"{} 19.\+53\char`\"{} \\\cline{1-2}
+7500 &\char`\"{}117.\+19\char`\"{} \\\cline{1-2}
+63999 &\char`\"{}999.\+99\char`\"{} \\\cline{1-2}
+64000 &\char`\"{}$\ast$$\ast$$\ast$.$\ast$$\ast$\char`\"{} \\\cline{1-2}
+\end{longtabu}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & unsigned 32-\/bit integer part of binary fixed-\/point number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+send exactly 6 characters to the LCD 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_gafeb12b9ade1d4487db1b2382a6cd188b}\label{group___s_t7735_gafeb12b9ade1d4487db1b2382a6cd188b}} 
+\index{ST7735@{ST7735}!ST7735\_XYplot@{ST7735\_XYplot}}
+\index{ST7735\_XYplot@{ST7735\_XYplot}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_XYplot()}{ST7735\_XYplot()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+XYplot (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num,  }\item[{int32\+\_\+t}]{bufX\mbox{[}$\,$\mbox{]},  }\item[{int32\+\_\+t}]{bufY\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+XY plot. 
+
+Plot an array of (x,y) data, neglect any points outside the minX maxY minY maxY bounds 
+\begin{DoxyParams}{Parameters}
+{\em num} & number of data points in the two arrays \\
+\hline
+{\em bufX} & array of 32-\/bit fixed-\/point data, resolution= 0.\+001 \\
+\hline
+{\em bufY} & array of 32-\/bit fixed-\/point data, resolution= 0.\+001 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+assumes ST7735\+\_\+\+XYplot\+Init has been previously called 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_gab1cc9a98dc66976026c3f0ed32988fa7}\label{group___s_t7735_gab1cc9a98dc66976026c3f0ed32988fa7}} 
+\index{ST7735@{ST7735}!ST7735\_XYplotInit@{ST7735\_XYplotInit}}
+\index{ST7735\_XYplotInit@{ST7735\_XYplotInit}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735\_XYplotInit()}{ST7735\_XYplotInit()}}
+{\footnotesize\ttfamily void ST7735\+\_\+\+XYplot\+Init (\begin{DoxyParamCaption}\item[{char $\ast$}]{title,  }\item[{int32\+\_\+t}]{minX,  }\item[{int32\+\_\+t}]{maxX,  }\item[{int32\+\_\+t}]{minY,  }\item[{int32\+\_\+t}]{maxY }\end{DoxyParamCaption})}
+
+
+
+initialize XY plot 
+
+Specify the X and Y axes for an x-\/y scatter plot Draw the title and clear the plot area 
+\begin{DoxyParams}{Parameters}
+{\em title} & ASCII string to label the plot, null-\/termination \\
+\hline
+{\em minX} & smallest X data value allowed, resolution= 0.\+001 \\
+\hline
+{\em maxX} & largest X data value allowed, resolution= 0.\+001 \\
+\hline
+{\em minY} & smallest Y data value allowed, resolution= 0.\+001 \\
+\hline
+{\em maxY} & largest Y data value allowed, resolution= 0.\+001 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+assumes minX $<$ maxX, and miny $<$ maxY 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___s_t7735_ga8d6be97f1d5363a69191eea02b023b54}\label{group___s_t7735_ga8d6be97f1d5363a69191eea02b023b54}} 
+\index{ST7735@{ST7735}!ST7735PlotIncrement@{ST7735PlotIncrement}}
+\index{ST7735PlotIncrement@{ST7735PlotIncrement}!ST7735@{ST7735}}
+\doxysubsubsection{\texorpdfstring{ST7735PlotIncrement()}{ST7735PlotIncrement()}}
+{\footnotesize\ttfamily void ST7735\+Plot\+Increment (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Moves the plot cursor in time. 
+
+Increment the plot between subsequent calls to \mbox{\hyperlink{group___s_t7735_ga1ae5c293f7cf004c66ca1c0f0d365fcd}{ST7735\+\_\+\+Plot\+Point()}}. Automatically wrap and clear the column to be printed to. ST7735\+\_\+\+Plot\+Increment will erase the new line (clearing the display as it goes). ST7735\+\_\+\+Plot\+Next does not erase the new line (plots over itself as it wraps). 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes\+: \mbox{\hyperlink{group___s_t7735_ga204a442207d7367ace616bd6bfd79348}{ST7735\+\_\+\+Init\+R()}} and \mbox{\hyperlink{group___s_t7735_ga9d73adde861d0adbb12831f818d73321}{ST7735\+\_\+\+Drawaxes()}} have been called 
+\end{DoxyNote}

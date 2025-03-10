@@ -1,0 +1,621 @@
+\hypertarget{group___l_c_d}{}\doxysection{LCD}
+\label{group___l_c_d}\index{LCD@{LCD}}
+
+
+MKII boosterpack LCD.  
+
+
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{_l_c_d_8h}{LCD.\+h}}
+\begin{DoxyCompactList}\small\item\em LCD on MKII boosterpack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___l_c_d_ga89194c8cf2691afa77b4f81ad1cde821}\label{group___l_c_d_ga89194c8cf2691afa77b4f81ad1cde821}} 
+\#define \mbox{\hyperlink{group___l_c_d_ga89194c8cf2691afa77b4f81ad1cde821}{LCD\+\_\+\+BLACK}}~0x0000
+\begin{DoxyCompactList}\small\item\em The following constants are possible colors for the LCD in RGB format. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___l_c_d_gae08bdcd40ed17c40c7ff537b31ae6c20}\label{group___l_c_d_gae08bdcd40ed17c40c7ff537b31ae6c20}} 
+\#define {\bfseries LCD\+\_\+\+BLUE}~0x001F
+\item 
+\mbox{\Hypertarget{group___l_c_d_gaa09d4c5b3a03b469a4527d21259b4f39}\label{group___l_c_d_gaa09d4c5b3a03b469a4527d21259b4f39}} 
+\#define {\bfseries LCD\+\_\+\+DARKBLUE}~0x34\+BF
+\item 
+\mbox{\Hypertarget{group___l_c_d_gaa32f6c50fe89cc11c61d8571acabaca7}\label{group___l_c_d_gaa32f6c50fe89cc11c61d8571acabaca7}} 
+\#define {\bfseries LCD\+\_\+\+RED}~0x\+F800
+\item 
+\mbox{\Hypertarget{group___l_c_d_ga93c7d21d563437550a6873fe0cfe3c0b}\label{group___l_c_d_ga93c7d21d563437550a6873fe0cfe3c0b}} 
+\#define {\bfseries LCD\+\_\+\+GREEN}~0x07\+E0
+\item 
+\mbox{\Hypertarget{group___l_c_d_gac763e5221b62fd0586c20cb3ffc5f9b5}\label{group___l_c_d_gac763e5221b62fd0586c20cb3ffc5f9b5}} 
+\#define {\bfseries LCD\+\_\+\+LIGHTGREEN}~0x07\+EF
+\item 
+\mbox{\Hypertarget{group___l_c_d_gaba73f8bc17067d4a82777254e838450c}\label{group___l_c_d_gaba73f8bc17067d4a82777254e838450c}} 
+\#define {\bfseries LCD\+\_\+\+ORANGE}~0x\+FD60
+\item 
+\mbox{\Hypertarget{group___l_c_d_gaa73471fd9276eddf1e8f60aacea5f2e4}\label{group___l_c_d_gaa73471fd9276eddf1e8f60aacea5f2e4}} 
+\#define {\bfseries LCD\+\_\+\+CYAN}~0x07\+FF
+\item 
+\mbox{\Hypertarget{group___l_c_d_gaee1fb729b04f50f41f5a9ae886ce536e}\label{group___l_c_d_gaee1fb729b04f50f41f5a9ae886ce536e}} 
+\#define {\bfseries LCD\+\_\+\+MAGENTA}~0x\+F81F
+\item 
+\mbox{\Hypertarget{group___l_c_d_gafdc90728740e3c7f3550dd2aa86d3249}\label{group___l_c_d_gafdc90728740e3c7f3550dd2aa86d3249}} 
+\#define {\bfseries LCD\+\_\+\+YELLOW}~0x\+FFE0
+\item 
+\mbox{\Hypertarget{group___l_c_d_ga34f95804d4bfa75ef2ab12cc2b65a65c}\label{group___l_c_d_ga34f95804d4bfa75ef2ab12cc2b65a65c}} 
+\#define {\bfseries LCD\+\_\+\+WHITE}~0x\+FFFF
+\item 
+\mbox{\Hypertarget{group___l_c_d_ga0ae174a4315ebe59af7f264aa19363fa}\label{group___l_c_d_ga0ae174a4315ebe59af7f264aa19363fa}} 
+\#define {\bfseries LCD\+\_\+\+GREY}~0x8410
+\item 
+\mbox{\Hypertarget{group___l_c_d_ga58a32a58ab2f13f9f7e208b59afb3f9a}\label{group___l_c_d_ga58a32a58ab2f13f9f7e208b59afb3f9a}} 
+\#define \mbox{\hyperlink{group___l_c_d_ga58a32a58ab2f13f9f7e208b59afb3f9a}{STANDARD\+\_\+\+GALACTIC\+\_\+\+ALPHABET}}~0
+\begin{DoxyCompactList}\small\item\em Set STANDARD\+\_\+\+GALACTIC\+\_\+\+ALPHABET to 1 for Commander Keen alphabet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___l_c_d_gaa53c9d40f3aa552a9974cd55ac510cb3}{LCD\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize MKII LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d_ga0ba703879abaa8f20a2350d7d8a50f5a}{LCD\+\_\+\+Draw\+Pixel}} (int16\+\_\+t x, int16\+\_\+t y, uint16\+\_\+t color)
+\item 
+void \mbox{\hyperlink{group___l_c_d_ga2f6ee00f6621ca971f75c65f52234999}{LCD\+\_\+\+Draw\+Fast\+VLine}} (int16\+\_\+t x, int16\+\_\+t y, int16\+\_\+t h, uint16\+\_\+t color)
+\item 
+void \mbox{\hyperlink{group___l_c_d_gac47e67002e564f900053bf488a0f71d5}{LCD\+\_\+\+Draw\+Fast\+HLine}} (int16\+\_\+t x, int16\+\_\+t y, int16\+\_\+t w, uint16\+\_\+t color)
+\item 
+void \mbox{\hyperlink{group___l_c_d_gaf161f992dbc57d0853e256d2c667e367}{LCD\+\_\+\+Fill\+Screen}} (uint16\+\_\+t color)
+\item 
+void \mbox{\hyperlink{group___l_c_d_ga0f8a069b62429baf1a223cc0fc26216a}{LCD\+\_\+\+Fill\+Rect}} (int16\+\_\+t x, int16\+\_\+t y, int16\+\_\+t w, int16\+\_\+t h, uint16\+\_\+t color)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group___l_c_d_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565}} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group___l_c_d_gaa4b5e50ce44d53137e0454475b92ad89}{LCD\+\_\+\+Swap\+Color}} (uint16\+\_\+t x)
+\item 
+void \mbox{\hyperlink{group___l_c_d_ga21aeea1f9ff1ff30bfcdc5869460b2f6}{LCD\+\_\+\+Draw\+Bitmap}} (int16\+\_\+t x, int16\+\_\+t y, const uint16\+\_\+t $\ast$image, int16\+\_\+t w, int16\+\_\+t h)
+\item 
+void \mbox{\hyperlink{group___l_c_d_ga687f1e588f52d50c525bbc5414af491d}{LCD\+\_\+\+Draw\+CharS}} (int16\+\_\+t x, int16\+\_\+t y, char c, int16\+\_\+t text\+Color, int16\+\_\+t bg\+Color, uint8\+\_\+t size)
+\item 
+void \mbox{\hyperlink{group___l_c_d_gab9dde4b1bc3018212340002aab36e036}{LCD\+\_\+\+Draw\+Char}} (int16\+\_\+t x, int16\+\_\+t y, char c, int16\+\_\+t text\+Color, int16\+\_\+t bg\+Color, uint8\+\_\+t size)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___l_c_d_gaffa07462092243189db5aa62b4ffe71b}{LCD\+\_\+\+Draw\+String}} (uint16\+\_\+t x, uint16\+\_\+t y, char $\ast$pt, int16\+\_\+t text\+Color)
+\item 
+void \mbox{\hyperlink{group___l_c_d_ga47491102a9621cc4aafa84f24b1ec60a}{LCD\+\_\+\+Set\+Cursor}} (uint32\+\_\+t newX, uint32\+\_\+t newY)
+\item 
+void \mbox{\hyperlink{group___l_c_d_ga860897e421fe0196aa8dec002b7bf1e2}{LCD\+\_\+\+Out\+UDec}} (uint32\+\_\+t n, int16\+\_\+t text\+Color)
+\item 
+void \mbox{\hyperlink{group___l_c_d_ga6ef9b54e9ebe6b7c22cc13f8f674aa44}{LCD\+\_\+\+Out\+UDec4}} (uint32\+\_\+t n, int16\+\_\+t text\+Color)
+\item 
+void \mbox{\hyperlink{group___l_c_d_gad938d603938f4e35db2b7724b1a95168}{LCD\+\_\+\+Out\+UDec5}} (uint32\+\_\+t n, int16\+\_\+t text\+Color)
+\item 
+void \mbox{\hyperlink{group___l_c_d_ga2662c81157afb415ad538e724d0a717c}{LCD\+\_\+\+Out\+UFix2\+\_\+1}} (uint32\+\_\+t n, int16\+\_\+t text\+Color)
+\item 
+void \mbox{\hyperlink{group___l_c_d_ga60950d6081654bc01c438b34cb72a934}{LCD\+\_\+\+Out\+UHex2}} (uint32\+\_\+t n, int16\+\_\+t text\+Color)
+\item 
+void \mbox{\hyperlink{group___l_c_d_ga4252ab9cc54e1eac3c62534667b472bd}{LCD\+\_\+\+Out\+Char}} (char ch)
+\item 
+void \mbox{\hyperlink{group___l_c_d_ga9e913fcb6d17acf582f200e01ec02ba3}{LCD\+\_\+\+Out\+String}} (char $\ast$ptr)
+\item 
+void \mbox{\hyperlink{group___l_c_d_ga1aed8b83ed0c8a4871f8da080ff9d74b}{LCD\+\_\+\+Set\+Text\+Color}} (uint16\+\_\+t color)
+\item 
+void \mbox{\hyperlink{group___l_c_d_ga6df874d61387bd819c0427f48ef25644}{LCD\+\_\+\+Drawaxes}} (uint16\+\_\+t axis\+Color, uint16\+\_\+t bg\+Color, char $\ast$x\+Label, char $\ast$y\+Label1, uint16\+\_\+t label1\+Color, char $\ast$y\+Label2, uint16\+\_\+t label2\+Color, int32\+\_\+t ymax, int32\+\_\+t ymin)
+\item 
+void \mbox{\hyperlink{group___l_c_d_ga0f75a18942856dae35661a0c2835b5df}{LCD\+\_\+\+Plot\+Point}} (int32\+\_\+t data1, uint16\+\_\+t color1)
+\item 
+void \mbox{\hyperlink{group___l_c_d_gae94ed7a4df800ed7bbb442498c843096}{LCD\+\_\+\+Plot\+Increment}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+MKII boosterpack LCD. 
+
+\hypertarget{group___l_c_d_MKIILCDpins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{MKII LCD pins }\label{group___l_c_d_MKIILCDpins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Function }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Function }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endhead
+PB9 &SPI1 SCLK &J1.\+7 LCD SPI clock (SPI) ~\newline
+ \\\cline{1-3}
+PB6 &SPI1 CS0 &J2.\+13 LCD SPI CS (SPI) ~\newline
+ \\\cline{1-3}
+PB8 &SPI1 PICO &J2.\+15 LCD SPI data (SPI) ~\newline
+ \\\cline{1-3}
+PB15&GPIO &J2.\+17 LCD !\+RST (digital) ~\newline
+ \\\cline{1-3}
+PA13&GPIO &J4.\+31 LCD RS (digital) ~\newline
+ \\\cline{1-3}
+\end{longtabu}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___l_c_d_gad5a5886440616b22b811ab68bb471d32}\label{group___l_c_d_gad5a5886440616b22b811ab68bb471d32}} 
+\index{LCD@{LCD}!LCD\_Color565@{LCD\_Color565}}
+\index{LCD\_Color565@{LCD\_Color565}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_Color565()}{LCD\_Color565()}}
+{\footnotesize\ttfamily uint16\+\_\+t LCD\+\_\+\+Color565 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+Pass 8-\/bit (each) R,G,B and get back 16-\/bit packed color. 
+\begin{DoxyParams}{Parameters}
+{\em r} & red value \\
+\hline
+{\em g} & green value \\
+\hline
+{\em b} & blue value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+16-\/bit color 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___l_c_d_ga6df874d61387bd819c0427f48ef25644}\label{group___l_c_d_ga6df874d61387bd819c0427f48ef25644}} 
+\index{LCD@{LCD}!LCD\_Drawaxes@{LCD\_Drawaxes}}
+\index{LCD\_Drawaxes@{LCD\_Drawaxes}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_Drawaxes()}{LCD\_Drawaxes()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Drawaxes (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{axis\+Color,  }\item[{uint16\+\_\+t}]{bg\+Color,  }\item[{char $\ast$}]{x\+Label,  }\item[{char $\ast$}]{y\+Label1,  }\item[{uint16\+\_\+t}]{label1\+Color,  }\item[{char $\ast$}]{y\+Label2,  }\item[{uint16\+\_\+t}]{label2\+Color,  }\item[{int32\+\_\+t}]{ymax,  }\item[{int32\+\_\+t}]{ymin }\end{DoxyParamCaption})}
+
+Set up the axes, labels, and other variables to allow data to be plotted in a chart using the functions \mbox{\hyperlink{group___l_c_d_ga0f75a18942856dae35661a0c2835b5df}{LCD\+\_\+\+Plot\+Point()}} and \mbox{\hyperlink{group___l_c_d_gae94ed7a4df800ed7bbb442498c843096}{LCD\+\_\+\+Plot\+Increment()}}. If y\+Label2 is empty string, no y\+Label2 is printed, and y\+Label1 is centered 
+\begin{DoxyParams}{Parameters}
+{\em axis\+Color} & 16-\/bit color for axes, which can be produced by \mbox{\hyperlink{group___l_c_d_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565()}} \\
+\hline
+{\em bg\+Color} & 16-\/bit color for plot background, which can be produced by \mbox{\hyperlink{group___l_c_d_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565()}} \\
+\hline
+{\em x\+Label} & pointer to a null terminated string for x-\/axis ($\sim$4 character space) \\
+\hline
+{\em y\+Label1} & pointer to a null terminated string for top of y-\/axis ($\sim$3-\/5 character space) \\
+\hline
+{\em label1\+Color} & 16-\/bit color for y-\/axis label1, which can be produced by \mbox{\hyperlink{group___l_c_d_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565()}} \\
+\hline
+{\em y\+Label2} & pointer to a null terminated string for bottom of y-\/axis ($\sim$3 character space) \\
+\hline
+{\em label2\+Color} & 16-\/bit color for y-\/axis label2, which can be produced by \mbox{\hyperlink{group___l_c_d_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565()}} \\
+\hline
+{\em ymax} & maximum value to be printed \\
+\hline
+{\em ymin} & minimum value to be printed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes\+: \mbox{\hyperlink{group___l_c_d_gaa53c9d40f3aa552a9974cd55ac510cb3}{LCD\+\_\+\+Init()}} has been called 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___l_c_d_ga21aeea1f9ff1ff30bfcdc5869460b2f6}\label{group___l_c_d_ga21aeea1f9ff1ff30bfcdc5869460b2f6}} 
+\index{LCD@{LCD}!LCD\_DrawBitmap@{LCD\_DrawBitmap}}
+\index{LCD\_DrawBitmap@{LCD\_DrawBitmap}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_DrawBitmap()}{LCD\_DrawBitmap()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Draw\+Bitmap (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{const uint16\+\_\+t $\ast$}]{image,  }\item[{int16\+\_\+t}]{w,  }\item[{int16\+\_\+t}]{h }\end{DoxyParamCaption})}
+
+Displays a 16-\/bit color BMP image. A bitmap file that is created by a PC image processing program has a header and may be padded with dummy columns so the data have four byte alignment. This function assumes that all of that has been stripped out, and the array image\mbox{[}\mbox{]} has one 16-\/bit halfword for each pixel to be displayed on the screen (encoded in reverse order, which is standard for bitmap files). An array can be created in this format from a 24-\/bit-\/per-\/pixel .bmp file using the associated converter program. (x,y) is the screen location of the lower left corner of BMP image~\newline
+ Requires (11 + 2$\ast$w$\ast$h) bytes of transmission (assuming image fully on screen) 
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal position of the bottom left corner of the image, columns from the left edge \\
+\hline
+{\em y} & vertical position of the bottom left corner of the image, rows from the top edge \\
+\hline
+{\em image} & pointer to a 16-\/bit color BMP image \\
+\hline
+{\em w} & number of pixels wide \\
+\hline
+{\em h} & number of pixels tall \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Must be less than or equal to 128 pixels wide by 128 pixels high 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___l_c_d_gab9dde4b1bc3018212340002aab36e036}\label{group___l_c_d_gab9dde4b1bc3018212340002aab36e036}} 
+\index{LCD@{LCD}!LCD\_DrawChar@{LCD\_DrawChar}}
+\index{LCD\_DrawChar@{LCD\_DrawChar}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_DrawChar()}{LCD\_DrawChar()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Draw\+Char (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{char}]{c,  }\item[{int16\+\_\+t}]{text\+Color,  }\item[{int16\+\_\+t}]{bg\+Color,  }\item[{uint8\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Advanced character draw function. This is similar to the function from Adafruit\+\_\+\+GFX.\+c but adapted for this processor. However, this function only uses one call to set\+Addr\+Window(), which allows it to run at least twice as fast.~\newline
+ Requires (11 + size$\ast$size$\ast$6$\ast$8) bytes of transmission (assuming image fully on screen) 
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal position of the top left corner of the character, columns from the left edge \\
+\hline
+{\em y} & vertical position of the top left corner of the character, rows from the top edge \\
+\hline
+{\em c} & character to be printed \\
+\hline
+{\em text\+Color} & 16-\/bit color of the character \\
+\hline
+{\em bg\+Color} & 16-\/bit color of the background \\
+\hline
+{\em size} & number of pixels per character pixel (e.\+g. size==2 prints each pixel of font as 2x2 square) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___l_c_d_ga687f1e588f52d50c525bbc5414af491d}\label{group___l_c_d_ga687f1e588f52d50c525bbc5414af491d}} 
+\index{LCD@{LCD}!LCD\_DrawCharS@{LCD\_DrawCharS}}
+\index{LCD\_DrawCharS@{LCD\_DrawCharS}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_DrawCharS()}{LCD\_DrawCharS()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Draw\+CharS (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{char}]{c,  }\item[{int16\+\_\+t}]{text\+Color,  }\item[{int16\+\_\+t}]{bg\+Color,  }\item[{uint8\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Simple character draw function. This is the same function from Adafruit\+\_\+\+GFX.\+c but adapted for this processor. However, each call to \mbox{\hyperlink{group___l_c_d_ga0ba703879abaa8f20a2350d7d8a50f5a}{LCD\+\_\+\+Draw\+Pixel()}} calls set\+Addr\+Window(), which needs to send many extra data and commands. If the background color is the same as the text color, no background will be printed, and text can be drawn right over existing images without covering them with a box.~\newline
+ Requires (11 + 2$\ast$size$\ast$size)$\ast$6$\ast$8 bytes of transmission (image fully on screen; textcolor != bg\+Color) 
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal position of the top left corner of the character, columns from the left edge \\
+\hline
+{\em y} & vertical position of the top left corner of the character, rows from the top edge \\
+\hline
+{\em c} & character to be printed \\
+\hline
+{\em text\+Color} & 16-\/bit color of the character \\
+\hline
+{\em bg\+Color} & 16-\/bit color of the background \\
+\hline
+{\em size} & number of pixels per character pixel (e.\+g. size==2 prints each pixel of font as 2x2 square) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___l_c_d_gac47e67002e564f900053bf488a0f71d5}\label{group___l_c_d_gac47e67002e564f900053bf488a0f71d5}} 
+\index{LCD@{LCD}!LCD\_DrawFastHLine@{LCD\_DrawFastHLine}}
+\index{LCD\_DrawFastHLine@{LCD\_DrawFastHLine}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_DrawFastHLine()}{LCD\_DrawFastHLine()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Draw\+Fast\+HLine (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{int16\+\_\+t}]{w,  }\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+Draw a horizontal line at the given coordinates with the given width and color. A horizontal line is parallel to the shorter side of the rectangular display~\newline
+ Requires (11 + 2$\ast$w) bytes of transmission (assuming image fully on screen) 
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal position of the start of the line, columns from the left edge \\
+\hline
+{\em y} & vertical position of the start of the line, rows from the top edge \\
+\hline
+{\em w} & horizontal width of the line \\
+\hline
+{\em color} & 16-\/bit color, which can be produced by \mbox{\hyperlink{group___l_c_d_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___l_c_d_ga2f6ee00f6621ca971f75c65f52234999}\label{group___l_c_d_ga2f6ee00f6621ca971f75c65f52234999}} 
+\index{LCD@{LCD}!LCD\_DrawFastVLine@{LCD\_DrawFastVLine}}
+\index{LCD\_DrawFastVLine@{LCD\_DrawFastVLine}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_DrawFastVLine()}{LCD\_DrawFastVLine()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Draw\+Fast\+VLine (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{int16\+\_\+t}]{h,  }\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+Draw a vertical line at the given coordinates with the given height and color.~\newline
+ A vertical line is parallel to the longer side of the rectangular display~\newline
+ Requires (11 + 2$\ast$h) bytes of transmission (assuming image fully on screen) 
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal position of the start of the line, columns from the left edge \\
+\hline
+{\em y} & vertical position of the start of the line, rows from the top edge \\
+\hline
+{\em h} & vertical height of the line \\
+\hline
+{\em color} & 16-\/bit color, which can be produced by \mbox{\hyperlink{group___l_c_d_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___l_c_d_ga0ba703879abaa8f20a2350d7d8a50f5a}\label{group___l_c_d_ga0ba703879abaa8f20a2350d7d8a50f5a}} 
+\index{LCD@{LCD}!LCD\_DrawPixel@{LCD\_DrawPixel}}
+\index{LCD\_DrawPixel@{LCD\_DrawPixel}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_DrawPixel()}{LCD\_DrawPixel()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Draw\+Pixel (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+Color the pixel at the given coordinates with the given color.~\newline
+ Requires 13 bytes of transmission~\newline
+ x must be less than 128~\newline
+ x 0 is on the left, 126 is near the right ~\newline
+ y must be less than 128 y 126 is near the wires, 0 is the side opposite the wires 
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal position of the pixel, columns from the left edge \\
+\hline
+{\em y} & vertical position of the pixel, rows from the top edge \\
+\hline
+{\em color} & 16-\/bit color, which can be produced by \mbox{\hyperlink{group___l_c_d_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___l_c_d_gaffa07462092243189db5aa62b4ffe71b}\label{group___l_c_d_gaffa07462092243189db5aa62b4ffe71b}} 
+\index{LCD@{LCD}!LCD\_DrawString@{LCD\_DrawString}}
+\index{LCD\_DrawString@{LCD\_DrawString}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_DrawString()}{LCD\_DrawString()}}
+{\footnotesize\ttfamily uint32\+\_\+t LCD\+\_\+\+Draw\+String (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{char $\ast$}]{pt,  }\item[{int16\+\_\+t}]{text\+Color }\end{DoxyParamCaption})}
+
+String draw function. 13 rows (0 to 12) and 21 characters (0 to 20)~\newline
+ Requires (11 + size$\ast$size$\ast$6$\ast$8) bytes of transmission for each character 
+\begin{DoxyParams}{Parameters}
+{\em x} & columns from the left edge (0 to 20) \\
+\hline
+{\em y} & rows from the top edge (0 to 12) \\
+\hline
+{\em pt} & pointer to a null terminated string to be printed \\
+\hline
+{\em text\+Color} & 16-\/bit color of the characters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of characters printed 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+bg\+Color is Black and size is 1 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___l_c_d_ga0f8a069b62429baf1a223cc0fc26216a}\label{group___l_c_d_ga0f8a069b62429baf1a223cc0fc26216a}} 
+\index{LCD@{LCD}!LCD\_FillRect@{LCD\_FillRect}}
+\index{LCD\_FillRect@{LCD\_FillRect}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_FillRect()}{LCD\_FillRect()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Fill\+Rect (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{int16\+\_\+t}]{w,  }\item[{int16\+\_\+t}]{h,  }\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+Draw a filled rectangle at the given coordinates with the given width, height, and color.~\newline
+ Requires (11 + 2$\ast$w$\ast$h) bytes of transmission (assuming image fully on screen) 
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal position of the top left corner of the rectangle, columns from the left edge \\
+\hline
+{\em y} & vertical position of the top left corner of the rectangle, rows from the top edge \\
+\hline
+{\em w} & horizontal width of the rectangle \\
+\hline
+{\em h} & vertical height of the rectangle \\
+\hline
+{\em color} & 16-\/bit color, which can be produced by \mbox{\hyperlink{group___l_c_d_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___l_c_d_gaf161f992dbc57d0853e256d2c667e367}\label{group___l_c_d_gaf161f992dbc57d0853e256d2c667e367}} 
+\index{LCD@{LCD}!LCD\_FillScreen@{LCD\_FillScreen}}
+\index{LCD\_FillScreen@{LCD\_FillScreen}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_FillScreen()}{LCD\_FillScreen()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Fill\+Screen (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+Fill the screen with the given color.~\newline
+ Requires 33,293 bytes of transmission 
+\begin{DoxyParams}{Parameters}
+{\em color} & 16-\/bit color, which can be produced by \mbox{\hyperlink{group___l_c_d_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___l_c_d_gaa53c9d40f3aa552a9974cd55ac510cb3}\label{group___l_c_d_gaa53c9d40f3aa552a9974cd55ac510cb3}} 
+\index{LCD@{LCD}!LCD\_Init@{LCD\_Init}}
+\index{LCD\_Init@{LCD\_Init}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_Init()}{LCD\_Init()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize MKII LCD. 
+
+Initialize Crystalfontz CFAF128128\+B-\/0145T color 128x128-\/pixel TFT LCD Booster\+Pack pins
+\begin{DoxyItemize}
+\item J1.\+7 PB9 (SPI CLK)
+\item J2.\+13 PB6 (SPI CS)
+\item J2.\+15 PB8 (SPI MOSI)
+\item J2.\+17 PB15(LCD $\sim$\+RST) and
+\item J4.\+31 PA13(\+LCD DC) 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+assumes GPIOA and GPIOB are reset and powered previously 
+\end{DoxyNote}
+
+\end{DoxyItemize}\mbox{\Hypertarget{group___l_c_d_ga4252ab9cc54e1eac3c62534667b472bd}\label{group___l_c_d_ga4252ab9cc54e1eac3c62534667b472bd}} 
+\index{LCD@{LCD}!LCD\_OutChar@{LCD\_OutChar}}
+\index{LCD\_OutChar@{LCD\_OutChar}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_OutChar()}{LCD\_OutChar()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Out\+Char (\begin{DoxyParamCaption}\item[{char}]{ch }\end{DoxyParamCaption})}
+
+Output one character to the LCD Position determined by LCD\+\_\+\+Set\+Text\+Color command Color set by LCD\+\_\+\+Set\+Text\+Color 
+\begin{DoxyParams}{Parameters}
+{\em ch} & 8-\/bit ASCII character \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___l_c_d_ga9e913fcb6d17acf582f200e01ec02ba3}\label{group___l_c_d_ga9e913fcb6d17acf582f200e01ec02ba3}} 
+\index{LCD@{LCD}!LCD\_OutString@{LCD\_OutString}}
+\index{LCD\_OutString@{LCD\_OutString}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_OutString()}{LCD\_OutString()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Out\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+Print a string of characters to the ST7735 LCD. Position determined by LCD\+\_\+\+Set\+Cursor command Color set by LCD\+\_\+\+Set\+Text\+Color The string will not automatically wrap. 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & pointer to NULL-\/terminated ASCII string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___l_c_d_ga860897e421fe0196aa8dec002b7bf1e2}\label{group___l_c_d_ga860897e421fe0196aa8dec002b7bf1e2}} 
+\index{LCD@{LCD}!LCD\_OutUDec@{LCD\_OutUDec}}
+\index{LCD\_OutUDec@{LCD\_OutUDec}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_OutUDec()}{LCD\_OutUDec()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Out\+UDec (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{n,  }\item[{int16\+\_\+t}]{text\+Color }\end{DoxyParamCaption})}
+
+Output a 32-\/bit number in unsigned decimal format Position determined by LCD\+\_\+\+Set\+Cursor command 
+\begin{DoxyParams}{Parameters}
+{\em n} & 32-\/bit number to be transferred \\
+\hline
+{\em text\+Color} & 16-\/bit color of the numbers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Variable format 1-\/10 digits with no space before or after 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___l_c_d_ga6ef9b54e9ebe6b7c22cc13f8f674aa44}\label{group___l_c_d_ga6ef9b54e9ebe6b7c22cc13f8f674aa44}} 
+\index{LCD@{LCD}!LCD\_OutUDec4@{LCD\_OutUDec4}}
+\index{LCD\_OutUDec4@{LCD\_OutUDec4}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_OutUDec4()}{LCD\_OutUDec4()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Out\+UDec4 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{n,  }\item[{int16\+\_\+t}]{text\+Color }\end{DoxyParamCaption})}
+
+Output a 32-\/bit number in unsigned 4-\/digit decimal format Position determined by LCD\+\_\+\+Set\+Cursor command 
+\begin{DoxyParams}{Parameters}
+{\em n} & 32-\/bit number to be transferred \\
+\hline
+{\em text\+Color} & 16-\/bit color of the numbers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Fixed format 4 digits with no space before or after 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___l_c_d_gad938d603938f4e35db2b7724b1a95168}\label{group___l_c_d_gad938d603938f4e35db2b7724b1a95168}} 
+\index{LCD@{LCD}!LCD\_OutUDec5@{LCD\_OutUDec5}}
+\index{LCD\_OutUDec5@{LCD\_OutUDec5}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_OutUDec5()}{LCD\_OutUDec5()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Out\+UDec5 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{n,  }\item[{int16\+\_\+t}]{text\+Color }\end{DoxyParamCaption})}
+
+Output a 32-\/bit number in unsigned 5-\/digit decimal format Position determined by LCD\+\_\+\+Set\+Cursor command 
+\begin{DoxyParams}{Parameters}
+{\em n} & 32-\/bit number to be transferred \\
+\hline
+{\em text\+Color} & 16-\/bit color of the numbers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Fixed format 5 digits with no space before or after 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___l_c_d_ga2662c81157afb415ad538e724d0a717c}\label{group___l_c_d_ga2662c81157afb415ad538e724d0a717c}} 
+\index{LCD@{LCD}!LCD\_OutUFix2\_1@{LCD\_OutUFix2\_1}}
+\index{LCD\_OutUFix2\_1@{LCD\_OutUFix2\_1}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_OutUFix2\_1()}{LCD\_OutUFix2\_1()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Out\+UFix2\+\_\+1 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{n,  }\item[{int16\+\_\+t}]{text\+Color }\end{DoxyParamCaption})}
+
+Output a 32-\/bit number in unsigned 3-\/digit fixed point, 0.\+1 resolution numbers 0 to 999 printed as \char`\"{} 0.\+0\char`\"{} to \char`\"{}99.\+9\char`\"{} Position determined by LCD\+\_\+\+Set\+Cursor command 
+\begin{DoxyParams}{Parameters}
+{\em n} & 32-\/bit number to be transferred \\
+\hline
+{\em text\+Color} & 16-\/bit color of the numbers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Fixed format 4 characters with no space before or after 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___l_c_d_ga60950d6081654bc01c438b34cb72a934}\label{group___l_c_d_ga60950d6081654bc01c438b34cb72a934}} 
+\index{LCD@{LCD}!LCD\_OutUHex2@{LCD\_OutUHex2}}
+\index{LCD\_OutUHex2@{LCD\_OutUHex2}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_OutUHex2()}{LCD\_OutUHex2()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Out\+UHex2 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{n,  }\item[{int16\+\_\+t}]{text\+Color }\end{DoxyParamCaption})}
+
+Output a 32-\/bit number in unsigned 2-\/digit hexadecimal format numbers 0 to 255 printed as \char`\"{}00,\char`\"{} to \char`\"{}\+FF,\char`\"{} Position determined by LCD\+\_\+\+Set\+Cursor command 
+\begin{DoxyParams}{Parameters}
+{\em n} & 32-\/bit number to be transferred \\
+\hline
+{\em text\+Color} & 16-\/bit color of the numbers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Fixed format 3 characters with comma after 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___l_c_d_gae94ed7a4df800ed7bbb442498c843096}\label{group___l_c_d_gae94ed7a4df800ed7bbb442498c843096}} 
+\index{LCD@{LCD}!LCD\_PlotIncrement@{LCD\_PlotIncrement}}
+\index{LCD\_PlotIncrement@{LCD\_PlotIncrement}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_PlotIncrement()}{LCD\_PlotIncrement()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Plot\+Increment (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Increment the plot between subsequent calls to \mbox{\hyperlink{group___l_c_d_ga0f75a18942856dae35661a0c2835b5df}{LCD\+\_\+\+Plot\+Point()}}. Automatically wrap and clear the column to be printed to. 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes\+: \mbox{\hyperlink{group___l_c_d_gaa53c9d40f3aa552a9974cd55ac510cb3}{LCD\+\_\+\+Init()}} and \mbox{\hyperlink{group___l_c_d_ga6df874d61387bd819c0427f48ef25644}{LCD\+\_\+\+Drawaxes()}} have been called 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___l_c_d_ga0f75a18942856dae35661a0c2835b5df}\label{group___l_c_d_ga0f75a18942856dae35661a0c2835b5df}} 
+\index{LCD@{LCD}!LCD\_PlotPoint@{LCD\_PlotPoint}}
+\index{LCD\_PlotPoint@{LCD\_PlotPoint}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_PlotPoint()}{LCD\_PlotPoint()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Plot\+Point (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{data1,  }\item[{uint16\+\_\+t}]{color1 }\end{DoxyParamCaption})}
+
+Plot a point on the chart. To plot several points in the same column, call this function repeatedly before calling \mbox{\hyperlink{group___l_c_d_gae94ed7a4df800ed7bbb442498c843096}{LCD\+\_\+\+Plot\+Increment()}}. The units of the data are the same as the ymax and ymin values specified in the initialization function. 
+\begin{DoxyParams}{Parameters}
+{\em data1} & value to be plotted (units not specified) \\
+\hline
+{\em color1} & 16-\/bit color for the point, which can be produced by \mbox{\hyperlink{group___l_c_d_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes\+: \mbox{\hyperlink{group___l_c_d_gaa53c9d40f3aa552a9974cd55ac510cb3}{LCD\+\_\+\+Init()}} and \mbox{\hyperlink{group___l_c_d_ga6df874d61387bd819c0427f48ef25644}{LCD\+\_\+\+Drawaxes()}} have been called 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___l_c_d_ga47491102a9621cc4aafa84f24b1ec60a}\label{group___l_c_d_ga47491102a9621cc4aafa84f24b1ec60a}} 
+\index{LCD@{LCD}!LCD\_SetCursor@{LCD\_SetCursor}}
+\index{LCD\_SetCursor@{LCD\_SetCursor}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetCursor()}{LCD\_SetCursor()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Set\+Cursor (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{newX,  }\item[{uint32\+\_\+t}]{newY }\end{DoxyParamCaption})}
+
+Move the cursor to the desired X-\/ and Y-\/position. The next character of the next unsigned decimal will be printed here. X=0 is the leftmost column. Y=0 is the top row. 
+\begin{DoxyParams}{Parameters}
+{\em newX} & new X-\/position of the cursor (0$<$=newX$<$=20) \\
+\hline
+{\em newY} & new Y-\/position of the cursor (0$<$=newY$<$=12) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___l_c_d_ga1aed8b83ed0c8a4871f8da080ff9d74b}\label{group___l_c_d_ga1aed8b83ed0c8a4871f8da080ff9d74b}} 
+\index{LCD@{LCD}!LCD\_SetTextColor@{LCD\_SetTextColor}}
+\index{LCD\_SetTextColor@{LCD\_SetTextColor}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetTextColor()}{LCD\_SetTextColor()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Set\+Text\+Color (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+Sets the color in which the characters will be printed Background color is fixed at black 
+\begin{DoxyParams}{Parameters}
+{\em color} & 16-\/bit packed color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___l_c_d_gaa4b5e50ce44d53137e0454475b92ad89}\label{group___l_c_d_gaa4b5e50ce44d53137e0454475b92ad89}} 
+\index{LCD@{LCD}!LCD\_SwapColor@{LCD\_SwapColor}}
+\index{LCD\_SwapColor@{LCD\_SwapColor}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD\_SwapColor()}{LCD\_SwapColor()}}
+{\footnotesize\ttfamily uint16\+\_\+t LCD\+\_\+\+Swap\+Color (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x }\end{DoxyParamCaption})}
+
+Swaps the red and blue values of the given 16-\/bit packed color; green is unchanged. 
+\begin{DoxyParams}{Parameters}
+{\em x} & 16-\/bit color in format B, G, R \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+16-\/bit color in format R, G, B 
+\end{DoxyReturn}

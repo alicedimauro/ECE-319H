@@ -1,0 +1,682 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "CCS Debug",
+            "type": "ccs-debug",
+            "request": "launch"
+        },
+        {
+            "name": "ECE319K_Lab2",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ECE319K_Lab2",
+                "resourceId": "/ECE319K_Lab2"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "ECE319K_Lab3",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ECE319K_Lab3",
+                "resourceId": "/ECE319K_Lab3"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "ECE319K_Lab4",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ECE319K_Lab4",
+                "resourceId": "/ECE319K_Lab4"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "ADCSWTrigger",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ADCSWTrigger",
+                "resourceId": "/ADCSWTrigger"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "AssemblyExamples",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "AssemblyExamples",
+                "resourceId": "/AssemblyExamples"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "CrystalfontzLCD",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "CrystalfontzLCD",
+                "resourceId": "/CrystalfontzLCD"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "DAC",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "DAC",
+                "resourceId": "/DAC"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "ECE319K_Lab1",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ECE319K_Lab1",
+                "resourceId": "/ECE319K_Lab1"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "ECE319K_Lab2H",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ECE319K_Lab2H",
+                "resourceId": "/ECE319K_Lab2H"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "ECE319K_Lab5",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ECE319K_Lab5",
+                "resourceId": "/ECE319K_Lab5"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "ECE319K_Lab6",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ECE319K_Lab6",
+                "resourceId": "/ECE319K_Lab6"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "ECE319K_Lab7",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ECE319K_Lab7",
+                "resourceId": "/ECE319K_Lab7"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "ECE319K_Lab7H",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ECE319K_Lab7H",
+                "resourceId": "/ECE319K_Lab7H"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "ECE319K_Lab8",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ECE319K_Lab8",
+                "resourceId": "/ECE319K_Lab8"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "ECE319K_Lab8H",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ECE319K_Lab8H",
+                "resourceId": "/ECE319K_Lab8H"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "ECE319K_Lab9",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ECE319K_Lab9",
+                "resourceId": "/ECE319K_Lab9"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "ECE319K_Lab9H",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ECE319K_Lab9H",
+                "resourceId": "/ECE319K_Lab9H"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "EdgeTriggeredInt",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "EdgeTriggeredInt",
+                "resourceId": "/EdgeTriggeredInt"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "I2C",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "I2C",
+                "resourceId": "/I2C"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "InputCaptureInt",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "InputCaptureInt",
+                "resourceId": "/InputCaptureInt"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "InputOutput",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "InputOutput",
+                "resourceId": "/InputOutput"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "InputOutputAsm",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "InputOutputAsm",
+                "resourceId": "/InputOutputAsm"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "NotGate",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "NotGate",
+                "resourceId": "/NotGate"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "NotGateAsm",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "NotGateAsm",
+                "resourceId": "/NotGateAsm"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "OutputToggleAsm",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "OutputToggleAsm",
+                "resourceId": "/OutputToggleAsm"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "RSLK",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "RSLK",
+                "resourceId": "/RSLK"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "Scratch",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "Scratch",
+                "resourceId": "/Scratch"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "ScratchAsm",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ScratchAsm",
+                "resourceId": "/ScratchAsm"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "SDCFile",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "SDCFile",
+                "resourceId": "/SDCFile"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "SDCFilecpp",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "SDCFilecpp",
+                "resourceId": "/SDCFilecpp"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "SSD1306",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "SSD1306",
+                "resourceId": "/SSD1306"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "ST7735R",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ST7735R",
+                "resourceId": "/ST7735R"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "SysTickPeriodicInt",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "SysTickPeriodicInt",
+                "resourceId": "/SysTickPeriodicInt"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "Tester",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "Tester",
+                "resourceId": "/Tester"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "TExaS",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "TExaS",
+                "resourceId": "/TExaS"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "TimerPeriodicInt",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "TimerPeriodicInt",
+                "resourceId": "/TimerPeriodicInt"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "TimerPWM",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "TimerPWM",
+                "resourceId": "/TimerPWM"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "ToggleLED",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ToggleLED",
+                "resourceId": "/ToggleLED"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "TrafficLightFSM",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "TrafficLightFSM",
+                "resourceId": "/TrafficLightFSM"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "TrafficLightFSMasm",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "TrafficLightFSMasm",
+                "resourceId": "/TrafficLightFSMasm"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "UART_busywait",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UART_busywait",
+                "resourceId": "/UART_busywait"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "UART_ints",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UART_ints",
+                "resourceId": "/UART_ints"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        }
+    ]
+}

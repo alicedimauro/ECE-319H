@@ -1,0 +1,408 @@
+\hypertarget{group___i2_c}{}\doxysection{I2C}
+\label{group___i2_c}\index{I2C@{I2C}}
+
+
+I2C and MKII boosterpack sensors.  
+
+
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{_i2_c_8h}{I2\+C.\+h}}
+\begin{DoxyCompactList}\small\item\em Software driver functions for I2C and MKII boosterpack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___i2_c_ga84df9a5887b8b8230cfe85d18e53900e}{I2\+C\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize I2C. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___i2_c_gae4b63e9ef99607a9c10c0888e874b271}{I2\+C\+\_\+\+Recv1}} (int8\+\_\+t slave)
+\begin{DoxyCompactList}\small\item\em Receive one byte. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i2_c_ga172e587b4c2819de75686b9a4d28795a}{I2\+C\+\_\+\+Recv2}} (int8\+\_\+t slave)
+\begin{DoxyCompactList}\small\item\em Receive two bytes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___i2_c_ga1ebce3db5cd81af24e235b9cb2e12d25}{I2\+C\+\_\+\+Send1}} (int8\+\_\+t slave, uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Send one byte. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___i2_c_gaa8986cab236dfc71dc40bf95db6be59a}{I2\+C\+\_\+\+Send2}} (int8\+\_\+t slave, uint8\+\_\+t data1, uint8\+\_\+t data2)
+\begin{DoxyCompactList}\small\item\em Send two bytes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___i2_c_ga3285b076a1a213e3c569dbcbfc9adae8}{I2\+C\+\_\+\+Send3}} (int8\+\_\+t slave, uint8\+\_\+t data1, uint8\+\_\+t data2, uint8\+\_\+t data3)
+\begin{DoxyCompactList}\small\item\em Send three bytes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i2_c_gaf070692463ba19763294b0eeb2a29009}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize OPT3001. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___i2_c_ga3a1b31e846c2e48289cde7e29014a8a5}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+Input}} (void)
+\begin{DoxyCompactList}\small\item\em Input from OPT3001. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i2_c_ga219fb26ad14ee74107bc4bd2e844ee5d}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+Start}} (void)
+\begin{DoxyCompactList}\small\item\em Start OPT3001. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___i2_c_ga1a1c8eb5d0a103574ea72bd2bab8f00f}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+End}} (uint32\+\_\+t $\ast$light)
+\begin{DoxyCompactList}\small\item\em Finish OPT3001. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i2_c_ga800416ee64fff3d1cabe47b9ca673cd4}{I2\+C\+\_\+\+Temp\+Sensor\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize TMP006. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i2_c_ga47d84de361178a434bf1ff0e3969ebb2}{I2\+C\+\_\+\+Temp\+Sensor\+\_\+\+Input}} (int32\+\_\+t $\ast$sensorV, int32\+\_\+t $\ast$localT)
+\begin{DoxyCompactList}\small\item\em Input from TMP006. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i2_c_ga1812b414fa715b7500fdfc040d8e3026}{I2\+C\+\_\+\+Temp\+Sensor\+\_\+\+Start}} (void)
+\begin{DoxyCompactList}\small\item\em Start TMP006. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___i2_c_ga0eafb7c75b865d02ff149ef68caecb29}{I2\+C\+\_\+\+Temp\+Sensor\+\_\+\+End}} (int32\+\_\+t $\ast$sensorV, int32\+\_\+t $\ast$localT)
+\begin{DoxyCompactList}\small\item\em Finish TMP006. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+I2C and MKII boosterpack sensors. 
+
+\hypertarget{group___i2_c_MKIIsensorpins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{MKII sensor pins }\label{group___i2_c_MKIIsensorpins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Function}&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Function}&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endhead
+PA27&GPIO &J1.\+8 ambient light (OPT3001) interrupt (digital) ~\newline
+ \\\cline{1-3}
+PB2 &I2\+C1-\/\+SCL&J1.\+9 ambient light (OPT3001) and temperature sensor (TMP006) ~\newline
+ \\\cline{1-3}
+PB3 &I2\+C1-\/\+SDA&J1.\+10 ambient light (OPT3001) and temperature sensor (TMP006) ~\newline
+ \\\cline{1-3}
+PB16&GPIO &J2.\+11 temperature sensor (TMP006) interrupt (digital) ~\newline
+ \\\cline{1-3}
+\end{longtabu}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___i2_c_ga84df9a5887b8b8230cfe85d18e53900e}\label{group___i2_c_ga84df9a5887b8b8230cfe85d18e53900e}} 
+\index{I2C@{I2C}!I2C\_Init@{I2C\_Init}}
+\index{I2C\_Init@{I2C\_Init}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{I2C\_Init()}{I2C\_Init()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize I2C. 
+
+Initialize PB2 and PB3 for I2C for 400k\+Hz clock. Uses busy-\/wait synchronization 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes 80MHz bus clock 
+
+Assumes GPIOB have been reset and powered previously 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___i2_c_ga1a1c8eb5d0a103574ea72bd2bab8f00f}\label{group___i2_c_ga1a1c8eb5d0a103574ea72bd2bab8f00f}} 
+\index{I2C@{I2C}!I2C\_LightSensor\_End@{I2C\_LightSensor\_End}}
+\index{I2C\_LightSensor\_End@{I2C\_LightSensor\_End}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{I2C\_LightSensor\_End()}{I2C\_LightSensor\_End()}}
+{\footnotesize\ttfamily int I2\+C\+\_\+\+Light\+Sensor\+\_\+\+End (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{light }\end{DoxyParamCaption})}
+
+
+
+Finish OPT3001. 
+
+Finish a measurement using the OPT3001. Query the OPT3001 light sensor for a measurement. If no measurement is currently in progress, start one and return zero immediately. If the measurement is not yet complete, return zero immediately. If the measurement is complete, store the result in the pointer provided and return one. 
+\begin{DoxyParams}{Parameters}
+{\em light} & pointer to a place to return data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if measurement is ready and pointer is valid, 0 if measurement is not ready and pointer unchanged 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___i2_c_gaf070692463ba19763294b0eeb2a29009}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+Init}} \mbox{\hyperlink{group___i2_c_ga1a1c8eb5d0a103574ea72bd2bab8f00f}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+End}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Assumes\+: \mbox{\hyperlink{group___i2_c_ga219fb26ad14ee74107bc4bd2e844ee5d}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+Start()}} has been called 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___i2_c_gaf070692463ba19763294b0eeb2a29009}\label{group___i2_c_gaf070692463ba19763294b0eeb2a29009}} 
+\index{I2C@{I2C}!I2C\_LightSensor\_Init@{I2C\_LightSensor\_Init}}
+\index{I2C\_LightSensor\_Init@{I2C\_LightSensor\_Init}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{I2C\_LightSensor\_Init()}{I2C\_LightSensor\_Init()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Light\+Sensor\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize OPT3001. 
+
+Initialize OPT3001 on MKII boosterpack. PA27 is GPIO pin for input, which corresponds with Booster\+Pack pins J1.\+8 (Light Sensor interrupt). Initialize PB2 and PB3 for I2C pins, which correspond with Booster\+Pack pins J1.\+9 (SCL) and J1.\+10 (SDA) 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes 80MHz bus clock 
+
+Assumes GPIOB have been reset and powered previously 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___i2_c_ga3a1b31e846c2e48289cde7e29014a8a5}\label{group___i2_c_ga3a1b31e846c2e48289cde7e29014a8a5}} 
+\index{I2C@{I2C}!I2C\_LightSensor\_Input@{I2C\_LightSensor\_Input}}
+\index{I2C\_LightSensor\_Input@{I2C\_LightSensor\_Input}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{I2C\_LightSensor\_Input()}{I2C\_LightSensor\_Input()}}
+{\footnotesize\ttfamily uint32\+\_\+t I2\+C\+\_\+\+Light\+Sensor\+\_\+\+Input (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Input from OPT3001. 
+
+Query the OPT3001 light sensor for a measurement. Wait until the measurement is ready, which may take 800 ms 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+light intensity (units 100$\ast$lux) 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___i2_c_ga219fb26ad14ee74107bc4bd2e844ee5d}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+Start}} \mbox{\hyperlink{group___i2_c_ga1a1c8eb5d0a103574ea72bd2bab8f00f}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+End}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Assumes\+: \mbox{\hyperlink{group___i2_c_gaf070692463ba19763294b0eeb2a29009}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+Init()}} has been called 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___i2_c_ga219fb26ad14ee74107bc4bd2e844ee5d}\label{group___i2_c_ga219fb26ad14ee74107bc4bd2e844ee5d}} 
+\index{I2C@{I2C}!I2C\_LightSensor\_Start@{I2C\_LightSensor\_Start}}
+\index{I2C\_LightSensor\_Start@{I2C\_LightSensor\_Start}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{I2C\_LightSensor\_Start()}{I2C\_LightSensor\_Start()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Light\+Sensor\+\_\+\+Start (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Start OPT3001. 
+
+Start a measurement using the OPT3001. If a measurement is currently in progress, return without starting another measurement 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___i2_c_gaf070692463ba19763294b0eeb2a29009}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+Init}} \mbox{\hyperlink{group___i2_c_ga1a1c8eb5d0a103574ea72bd2bab8f00f}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+End}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Assumes\+: \mbox{\hyperlink{group___i2_c_gaf070692463ba19763294b0eeb2a29009}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+Init()}} has been called 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___i2_c_gae4b63e9ef99607a9c10c0888e874b271}\label{group___i2_c_gae4b63e9ef99607a9c10c0888e874b271}} 
+\index{I2C@{I2C}!I2C\_Recv1@{I2C\_Recv1}}
+\index{I2C\_Recv1@{I2C\_Recv1}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{I2C\_Recv1()}{I2C\_Recv1()}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+\_\+\+Recv1 (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{slave }\end{DoxyParamCaption})}
+
+
+
+Receive one byte. 
+
+Receive one byte from specified slave. Uses busy-\/wait synchronization ~\newline
+ \mbox{[}send address\mbox{]}\mbox{[}read data\mbox{]} 
+\begin{DoxyParams}{Parameters}
+{\em slave} & is slave address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+8-\/bit data received 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Does not check for errors 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___i2_c_ga172e587b4c2819de75686b9a4d28795a}\label{group___i2_c_ga172e587b4c2819de75686b9a4d28795a}} 
+\index{I2C@{I2C}!I2C\_Recv2@{I2C\_Recv2}}
+\index{I2C\_Recv2@{I2C\_Recv2}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{I2C\_Recv2()}{I2C\_Recv2()}}
+{\footnotesize\ttfamily uint16\+\_\+t I2\+C\+\_\+\+Recv2 (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{slave }\end{DoxyParamCaption})}
+
+
+
+Receive two bytes. 
+
+Receive two bytes from specified slave. Uses busy-\/wait synchronization ~\newline
+ \mbox{[}send address\mbox{]}\mbox{[}read data\mbox{]}\mbox{[}read data\mbox{]} 
+\begin{DoxyParams}{Parameters}
+{\em slave} & is slave address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+16-\/bit data received 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Does not check for errors 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___i2_c_ga1ebce3db5cd81af24e235b9cb2e12d25}\label{group___i2_c_ga1ebce3db5cd81af24e235b9cb2e12d25}} 
+\index{I2C@{I2C}!I2C\_Send1@{I2C\_Send1}}
+\index{I2C\_Send1@{I2C\_Send1}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{I2C\_Send1()}{I2C\_Send1()}}
+{\footnotesize\ttfamily int I2\+C\+\_\+\+Send1 (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{slave,  }\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Send one byte. 
+
+Send one byte to specified slave. Uses busy-\/wait synchronization ~\newline
+ \mbox{[}send address\mbox{]}\mbox{[}send data\mbox{]} 
+\begin{DoxyParams}{Parameters}
+{\em slave} & is slave address \\
+\hline
+{\em data} & is byte to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, nonzero if error 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Does check for errors 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___i2_c_gaa8986cab236dfc71dc40bf95db6be59a}\label{group___i2_c_gaa8986cab236dfc71dc40bf95db6be59a}} 
+\index{I2C@{I2C}!I2C\_Send2@{I2C\_Send2}}
+\index{I2C\_Send2@{I2C\_Send2}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{I2C\_Send2()}{I2C\_Send2()}}
+{\footnotesize\ttfamily int I2\+C\+\_\+\+Send2 (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{slave,  }\item[{uint8\+\_\+t}]{data1,  }\item[{uint8\+\_\+t}]{data2 }\end{DoxyParamCaption})}
+
+
+
+Send two bytes. 
+
+Send two bytes to specified slave. Uses busy-\/wait synchronization ~\newline
+ \mbox{[}send address\mbox{]}\mbox{[}send data1\mbox{]}\mbox{[}send data2\mbox{]} 
+\begin{DoxyParams}{Parameters}
+{\em slave} & is slave address \\
+\hline
+{\em data1} & is first byte to be sent \\
+\hline
+{\em data2} & is second byte to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, nonzero if error 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Does check for errors 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___i2_c_ga3285b076a1a213e3c569dbcbfc9adae8}\label{group___i2_c_ga3285b076a1a213e3c569dbcbfc9adae8}} 
+\index{I2C@{I2C}!I2C\_Send3@{I2C\_Send3}}
+\index{I2C\_Send3@{I2C\_Send3}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{I2C\_Send3()}{I2C\_Send3()}}
+{\footnotesize\ttfamily int I2\+C\+\_\+\+Send3 (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{slave,  }\item[{uint8\+\_\+t}]{data1,  }\item[{uint8\+\_\+t}]{data2,  }\item[{uint8\+\_\+t}]{data3 }\end{DoxyParamCaption})}
+
+
+
+Send three bytes. 
+
+Send three bytes to specified slave. Uses busy-\/wait synchronization ~\newline
+ \mbox{[}send address\mbox{]}\mbox{[}send data1\mbox{]}\mbox{[}send data2\mbox{]}\mbox{[}send data3\mbox{]} 
+\begin{DoxyParams}{Parameters}
+{\em slave} & is slave address \\
+\hline
+{\em data1} & is first byte to be sent \\
+\hline
+{\em data2} & is second byte to be sent \\
+\hline
+{\em data3} & is third byte to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, nonzero if error 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Does check for errors 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___i2_c_ga0eafb7c75b865d02ff149ef68caecb29}\label{group___i2_c_ga0eafb7c75b865d02ff149ef68caecb29}} 
+\index{I2C@{I2C}!I2C\_TempSensor\_End@{I2C\_TempSensor\_End}}
+\index{I2C\_TempSensor\_End@{I2C\_TempSensor\_End}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{I2C\_TempSensor\_End()}{I2C\_TempSensor\_End()}}
+{\footnotesize\ttfamily int I2\+C\+\_\+\+Temp\+Sensor\+\_\+\+End (\begin{DoxyParamCaption}\item[{int32\+\_\+t $\ast$}]{sensorV,  }\item[{int32\+\_\+t $\ast$}]{localT }\end{DoxyParamCaption})}
+
+
+
+Finish TMP006. 
+
+Finish a measurement using the OPT3001. Query the TMP006 temperature sensor for a measurement. If no measurement is currently in progress, start one and return zero immediately. If the measurement is not yet complete, return zero immediately. If the measurement is complete, store the result in the pointers provided and return one. 
+\begin{DoxyParams}{Parameters}
+{\em sensorV} & is signed pointer to store sensor voltage (units 100$\ast$nV) \\
+\hline
+{\em localT} & is signed pointer to store local temperature (units 100,000$\ast$C) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if measurement is ready and pointer is valid, 0 if measurement is not ready and pointer unchanged 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___i2_c_ga1812b414fa715b7500fdfc040d8e3026}{I2\+C\+\_\+\+Temp\+Sensor\+\_\+\+Start}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Assumes\+: I2\+C\+\_\+\+Temp\+Sensor\+\_\+\+Start has been called 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___i2_c_ga800416ee64fff3d1cabe47b9ca673cd4}\label{group___i2_c_ga800416ee64fff3d1cabe47b9ca673cd4}} 
+\index{I2C@{I2C}!I2C\_TempSensor\_Init@{I2C\_TempSensor\_Init}}
+\index{I2C\_TempSensor\_Init@{I2C\_TempSensor\_Init}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{I2C\_TempSensor\_Init()}{I2C\_TempSensor\_Init()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Temp\+Sensor\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize TMP006. 
+
+Initialize TMP006 on MKII boosterpack. PB16 is GPIO pin for input, which corresponds with Booster\+Pack pins J1.\+8 (Light Sensor interrupt). Initialize PB2 and PB3 for I2C pins, which correspond with Booster\+Pack pins J1.\+9 (SCL) and J1.\+10 (SDA) 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes 80MHz bus clock 
+
+Assumes GPIOB have been reset and powered previously 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___i2_c_ga47d84de361178a434bf1ff0e3969ebb2}\label{group___i2_c_ga47d84de361178a434bf1ff0e3969ebb2}} 
+\index{I2C@{I2C}!I2C\_TempSensor\_Input@{I2C\_TempSensor\_Input}}
+\index{I2C\_TempSensor\_Input@{I2C\_TempSensor\_Input}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{I2C\_TempSensor\_Input()}{I2C\_TempSensor\_Input()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Temp\+Sensor\+\_\+\+Input (\begin{DoxyParamCaption}\item[{int32\+\_\+t $\ast$}]{sensorV,  }\item[{int32\+\_\+t $\ast$}]{localT }\end{DoxyParamCaption})}
+
+
+
+Input from TMP006. 
+
+Query the TMP006 temperature sensor for a measurement. Wait until the measurement is ready, which may take 4 seconds 
+\begin{DoxyParams}{Parameters}
+{\em sensorV} & is signed pointer to store sensor voltage (units 100$\ast$nV) \\
+\hline
+{\em localT} & is signed pointer to store local temperature (units 100,000$\ast$C) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+TMP006 was discontinued and not populated on most MKII 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___i2_c_ga1812b414fa715b7500fdfc040d8e3026}\label{group___i2_c_ga1812b414fa715b7500fdfc040d8e3026}} 
+\index{I2C@{I2C}!I2C\_TempSensor\_Start@{I2C\_TempSensor\_Start}}
+\index{I2C\_TempSensor\_Start@{I2C\_TempSensor\_Start}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{I2C\_TempSensor\_Start()}{I2C\_TempSensor\_Start()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Temp\+Sensor\+\_\+\+Start (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Start TMP006. 
+
+Start a measurement using the TMP006. If a measurement is currently in progress, return without starting another measurement 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___i2_c_gaf070692463ba19763294b0eeb2a29009}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+Init}} \mbox{\hyperlink{group___i2_c_ga1a1c8eb5d0a103574ea72bd2bab8f00f}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+End}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Assumes\+: \mbox{\hyperlink{group___i2_c_gaf070692463ba19763294b0eeb2a29009}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+Init()}} has been called 
+\end{DoxyNote}

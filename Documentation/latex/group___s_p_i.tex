@@ -1,0 +1,149 @@
+\hypertarget{group___s_p_i}{}\doxysection{SPI}
+\label{group___s_p_i}\index{SPI@{SPI}}
+
+
+Synchronous serial communication.  
+
+
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{_s_p_i_8h}{SPI.\+h}}
+\begin{DoxyCompactList}\small\item\em Synchronous serial communication. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_p_i_ga292196e767158c66f03cbcc244fc802b}{SPI\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em initialize SPI \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_p_i_gaed11530aee001ae938f496682af21e64}{SPI\+\_\+\+Out\+Data}} (char data)
+\begin{DoxyCompactList}\small\item\em Output data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_p_i_ga8ed2ce84f38ed615cb23dc97ceb7c85b}{SPI\+\_\+\+Out\+Command}} (char command)
+\begin{DoxyCompactList}\small\item\em Output command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_p_i_gae2772fcf7bc437d833f9784c6d184ab2}{SPI\+\_\+\+Reset}} (void)
+\begin{DoxyCompactList}\small\item\em Reset LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Synchronous serial communication. 
+
+\hypertarget{group___s_p_i_SPIpins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{SPI-\/\+LCD pins }\label{group___s_p_i_SPIpins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Function }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Function }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endhead
+PB9 &SPI1 SCLK &J1.\+7 LCD SPI clock (SPI) ~\newline
+ \\\cline{1-3}
+PB6 &SPI1 CS0 &J2.\+13 LCD SPI CS (SPI) ~\newline
+ \\\cline{1-3}
+PB8 &SPI1 PICO &J2.\+15 LCD SPI data (SPI) ~\newline
+ \\\cline{1-3}
+PB15&GPIO &J2.\+17 LCD !\+RST =1 for run, =0 for reset ~\newline
+ \\\cline{1-3}
+PA13&GPIO &J4.\+31 LCD RS =1 for data, =0 for command ~\newline
+ \\\cline{1-3}
+\end{longtabu}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___s_p_i_ga292196e767158c66f03cbcc244fc802b}\label{group___s_p_i_ga292196e767158c66f03cbcc244fc802b}} 
+\index{SPI@{SPI}!SPI\_Init@{SPI\_Init}}
+\index{SPI\_Init@{SPI\_Init}!SPI@{SPI}}
+\doxysubsubsection{\texorpdfstring{SPI\_Init()}{SPI\_Init()}}
+{\footnotesize\ttfamily void SPI\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+initialize SPI 
+
+Initialize SPI for 8 MHz baud clock using busy-\/wait synchronization. Calls Clock\+\_\+\+Freq to get bus clock
+\begin{DoxyItemize}
+\item PB9 SPI1 SCLK ~\newline
+
+\item PB6 SPI1 CS0 ~\newline
+
+\item PB8 SPI1 PICO ~\newline
+
+\item PB15 GPIO !\+RST =1 for run, =0 for reset ~\newline
+
+\item PA13 GPIO RS =1 for data, =0 for command
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+SPI0,SPI1 in power domain PD1 Sys\+Clk equals bus CPU clock 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_p_i_ga8ed2ce84f38ed615cb23dc97ceb7c85b}\label{group___s_p_i_ga8ed2ce84f38ed615cb23dc97ceb7c85b}} 
+\index{SPI@{SPI}!SPI\_OutCommand@{SPI\_OutCommand}}
+\index{SPI\_OutCommand@{SPI\_OutCommand}!SPI@{SPI}}
+\doxysubsubsection{\texorpdfstring{SPI\_OutCommand()}{SPI\_OutCommand()}}
+{\footnotesize\ttfamily void SPI\+\_\+\+Out\+Command (\begin{DoxyParamCaption}\item[{char}]{command }\end{DoxyParamCaption})}
+
+
+
+Output command. 
+
+Output 8-\/bit command to SPI port. RS=PA13=0 for command 
+\begin{DoxyParams}{Parameters}
+{\em command} & is an 8-\/bit command to be transferred \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_p_i_gaed11530aee001ae938f496682af21e64}\label{group___s_p_i_gaed11530aee001ae938f496682af21e64}} 
+\index{SPI@{SPI}!SPI\_OutData@{SPI\_OutData}}
+\index{SPI\_OutData@{SPI\_OutData}!SPI@{SPI}}
+\doxysubsubsection{\texorpdfstring{SPI\_OutData()}{SPI\_OutData()}}
+{\footnotesize\ttfamily void SPI\+\_\+\+Out\+Data (\begin{DoxyParamCaption}\item[{char}]{data }\end{DoxyParamCaption})}
+
+
+
+Output data. 
+
+Output 8-\/bit data to SPI port. RS=PA13=1 for data. 
+\begin{DoxyParams}{Parameters}
+{\em data} & is an 8-\/bit data to be transferred \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___s_p_i_gae2772fcf7bc437d833f9784c6d184ab2}\label{group___s_p_i_gae2772fcf7bc437d833f9784c6d184ab2}} 
+\index{SPI@{SPI}!SPI\_Reset@{SPI\_Reset}}
+\index{SPI\_Reset@{SPI\_Reset}!SPI@{SPI}}
+\doxysubsubsection{\texorpdfstring{SPI\_Reset()}{SPI\_Reset()}}
+{\footnotesize\ttfamily void SPI\+\_\+\+Reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Reset LCD. 
+
+Reset LCD
+\begin{DoxyEnumerate}
+\item drive RST high for 500ms
+\item drive RST low for 500ms
+\item drive RST high for 500ms
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}

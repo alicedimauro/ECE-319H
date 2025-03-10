@@ -1,0 +1,95 @@
+\hypertarget{_u_a_r_t_8h}{}\doxysection{inc/\+UART.h File Reference}
+\label{_u_a_r_t_8h}\index{inc/UART.h@{inc/UART.h}}
+
+
+Initialize UART0.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t_ga876ce77f3c672c7162658151e648389e}{CR}}~0x0D
+\begin{DoxyCompactList}\small\item\em CR is carriage return. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___u_a_r_t_ga350c9d6cb81908d59427ee96844d1a9c}{LF}}~0x0A
+\begin{DoxyCompactList}\small\item\em LF is line feed. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___u_a_r_t_ga580a88f98668df1ac5e1683cae31c0b3}{BS}}~0x08
+\begin{DoxyCompactList}\small\item\em BS is back space. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___u_a_r_t_ga4af1b6159e447ba72652bb7fcdfa726e}{ESC}}~0x1B
+\begin{DoxyCompactList}\small\item\em ESC is escape character. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___u_a_r_t_gaecd69d9a67487cc45c38eb184c50538a}{SP}}~0x20
+\begin{DoxyCompactList}\small\item\em SP is space. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___u_a_r_t_gad1e508e805e4ddbc05119be4bb260985}{DEL}}~0x7F
+\begin{DoxyCompactList}\small\item\em DEL is delete. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___u_a_r_t_gad5cbed2a2222bb84e8b5c1caaa50634e}{UART\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize UART0. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{group___u_a_r_t_ga00e894bb188320a2f4dcd5a78b80da52}{UART\+\_\+\+In\+Char}} (void)
+\begin{DoxyCompactList}\small\item\em input from UART0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_ga4ef2f92682b12a347cf1f81cccda4da7}{UART\+\_\+\+Out\+Char}} (char data)
+\begin{DoxyCompactList}\small\item\em output character to UART0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_ga2cbbed822dc8e6d801e6c9f21a2cd418}{UART\+\_\+\+Out\+String}} (char $\ast$pt)
+\begin{DoxyCompactList}\small\item\em output string to UART0 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___u_a_r_t_ga0a28a219c31df1bd2182e4b3afbcc5cd}{UART\+\_\+\+In\+UDec}} (void)
+\begin{DoxyCompactList}\small\item\em input a number from UART0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_ga9a53c5fe8486e0282990b11a218c2625}{UART\+\_\+\+Out\+UDec}} (uint32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em output a number to UART0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_gaf513c146e50210a3e8d560c3f7f4a61c}{UART\+\_\+\+Out\+SDec}} (int32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em output a signed number to UART0 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___u_a_r_t_ga5a7efc717f2c844f08689418dd50ee43}{UART\+\_\+\+In\+UHex}} (void)
+\begin{DoxyCompactList}\small\item\em input a hex number from UART0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_ga21661aabfda94ec88e9514856f062a41}{UART\+\_\+\+Out\+UHex}} (uint32\+\_\+t number)
+\begin{DoxyCompactList}\small\item\em output a hex number to UART0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_ga4278ab3463fadff60a5a84792707c3a3}{UART\+\_\+\+In\+String}} (char $\ast$buf\+Pt, uint16\+\_\+t max)
+\begin{DoxyCompactList}\small\item\em input a string from UART0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_ga8f712d5a0da62169816c832d148422dd}{UART\+\_\+\+Init\+Printf}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize UART0 to use printf. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_ga5c01e95ec3c881cdd00e311327126693}{UART1\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize UART1. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{group___u_a_r_t_ga952c67b026c15d0ae63b478f0c2b65a4}{UART1\+\_\+\+In\+Char}} (void)
+\begin{DoxyCompactList}\small\item\em input from UART1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_a_r_t_gab2b4650fa453ead2c95a88c468ae47e8}{UART1\+\_\+\+Out\+Char}} (char data)
+\begin{DoxyCompactList}\small\item\em output character to UART1 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Initialize UART0. 
+
+UART0 initialization. 115200 baud, 1 start, 8 data bits, 1 stop, no parity.~\newline
+
+
+\begin{DoxyVersion}{Version}
+ECE319K v1.\+2 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Daniel Valvano and Jonathan Valvano 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2025 by Jonathan W. Valvano, \href{mailto:valvano@mail.utexas.edu}{\texttt{ valvano@mail.\+utexas.\+edu}}, 
+\end{DoxyCopyright}
+\begin{DoxyWarning}{Warning}
+AS-\/\+IS 
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+For more information see \href{http://users.ece.utexas.edu/~valvano/}{\texttt{ http\+://users.\+ece.\+utexas.\+edu/$\sim$valvano/}} 
+\end{DoxyNote}
+\begin{DoxyDate}{Date}
+December 23, 2024 \hypertarget{_u_a_r_t_8h_UARTpins2}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{UART pins on the MSPM0\+G3507}\label{_u_a_r_t_8h_UARTpins2}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-2}
+\endhead
+PA10 &UART0 Tx to XDS Rx \\\cline{1-2}
+PA11 &UART0 Rx from XDS Tx \\\cline{1-2}
+\end{longtabu}
+
+\end{DoxyDate}

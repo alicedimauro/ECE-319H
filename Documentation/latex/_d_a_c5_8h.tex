@@ -1,0 +1,110 @@
+\hypertarget{_d_a_c5_8h}{}\doxysection{inc/\+DAC5.h File Reference}
+\label{_d_a_c5_8h}\index{inc/DAC5.h@{inc/DAC5.h}}
+
+
+5-\/bit binary-\/weighted DAC  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_d_a_c5_8h_a71ea7f30f97ef82d817636781d23377a}{DAC5\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize DAC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_d_a_c5_8h_a8c8d1971467c4b4c97e909eedfc63dab}{DAC5\+\_\+\+Out}} (uint32\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Output to DAC5. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+5-\/bit binary-\/weighted DAC 
+
+Lab 5. Digital Piano using a Digital to Analog Converter~\newline
+ For more information see~\newline
+ \href{https://docs.google.com/document/d/1DVmHjqsx24FvLp4x8KKyr5UmDeDlBlfeQPsVvKFQF_k/edit}{\texttt{ https\+://docs.\+google.\+com/document/d/1\+DVm\+Hjqsx24\+Fv\+Lp4x8\+KKyr5\+Um\+De\+Dl\+Blfe\+QPs\+Vv\+KFQF\+\_\+k/edit}}~\newline
+ \begin{DoxyVersion}{Version}
+ECE319K Spring 2025 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Your names go here 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Lab solution, do not post, 
+\end{DoxyCopyright}
+\begin{DoxyWarning}{Warning}
+AS-\/\+IS 
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+For more information see \href{http://users.ece.utexas.edu/~valvano/}{\texttt{ http\+://users.\+ece.\+utexas.\+edu/$\sim$valvano/}} 
+\end{DoxyNote}
+\begin{DoxyDate}{Date}
+December 23, 2024 \hypertarget{_d_a_c5_8h_Lab5pins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{Pins on the 5-\/bit DAC}\label{_d_a_c5_8h_Lab5pins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ GPIO}&\cellcolor{\tableheadbgcolor}\textbf{ Hardware }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ GPIO}&\cellcolor{\tableheadbgcolor}\textbf{ Hardware }\\\cline{1-3}
+\endhead
+PB4 &output&bit 4 (most significant) \\\cline{1-3}
+PB3 &output&bit 3 \\\cline{1-3}
+PB2 &output&bit 2 \\\cline{1-3}
+PB1 &output&bit 1 \\\cline{1-3}
+PB0 &output&bit 0 (least significant) \\\cline{1-3}
+\end{longtabu}
+
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_d_a_c5_8h_a71ea7f30f97ef82d817636781d23377a}\label{_d_a_c5_8h_a71ea7f30f97ef82d817636781d23377a}} 
+\index{DAC5.h@{DAC5.h}!DAC5\_Init@{DAC5\_Init}}
+\index{DAC5\_Init@{DAC5\_Init}!DAC5.h@{DAC5.h}}
+\doxysubsubsection{\texorpdfstring{DAC5\_Init()}{DAC5\_Init()}}
+{\footnotesize\ttfamily void DAC5\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize DAC. 
+
+Initialize 5-\/bit DAC
+\begin{DoxyItemize}
+\item PB4 output MSBit
+\item PB3 output
+\item PB2 output
+\item PB1 output
+\item PB0 output LSBit 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Launch\+Pad\+\_\+\+Init has been called; this program should not reset Port B 
+\end{DoxyNote}
+
+\end{DoxyItemize}\mbox{\Hypertarget{_d_a_c5_8h_a8c8d1971467c4b4c97e909eedfc63dab}\label{_d_a_c5_8h_a8c8d1971467c4b4c97e909eedfc63dab}} 
+\index{DAC5.h@{DAC5.h}!DAC5\_Out@{DAC5\_Out}}
+\index{DAC5\_Out@{DAC5\_Out}!DAC5.h@{DAC5.h}}
+\doxysubsubsection{\texorpdfstring{DAC5\_Out()}{DAC5\_Out()}}
+{\footnotesize\ttfamily void DAC5\+\_\+\+Out (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Output to DAC5. 
+
+Output to 5-\/bit DAC 
+\begin{DoxyParams}{Parameters}
+{\em data} & is 5-\/bit value to output, 0 to 31 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+this solution must be friendly 
+\end{DoxyNote}

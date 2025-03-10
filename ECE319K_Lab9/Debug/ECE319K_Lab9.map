@@ -1,0 +1,529 @@
+******************************************************************************
+            TI ARM Clang Linker PC v4.0.1                      
+******************************************************************************
+>> Linked Thu Dec 26 11:31:26 2024
+
+OUTPUT FILE NAME:   <ECE319K_Lab9.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 000039c5
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00020000  00003ba0  0001c460  R  X
+  SRAM                  20200000   00008000  000004cf  00007b31  RW X
+  BCR_CONFIG            41c00000   00000080  00000000  00000080  R   
+  BSL_CONFIG            41c00100   00000080  00000000  00000080  R   
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00003ba0   00003ba0    r-x
+  00000000    00000000    000000c0   000000c0    r-- .intvecs
+  000000c0    000000c0    00002cc0   00002cc0    r-- .rodata
+  00002d80    00002d80    00000d48   00000d48    r-x .text
+  00003ac8    00003ac8    000000d8   000000d8    r-- .cinit
+20200000    20200000    000002cf   00000000    rw-
+  20200000    20200000    00000200   00000000    rw- .sysmem
+  20200200    20200200    000000bc   00000000    rw- .data
+  202002bc    202002bc    00000013   00000000    rw- .bss
+20207e00    20207e00    00000200   00000000    rw-
+  20207e00    20207e00    00000200   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    000000c0     
+                  00000000    000000c0     startup_mspm0g3507_ticlang.o (.intvecs)
+
+.text      0    00002d80    00000d48     
+                  00002d80    00000210     ST7735.o (.text.ST7735_DrawBitmap)
+                  00002f90    000001b4     Clock.o (.text.Clock_Init80MHz)
+                  00003144    00000118     ST7735.o (.text.ST7735_FillRect)
+                  0000325c    000000f8     SPI.o (.text.SPI_Init)
+                  00003354    000000a2     ST7735.o (.text.commandList)
+                  000033f6    00000002     Sound.o (.text.SysTick_Handler)
+                  000033f8    00000098     ST7735.o (.text.ST7735_InitR)
+                  00003490    00000088     ST7735.o (.text.setAddrWindow)
+                  00003518    00000084     Arabic.o (.text.Arabic_OutChar)
+                  0000359c    0000007c     LaunchPad.o (.text.LaunchPad_Init)
+                  00003618    0000007c     libc.a : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  00003694    0000005c     Lab9Main.o (.text.main)
+                  000036f0    00000048     SPI.o (.text.SPI_OutCommand)
+                  00003738    00000040     SPI.o (.text.SPI_Reset)
+                  00003778    00000040     TExaS.o (.text.TIMG7_IRQHandler)
+                  000037b8    00000040     libclang_rt.builtins.a : aeabi_uidivmod.S.obj (.text.__aeabi_uidivmod)
+                  000037f8    0000003c     libc.a : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
+                  00003834    00000038     LaunchPad.o (.text.ActivatePortA_B)
+                  0000386c    00000038     SPI.o (.text.SPI_OutData)
+                  000038a4    00000034     Arabic.o (.text.Arabic_SetCursor)
+                  000038d8    00000034     Clock.o (.text.Clock_Delay1ms)
+                  0000390c    00000034     ST7735.o (.text.ST7735_SetCursor)
+                  00003940    00000030     ST7735.o (.text.commonInit)
+                  00003970    0000002c     ST7735.o (.text.ST7735_FillScreen)
+                  0000399c    00000028     Lab9Main.o (.text.TIMG12_IRQHandler)
+                  000039c4    00000028     libc.a : boot_cortex_m.c.obj (.text:_c_int00_noargs)
+                  000039ec    00000026     Arabic.o (.text.Arabic_OutString)
+                  00003a12    00000002     libclang_rt.builtins.a : aeabi_div0.c.obj (.text.__aeabi_idiv0)
+                  00003a14    0000001c     startup_mspm0g3507_ticlang.o (.text.Default_Handler)
+                  00003a30    0000001c     startup_mspm0g3507_ticlang.o (.text.HardFault_Handler)
+                  00003a4c    00000016     libc.a : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
+                  00003a62    00000012            : memcpy16.S.obj (.text:TI_memcpy_small)
+                  00003a74    00000012            : copy_decompress_none.c.obj (.text:decompress:none)
+                  00003a86    00000010     Clock.o (.text.Clock_Delay)
+                  00003a96    00000010     LaunchPad.o (.text.Delay)
+                  00003aa6    00000002     --HOLE-- [fill = 0]
+                  00003aa8    0000000c     Clock.o (.text.Clock_Freq)
+                  00003ab4    00000008     libclang_rt.builtins.a : aeabi_memcpy.S.obj (.text.__aeabi_memcpy)
+                  00003abc    00000004     startup_mspm0g3507_ticlang.o (.text.Reset_Handler)
+                  00003ac0    00000004     libc.a : pre_init.c.obj (.text._system_pre_init)
+                  00003ac4    00000004            : exit.c.obj (.text:abort)
+
+.cinit     0    00003ac8    000000d8     
+                  00003ac8    000000b1     (.cinit..data.load) [load image, compression = lzss]
+                  00003b79    00000003     --HOLE-- [fill = 0]
+                  00003b7c    0000000c     (__TI_handler_table)
+                  00003b88    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00003b90    00000010     (__TI_cinit_table)
+
+.rodata    0    000000c0    00002cc0     
+                  000000c0    00000200     Arabic.o (.rodata.daad16)
+                  000002c0    00000200     Arabic.o (.rodata.faa16)
+                  000004c0    00000200     Arabic.o (.rodata.saad16)
+                  000006c0    00000200     Arabic.o (.rodata.seen16)
+                  000008c0    00000200     Arabic.o (.rodata.sheen16)
+                  00000ac0    000001c0     Arabic.o (.rodata.dhaa14)
+                  00000c80    000001c0     Arabic.o (.rodata.ta14)
+                  00000e40    000001c0     Arabic.o (.rodata.thaa14)
+                  00001000    000001c0     Arabic.o (.rodata.twe14)
+                  000011c0    000001c0     Arabic.o (.rodata.yaa14)
+                  00001380    000001a0     Arabic.o (.rodata.baa13)
+                  00001520    00000180     Arabic.o (.rodata.jeem12)
+                  000016a0    00000180     Arabic.o (.rodata.kaaf12)
+                  00001820    00000180     Arabic.o (.rodata.khaa12)
+                  000019a0    00000180     Arabic.o (.rodata.laam12)
+                  00001b20    00000180     Arabic.o (.rodata.noon12)
+                  00001ca0    00000180     Arabic.o (.rodata.qaaf12)
+                  00001e20    00000160     Arabic.o (.rodata.ayh11)
+                  00001f80    00000160     Arabic.o (.rodata.ghayh11)
+                  000020e0    00000160     Arabic.o (.rodata.ha11)
+                  00002240    00000160     Arabic.o (.rodata.waaw11)
+                  000023a0    00000120     Arabic.o (.rodata.meem9)
+                  000024c0    00000120     Arabic.o (.rodata.raa9)
+                  000025e0    00000120     Arabic.o (.rodata.zaa9)
+                  00002700    00000100     Arabic.o (.rodata.daal8)
+                  00002800    00000100     Arabic.o (.rodata.dhaal8)
+                  00002900    00000100     Arabic.o (.rodata.dot8)
+                  00002a00    00000100     Arabic.o (.rodata.haa8)
+                  00002b00    00000100     Arabic.o (.rodata.space8)
+                  00002c00    00000080     Arabic.o (.rodata.alif4)
+                  00002c80    0000007c     Arabic.o (.rodata.ArabicWidth)
+                  00002cfc    0000003b     ST7735.o (.rodata.Rcmd1)
+                  00002d37    0000002b     ST7735.o (.rodata.Rcmd3)
+                  00002d62    0000000d     ST7735.o (.rodata.Rcmd2green)
+                  00002d6f    0000000d     ST7735.o (.rodata.Rcmd2red)
+                  00002d7c    00000004     --HOLE-- [fill = 0]
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.binit     0    00000000    00000000     
+
+.sysmem    0    20200000    00000200     UNINITIALIZED
+                  20200000    00000010     libc.a : memory.c.obj (.sysmem)
+                  20200010    000001f0     --HOLE--
+
+.data      0    20200200    000000bc     UNINITIALIZED
+                  20200200    0000007c     Arabic.o (.data.ArabicFont)
+                  2020027c    0000001f     Lab9Main.o (.data.ArabicAlphabet)
+                  2020029b    00000008     Lab9Main.o (.data.WeAreHonoredByYourPresence)
+                  202002a3    00000006     Lab9Main.o (.data.Hello)
+                  202002a9    00000001     --HOLE--
+                  202002aa    00000002     ST7735.o (.data.StTextColor)
+                  202002ac    00000004     Clock.o (.data.BusFreq)
+                  202002b0    00000004     ST7735.o (.data.StX)
+                  202002b4    00000004     ST7735.o (.data.StY)
+                  202002b8    00000002     ST7735.o (.data._height)
+                  202002ba    00000002     ST7735.o (.data._width)
+
+.bss       0    202002bc    00000013     UNINITIALIZED
+                  202002bc    00000004     (.common:ArabicX)
+                  202002c0    00000004     (.common:ArabicY)
+                  202002c4    00000004     (.common:TExaSLogic)
+                  202002c8    00000004     (.common:TExaSadc)
+                  202002cc    00000001     ST7735.o (.bss.ColStart)
+                  202002cd    00000001     ST7735.o (.bss.RowStart)
+                  202002ce    00000001     ST7735.o (.bss.TabColor)
+
+.stack     0    20207e00    00000200     UNINITIALIZED
+                  20207e00    00000004     libc.a : boot_cortex_m.c.obj (.stack)
+                  20207e04    000001fc     --HOLE--
+
+__llvm_prf_cnts 
+*          0    20200000    00000000     UNINITIALIZED
+
+__llvm_prf_bits 
+*          0    20200000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                         code   ro data   rw data
+       ------                         ----   -------   -------
+    .\
+       Arabic.o                       222    11324     132    
+       ST7735.o                       1402   128       17     
+       Clock.o                        516    0         4      
+       SPI.o                          440    0         0      
+       LaunchPad.o                    196    0         0      
+       Lab9Main.o                     132    0         45     
+       TExaS.o                        64     0         8      
+       Sound.o                        2      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         2974   11452     206    
+                                                              
+    .\ticlang\
+       startup_mspm0g3507_ticlang.o   60     192       0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         60     192       0      
+                                                              
+    C:\ti\ccs2000\ccs\tools\compiler\ti-cgt-armllvm_4.0.1.LTS\lib\armv6m-ti-none-eabi/c/libc.a
+       copy_decompress_lzss.c.obj     124    0         0      
+       autoinit.c.obj                 60     0         0      
+       boot_cortex_m.c.obj            40     0         0      
+       copy_zero_init.c.obj           22     0         0      
+       copy_decompress_none.c.obj     18     0         0      
+       memcpy16.S.obj                 18     0         0      
+       exit.c.obj                     4      0         0      
+       pre_init.c.obj                 4      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         290    0         0      
+                                                              
+    C:\ti\ccs2000\ccs\tools\compiler\ti-cgt-armllvm_4.0.1.LTS\lib\armv6m-ti-none-eabi/libclang_rt.builtins.a
+       aeabi_uidivmod.S.obj           64     0         0      
+       aeabi_memcpy.S.obj             8      0         0      
+       aeabi_div0.c.obj               2      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         74     0         0      
+                                                              
+       Heap:                          0      0         512    
+       Stack:                         0      0         512    
+       Linker Generated:              0      213       0      
+    +--+------------------------------+------+---------+---------+
+       Grand Total:                   3398   11857     1230   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00003b90 records: 2, size/record: 8, table size: 16
+	.data: load addr=00003ac8, load size=000000b1 bytes, run addr=20200200, run size=000000bc bytes, compression=lzss
+	.bss: load addr=00003b88, load size=00000008 bytes, run addr=202002bc, run size=00000013 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00003b7c records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                          
+-------   ----                          
+00003a15  ADC0_IRQHandler               
+00003a15  ADC1_IRQHandler               
+00003a15  AES_IRQHandler                
+00003835  ActivatePortA_B               
+2020027c  ArabicAlphabet                
+20200200  ArabicFont                    
+00002c80  ArabicWidth                   
+202002bc  ArabicX                       
+202002c0  ArabicY                       
+00003519  Arabic_OutChar                
+000039ed  Arabic_OutString              
+000038a5  Arabic_SetCursor              
+202002ac  BusFreq                       
+00003ac4  C$$EXIT                       
+00003a15  CANFD0_IRQHandler             
+00003a87  Clock_Delay                   
+000038d9  Clock_Delay1ms                
+00003aa9  Clock_Freq                    
+00002f91  Clock_Init80MHz               
+00003a15  DAC0_IRQHandler               
+00003a15  DMA_IRQHandler                
+00003a15  Default_Handler               
+00003a97  Delay                         
+00003a15  GROUP0_IRQHandler             
+00003a15  GROUP1_IRQHandler             
+00003a31  HardFault_Handler             
+202002a3  Hello                         
+00003a15  I2C0_IRQHandler               
+00003a15  I2C1_IRQHandler               
+0000359d  LaunchPad_Init                
+00003a15  NMI_Handler                   
+00003a15  PendSV_Handler                
+00003a15  RTC_IRQHandler                
+00003abd  Reset_Handler                 
+00003a15  SPI0_IRQHandler               
+00003a15  SPI1_IRQHandler               
+0000325d  SPI_Init                      
+000036f1  SPI_OutCommand                
+0000386d  SPI_OutData                   
+00003739  SPI_Reset                     
+00002d81  ST7735_DrawBitmap             
+00003145  ST7735_FillRect               
+00003971  ST7735_FillScreen             
+000033f9  ST7735_InitR                  
+0000390d  ST7735_SetCursor              
+00003a15  SVC_Handler                   
+202002aa  StTextColor                   
+202002b0  StX                           
+202002b4  StY                           
+000033f7  SysTick_Handler               
+202002c4  TExaSLogic                    
+202002c8  TExaSadc                      
+00003a15  TIMA0_IRQHandler              
+00003a15  TIMA1_IRQHandler              
+00003a15  TIMG0_IRQHandler              
+0000399d  TIMG12_IRQHandler             
+00003a15  TIMG6_IRQHandler              
+00003779  TIMG7_IRQHandler              
+00003a15  TIMG8_IRQHandler              
+00003a63  TI_memcpy_small               
+00003a15  UART0_IRQHandler              
+00003a15  UART1_IRQHandler              
+00003a15  UART2_IRQHandler              
+00003a15  UART3_IRQHandler              
+2020029b  WeAreHonoredByYourPresence    
+20208000  __STACK_END                   
+00000200  __STACK_SIZE                  
+00000200  __SYSMEM_SIZE                 
+00000000  __TI_ATRegion0_region_sz      
+00000000  __TI_ATRegion0_src_addr       
+00000000  __TI_ATRegion0_trg_addr       
+00000000  __TI_ATRegion1_region_sz      
+00000000  __TI_ATRegion1_src_addr       
+00000000  __TI_ATRegion1_trg_addr       
+00000000  __TI_ATRegion2_region_sz      
+00000000  __TI_ATRegion2_src_addr       
+00000000  __TI_ATRegion2_trg_addr       
+00003b90  __TI_CINIT_Base               
+00003ba0  __TI_CINIT_Limit              
+00003ba0  __TI_CINIT_Warm               
+00003b7c  __TI_Handler_Table_Base       
+00003b88  __TI_Handler_Table_Limit      
+000037f9  __TI_auto_init_nobinit_nopinit
+00003619  __TI_decompress_lzss          
+00003a75  __TI_decompress_none          
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+00000000  __TI_static_base__            
+00003a4d  __TI_zero_init_nomemset       
+00003a13  __aeabi_idiv0                 
+00003ab5  __aeabi_memcpy                
+00003ab5  __aeabi_memcpy4               
+00003ab5  __aeabi_memcpy8               
+000037b9  __aeabi_uidiv                 
+000037b9  __aeabi_uidivmod              
+ffffffff  __binit__                     
+UNDEFED   __mpu_init                    
+20207e00  __stack                       
+20200000  __start___llvm_prf_bits       
+20200000  __start___llvm_prf_cnts       
+20200000  __stop___llvm_prf_bits        
+20200000  __stop___llvm_prf_cnts        
+000039c5  _c_int00_noargs               
+20200000  _sys_memory                   
+UNDEFED   _system_post_cinit            
+00003ac1  _system_pre_init              
+00003ac5  abort                         
+00002c00  alif4                         
+00001e20  ayh11                         
+00001380  baa13                         
+ffffffff  binit                         
+000000c0  daad16                        
+00002700  daal8                         
+00000ac0  dhaa14                        
+00002800  dhaal8                        
+00002900  dot8                          
+000002c0  faa16                         
+00001f80  ghayh11                       
+000020e0  ha11                          
+00002a00  haa8                          
+00000000  interruptVectors              
+00001520  jeem12                        
+000016a0  kaaf12                        
+00001820  khaa12                        
+000019a0  laam12                        
+00003695  main                          
+000023a0  meem9                         
+00001b20  noon12                        
+00001ca0  qaaf12                        
+000024c0  raa9                          
+000004c0  saad16                        
+000006c0  seen16                        
+000008c0  sheen16                       
+00002b00  space8                        
+00000c80  ta14                          
+00000e40  thaa14                        
+00001000  twe14                         
+00002240  waaw11                        
+000011c0  yaa14                         
+000025e0  zaa9                          
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                          
+-------   ----                          
+00000000  __TI_ATRegion0_region_sz      
+00000000  __TI_ATRegion0_src_addr       
+00000000  __TI_ATRegion0_trg_addr       
+00000000  __TI_ATRegion1_region_sz      
+00000000  __TI_ATRegion1_src_addr       
+00000000  __TI_ATRegion1_trg_addr       
+00000000  __TI_ATRegion2_region_sz      
+00000000  __TI_ATRegion2_src_addr       
+00000000  __TI_ATRegion2_trg_addr       
+00000000  __TI_static_base__            
+00000000  interruptVectors              
+000000c0  daad16                        
+00000200  __STACK_SIZE                  
+00000200  __SYSMEM_SIZE                 
+000002c0  faa16                         
+000004c0  saad16                        
+000006c0  seen16                        
+000008c0  sheen16                       
+00000ac0  dhaa14                        
+00000c80  ta14                          
+00000e40  thaa14                        
+00001000  twe14                         
+000011c0  yaa14                         
+00001380  baa13                         
+00001520  jeem12                        
+000016a0  kaaf12                        
+00001820  khaa12                        
+000019a0  laam12                        
+00001b20  noon12                        
+00001ca0  qaaf12                        
+00001e20  ayh11                         
+00001f80  ghayh11                       
+000020e0  ha11                          
+00002240  waaw11                        
+000023a0  meem9                         
+000024c0  raa9                          
+000025e0  zaa9                          
+00002700  daal8                         
+00002800  dhaal8                        
+00002900  dot8                          
+00002a00  haa8                          
+00002b00  space8                        
+00002c00  alif4                         
+00002c80  ArabicWidth                   
+00002d81  ST7735_DrawBitmap             
+00002f91  Clock_Init80MHz               
+00003145  ST7735_FillRect               
+0000325d  SPI_Init                      
+000033f7  SysTick_Handler               
+000033f9  ST7735_InitR                  
+00003519  Arabic_OutChar                
+0000359d  LaunchPad_Init                
+00003619  __TI_decompress_lzss          
+00003695  main                          
+000036f1  SPI_OutCommand                
+00003739  SPI_Reset                     
+00003779  TIMG7_IRQHandler              
+000037b9  __aeabi_uidiv                 
+000037b9  __aeabi_uidivmod              
+000037f9  __TI_auto_init_nobinit_nopinit
+00003835  ActivatePortA_B               
+0000386d  SPI_OutData                   
+000038a5  Arabic_SetCursor              
+000038d9  Clock_Delay1ms                
+0000390d  ST7735_SetCursor              
+00003971  ST7735_FillScreen             
+0000399d  TIMG12_IRQHandler             
+000039c5  _c_int00_noargs               
+000039ed  Arabic_OutString              
+00003a13  __aeabi_idiv0                 
+00003a15  ADC0_IRQHandler               
+00003a15  ADC1_IRQHandler               
+00003a15  AES_IRQHandler                
+00003a15  CANFD0_IRQHandler             
+00003a15  DAC0_IRQHandler               
+00003a15  DMA_IRQHandler                
+00003a15  Default_Handler               
+00003a15  GROUP0_IRQHandler             
+00003a15  GROUP1_IRQHandler             
+00003a15  I2C0_IRQHandler               
+00003a15  I2C1_IRQHandler               
+00003a15  NMI_Handler                   
+00003a15  PendSV_Handler                
+00003a15  RTC_IRQHandler                
+00003a15  SPI0_IRQHandler               
+00003a15  SPI1_IRQHandler               
+00003a15  SVC_Handler                   
+00003a15  TIMA0_IRQHandler              
+00003a15  TIMA1_IRQHandler              
+00003a15  TIMG0_IRQHandler              
+00003a15  TIMG6_IRQHandler              
+00003a15  TIMG8_IRQHandler              
+00003a15  UART0_IRQHandler              
+00003a15  UART1_IRQHandler              
+00003a15  UART2_IRQHandler              
+00003a15  UART3_IRQHandler              
+00003a31  HardFault_Handler             
+00003a4d  __TI_zero_init_nomemset       
+00003a63  TI_memcpy_small               
+00003a75  __TI_decompress_none          
+00003a87  Clock_Delay                   
+00003a97  Delay                         
+00003aa9  Clock_Freq                    
+00003ab5  __aeabi_memcpy                
+00003ab5  __aeabi_memcpy4               
+00003ab5  __aeabi_memcpy8               
+00003abd  Reset_Handler                 
+00003ac1  _system_pre_init              
+00003ac4  C$$EXIT                       
+00003ac5  abort                         
+00003b7c  __TI_Handler_Table_Base       
+00003b88  __TI_Handler_Table_Limit      
+00003b90  __TI_CINIT_Base               
+00003ba0  __TI_CINIT_Limit              
+00003ba0  __TI_CINIT_Warm               
+20200000  __start___llvm_prf_bits       
+20200000  __start___llvm_prf_cnts       
+20200000  __stop___llvm_prf_bits        
+20200000  __stop___llvm_prf_cnts        
+20200000  _sys_memory                   
+20200200  ArabicFont                    
+2020027c  ArabicAlphabet                
+2020029b  WeAreHonoredByYourPresence    
+202002a3  Hello                         
+202002aa  StTextColor                   
+202002ac  BusFreq                       
+202002b0  StX                           
+202002b4  StY                           
+202002bc  ArabicX                       
+202002c0  ArabicY                       
+202002c4  TExaSLogic                    
+202002c8  TExaSadc                      
+20207e00  __stack                       
+20208000  __STACK_END                   
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+ffffffff  __binit__                     
+ffffffff  binit                         
+UNDEFED   __mpu_init                    
+UNDEFED   _system_post_cinit            
+
+[141 symbols]

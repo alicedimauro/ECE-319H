@@ -1,0 +1,133 @@
+\hypertarget{group___p_w_m1}{}\doxysection{PWM1}
+\label{group___p_w_m1}\index{PWM1@{PWM1}}
+
+
+Pulse width modulation.  
+
+
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{_p_w_m1_8h}{PWM1.\+h}}
+\begin{DoxyCompactList}\small\item\em Pulse width modulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___p_w_m1_ga7497b42df7df560ce90e9b40508a5036}\label{group___p_w_m1_ga7497b42df7df560ce90e9b40508a5036}} 
+\#define \mbox{\hyperlink{group___p_w_m1_ga7497b42df7df560ce90e9b40508a5036}{PWMUSELFCLK}}~2
+\begin{DoxyCompactList}\small\item\em use PWMUSELFCLK to select LFCLK \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___p_w_m1_ga5bc0918f95e19ab8f7c11d2b850331d8}\label{group___p_w_m1_ga5bc0918f95e19ab8f7c11d2b850331d8}} 
+\#define \mbox{\hyperlink{group___p_w_m1_ga5bc0918f95e19ab8f7c11d2b850331d8}{PWMUSEMFCLK}}~4
+\begin{DoxyCompactList}\small\item\em use PWMUSEMFCLK to select MFCLK \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___p_w_m1_ga5a97982467a525ef6074c48f5841efdd}\label{group___p_w_m1_ga5a97982467a525ef6074c48f5841efdd}} 
+\#define \mbox{\hyperlink{group___p_w_m1_ga5a97982467a525ef6074c48f5841efdd}{PWMUSEBUSCLK}}~8
+\begin{DoxyCompactList}\small\item\em use PWMUSEBUSCLK to select bus CLK \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___p_w_m1_ga3cc24d66683c1e02b605488c8fbac9a1}{PWM1\+\_\+\+Init}} (uint32\+\_\+t timer\+Clk\+Src, uint32\+\_\+t timer\+Clk\+Prescale, uint32\+\_\+t period, uint32\+\_\+t duty0, uint32\+\_\+t duty1)
+\begin{DoxyCompactList}\small\item\em Initialize PWM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_m1_ga56312765befdd89ddb734c96445dc000}{PWM1\+\_\+\+Set\+Duty}} (uint32\+\_\+t duty0, uint32\+\_\+t duty1)
+\begin{DoxyCompactList}\small\item\em Set duty cycles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Pulse width modulation. 
+
+\hypertarget{group___p_w_m1_PWMpins2}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{PWM pins on the MSPM0\+G3507}\label{group___p_w_m1_PWMpins2}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-2}
+\endhead
+PB4 &CCP0 PWM output \\\cline{1-2}
+PB1 &CCP1 PWM output \\\cline{1-2}
+\end{longtabu}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___p_w_m1_ga3cc24d66683c1e02b605488c8fbac9a1}\label{group___p_w_m1_ga3cc24d66683c1e02b605488c8fbac9a1}} 
+\index{PWM1@{PWM1}!PWM1\_Init@{PWM1\_Init}}
+\index{PWM1\_Init@{PWM1\_Init}!PWM1@{PWM1}}
+\doxysubsubsection{\texorpdfstring{PWM1\_Init()}{PWM1\_Init()}}
+{\footnotesize\ttfamily void PWM1\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{timer\+Clk\+Src,  }\item[{uint32\+\_\+t}]{timer\+Clk\+Prescale,  }\item[{uint32\+\_\+t}]{period,  }\item[{uint32\+\_\+t}]{duty0,  }\item[{uint32\+\_\+t}]{duty1 }\end{DoxyParamCaption})}
+
+
+
+Initialize PWM. 
+
+Initialize PWM outputs on PA12 PA13. Rising edge synchronized. timer\+Clk\+Div\+Ratio = 1. Once started, hardware will continuously output the waves.
+\begin{DoxyItemize}
+\item timer\+Clk\+Src =
+\begin{DoxyItemize}
+\item 2 for 32768 Hz LFCLK
+\item 4 for 4MHz MFCLK (not tested)
+\item 8 for 80/32/4 BUSCLK
+\end{DoxyItemize}
+\item G0/\+G8 is on Power domain PD0
+\begin{DoxyItemize}
+\item 32MHz bus clock, BUSCLK clock is 32MHz
+\item 40MHz bus clock, BUSCLK clock is ULPCLK 20MHz
+\item 80MHz bus clock, BUSCLK clock is ULPCLK 40MHz
+\end{DoxyItemize}
+\item PWMFreq = (timer\+Clk\+Src / (timer\+Clk\+Div\+Ratio $\ast$ (timer\+Clk\+Prescale + 1) $\ast$ period))
+\begin{DoxyItemize}
+\item For example, source=LFCLK, prescale = 0, period = 1000, PWM frequency = 32.\+768 Hz
+\item For example, source=BUSCLK, bus=40MHz, prescale=19, period = 10000, PWM frequency = 10k\+Hz
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer\+Clk\+Src} & is 2 4 or 8 \\
+\hline
+{\em timer\+Clk\+Prescale} & divide clock by timer\+Clk\+Prescale+1, 0 to 255 \\
+\hline
+{\em period} & sets the PWM period \\
+\hline
+{\em duty0} & sets the duty cycle on PA12 \\
+\hline
+{\em duty1} & sets the duty cycle on PA13 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Will call Launch\+Pad\+\_\+\+Init to reset and activate power 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___p_w_m_ga5c69eb98be420d1d04b4a11540ef3796}{PWM\+\_\+\+Set\+Duty}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___p_w_m1_ga56312765befdd89ddb734c96445dc000}\label{group___p_w_m1_ga56312765befdd89ddb734c96445dc000}} 
+\index{PWM1@{PWM1}!PWM1\_SetDuty@{PWM1\_SetDuty}}
+\index{PWM1\_SetDuty@{PWM1\_SetDuty}!PWM1@{PWM1}}
+\doxysubsubsection{\texorpdfstring{PWM1\_SetDuty()}{PWM1\_SetDuty()}}
+{\footnotesize\ttfamily void PWM1\+\_\+\+Set\+Duty (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{duty0,  }\item[{uint32\+\_\+t}]{duty1 }\end{DoxyParamCaption})}
+
+
+
+Set duty cycles. 
+
+Set duty cycles on PA12 PA13. 
+\begin{DoxyParams}{Parameters}
+{\em duty0} & sets the duty cycle on PA12 \\
+\hline
+{\em duty1} & sets the duty cycle on PA13 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+assumes PWM\+\_\+\+Init was called 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___p_w_m_gad0dabd7d24c17681ede2041b4df2ab6a}{PWM\+\_\+\+Init}} 
+\end{DoxySeeAlso}

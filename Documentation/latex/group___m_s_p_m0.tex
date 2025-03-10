@@ -1,0 +1,67 @@
+\hypertarget{group___m_s_p_m0}{}\doxysection{MSPM0}
+\label{group___m_s_p_m0}\index{MSPM0@{MSPM0}}
+
+
+Digital to analog conversion.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___m_s_p_m0_ga6ae286bbe0230eee85b3052e32a1e0bc}{DAC\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize 12-\/bit DAC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_s_p_m0_ga7bf3929a65234c2ffc1671d77d8894b4}{DAC\+\_\+\+Out}} (uint32\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Output to DAC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Digital to analog conversion. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___m_s_p_m0_ga6ae286bbe0230eee85b3052e32a1e0bc}\label{group___m_s_p_m0_ga6ae286bbe0230eee85b3052e32a1e0bc}} 
+\index{MSPM0@{MSPM0}!DAC\_Init@{DAC\_Init}}
+\index{DAC\_Init@{DAC\_Init}!MSPM0@{MSPM0}}
+\doxysubsubsection{\texorpdfstring{DAC\_Init()}{DAC\_Init()}}
+{\footnotesize\ttfamily void DAC\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize 12-\/bit DAC. 
+
+Initialize 12-\/bit DAC output on PA15 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___m_s_p_m0_ga7bf3929a65234c2ffc1671d77d8894b4}{DAC\+\_\+\+Out()}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Range is 0 to 3.\+3V 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___m_s_p_m0_ga7bf3929a65234c2ffc1671d77d8894b4}\label{group___m_s_p_m0_ga7bf3929a65234c2ffc1671d77d8894b4}} 
+\index{MSPM0@{MSPM0}!DAC\_Out@{DAC\_Out}}
+\index{DAC\_Out@{DAC\_Out}!MSPM0@{MSPM0}}
+\doxysubsubsection{\texorpdfstring{DAC\_Out()}{DAC\_Out()}}
+{\footnotesize\ttfamily void DAC\+\_\+\+Out (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Output to DAC. 
+
+Output to 12-\/bit DAC, 0 to 2.\+5V range 
+\begin{DoxyParams}{Parameters}
+{\em 12-\/bit} & data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___m_s_p_m0_ga6ae286bbe0230eee85b3052e32a1e0bc}{DAC\+\_\+\+Init()}} 
+\end{DoxySeeAlso}

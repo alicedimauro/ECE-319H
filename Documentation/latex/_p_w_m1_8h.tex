@@ -1,0 +1,61 @@
+\hypertarget{_p_w_m1_8h}{}\doxysection{inc/\+PWM1.h File Reference}
+\label{_p_w_m1_8h}\index{inc/PWM1.h@{inc/PWM1.h}}
+
+
+Pulse width modulation.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___p_w_m_ga7497b42df7df560ce90e9b40508a5036}{PWMUSELFCLK}}~2
+\begin{DoxyCompactList}\small\item\em use PWMUSELFCLK to select LFCLK \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___p_w_m_ga5bc0918f95e19ab8f7c11d2b850331d8}{PWMUSEMFCLK}}~4
+\begin{DoxyCompactList}\small\item\em use PWMUSEMFCLK to select MFCLK \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___p_w_m_ga5a97982467a525ef6074c48f5841efdd}{PWMUSEBUSCLK}}~8
+\begin{DoxyCompactList}\small\item\em use PWMUSEBUSCLK to select bus CLK \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___p_w_m_ga3cc24d66683c1e02b605488c8fbac9a1}{PWM1\+\_\+\+Init}} (uint32\+\_\+t timer\+Clk\+Src, uint32\+\_\+t timer\+Clk\+Prescale, uint32\+\_\+t period, uint32\+\_\+t duty0, uint32\+\_\+t duty1)
+\begin{DoxyCompactList}\small\item\em Initialize PWM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_m_ga56312765befdd89ddb734c96445dc000}{PWM1\+\_\+\+Set\+Duty}} (uint32\+\_\+t duty0, uint32\+\_\+t duty1)
+\begin{DoxyCompactList}\small\item\em Set duty cycles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Pulse width modulation. 
+
+Hardware creates fixed period, variable duty cycle waves  \begin{DoxyVersion}{Version}
+ECE319K v1.\+2 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Daniel Valvano and Jonathan Valvano 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2023 by Jonathan W. Valvano, \href{mailto:valvano@mail.utexas.edu}{\texttt{ valvano@mail.\+utexas.\+edu}}, 
+\end{DoxyCopyright}
+\begin{DoxyWarning}{Warning}
+AS-\/\+IS 
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+For more information see \href{http://users.ece.utexas.edu/~valvano/}{\texttt{ http\+://users.\+ece.\+utexas.\+edu/$\sim$valvano/}} 
+\end{DoxyNote}
+\begin{DoxyDate}{Date}
+December 23, 2024 \hypertarget{_p_w_m1_8h_PWMpins3}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{PWM pins on the MSPM0\+G3507}\label{_p_w_m1_8h_PWMpins3}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-2}
+\endhead
+PB4 &CCP0 PWM output \\\cline{1-2}
+PB1 &CCP1 PWM output \\\cline{1-2}
+\end{longtabu}
+
+\end{DoxyDate}

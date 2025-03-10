@@ -1,0 +1,389 @@
+\hypertarget{group___a_d_c}{}\doxysection{ADC}
+\label{group___a_d_c}\index{ADC@{ADC}}
+
+
+Analog to digital conversion.  
+
+
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{_a_d_c_8h}{ADC.\+h}}
+\begin{DoxyCompactList}\small\item\em Initialize 12-\/bit ADC0 and/or ADC1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___a_d_c_gaca29e70cf7d5f2386de2db4875ce1be7}\label{group___a_d_c_gaca29e70cf7d5f2386de2db4875ce1be7}} 
+\#define \mbox{\hyperlink{group___a_d_c_gaca29e70cf7d5f2386de2db4875ce1be7}{ADCVREF\+\_\+\+INT}}~0x200
+\begin{DoxyCompactList}\small\item\em using ADCVREF\+\_\+\+INT means choose internal 2.\+5V reference for accuracy \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___a_d_c_ga0a05da91d2e9a78c7cc97d9891a7db3a}\label{group___a_d_c_ga0a05da91d2e9a78c7cc97d9891a7db3a}} 
+\#define \mbox{\hyperlink{group___a_d_c_ga0a05da91d2e9a78c7cc97d9891a7db3a}{ADCVREF\+\_\+\+EXT}}~0x100
+\begin{DoxyCompactList}\small\item\em using ADCVREF\+\_\+\+EXT means choose external reference not tested \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___a_d_c_ga205c4d7f564b9d5f50299e259a005b0e}\label{group___a_d_c_ga205c4d7f564b9d5f50299e259a005b0e}} 
+\#define \mbox{\hyperlink{group___a_d_c_ga205c4d7f564b9d5f50299e259a005b0e}{ADCVREF\+\_\+\+VDDA}}~0x000
+\begin{DoxyCompactList}\small\item\em using ADCVREF\+\_\+\+VDDA means choose power line 3.\+3V reference for 0 to 3.\+3V range. This is the mode we use in ECE319K \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___a_d_c_gaa2ee4b39fc4e60ee49b2da4e28b30925}{ADC0\+\_\+\+Init}} (uint32\+\_\+t channel, uint32\+\_\+t reference)
+\begin{DoxyCompactList}\small\item\em Initialize 12-\/bit ADC0. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___a_d_c_ga75363bb5d11c6dc15b829bf5cf619ebd}{ADC0\+\_\+\+In}} (void)
+\begin{DoxyCompactList}\small\item\em Trigger ADC measurement and wait for result. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_c_ga49340f14952348fe1529710cc0d8a245}{ADC1\+\_\+\+Init}} (uint32\+\_\+t channel, uint32\+\_\+t reference)
+\begin{DoxyCompactList}\small\item\em Initialize 12-\/bit ADC0. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___a_d_c_gaef98b62b7e3ce18d5094c28fbf5d6af2}{ADC1\+\_\+\+In}} (void)
+\begin{DoxyCompactList}\small\item\em Trigger ADC measurement and wait for result. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_c_gab1e0b7cd7493bc9892347b921854eb0f}{ADC\+\_\+\+Init}} (ADC12\+\_\+\+Regs $\ast$adc12, uint32\+\_\+t channel, uint32\+\_\+t reference)
+\begin{DoxyCompactList}\small\item\em Initialize 12-\/bit ADC0 or ADC1. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___a_d_c_ga56d134838c921ff75712f794955aa6cc}{ADC\+\_\+\+In}} (ADC12\+\_\+\+Regs $\ast$adc12)
+\begin{DoxyCompactList}\small\item\em Trigger ADC measurement and wait for result. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_c_ga843392fdf2a6133622118d766aacd41d}{ADC\+\_\+\+Init\+Dual}} (ADC12\+\_\+\+Regs $\ast$adc12, uint32\+\_\+t channel1, uint32\+\_\+t channel2, uint32\+\_\+t reference)
+\begin{DoxyCompactList}\small\item\em Initialize 12-\/bit ADC for two channels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_c_gac1687fa960d01840744d6d5214282a83}{ADC\+\_\+\+In\+Dual}} (ADC12\+\_\+\+Regs $\ast$adc12, uint32\+\_\+t $\ast$d1, uint32\+\_\+t $\ast$d2)
+\begin{DoxyCompactList}\small\item\em Trigger two ADC measurements and wait for results. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_c_gadba0385a82a5ede174e5d515c89fad54}{ADC\+\_\+\+Init\+Triple}} (ADC12\+\_\+\+Regs $\ast$adc12, uint32\+\_\+t channel1, uint32\+\_\+t channel2, uint32\+\_\+t channel3, uint32\+\_\+t reference)
+\begin{DoxyCompactList}\small\item\em Initialize 12-\/bit ADC for three channels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_c_ga9c2371678edcc3f66f38b8856b3ac83c}{ADC\+\_\+\+In\+Triple}} (ADC12\+\_\+\+Regs $\ast$adc12, uint32\+\_\+t $\ast$d1, uint32\+\_\+t $\ast$d2, uint32\+\_\+t $\ast$d3)
+\begin{DoxyCompactList}\small\item\em Trigger three ADC measurements and wait for results. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_c_ga2e1407c7f4740a7fac89d2b57892e996}{ADC0\+\_\+\+Init\+Ave}} (uint32\+\_\+t channel, uint32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Initialize 12-\/bit ADC0 for hardware averaging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Analog to digital conversion. 
+
+\hypertarget{group___a_d_c_ADCpins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{ADC pins on the MSPM0\+G3507}\label{group___a_d_c_ADCpins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ ADC channel}&\cellcolor{\tableheadbgcolor}\textbf{ Sensor }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ ADC channel}&\cellcolor{\tableheadbgcolor}\textbf{ Sensor }\\\cline{1-3}
+\endhead
+PA27 &ADC0 channel 0 &J1.\+8 also MKII light interrupt \\\cline{1-3}
+PA26 &ADC0 channel 1 &J1.\+6 MKII microphone in \\\cline{1-3}
+PA25 &ADC0 channel 2 &J1.\+2 MKII Joystick X \\\cline{1-3}
+PA24 &ADC0 channel 3 &J3.\+27 {\itshape {\bfseries{free}}} \\\cline{1-3}
+PB25 &ADC0 channel 4 &J19.\+7 (insert 0ohm R74, no U3 OPA2365) \\\cline{1-3}
+PB24 &ADC0 channel 5 &J1.\+5 also MKII joystick select button \\\cline{1-3}
+PB20 &ADC0 channel 6 &J4.\+36 {\itshape {\bfseries{free}}} \\\cline{1-3}
+PA22 &ADC0 channel 7 &J24 MKII Accelerometer Y
+
+\\\cline{1-3}
+PA15 &ADC1 channel 0 &J3.\+30 (also DACout) \\\cline{1-3}
+PA16 &ADC1 channel 1 &J3.\+29 {\itshape {\bfseries{free}}} \\\cline{1-3}
+PA17 &ADC1 channel 2 &J3.\+28 {\itshape {\bfseries{free}}} \\\cline{1-3}
+PA18 &ADC1 channel 3 &J3.\+26 MKII Joystick Y \\\cline{1-3}
+PB17 &ADC1 channel 4 &J2.\+18 {\itshape {\bfseries{free}}} \\\cline{1-3}
+PB18 &ADC1 channel 5 &J3.\+25 MKII Accelerometer Z \\\cline{1-3}
+PB19 &ADC1 channel 6 &J3.\+23 MKII Accelerometer X \\\cline{1-3}
+PA21 &ADC1 channel 7 &J17.\+8 (insert R20, remove R3)
+
+\\\cline{1-3}
+\end{longtabu}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___a_d_c_ga75363bb5d11c6dc15b829bf5cf619ebd}\label{group___a_d_c_ga75363bb5d11c6dc15b829bf5cf619ebd}} 
+\index{ADC@{ADC}!ADC0\_In@{ADC0\_In}}
+\index{ADC0\_In@{ADC0\_In}!ADC@{ADC}}
+\doxysubsubsection{\texorpdfstring{ADC0\_In()}{ADC0\_In()}}
+{\footnotesize\ttfamily uint32\+\_\+t ADC0\+\_\+\+In (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Trigger ADC measurement and wait for result. 
+
+Trigger a single ADC0 measurement, wait for it to complete, and return the 12-\/bit result as 0 to 4095. The ADC input voltage range is 0 to 3.\+3V. Busy-\/wait synchronization used. 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+12-\/bit result 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes ADC0\+\_\+\+Init has been called. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___a_d_c_gaa2ee4b39fc4e60ee49b2da4e28b30925}\label{group___a_d_c_gaa2ee4b39fc4e60ee49b2da4e28b30925}} 
+\index{ADC@{ADC}!ADC0\_Init@{ADC0\_Init}}
+\index{ADC0\_Init@{ADC0\_Init}!ADC@{ADC}}
+\doxysubsubsection{\texorpdfstring{ADC0\_Init()}{ADC0\_Init()}}
+{\footnotesize\ttfamily void ADC0\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{channel,  }\item[{uint32\+\_\+t}]{reference }\end{DoxyParamCaption})}
+
+
+
+Initialize 12-\/bit ADC0. 
+
+Initialize 12-\/bit ADC0 in software-\/triggered mode to take measurements when the associated function is called. One channel is to be measured~\newline
+ Pin channel~\newline
+ PA27 0 ~\newline
+ PA26 1 ~\newline
+ PA25 2 ~\newline
+ PA24 3 ~\newline
+ PB25 4 ~\newline
+ PB24 5 ~\newline
+ PB20 6 ~\newline
+ PA22 7 
+\begin{DoxyParams}{Parameters}
+{\em channel} & is the 0 to 7 \\
+\hline
+{\em reference} & is ADCVREF\+\_\+\+INT, ADCVREF\+\_\+\+EXT, ADCVREF\+\_\+\+VDDA \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___a_d_c_ga2e1407c7f4740a7fac89d2b57892e996}\label{group___a_d_c_ga2e1407c7f4740a7fac89d2b57892e996}} 
+\index{ADC@{ADC}!ADC0\_InitAve@{ADC0\_InitAve}}
+\index{ADC0\_InitAve@{ADC0\_InitAve}!ADC@{ADC}}
+\doxysubsubsection{\texorpdfstring{ADC0\_InitAve()}{ADC0\_InitAve()}}
+{\footnotesize\ttfamily void ADC0\+\_\+\+Init\+Ave (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{channel,  }\item[{uint32\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Initialize 12-\/bit ADC0 for hardware averaging. 
+
+Initialize 12-\/bit ADC0 in software-\/triggered mode to take measurements when the associated function is called. One channel is to be measured 2$^\wedge$n times in average. 
+\begin{DoxyParams}{Parameters}
+{\em channel} & is the 0 to 7 \\
+\hline
+{\em n} & 0 to 7 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+uses ADCVREF\+\_\+\+VDDA, so range is 0 to 3.\+3V 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___a_d_c_gaef98b62b7e3ce18d5094c28fbf5d6af2}\label{group___a_d_c_gaef98b62b7e3ce18d5094c28fbf5d6af2}} 
+\index{ADC@{ADC}!ADC1\_In@{ADC1\_In}}
+\index{ADC1\_In@{ADC1\_In}!ADC@{ADC}}
+\doxysubsubsection{\texorpdfstring{ADC1\_In()}{ADC1\_In()}}
+{\footnotesize\ttfamily uint32\+\_\+t ADC1\+\_\+\+In (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Trigger ADC measurement and wait for result. 
+
+Trigger a single ADC1 measurement, wait for it to complete, and return the 12-\/bit result as 0 to 4095. The ADC input voltage range is 0 to 3.\+3V. Busy-\/wait synchronization used. 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+12-\/bit result 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes ADC1\+\_\+\+Init has been called. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___a_d_c_ga49340f14952348fe1529710cc0d8a245}\label{group___a_d_c_ga49340f14952348fe1529710cc0d8a245}} 
+\index{ADC@{ADC}!ADC1\_Init@{ADC1\_Init}}
+\index{ADC1\_Init@{ADC1\_Init}!ADC@{ADC}}
+\doxysubsubsection{\texorpdfstring{ADC1\_Init()}{ADC1\_Init()}}
+{\footnotesize\ttfamily void ADC1\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{channel,  }\item[{uint32\+\_\+t}]{reference }\end{DoxyParamCaption})}
+
+
+
+Initialize 12-\/bit ADC0. 
+
+Initialize 12-\/bit ADC1 in software-\/triggered mode to take measurements when the associated function is called. One channel is to be measured~\newline
+ Pin channel~\newline
+ PA15 0 ~\newline
+ PA16 1 ~\newline
+ PA17 2 ~\newline
+ PA18 3 ~\newline
+ PB17 4 ~\newline
+ PB18 5 ~\newline
+ PB19 6 ~\newline
+ PA21 7 
+\begin{DoxyParams}{Parameters}
+{\em channel} & is the 0 to 7 \\
+\hline
+{\em reference} & is ADCVREF\+\_\+\+INT, ADCVREF\+\_\+\+EXT, ADCVREF\+\_\+\+VDDA \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___a_d_c_ga56d134838c921ff75712f794955aa6cc}\label{group___a_d_c_ga56d134838c921ff75712f794955aa6cc}} 
+\index{ADC@{ADC}!ADC\_In@{ADC\_In}}
+\index{ADC\_In@{ADC\_In}!ADC@{ADC}}
+\doxysubsubsection{\texorpdfstring{ADC\_In()}{ADC\_In()}}
+{\footnotesize\ttfamily uint32\+\_\+t ADC\+\_\+\+In (\begin{DoxyParamCaption}\item[{ADC12\+\_\+\+Regs $\ast$}]{adc12 }\end{DoxyParamCaption})}
+
+
+
+Trigger ADC measurement and wait for result. 
+
+Trigger a single ADC0 or ADC1 measurement, wait for it to complete, and return the 12-\/bit result as 0 to 4095. The ADC input voltage range is 0 to 3.\+3V. Busy-\/wait synchronization used. 
+\begin{DoxyParams}{Parameters}
+{\em adc12} & is ADC0 or ADC1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+12-\/bit result 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes ADC\+\_\+\+Init has been called. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___a_d_c_gac1687fa960d01840744d6d5214282a83}\label{group___a_d_c_gac1687fa960d01840744d6d5214282a83}} 
+\index{ADC@{ADC}!ADC\_InDual@{ADC\_InDual}}
+\index{ADC\_InDual@{ADC\_InDual}!ADC@{ADC}}
+\doxysubsubsection{\texorpdfstring{ADC\_InDual()}{ADC\_InDual()}}
+{\footnotesize\ttfamily void ADC\+\_\+\+In\+Dual (\begin{DoxyParamCaption}\item[{ADC12\+\_\+\+Regs $\ast$}]{adc12,  }\item[{uint32\+\_\+t $\ast$}]{d1,  }\item[{uint32\+\_\+t $\ast$}]{d2 }\end{DoxyParamCaption})}
+
+
+
+Trigger two ADC measurements and wait for results. 
+
+Trigger a dual ADC0 or ADC1 measurement, wait for it to complete, and return the two 12-\/bit results as 0 to 4095. The ADC input voltage range is 0 to 3.\+3V. Busy-\/wait synchronization used. 
+\begin{DoxyParams}{Parameters}
+{\em adc12} & is ADC0 or ADC1 \\
+\hline
+{\em $\ast$d1} & address into which the first ADC sample will be stored \\
+\hline
+{\em $\ast$d2} & address into which the second ADC sample will be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes ADC\+\_\+\+Init\+Dual has been called. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___a_d_c_gab1e0b7cd7493bc9892347b921854eb0f}\label{group___a_d_c_gab1e0b7cd7493bc9892347b921854eb0f}} 
+\index{ADC@{ADC}!ADC\_Init@{ADC\_Init}}
+\index{ADC\_Init@{ADC\_Init}!ADC@{ADC}}
+\doxysubsubsection{\texorpdfstring{ADC\_Init()}{ADC\_Init()}}
+{\footnotesize\ttfamily void ADC\+\_\+\+Init (\begin{DoxyParamCaption}\item[{ADC12\+\_\+\+Regs $\ast$}]{adc12,  }\item[{uint32\+\_\+t}]{channel,  }\item[{uint32\+\_\+t}]{reference }\end{DoxyParamCaption})}
+
+
+
+Initialize 12-\/bit ADC0 or ADC1. 
+
+Initialize 12-\/bit ADC0 or ADC1 in software-\/triggered mode to take measurements when the associated function is called. One channel is to be measured \hypertarget{group___a_d_c_ADCpins3}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{ADC pins on the MSPM0\+G3507}\label{group___a_d_c_ADCpins3}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ ADC channel }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ ADC channel }\\\cline{1-2}
+\endhead
+PA27 &ADC0 channel 0 \\\cline{1-2}
+PA26 &ADC0 channel 1 \\\cline{1-2}
+PA25 &ADC0 channel 2 \\\cline{1-2}
+PA24 &ADC0 channel 3 \\\cline{1-2}
+PB25 &ADC0 channel 4 \\\cline{1-2}
+PB24 &ADC0 channel 5 \\\cline{1-2}
+PB20 &ADC0 channel 6 \\\cline{1-2}
+PA22 &ADC0 channel 7
+
+\\\cline{1-2}
+PA15 &ADC1 channel 0 \\\cline{1-2}
+PA16 &ADC1 channel 1 \\\cline{1-2}
+PA17 &ADC1 channel 2 \\\cline{1-2}
+PA18 &ADC1 channel 3 \\\cline{1-2}
+PB17 &ADC1 channel 4 \\\cline{1-2}
+PB18 &ADC1 channel 5 \\\cline{1-2}
+PB19 &ADC1 channel 6 \\\cline{1-2}
+PA21 &ADC1 channel 7 \\\cline{1-2}
+\end{longtabu}
+
+\begin{DoxyParams}{Parameters}
+{\em adc12} & is ADC0 or ADC1 \\
+\hline
+{\em channel} & is the 0 to 7 \\
+\hline
+{\em reference} & is ADCVREF\+\_\+\+INT, ADCVREF\+\_\+\+EXT, ADCVREF\+\_\+\+VDDA \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___a_d_c_ga843392fdf2a6133622118d766aacd41d}\label{group___a_d_c_ga843392fdf2a6133622118d766aacd41d}} 
+\index{ADC@{ADC}!ADC\_InitDual@{ADC\_InitDual}}
+\index{ADC\_InitDual@{ADC\_InitDual}!ADC@{ADC}}
+\doxysubsubsection{\texorpdfstring{ADC\_InitDual()}{ADC\_InitDual()}}
+{\footnotesize\ttfamily void ADC\+\_\+\+Init\+Dual (\begin{DoxyParamCaption}\item[{ADC12\+\_\+\+Regs $\ast$}]{adc12,  }\item[{uint32\+\_\+t}]{channel1,  }\item[{uint32\+\_\+t}]{channel2,  }\item[{uint32\+\_\+t}]{reference }\end{DoxyParamCaption})}
+
+
+
+Initialize 12-\/bit ADC for two channels. 
+
+Initialize 12-\/bit ADC0 or ADC1 in software-\/triggered mode to take measurements when the associated function is called. Two channels are to be measured 
+\begin{DoxyParams}{Parameters}
+{\em adc12} & is ADC0 or ADC1 \\
+\hline
+{\em channel1} & is the 0 to 7 \\
+\hline
+{\em channel2} & is the 0 to 7 \\
+\hline
+{\em reference} & is ADCVREF\+\_\+\+INT, ADCVREF\+\_\+\+EXT, ADCVREF\+\_\+\+VDDA \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___a_d_c_gadba0385a82a5ede174e5d515c89fad54}\label{group___a_d_c_gadba0385a82a5ede174e5d515c89fad54}} 
+\index{ADC@{ADC}!ADC\_InitTriple@{ADC\_InitTriple}}
+\index{ADC\_InitTriple@{ADC\_InitTriple}!ADC@{ADC}}
+\doxysubsubsection{\texorpdfstring{ADC\_InitTriple()}{ADC\_InitTriple()}}
+{\footnotesize\ttfamily void ADC\+\_\+\+Init\+Triple (\begin{DoxyParamCaption}\item[{ADC12\+\_\+\+Regs $\ast$}]{adc12,  }\item[{uint32\+\_\+t}]{channel1,  }\item[{uint32\+\_\+t}]{channel2,  }\item[{uint32\+\_\+t}]{channel3,  }\item[{uint32\+\_\+t}]{reference }\end{DoxyParamCaption})}
+
+
+
+Initialize 12-\/bit ADC for three channels. 
+
+Initialize 12-\/bit ADC0 or ADC1 in software-\/triggered mode to take measurements when the associated function is called. three channels are to be measured 
+\begin{DoxyParams}{Parameters}
+{\em adc12} & is ADC0 or ADC1 \\
+\hline
+{\em channel1} & is the 0 to 7 \\
+\hline
+{\em channel2} & is the 0 to 7 \\
+\hline
+{\em channel3} & is the 0 to 7 \\
+\hline
+{\em reference} & is ADCVREF\+\_\+\+INT, ADCVREF\+\_\+\+EXT, ADCVREF\+\_\+\+VDDA \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___a_d_c_ga9c2371678edcc3f66f38b8856b3ac83c}\label{group___a_d_c_ga9c2371678edcc3f66f38b8856b3ac83c}} 
+\index{ADC@{ADC}!ADC\_InTriple@{ADC\_InTriple}}
+\index{ADC\_InTriple@{ADC\_InTriple}!ADC@{ADC}}
+\doxysubsubsection{\texorpdfstring{ADC\_InTriple()}{ADC\_InTriple()}}
+{\footnotesize\ttfamily void ADC\+\_\+\+In\+Triple (\begin{DoxyParamCaption}\item[{ADC12\+\_\+\+Regs $\ast$}]{adc12,  }\item[{uint32\+\_\+t $\ast$}]{d1,  }\item[{uint32\+\_\+t $\ast$}]{d2,  }\item[{uint32\+\_\+t $\ast$}]{d3 }\end{DoxyParamCaption})}
+
+
+
+Trigger three ADC measurements and wait for results. 
+
+Trigger a triple ADC0 or ADC1 measurement, wait for it to complete, and return the three 12-\/bit results as 0 to 4095. The ADC input voltage range is 0 to 3.\+3V. Busy-\/wait synchronization used. 
+\begin{DoxyParams}{Parameters}
+{\em adc12} & is ADC0 or ADC1 \\
+\hline
+{\em $\ast$d1} & address into which the first ADC sample will be stored \\
+\hline
+{\em $\ast$d2} & address into which the second ADC sample will be stored \\
+\hline
+{\em $\ast$d3} & address into which the third ADC sample will be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Assumes ADC\+\_\+\+Init\+Triple has been called. 
+\end{DoxyNote}

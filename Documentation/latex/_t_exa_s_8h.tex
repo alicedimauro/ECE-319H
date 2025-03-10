@@ -1,0 +1,109 @@
+\hypertarget{_t_exa_s_8h}{}\doxysection{inc/\+TExaS.h File Reference}
+\label{_t_exa_s_8h}\index{inc/TExaS.h@{inc/TExaS.h}}
+
+
+Creates either an oscilloscope or a logic analyzer.  
+
+
+{\ttfamily \#include $<$ti/devices/msp/msp.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___debugging_ga4b13398ed52d152a863c3104dbe64c1e}{PAout\+Pin0\+Bit0}}~(GPIOA-\/$>$DOUT31\+\_\+0\&1)
+\begin{DoxyCompactList}\small\item\em using PAout\+Pin0\+Bit0 places PA0 output on bit 0 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___debugging_gaa9e79475b029458c786129678df3f43f}{PBout\+Pin22\+Bit1}}~(((GPIOB-\/$>$DOUT31\+\_\+0\&(1$<$$<$22))$>$$>$21))
+\begin{DoxyCompactList}\small\item\em using PBout\+Pin22\+Bit1 places PB22 output on bit 1 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___debugging_ga8a498d3a6c2f0a6fdb1b84b9c02fefad}{PBout\+Pin26\+Bit2}}~(((GPIOB-\/$>$DOUT31\+\_\+0\&(1$<$$<$26))$>$$>$24))
+\begin{DoxyCompactList}\small\item\em using PBout\+Pin26\+Bit2 places PB26 output on bit 2 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___debugging_ga645e278a06ecca2fc7f2b8316c2b75c7}{PBout\+Pin27\+Bit3}}~(((GPIOB-\/$>$DOUT31\+\_\+0\&(1$<$$<$27))$>$$>$24))
+\begin{DoxyCompactList}\small\item\em using PBout\+Pin27\+Bit3 places PB27 output on bit 3 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___debugging_ga588874a1b34d9d2239aec320a4805540}{PAin\+Pin18\+Bit4}}~(((GPIOA-\/$>$DIN31\+\_\+0\&(1$<$$<$18))$>$$>$14))
+\begin{DoxyCompactList}\small\item\em using PAin\+Pin18\+Bit4 places PA18 input on bit 4 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___debugging_gaa158042fc6e3bfba40432ff8bd2735b9}{PBin\+Pin21\+Bit5}}~(((GPIOB-\/$>$DIN31\+\_\+0\&(1$<$$<$21))$>$$>$16))
+\begin{DoxyCompactList}\small\item\em using PBin\+Pin21\+Bit5 places PA21 input on bit 5 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___debugging_ga41f076689bb56958c9ab9c884379baeb}{TExa\+S\+\_\+\+Launch\+Pad\+Logic}} (void)
+\begin{DoxyCompactList}\small\item\em PB21,PA18,PB27,PB26,PB22,PA0. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___debugging_ga2e9148d56309a480c90427bcdd641f23}{TExa\+S\+\_\+\+PB22\+PA0\+Logic}} (void)
+\begin{DoxyCompactList}\small\item\em PB22,PA0. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___debugging_ga1ba47253c544fb5108edd22beb4ec06b}{TExa\+S\+\_\+\+PA60\+Logic}} (void)
+\begin{DoxyCompactList}\small\item\em PA6-\/\+PA0. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___debugging_ga055be19744698eda16aac6fd89d0659c}{TExa\+S\+\_\+\+PB18\+PB17\+PB16\+PB2\+PB1\+PB0\+Logic}} (void)
+\begin{DoxyCompactList}\small\item\em PB18-\/16 outputs, PB2-\/0 input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___debugging_gacc6b4d7bbc5b9eb0ef524290c81bcaa3}{TExa\+S\+\_\+\+Init}} (ADC12\+\_\+\+Regs $\ast$adc12, uint32\+\_\+t channel, uint8\+\_\+t($\ast$logic)(void))
+\begin{DoxyCompactList}\small\item\em Initialize 12-\/bit ADC0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Creates either an oscilloscope or a logic analyzer. 
+
+TExaS is an oscilloscope or a logic analyzer, sampling at 10 k\+Hz~\newline
+
+\begin{DoxyItemize}
+\item to create an 8-\/bit analog oscilloscope
+\begin{DoxyEnumerate}
+\item set adc12 to either ADC0 or ADC1
+\item set channel to 0 to 7
+\item scope ISR is 11 instructions, 1.\+5us, 1.\+5\% overhead
+\end{DoxyEnumerate}
+\item to create a 7-\/bit digital logic analyzer
+\begin{DoxyEnumerate}
+\item set adc12 to 0, channel doesn\textquotesingle{}t not matter
+\item create a function to read any 7-\/bit digital measurement, add bit7=1
+\item pass that function into TExa\+S\+\_\+\+Init
+\end{DoxyEnumerate}
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Works at 32MHz or 40MHz or 80 MHz
+\end{DoxyNote}
+\begin{DoxyVersion}{Version}
+ECE319K v1.\+2 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Put your name here 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Put your copyright here, 
+\end{DoxyCopyright}
+\begin{DoxyWarning}{Warning}
+AS-\/\+IS 
+\end{DoxyWarning}
+\begin{DoxyDate}{Date}
+December 23, 2024 \hypertarget{group___a_d_c_ADCpins3}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{ADC pins on the MSPM0\+G3507}\label{group___a_d_c_ADCpins3}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ ADC channel}&\cellcolor{\tableheadbgcolor}\textbf{ Sensor }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ ADC channel}&\cellcolor{\tableheadbgcolor}\textbf{ Sensor }\\\cline{1-3}
+\endhead
+PA27 &ADC0 channel 0 &J1.\+8 also MKII light interrupt \\\cline{1-3}
+PA26 &ADC0 channel 1 &J1.\+6 MKII microphone in \\\cline{1-3}
+PA25 &ADC0 channel 2 &J1.\+2 MKII Joystick X \\\cline{1-3}
+PA24 &ADC0 channel 3 &J3.\+27 {\itshape {\bfseries{free}}} \\\cline{1-3}
+PB25 &ADC0 channel 4 &J19.\+7 (insert 0ohm R74, no U3 OPA2365) \\\cline{1-3}
+PB24 &ADC0 channel 5 &J1.\+5 also MKII joystick select button \\\cline{1-3}
+PB20 &ADC0 channel 6 &J4.\+36 {\itshape {\bfseries{free}}} \\\cline{1-3}
+PA22 &ADC0 channel 7 &J24 MKII Accelerometer Y
+
+\\\cline{1-3}
+PA15 &ADC1 channel 0 &J3.\+30 (also DACout) \\\cline{1-3}
+PA16 &ADC1 channel 1 &J3.\+29 {\itshape {\bfseries{free}}} \\\cline{1-3}
+PA17 &ADC1 channel 2 &J3.\+28 {\itshape {\bfseries{free}}} \\\cline{1-3}
+PA18 &ADC1 channel 3 &J3.\+26 MKII Joystick Y \\\cline{1-3}
+PB17 &ADC1 channel 4 &J2.\+18 {\itshape {\bfseries{free}}} \\\cline{1-3}
+PB18 &ADC1 channel 5 &J3.\+25 MKII Accelerometer Z \\\cline{1-3}
+PB19 &ADC1 channel 6 &J3.\+23 MKII Accelerometer X \\\cline{1-3}
+PA21 &ADC1 channel 7 &J17.\+8 (insert R20, remove R3)
+
+\\\cline{1-3}
+\end{longtabu}
+
+\end{DoxyDate}

@@ -1,0 +1,105 @@
+\hypertarget{_a_d_c_8h}{}\doxysection{inc/\+ADC.h File Reference}
+\label{_a_d_c_8h}\index{inc/ADC.h@{inc/ADC.h}}
+
+
+Initialize 12-\/bit ADC0 and/or ADC1.  
+
+
+{\ttfamily \#include $<$ti/devices/msp/msp.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___a_d_c_gaca29e70cf7d5f2386de2db4875ce1be7}{ADCVREF\+\_\+\+INT}}~0x200
+\begin{DoxyCompactList}\small\item\em using ADCVREF\+\_\+\+INT means choose internal 2.\+5V reference for accuracy \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c_ga0a05da91d2e9a78c7cc97d9891a7db3a}{ADCVREF\+\_\+\+EXT}}~0x100
+\begin{DoxyCompactList}\small\item\em using ADCVREF\+\_\+\+EXT means choose external reference not tested \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c_ga205c4d7f564b9d5f50299e259a005b0e}{ADCVREF\+\_\+\+VDDA}}~0x000
+\begin{DoxyCompactList}\small\item\em using ADCVREF\+\_\+\+VDDA means choose power line 3.\+3V reference for 0 to 3.\+3V range. This is the mode we use in ECE319K \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___a_d_c_gaa2ee4b39fc4e60ee49b2da4e28b30925}{ADC0\+\_\+\+Init}} (uint32\+\_\+t channel, uint32\+\_\+t reference)
+\begin{DoxyCompactList}\small\item\em Initialize 12-\/bit ADC0. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___a_d_c_ga75363bb5d11c6dc15b829bf5cf619ebd}{ADC0\+\_\+\+In}} (void)
+\begin{DoxyCompactList}\small\item\em Trigger ADC measurement and wait for result. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_c_ga49340f14952348fe1529710cc0d8a245}{ADC1\+\_\+\+Init}} (uint32\+\_\+t channel, uint32\+\_\+t reference)
+\begin{DoxyCompactList}\small\item\em Initialize 12-\/bit ADC0. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___a_d_c_gaef98b62b7e3ce18d5094c28fbf5d6af2}{ADC1\+\_\+\+In}} (void)
+\begin{DoxyCompactList}\small\item\em Trigger ADC measurement and wait for result. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_c_gab1e0b7cd7493bc9892347b921854eb0f}{ADC\+\_\+\+Init}} (ADC12\+\_\+\+Regs $\ast$adc12, uint32\+\_\+t channel, uint32\+\_\+t reference)
+\begin{DoxyCompactList}\small\item\em Initialize 12-\/bit ADC0 or ADC1. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___a_d_c_ga56d134838c921ff75712f794955aa6cc}{ADC\+\_\+\+In}} (ADC12\+\_\+\+Regs $\ast$adc12)
+\begin{DoxyCompactList}\small\item\em Trigger ADC measurement and wait for result. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_c_ga843392fdf2a6133622118d766aacd41d}{ADC\+\_\+\+Init\+Dual}} (ADC12\+\_\+\+Regs $\ast$adc12, uint32\+\_\+t channel1, uint32\+\_\+t channel2, uint32\+\_\+t reference)
+\begin{DoxyCompactList}\small\item\em Initialize 12-\/bit ADC for two channels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_c_gac1687fa960d01840744d6d5214282a83}{ADC\+\_\+\+In\+Dual}} (ADC12\+\_\+\+Regs $\ast$adc12, uint32\+\_\+t $\ast$d1, uint32\+\_\+t $\ast$d2)
+\begin{DoxyCompactList}\small\item\em Trigger two ADC measurements and wait for results. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_c_gadba0385a82a5ede174e5d515c89fad54}{ADC\+\_\+\+Init\+Triple}} (ADC12\+\_\+\+Regs $\ast$adc12, uint32\+\_\+t channel1, uint32\+\_\+t channel2, uint32\+\_\+t channel3, uint32\+\_\+t reference)
+\begin{DoxyCompactList}\small\item\em Initialize 12-\/bit ADC for three channels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_c_ga9c2371678edcc3f66f38b8856b3ac83c}{ADC\+\_\+\+In\+Triple}} (ADC12\+\_\+\+Regs $\ast$adc12, uint32\+\_\+t $\ast$d1, uint32\+\_\+t $\ast$d2, uint32\+\_\+t $\ast$d3)
+\begin{DoxyCompactList}\small\item\em Trigger three ADC measurements and wait for results. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_c_ga2e1407c7f4740a7fac89d2b57892e996}{ADC0\+\_\+\+Init\+Ave}} (uint32\+\_\+t channel, uint32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Initialize 12-\/bit ADC0 for hardware averaging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Initialize 12-\/bit ADC0 and/or ADC1. 
+
+ADC input, software trigger, 12-\/bit conversion~\newline
+ The ADC allows two possible references\+: 2.\+5V or 3.\+3V.~\newline
+ The internal 2.\+5V reference is lower noise, but limits the range to 0 to 2.\+5V.~\newline
+ The other possibility is to use the analog voltage supply at 3.\+3V, making the ADC range 0 to 3.\+3V. In this driver, the 3.\+3V range is selected. There are several configurations (each with initialization and a read ADC with software trigger, busy-\/wait function)~\newline
+
+
+\begin{DoxyVersion}{Version}
+ECE319K v1.\+2 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Daniel Valvano and Jonathan Valvano 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2025 by Jonathan W. Valvano, \href{mailto:valvano@mail.utexas.edu}{\texttt{ valvano@mail.\+utexas.\+edu}}, 
+\end{DoxyCopyright}
+\begin{DoxyWarning}{Warning}
+AS-\/\+IS 
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+For more information see \href{http://users.ece.utexas.edu/~valvano/}{\texttt{ http\+://users.\+ece.\+utexas.\+edu/$\sim$valvano/}} 
+\end{DoxyNote}
+\begin{DoxyDate}{Date}
+December 23, 2024 \hypertarget{_a_d_c_8h_ADCpins2}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{ADC pins on the MSPM0\+G3507}\label{_a_d_c_8h_ADCpins2}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ ADC channel}&\cellcolor{\tableheadbgcolor}\textbf{ Sensor }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ ADC channel}&\cellcolor{\tableheadbgcolor}\textbf{ Sensor }\\\cline{1-3}
+\endhead
+PA27 &ADC0 channel 0 &J1.\+8 also MKII light interrupt \\\cline{1-3}
+PA26 &ADC0 channel 1 &J1.\+6 MKII microphone in \\\cline{1-3}
+PA25 &ADC0 channel 2 &J1.\+2 MKII Joystick X \\\cline{1-3}
+PA24 &ADC0 channel 3 &J3.\+27 {\itshape {\bfseries{free}}} \\\cline{1-3}
+PB25 &ADC0 channel 4 &J19.\+7 (insert 0ohm R74, no U3 OPA2365) \\\cline{1-3}
+PB24 &ADC0 channel 5 &J1.\+5 also MKII joystick select button \\\cline{1-3}
+PB20 &ADC0 channel 6 &J4.\+36 {\itshape {\bfseries{free}}} \\\cline{1-3}
+PA22 &ADC0 channel 7 &J24 MKII Accelerometer Y
+
+\\\cline{1-3}
+PA15 &ADC1 channel 0 &J3.\+30 (also DACout) \\\cline{1-3}
+PA16 &ADC1 channel 1 &J3.\+29 {\itshape {\bfseries{free}}} \\\cline{1-3}
+PA17 &ADC1 channel 2 &J3.\+28 {\itshape {\bfseries{free}}} \\\cline{1-3}
+PA18 &ADC1 channel 3 &J3.\+26 MKII Joystick Y \\\cline{1-3}
+PB17 &ADC1 channel 4 &J2.\+18 {\itshape {\bfseries{free}}} \\\cline{1-3}
+PB18 &ADC1 channel 5 &J3.\+25 MKII Accelerometer Z \\\cline{1-3}
+PB19 &ADC1 channel 6 &J3.\+23 MKII Accelerometer X \\\cline{1-3}
+PA21 &ADC1 channel 7 &J17.\+8 (insert R20, remove R3)
+
+\\\cline{1-3}
+\end{longtabu}
+note to students$\ast$$\ast$$\ast$$\ast$~\newline
+ the data sheet says the ADC does not work when clock is 80 MHz however, the ADC seems to work on my boards at 80 MHz I suggest you try 80MHz, but if it doesn\textquotesingle{}t work, switch to 40MHz 
+\end{DoxyDate}

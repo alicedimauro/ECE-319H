@@ -1,0 +1,217 @@
+\hypertarget{_arabic_8h}{}\doxysection{inc/\+Arabic.h File Reference}
+\label{_arabic_8h}\index{inc/Arabic.h@{inc/Arabic.h}}
+
+
+Arabic output to LCD.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_t7735_gae767fd15e422bf7184563e9b4dbb04ea}\label{group___s_t7735_gae767fd15e422bf7184563e9b4dbb04ea}} 
+enum \mbox{\hyperlink{group___s_t7735_gae767fd15e422bf7184563e9b4dbb04ea}{Arabic\+\_\+t}} \{ \newline
+{\bfseries null}
+, {\bfseries alif}
+, {\bfseries ayh}
+, {\bfseries baa}
+, \newline
+{\bfseries daad}
+, {\bfseries daal}
+, {\bfseries dhaa}
+, {\bfseries dhaal}
+, \newline
+{\bfseries faa}
+, {\bfseries ghayh}
+, {\bfseries haa}
+, {\bfseries ha}
+, \newline
+{\bfseries jeem}
+, {\bfseries kaaf}
+, {\bfseries khaa}
+, {\bfseries laam}
+, \newline
+{\bfseries meem}
+, {\bfseries noon}
+, {\bfseries qaaf}
+, {\bfseries raa}
+, \newline
+{\bfseries saad}
+, {\bfseries seen}
+, {\bfseries sheen}
+, {\bfseries ta}
+, \newline
+{\bfseries thaa}
+, {\bfseries twe}
+, {\bfseries waaw}
+, {\bfseries yaa}
+, \newline
+{\bfseries zaa}
+, {\bfseries space}
+, {\bfseries dot}
+ \}
+\begin{DoxyCompactList}\small\item\em Arabic character set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_t7735_gaa6c9e4542c04e32e57f95838fde7d4f2}{Arabic\+\_\+\+Set\+Cursor}} (uint32\+\_\+t newX, uint32\+\_\+t newY)
+\begin{DoxyCompactList}\small\item\em Move Arabic cursor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_ga3b8025b0e0f8b5bc043e1f3355d1f0d6}{Arabic\+\_\+\+Out\+Char}} (\mbox{\hyperlink{group___s_t7735_gae767fd15e422bf7184563e9b4dbb04ea}{Arabic\+\_\+t}} ch)
+\begin{DoxyCompactList}\small\item\em Output an Arabic character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735_gace8825b3c2dd7f17902847f25578a4d0}{Arabic\+\_\+\+Out\+String}} (\mbox{\hyperlink{group___s_t7735_gae767fd15e422bf7184563e9b4dbb04ea}{Arabic\+\_\+t}} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Output an Arabic string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Arabic output to LCD. 
+
+Arabic character/string output to ST7735R display~\newline
+ \begin{DoxyVersion}{Version}
+ECE319K v1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Amina Meddad and Jonathan Valvano 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2024 by Jonathan W. Valvano, \href{mailto:valvano@mail.utexas.edu}{\texttt{ valvano@mail.\+utexas.\+edu}}, 
+\end{DoxyCopyright}
+\begin{DoxyWarning}{Warning}
+AS-\/\+IS 
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+For more information see \href{http://users.ece.utexas.edu/~valvano/}{\texttt{ http\+://users.\+ece.\+utexas.\+edu/$\sim$valvano/}} 
+\end{DoxyNote}
+\begin{DoxyDate}{Date}
+August 14, 2024 \hypertarget{_arabic_8h_ArabicAdafruitLCDpins2}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{Adafruit ST7735R pins }\label{_arabic_8h_ArabicAdafruitLCDpins2}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Connection }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Connection }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endhead
+10&+3.\+3&Backlight \\\cline{1-3}
+9 &nc &SPI1 MISO (used for SDC) \\\cline{1-3}
+8 &PB9 &SPI1 SCLK clock out \\\cline{1-3}
+7 &PB8 &SPI1 PICO data out \\\cline{1-3}
+6 &PB6 &SPI1 CS0=TFT\+\_\+\+CS \\\cline{1-3}
+5 &nc &CARD\+\_\+\+CS (used for SDC) \\\cline{1-3}
+4 &PA13&Data/\+Command(GPIO), high for data, low for command \\\cline{1-3}
+3 &PB15&RESET, low to reset, (GPIO) \\\cline{1-3}
+2 &+3.\+3&VCC \\\cline{1-3}
+1 &Gnd &ground \\\cline{1-3}
+\end{longtabu}
+
+\end{DoxyDate}
+\hypertarget{_arabic_8h_Arabicwidehkpins2}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{wide.\+hk ST7735R with ADXL345 accelerometer pins }\label{_arabic_8h_Arabicwidehkpins2}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-2}
+\endhead
+VCC &+3.\+3 V \\\cline{1-2}
+GND &Ground \\\cline{1-2}
+!\+SCL &SPI1 SCLK\+: PB9 clock \\\cline{1-2}
+!\+SDA &SPI1 PICO\+: PB8 MOSI SPI data from microcontroller to TFT or SDC \\\cline{1-2}
+DC &GPIO PA13 TFT data/command \\\cline{1-2}
+RES &GPIO PB15 TFT reset \\\cline{1-2}
+CS &SPI1 CS0\+: PB6 TFT\+\_\+\+CS, active low to enable TFT \\\cline{1-2}
+$\ast$\+CS &(NC) SDC\+\_\+\+CS, active low to enable SDC \\\cline{1-2}
+MISO &(NC) MISO SPI data from SDC to microcontroller \\\cline{1-2}
+SDA &(NC) I2C data for ADXL345 accelerometer \\\cline{1-2}
+SCL &(NC) I2C clock for ADXL345 accelerometer \\\cline{1-2}
+SDO &(NC) I2C alternate address for ADXL345 accelerometer \\\cline{1-2}
+Backlight + -\/ Light, backlight connected to +3.\+3 V \\\cline{1-2}
+\end{longtabu}
+
+
+\hypertarget{_arabic_8h_Arabicwidehkpins3352}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{wide.\+hk ST7735R with ADXL335 accelerometer pins }\label{_arabic_8h_Arabicwidehkpins3352}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-2}
+\endhead
+VCC &+3.\+3 V \\\cline{1-2}
+GND &Ground /\\\cline{1-2}
+!\+SCL&SPI1 SCLK\+: PB9 \\\cline{1-2}
+!\+SDA &SPI1 PICO\+: PB8 MOSI SPI data from microcontroller to TFT or SDC \\\cline{1-2}
+DC &GPIO PA13 TFT data/command \\\cline{1-2}
+RES &GPIO PB15 TFT reset \\\cline{1-2}
+CS &SPI1 CS0\+: PB6 TFT\+\_\+\+CS, active low to enable TFT \\\cline{1-2}
+$\ast$\+CS &(NC) SDC\+\_\+\+CS, active low to enable SDC \\\cline{1-2}
+MISO &(NC) MISO SPI data from SDC to microcontroller \\\cline{1-2}
+X&(NC) analog input X-\/axis from ADXL335 accelerometer \\\cline{1-2}
+Y&(NC) analog input Y-\/axis from ADXL335 accelerometer \\\cline{1-2}
+Z&(NC) analog input Z-\/axis from ADXL335 accelerometer \\\cline{1-2}
+Backlight + &Light, backlight connected to +3.\+3 V \\\cline{1-2}
+\end{longtabu}
+
+
+\hypertarget{_arabic_8h_ArabicHiLetgopins2}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{Hi\+Letgo ST7735 TFT and SDC pins }\label{_arabic_8h_ArabicHiLetgopins2}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ signal}&\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ signal}&\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-3}
+\endhead
+LED-\/ &16&TFT, to ground \\\cline{1-3}
+LED+ &15&TFT, to +3.\+3 V \\\cline{1-3}
+SD\+\_\+\+CS &14&SDC, to chip select \\\cline{1-3}
+MOSI &13&SDC, to MOSI \\\cline{1-3}
+MISO &12&SDC, to MISO \\\cline{1-3}
+SCK &11&SDC, to serial clock \\\cline{1-3}
+CS &10&TFT, to PB6 SPI1 CS0 \\\cline{1-3}
+SCL &9&TFT, to PB9 SPI1 SCLK \\\cline{1-3}
+SDA &8&TFT, to PB8 MOSI SPI1 PICO \\\cline{1-3}
+A0 &7&TFT, to PA13 Data/\+Command, high for data, low for command \\\cline{1-3}
+RESET &6&TFT, to PB15 reset (GPIO), low to reset \\\cline{1-3}
+NC &3,4,5&not connected \\\cline{1-3}
+VCC &2&to +3.\+3 V \\\cline{1-3}
+GND &1&to ground \\\cline{1-3}
+\end{longtabu}
+
+
+\hypertarget{_arabic_8h_ArabicTyenazapins2}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{Tyenaza Tyenazaqhf72mi9s3 pins }\label{_arabic_8h_ArabicTyenazapins2}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ signal}&\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ signal}&\cellcolor{\tableheadbgcolor}\textbf{ Pin}&\cellcolor{\tableheadbgcolor}\textbf{ Connection }\\\cline{1-3}
+\endhead
+LED &8&to +3.\+3 V \\\cline{1-3}
+SCK &7&SCLK to PB9 SPI1 SCLK \\\cline{1-3}
+SDA &6&MOSI, to PB8 SPI1 PICO \\\cline{1-3}
+A0 &5&Data/\+Command to PA13 (GPIO), high for data, low for command \\\cline{1-3}
+RESET &4&to PB15 (GPIO), low to reset \\\cline{1-3}
+CS &3&to PB6 SPI1 CS0\+: \\\cline{1-3}
+Gnd &2&to ground \\\cline{1-3}
+VCC &1&to +3.\+3 V \\\cline{1-3}
+\end{longtabu}
+~\newline
+ 

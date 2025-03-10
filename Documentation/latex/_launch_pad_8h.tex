@@ -1,0 +1,307 @@
+\hypertarget{_launch_pad_8h}{}\doxysection{inc/\+Launch\+Pad.h File Reference}
+\label{_launch_pad_8h}\index{inc/LaunchPad.h@{inc/LaunchPad.h}}
+
+
+Initialize Launch\+Pad switches and LEDs.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___launch_pad_gadbb57b492bb5968365dbbd89f9ce3036}{RED1}}~1
+\begin{DoxyCompactList}\small\item\em RED1 is a constant to select red LED1 on Port A, PA0. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___launch_pad_ga79d10e672abb49ad63eeaa8aaef57c38}{BLUE}}~(1$<$$<$22)
+\begin{DoxyCompactList}\small\item\em BLUE is a constant to select blue LED2 on Port B, PB22. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___launch_pad_ga8d23feea868a983c8c2b661e1e16972f}{RED}}~(1$<$$<$26)
+\begin{DoxyCompactList}\small\item\em RED is a constant to select red LED2 on Port B, PB26. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___launch_pad_gacfbc006ea433ad708fdee3e82996e721}{GREEN}}~(1$<$$<$27)
+\begin{DoxyCompactList}\small\item\em GREEN is a constant to select green LED2 on Port B, PB27. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___launch_pad_gad5e70dee3c36d645b0eb1743b8a7d2bf}{S2}}~(1$<$$<$18)
+\begin{DoxyCompactList}\small\item\em S2 is a constant to select switch 2 on Port A, PA18. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___launch_pad_gab29872af8ce9dc9463b7f7ecfbea02ae}{S3}}~(1$<$$<$21)
+\begin{DoxyCompactList}\small\item\em S3 is a constant to select switch 3 on Port B, PB21. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___launch_pad_ga9fc443a053b5ad7b4e6f1825ca2acab9}{PA0\+INDEX}}~0
+\begin{DoxyCompactList}\small\item\em The following constants are used to index into the PINCM table. \end{DoxyCompactList}\item 
+\#define {\bfseries PA1\+INDEX}~1
+\item 
+\#define {\bfseries PA2\+INDEX}~6
+\item 
+\#define {\bfseries PA3\+INDEX}~7
+\item 
+\#define {\bfseries PA4\+INDEX}~8
+\item 
+\#define {\bfseries PA5\+INDEX}~9
+\item 
+\#define {\bfseries PA6\+INDEX}~10
+\item 
+\#define {\bfseries PA7\+INDEX}~13
+\item 
+\#define {\bfseries PA8\+INDEX}~18
+\item 
+\#define {\bfseries PA9\+INDEX}~19
+\item 
+\#define {\bfseries PA10\+INDEX}~20
+\item 
+\#define {\bfseries PA11\+INDEX}~21
+\item 
+\#define {\bfseries PA12\+INDEX}~33
+\item 
+\#define {\bfseries PA13\+INDEX}~34
+\item 
+\#define {\bfseries PA14\+INDEX}~35
+\item 
+\#define {\bfseries PA15\+INDEX}~36
+\item 
+\#define {\bfseries PA16\+INDEX}~37
+\item 
+\#define {\bfseries PA17\+INDEX}~38
+\item 
+\#define {\bfseries PA18\+INDEX}~39
+\item 
+\#define {\bfseries PA19\+INDEX}~40
+\item 
+\#define {\bfseries PA20\+INDEX}~41
+\item 
+\#define {\bfseries PA21\+INDEX}~45
+\item 
+\#define {\bfseries PA22\+INDEX}~46
+\item 
+\#define {\bfseries PA23\+INDEX}~52
+\item 
+\#define {\bfseries PA24\+INDEX}~53
+\item 
+\#define {\bfseries PA25\+INDEX}~54
+\item 
+\#define {\bfseries PA26\+INDEX}~58
+\item 
+\#define {\bfseries PA27\+INDEX}~59
+\item 
+\#define {\bfseries PA28\+INDEX}~2
+\item 
+\#define {\bfseries PA29\+INDEX}~3
+\item 
+\#define {\bfseries PA30\+INDEX}~4
+\item 
+\#define {\bfseries PA31\+INDEX}~5
+\item 
+\#define {\bfseries PB0\+INDEX}~11
+\item 
+\#define {\bfseries PB1\+INDEX}~12
+\item 
+\#define {\bfseries PB2\+INDEX}~14
+\item 
+\#define {\bfseries PB3\+INDEX}~15
+\item 
+\#define {\bfseries PB4\+INDEX}~16
+\item 
+\#define {\bfseries PB5\+INDEX}~17
+\item 
+\#define {\bfseries PB6\+INDEX}~22
+\item 
+\#define {\bfseries PB7\+INDEX}~23
+\item 
+\#define {\bfseries PB8\+INDEX}~24
+\item 
+\#define {\bfseries PB9\+INDEX}~25
+\item 
+\#define {\bfseries PB10\+INDEX}~26
+\item 
+\#define {\bfseries PB11\+INDEX}~27
+\item 
+\#define {\bfseries PB12\+INDEX}~28
+\item 
+\#define {\bfseries PB13\+INDEX}~29
+\item 
+\#define {\bfseries PB14\+INDEX}~30
+\item 
+\#define {\bfseries PB15\+INDEX}~31
+\item 
+\#define {\bfseries PB16\+INDEX}~32
+\item 
+\#define {\bfseries PB17\+INDEX}~42
+\item 
+\#define {\bfseries PB18\+INDEX}~43
+\item 
+\#define {\bfseries PB19\+INDEX}~44
+\item 
+\#define {\bfseries PB20\+INDEX}~47
+\item 
+\#define {\bfseries PB21\+INDEX}~48
+\item 
+\#define {\bfseries PB22\+INDEX}~49
+\item 
+\#define {\bfseries PB23\+INDEX}~50
+\item 
+\#define {\bfseries PB24\+INDEX}~51
+\item 
+\#define {\bfseries PB25\+INDEX}~55
+\item 
+\#define {\bfseries PB26\+INDEX}~56
+\item 
+\#define {\bfseries PB27\+INDEX}~57
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___launch_pad_gadd09bb41f83980522cc25042d9018b61}{Launch\+Pad\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize Launch\+Pad. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___launch_pad_ga6174cc19ab7ce46c351687717b3ae40b}{Launch\+Pad\+\_\+\+In\+S2}} (void)
+\begin{DoxyCompactList}\small\item\em Input S2. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___launch_pad_gaaaf99ea292022ee6255c207392c36b8e}{Launch\+Pad\+\_\+\+In\+S3}} (void)
+\begin{DoxyCompactList}\small\item\em Input S2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___launch_pad_gaf35108b2b7086af6490531b08f1a058b}{Launch\+Pad\+\_\+\+LED1}} (uint32\+\_\+t led)
+\begin{DoxyCompactList}\small\item\em Output to LED1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___launch_pad_gaccd2418244c007f3d42f0d22f0d35761}{Launch\+Pad\+\_\+\+LED1on}} (void)
+\begin{DoxyCompactList}\small\item\em Turn on LED1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___launch_pad_ga60a40857a5562b38b907a931945ded59}{Launch\+Pad\+\_\+\+LED1off}} (void)
+\begin{DoxyCompactList}\small\item\em Turn off LED1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___launch_pad_gaa541fa804d37b3860684210b9718b94e}{Launch\+Pad\+\_\+\+LED}} (uint32\+\_\+t led)
+\begin{DoxyCompactList}\small\item\em Output to LED. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___launch_pad_ga9cb3c9fb7ade7955b292446385b140dc}{Launch\+Pad\+\_\+\+LEDwhite}} (void)
+\begin{DoxyCompactList}\small\item\em Make LED white. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___launch_pad_ga387e9d59ed4a60546a6aa8d868a34b75}{Launch\+Pad\+\_\+\+LEDoff}} (void)
+\begin{DoxyCompactList}\small\item\em Turn off LED. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Initialize Launch\+Pad switches and LEDs. 
+
+MSPM0\+G3507 Launch\+Pad Development Kit (LP-\/\+MSPM0\+G3507)~\newline
+ For more information see~\newline
+ \href{https://www.ti.com/product/LP-MSPM0G3507/part-details/LP-MSPM0G3507}{\texttt{ https\+://www.\+ti.\+com/product/\+LP-\/\+MSPM0\+G3507/part-\/details/\+LP-\/\+MSPM0\+G3507}}~\newline
+  
+\begin{DoxyImage}
+\includegraphics[width=10cm]{Fg01_07_02_LaunchPad.png}
+\doxyfigcaption{TI MSPM0 Launch\+Pad}
+\end{DoxyImage}
+ The following is a simplified circuit diagram~\newline
+  
+\begin{DoxyImage}
+\includegraphics[width=10cm<br>]{LaunchPadCircuit.png}
+\doxyfigcaption{LP-\/\+MSPM0\+G3507 Circuit Diagram}
+\end{DoxyImage}
+
+\begin{DoxyItemize}
+\item Launch\+Pad Jumpers
+\begin{DoxyItemize}
+\item J4 Connects PA0 to red LED1
+\item J5\+: Connects PB22 to blue LED2
+\item J6\+: Connects PB26 to red LED2
+\item J7\+: Connects PB27 to green LED2
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\begin{DoxyVersion}{Version}
+ECE319K v1.\+2 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Daniel Valvano and Jonathan Valvano 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2025 by Jonathan W. Valvano, \href{mailto:valvano@mail.utexas.edu}{\texttt{ valvano@mail.\+utexas.\+edu}}, 
+\end{DoxyCopyright}
+\begin{DoxyWarning}{Warning}
+AS-\/\+IS 
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+For more information see \href{http://users.ece.utexas.edu/~valvano/}{\texttt{ http\+://users.\+ece.\+utexas.\+edu/$\sim$valvano/}} 
+\end{DoxyNote}
+\begin{DoxyDate}{Date}
+December 23, 2024 \hypertarget{_launch_pad_8h_LaunchPadpins2}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{Pins on the MSPM0\+G3507 Launch\+Pad}\label{_launch_pad_8h_LaunchPadpins2}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ GPIO}&\cellcolor{\tableheadbgcolor}\textbf{ Hardware }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ GPIO}&\cellcolor{\tableheadbgcolor}\textbf{ Hardware }\\\cline{1-3}
+\endhead
+PA0 &output&RED LED1, index 0 in IOMUX PINCM table, negative logic \\\cline{1-3}
+PB22&output&BLUE LED2, index 49 in IOMUX PINCM table \\\cline{1-3}
+PB26&output&RED LED2, index 56 in IOMUX PINCM table \\\cline{1-3}
+PB27&output&GREEN LED2, index 57 in IOMUX PINCM table \\\cline{1-3}
+PA18&input &S2 positive logic switch, index 39 in IOMUX PINCM table \\\cline{1-3}
+PB21&input &S3 negative logic switch, index 48 in IOMUX PINCM table
+
+\\\cline{1-3}
+\end{longtabu}
+Mode=0 selects the GPIO pin~\newline
+ \hypertarget{_launch_pad_8h_PINCM}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{10}{|X[-1]}|}
+\caption{PINCM Mode values for the MSPM0\+G3507}\label{_launch_pad_8h_PINCM}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name}&\cellcolor{\tableheadbgcolor}\textbf{ Value}&\cellcolor{\tableheadbgcolor}\textbf{ Mode=2}&\cellcolor{\tableheadbgcolor}\textbf{ Mode=3}&\cellcolor{\tableheadbgcolor}\textbf{ Mode=4}&\cellcolor{\tableheadbgcolor}\textbf{ Mode=5}&\cellcolor{\tableheadbgcolor}\textbf{ Mode=6}&\cellcolor{\tableheadbgcolor}\textbf{ Mode=7}&\cellcolor{\tableheadbgcolor}\textbf{ Mode=8}&\cellcolor{\tableheadbgcolor}\textbf{ Mode=9 }\\\cline{1-10}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name}&\cellcolor{\tableheadbgcolor}\textbf{ Value}&\cellcolor{\tableheadbgcolor}\textbf{ Mode=2}&\cellcolor{\tableheadbgcolor}\textbf{ Mode=3}&\cellcolor{\tableheadbgcolor}\textbf{ Mode=4}&\cellcolor{\tableheadbgcolor}\textbf{ Mode=5}&\cellcolor{\tableheadbgcolor}\textbf{ Mode=6}&\cellcolor{\tableheadbgcolor}\textbf{ Mode=7}&\cellcolor{\tableheadbgcolor}\textbf{ Mode=8}&\cellcolor{\tableheadbgcolor}\textbf{ Mode=9 }\\\cline{1-10}
+\endhead
+PA0\+INDEX&0&UART0\+\_\+\+TX&I2\+C0\+\_\+\+SDA&TIMA0\+\_\+\+C0&TIMA\+\_\+\+FAL1&TIMG8\+\_\+\+C1&FCC\+\_\+\+IN&&\\\cline{1-10}
+PA1\+INDEX&1&UART0\+\_\+\+RX&I2\+C0\+\_\+\+SCL&TIMA0\+\_\+\+C1&TIMA\+\_\+\+FAL2&TIMG8\+\_\+\+IDX&TIMG8\+\_\+\+C0&&\\\cline{1-10}
+PA2\+INDEX&6&TIMG8\+\_\+\+C1&SPI0\+\_\+\+CS0&TIMG7\+\_\+\+C1&SPI1\+\_\+\+CS0&&&&\\\cline{1-10}
+PA3\+INDEX&7&TIMG8\+\_\+\+C0&SPI0\+\_\+\+CS1&UART2\+\_\+\+CTS&TIMA0\+\_\+\+C2&COMP1\+\_\+\+OUT&TIMG7\+\_\+\+C0&TIMA0\+\_\+\+C1&I2\+C1\+\_\+\+SDA \\\cline{1-10}
+PA4\+INDEX&8&TIMG8\+\_\+\+C1&SPI0\+\_\+\+POCI&UART2\+\_\+\+RTS&TIMA0\+\_\+\+C3&LFCLK\+\_\+\+IN&TIMG7\+\_\+\+C1&TIMA0\+\_\+\+C1N&I2\+C1\+\_\+\+SCL \\\cline{1-10}
+PA5\+INDEX&9&TIMG8\+\_\+\+C0&SPI0\+\_\+\+PICO&TIMA\+\_\+\+FAL1&TIMG0\+\_\+\+C0&TIMG6\+\_\+\+C0&FCC\+\_\+\+IN&&\\\cline{1-10}
+PA6\+INDEX&10&TTIMG8\+\_\+\+C1&SPI0\+\_\+\+SCK&TIMA\+\_\+\+FAL0&TIMG0\+\_\+\+C1&HFCLK\+\_\+\+IN&TIMG6\+\_\+\+C1&TIMA0\+\_\+\+C2N&\\\cline{1-10}
+PA7\+INDEX&13&COMP0\+\_\+\+OUT&CLK\+\_\+\+OUT&TIMG8\+\_\+\+C0&TIMA0\+\_\+\+C2&TIMG8\+\_\+\+IDX&TIMG7\+\_\+\+C1&TIMA0\+\_\+\+C1&\\\cline{1-10}
+PA8\+INDEX&18&UART1\+\_\+\+TX&SPI0\+\_\+\+CS0&UART0\+\_\+\+RTS&TIMA0\+\_\+\+C0&TIMA1\+\_\+\+C0N&&&\\\cline{1-10}
+PA9\+INDEX&19&UART1\+\_\+\+RX&SPI0\+\_\+\+PICO&UART0\+\_\+\+CTS&TIMA0\+\_\+\+C1&RTC\+\_\+\+OUT&TIMA0\+\_\+\+C0N&TIMA1\+\_\+\+C1N&CLK\+\_\+\+OUT \\\cline{1-10}
+PA10\+INDEX&20&UART0\+\_\+\+TX&SPI0\+\_\+\+POCI&I2\+C0\+\_\+\+SDA&TIMA1\+\_\+\+C0&TIMG12\+\_\+\+C0&TIMA0\+\_\+\+C2&I2\+C1\+\_\+\+SDA&CLK\+\_\+\+OUT \\\cline{1-10}
+PA11\+INDEX&21&UART0\+\_\+\+RX&SPI0\+\_\+\+SCK&I2\+C0\+\_\+\+SCL&TIMA1\+\_\+\+C1&COMP0\+\_\+\+OUT&TIMA0\+\_\+\+C2N&I2\+C1\+\_\+\+SCL&\\\cline{1-10}
+PA12\+INDEX&33&UART3\+\_\+\+CTS&SPI0\+\_\+\+SCK&TIMG0\+\_\+\+C0&CAN\+\_\+\+TX&TIMA0\+\_\+\+C3&FCC\+\_\+\+IN&&\\\cline{1-10}
+PA13\+INDEX&34&UART3\+\_\+\+RTS&SPI0\+\_\+\+POCI&UART3\+\_\+\+RX&TIMG0\+\_\+\+C1&CAN\+\_\+\+RX&TIMA0\+\_\+\+C3N&&\\\cline{1-10}
+PA14\+INDEX&35&UART0\+\_\+\+CTS&SPI0\+\_\+\+PICO&UART3\+\_\+\+TX&TIMG12\+\_\+\+C0&CLK\+\_\+\+OUT&&&\\\cline{1-10}
+PA15\+INDEX&36&UART0\+\_\+\+RTS&SPI1\+\_\+\+CS2&I2\+C1\+\_\+\+SCL&TIMA1\+\_\+\+C0&TIMG8\+\_\+\+IDX&TIMA1\+\_\+\+C0N&TIMA0\+\_\+\+C2&\\\cline{1-10}
+PA16\+INDEX&37&COMP2\+\_\+\+OUT&SPI1\+\_\+\+POCI&I2\+C1\+\_\+\+SDA&TIMA1\+\_\+\+C1&TIMA1\+\_\+\+C1N&TIMA0\+\_\+\+C2N&FCC\+\_\+\+IN&\\\cline{1-10}
+PA17\+INDEX&38&UART1\+\_\+\+TX&SPI1\+\_\+\+SCK&I2\+C1\+\_\+\+SCL&TIMA0\+\_\+\+C3&TIMG7\+\_\+\+C0&TIMA1\+\_\+\+C0&&\\\cline{1-10}
+PA18\+INDEX&39&UART1\+\_\+\+RX&SPI1\+\_\+\+PICO&I2\+C1\+\_\+\+SDA&TIMA0\+\_\+\+C3N&TIMG7\+\_\+\+C1&TIMA1\+\_\+\+C1&&\\\cline{1-10}
+PA19\+INDEX&40&SWDIO&&&&&&&\\\cline{1-10}
+PA20\+INDEX&41&SWCLK&&&&&&&\\\cline{1-10}
+PA21\+INDEX&45&UART2\+\_\+\+TX&TIMG8\+\_\+\+C0&UART1\+\_\+\+CTS&TIMA0\+\_\+\+C0&TIMG6\+\_\+\+C0&&&\\\cline{1-10}
+PA22\+INDEX&46&UART2\+\_\+\+RX&TIMG8\+\_\+\+C1&UART1\+\_\+\+RTS&TIMA0\+\_\+\+C1&CLK\+\_\+\+OUT&TIMA0\+\_\+\+C0N&TIMG6\+\_\+\+C1&\\\cline{1-10}
+PA23\+INDEX&52&UART2\+\_\+\+TX&SPI0\+\_\+\+CS3&TIMA0\+\_\+\+C3&TIMG0\+\_\+\+C0&UART3\+\_\+\+CTS&TIMG7\+\_\+\+C0&TIMG8\+\_\+\+C0&\\\cline{1-10}
+PA24\+INDEX&53&UART2\+\_\+\+RX&SPI0\+\_\+\+CS2&TIMA0\+\_\+\+C3N&TIMG0\+\_\+\+C1&UART3\+\_\+\+RTS&TIMG7\+\_\+\+C1&TIMA1\+\_\+\+C1&\\\cline{1-10}
+PA25\+INDEX&54&UART3\+\_\+\+RX&SPI1\+\_\+\+CS3&TIMG12\+\_\+\+C1&TIMA0\+\_\+\+C3&TIMA0\+\_\+\+C1N&&&\\\cline{1-10}
+PA26\+INDEX&58&UART3\+\_\+\+TX&SPI1\+\_\+\+CS0&TIMG8\+\_\+\+C0&TIMA\+\_\+\+FAL0&CAN\+\_\+\+TX&TIMG7\+\_\+\+C0&&\\\cline{1-10}
+PA27\+INDEX&59&RTC\+\_\+\+OUT&SPI1\+\_\+\+CS1&TIMG8\+\_\+\+C1&TIMA\+\_\+\+FAL2&CAN\+\_\+\+RX&TIMG7\+\_\+\+C1&&\\\cline{1-10}
+PA28\+INDEX&2&UART0\+\_\+\+TX&I2\+C0\+\_\+\+SDA&TIMA0\+\_\+\+C3&TIMA\+\_\+\+FAL0&TIMG7\+\_\+\+C0&TIMA1\+\_\+\+C0&&\\\cline{1-10}
+PA29\+INDEX&3&I2\+C1\+\_\+\+SCL&UART2\+\_\+\+RTS&TIMG8\+\_\+\+C0&TIMG6\+\_\+\+C0&&&&\\\cline{1-10}
+PA30\+INDEX&4&I2\+C1\+\_\+\+SDA&UART2\+\_\+\+CTS&TIMG8\+\_\+\+C1&TIMG6\+\_\+\+C1&&&&\\\cline{1-10}
+PA31\+INDEX&5&UART0\+\_\+\+RX&I2\+C0\+\_\+\+SCL&TIMA0\+\_\+\+C3N&TIMG12\+\_\+\+C1&CLK\+\_\+\+OUT&TIMG7\+\_\+\+C1&TIMA1\+\_\+\+C1&\\\cline{1-10}
+PB0\+INDEX&11&UART0\+\_\+\+TX&SPI1\+\_\+\+CS2&TIMA1\+\_\+\+C0&TIMA0\+\_\+\+C2&&&&\\\cline{1-10}
+PB1\+INDEX&12&UART0\+\_\+\+RX&SPI1\+\_\+\+CS3&TIMA1\+\_\+\+C1&TIMA0\+\_\+\+C2N&&&&\\\cline{1-10}
+PB2\+INDEX&14&UART3\+\_\+\+TX&UART2\+\_\+\+CTS&I2\+C1\+\_\+\+SCL&TIMA0\+\_\+\+C3&UART1\+\_\+\+CTS&TIMG6\+\_\+\+C0&TIMA1\+\_\+\+C0&\\\cline{1-10}
+PB3\+INDEX&15&UART3\+\_\+\+RX&UART2\+\_\+\+RTS&I2\+C1\+\_\+\+SDA&TIMA0\+\_\+\+C3N&UART1\+\_\+\+RTS&TIMG6\+\_\+\+C1&TIMA1\+\_\+\+C1&\\\cline{1-10}
+PB4\+INDEX&16&UART1\+\_\+\+TX&UART3\+\_\+\+CTS&TIMA1\+\_\+\+C0&TIMA0\+\_\+\+C2&TIMA1\+\_\+\+C0N&&&\\\cline{1-10}
+PB5\+INDEX&17&UART1\+\_\+\+RX&UART3\+\_\+\+RTS&TIMA1\+\_\+\+C1&TIMA0\+\_\+\+C2N&TIMA1\+\_\+\+C1N&&&\\\cline{1-10}
+PB6\+INDEX&22&UART1\+\_\+\+TX&SPI1\+\_\+\+CS0&SPI0\+\_\+\+CS1&TIMG8\+\_\+\+C0&UART2\+\_\+\+CTS&TIMG6\+\_\+\+C0&TIMA1\+\_\+\+C0N&\\\cline{1-10}
+PB7\+INDEX&23&UART1\+\_\+\+RX&SPI1\+\_\+\+POCI&SPI0\+\_\+\+CS2&TIMG8\+\_\+\+C1&UART2\+\_\+\+RTS&TIMG6\+\_\+\+C1&TIMA1\+\_\+\+C1N&\\\cline{1-10}
+PB8\+INDEX&24&UART1\+\_\+\+CTS&SPI1\+\_\+\+PICO&TIMA0\+\_\+\+C0&COMP1\+\_\+\+OUT&&&&\\\cline{1-10}
+PB9\+INDEX&25&UART1\+\_\+\+RTS&SPI1\+\_\+\+SCK&TIMA0\+\_\+\+C1&TIMA0\+\_\+\+C0N&&&&\\\cline{1-10}
+PB10\+INDEX&26&TIMG0\+\_\+\+C0&TIMG8\+\_\+\+C0&COMP1\+\_\+\+OUT&TIMG6\+\_\+\+C0&&&&\\\cline{1-10}
+PB11\+INDEX&27&TIMG0\+\_\+\+C1&TIMG8\+\_\+\+C1&CLK\+\_\+\+OUT&TIMG6\+\_\+\+C1&&&&\\\cline{1-10}
+PB12\+INDEX&28&UART3\+\_\+\+TX&TIMA0\+\_\+\+C2&TIMA\+\_\+\+FAL1&TIMA0\+\_\+\+C1&&&&\\\cline{1-10}
+PB13\+INDEX&29&UART3\+\_\+\+RX&TIMA0\+\_\+\+C3&TIMG12\+\_\+\+C0&TIMA0\+\_\+\+C1N&&&&\\\cline{1-10}
+PB14\+INDEX&30&SPI1\+\_\+\+CS3&SPI1\+\_\+\+POCI&SPI0\+\_\+\+CS3&TIMG12\+\_\+\+C1&TIMG8\+\_\+\+IDX&TIMA0\+\_\+\+C0&&\\\cline{1-10}
+PB15\+INDEX&31&UART2\+\_\+\+TX&SPI1\+\_\+\+PICO&UART3\+\_\+\+CTS&TIMG8\+\_\+\+C0&TIMG7\+\_\+\+C0&&&\\\cline{1-10}
+PB16\+INDEX&32&UART2\+\_\+\+RX&SPI1\+\_\+\+SCK&UART3\+\_\+\+RTS&TIMG8\+\_\+\+C1&TIMG7\+\_\+\+C1&&&\\\cline{1-10}
+PB17\+INDEX&42&UART2\+\_\+\+TX&SPI0\+\_\+\+PICO&SPI1\+\_\+\+CS1&TIMA1\+\_\+\+C0&TIMA0\+\_\+\+C2&&&\\\cline{1-10}
+PB18\+INDEX&43&UART2\+\_\+\+RX&SPI0\+\_\+\+SCK&SPI1\+\_\+\+CS2&TIMA1\+\_\+\+C1&TIMA0\+\_\+\+C2N&&&\\\cline{1-10}
+PB19\+INDEX&44&COMP2\+\_\+\+OUT&SPI0\+\_\+\+POCI&TIMG8\+\_\+\+C1&UART0\+\_\+\+CTS&TIMG7\+\_\+\+C1&&&\\\cline{1-10}
+PB20\+INDEX&47&SPI0\+\_\+\+CS2&SPI1\+\_\+\+CS0&TIMA0\+\_\+\+C2&TIMG12\+\_\+\+C0&TIMA\+\_\+\+FAL1&TIMA0\+\_\+\+C1&TIMA1\+\_\+\+C1N&\\\cline{1-10}
+PB21\+INDEX&48&SPI1\+\_\+\+POCI&TIMG8\+\_\+\+C0&&&&&&\\\cline{1-10}
+PB22\+INDEX&49&SPI1\+\_\+\+PICO&TIMG8\+\_\+\+C1&&&&&&\\\cline{1-10}
+PB23\+INDEX&50&SPI1\+\_\+\+SCK&COMP0\+\_\+\+OUT&TIMA\+\_\+\+FAL0&&&&&\\\cline{1-10}
+PB24\+INDEX&51&SPI0\+\_\+\+CS3&SPI0\+\_\+\+CS1&TIMA0\+\_\+\+C3&TIMG12\+\_\+\+C1&TIMA0\+\_\+\+C1N&TIMA1\+\_\+\+C0N&&\\\cline{1-10}
+PB25\+INDEX&55&UART0\+\_\+\+CTS&SPI0\+\_\+\+CS0&TIMA\+\_\+\+FAL2&&&&&\\\cline{1-10}
+PB26\+INDEX&56&UART0\+\_\+\+RTS&SPI0\+\_\+\+CS1&TIMA0\+\_\+\+C3&TIMG6\+\_\+\+C0&TIMA1\+\_\+\+C0&&&\\\cline{1-10}
+PB27\+INDEX&57&COMP2\+\_\+\+OUT&SPI1\+\_\+\+CS1&TIMA0\+\_\+\+C3N&TIMG6\+\_\+\+C1&TIMA1\+\_\+\+C1&&&\\\cline{1-10}
+\end{longtabu}
+
+\end{DoxyDate}

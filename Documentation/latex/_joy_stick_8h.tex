@@ -1,0 +1,69 @@
+\hypertarget{_joy_stick_8h}{}\doxysection{inc/\+Joy\+Stick.h File Reference}
+\label{_joy_stick_8h}\index{inc/JoyStick.h@{inc/JoyStick.h}}
+
+
+Joystick on MKII boosterpack.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___m_k_i_i_gaba4ada31a376a9449787b2ba644fcd73}{Joy\+Stick\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize Joy\+Stick. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___m_k_i_i_gab8e1d8bb1022b40a4bfe7157f75f2eb8}{Joy\+Stick\+\_\+\+In\+Button}} (void)
+\begin{DoxyCompactList}\small\item\em Input Joy\+Stick button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga2502aadd5e6134068563df06efab0264}{Joy\+Stick\+\_\+\+In}} (uint32\+\_\+t $\ast$x, uint32\+\_\+t $\ast$y)
+\begin{DoxyCompactList}\small\item\em Read Joy\+Stick. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___m_k_i_i_ga1f39f9a74dd7394dfd7ff8492fa9b272}{Joy\+Stick\+\_\+\+In\+Button1}} (void)
+\begin{DoxyCompactList}\small\item\em Input MKII button1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Joystick on MKII boosterpack. 
+
+Software driver functions for joystick on MKII boosterpack~\newline
+ \href{https://www.ti.com/tool/BOOSTXL-EDUMKII}{\texttt{ https\+://www.\+ti.\+com/tool/\+BOOSTXL-\/\+EDUMKII}} ~\newline
+
+
+\begin{DoxyVersion}{Version}
+ECE319K v1.\+2 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Daniel Valvano and Jonathan Valvano 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2023 by Jonathan W. Valvano, \href{mailto:valvano@mail.utexas.edu}{\texttt{ valvano@mail.\+utexas.\+edu}}, 
+\end{DoxyCopyright}
+\begin{DoxyWarning}{Warning}
+AS-\/\+IS 
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+For more information see \href{http://users.ece.utexas.edu/~valvano/}{\texttt{ http\+://users.\+ece.\+utexas.\+edu/$\sim$valvano/}} 
+\end{DoxyNote}
+\begin{DoxyDate}{Date}
+December 23, 2024  ~\newline
+ \hypertarget{_joy_stick_8h_MKIIjoystickpins2}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{MKII Joystick pins }\label{_joy_stick_8h_MKIIjoystickpins2}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Function}&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Function}&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endhead
+PA26&GPIO &J1.\+5 joystick Select button (digital) ~\newline
+ \\\cline{1-3}
+PA15&ADC0.\+2&J1.\+2 joystick horizontal (X) (analog) ~\newline
+ \\\cline{1-3}
+PA18&ADC1.\+3&J1.\+10 ambient light (OPT3001) and temperature sensor (TMP006) ~\newline
+ \\\cline{1-3}
+PA12&GPIO &J4.\+33 user Button1 (bottom) (digital) ~\newline
+ \\\cline{1-3}
+PA11&GPIO &J4.\+32 user Button2 (top) (digital) (conflicts with UART0 Rx from XDS Tx) ~\newline
+ \\\cline{1-3}
+\end{longtabu}
+
+\end{DoxyDate}

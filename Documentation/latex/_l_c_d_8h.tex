@@ -1,0 +1,137 @@
+\hypertarget{_l_c_d_8h}{}\doxysection{inc/\+LCD.h File Reference}
+\label{_l_c_d_8h}\index{inc/LCD.h@{inc/LCD.h}}
+
+
+LCD on MKII boosterpack.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___m_k_i_i_ga89194c8cf2691afa77b4f81ad1cde821}{LCD\+\_\+\+BLACK}}~0x0000
+\begin{DoxyCompactList}\small\item\em The following constants are possible colors for the LCD in RGB format. \end{DoxyCompactList}\item 
+\#define {\bfseries LCD\+\_\+\+BLUE}~0x001F
+\item 
+\#define {\bfseries LCD\+\_\+\+DARKBLUE}~0x34\+BF
+\item 
+\#define {\bfseries LCD\+\_\+\+RED}~0x\+F800
+\item 
+\#define {\bfseries LCD\+\_\+\+GREEN}~0x07\+E0
+\item 
+\#define {\bfseries LCD\+\_\+\+LIGHTGREEN}~0x07\+EF
+\item 
+\#define {\bfseries LCD\+\_\+\+ORANGE}~0x\+FD60
+\item 
+\#define {\bfseries LCD\+\_\+\+CYAN}~0x07\+FF
+\item 
+\#define {\bfseries LCD\+\_\+\+MAGENTA}~0x\+F81F
+\item 
+\#define {\bfseries LCD\+\_\+\+YELLOW}~0x\+FFE0
+\item 
+\#define {\bfseries LCD\+\_\+\+WHITE}~0x\+FFFF
+\item 
+\#define {\bfseries LCD\+\_\+\+GREY}~0x8410
+\item 
+\#define \mbox{\hyperlink{group___m_k_i_i_ga58a32a58ab2f13f9f7e208b59afb3f9a}{STANDARD\+\_\+\+GALACTIC\+\_\+\+ALPHABET}}~0
+\begin{DoxyCompactList}\small\item\em Set STANDARD\+\_\+\+GALACTIC\+\_\+\+ALPHABET to 1 for Commander Keen alphabet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___m_k_i_i_gaa53c9d40f3aa552a9974cd55ac510cb3}{LCD\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize MKII LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga0ba703879abaa8f20a2350d7d8a50f5a}{LCD\+\_\+\+Draw\+Pixel}} (int16\+\_\+t x, int16\+\_\+t y, uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Color one pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga2f6ee00f6621ca971f75c65f52234999}{LCD\+\_\+\+Draw\+Fast\+VLine}} (int16\+\_\+t x, int16\+\_\+t y, int16\+\_\+t h, uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw a vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_gac47e67002e564f900053bf488a0f71d5}{LCD\+\_\+\+Draw\+Fast\+HLine}} (int16\+\_\+t x, int16\+\_\+t y, int16\+\_\+t w, uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw a horizontal line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_gaf161f992dbc57d0853e256d2c667e367}{LCD\+\_\+\+Fill\+Screen}} (uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Fill the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga0f8a069b62429baf1a223cc0fc26216a}{LCD\+\_\+\+Fill\+Rect}} (int16\+\_\+t x, int16\+\_\+t y, int16\+\_\+t w, int16\+\_\+t h, uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw a filled rectangle. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___m_k_i_i_gad5a5886440616b22b811ab68bb471d32}{LCD\+\_\+\+Color565}} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em RGB to color creation. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___m_k_i_i_gaa4b5e50ce44d53137e0454475b92ad89}{LCD\+\_\+\+Swap\+Color}} (uint16\+\_\+t x)
+\begin{DoxyCompactList}\small\item\em Swaps red and blue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga21aeea1f9ff1ff30bfcdc5869460b2f6}{LCD\+\_\+\+Draw\+Bitmap}} (int16\+\_\+t x, int16\+\_\+t y, const uint16\+\_\+t $\ast$image, int16\+\_\+t w, int16\+\_\+t h)
+\begin{DoxyCompactList}\small\item\em Displays a BMP image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga687f1e588f52d50c525bbc5414af491d}{LCD\+\_\+\+Draw\+CharS}} (int16\+\_\+t x, int16\+\_\+t y, char c, int16\+\_\+t text\+Color, int16\+\_\+t bg\+Color, uint8\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Draw a character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_gab9dde4b1bc3018212340002aab36e036}{LCD\+\_\+\+Draw\+Char}} (int16\+\_\+t x, int16\+\_\+t y, char c, int16\+\_\+t text\+Color, int16\+\_\+t bg\+Color, uint8\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Draw a character. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___m_k_i_i_gaffa07462092243189db5aa62b4ffe71b}{LCD\+\_\+\+Draw\+String}} (uint16\+\_\+t x, uint16\+\_\+t y, char $\ast$pt, int16\+\_\+t text\+Color)
+\begin{DoxyCompactList}\small\item\em Draw a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga47491102a9621cc4aafa84f24b1ec60a}{LCD\+\_\+\+Set\+Cursor}} (uint32\+\_\+t newX, uint32\+\_\+t newY)
+\begin{DoxyCompactList}\small\item\em Move the cursor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga860897e421fe0196aa8dec002b7bf1e2}{LCD\+\_\+\+Out\+UDec}} (uint32\+\_\+t n, int16\+\_\+t text\+Color)
+\begin{DoxyCompactList}\small\item\em Output an unsigned decimal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga6ef9b54e9ebe6b7c22cc13f8f674aa44}{LCD\+\_\+\+Out\+UDec4}} (uint32\+\_\+t n, int16\+\_\+t text\+Color)
+\begin{DoxyCompactList}\small\item\em Output a 4-\/digit unsigned decimal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_gad938d603938f4e35db2b7724b1a95168}{LCD\+\_\+\+Out\+UDec5}} (uint32\+\_\+t n, int16\+\_\+t text\+Color)
+\begin{DoxyCompactList}\small\item\em Output a 5-\/digit unsigned decimal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga2662c81157afb415ad538e724d0a717c}{LCD\+\_\+\+Out\+UFix2\+\_\+1}} (uint32\+\_\+t n, int16\+\_\+t text\+Color)
+\begin{DoxyCompactList}\small\item\em Output a 2-\/digit fixed-\/point decimal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga60950d6081654bc01c438b34cb72a934}{LCD\+\_\+\+Out\+UHex2}} (uint32\+\_\+t n, int16\+\_\+t text\+Color)
+\begin{DoxyCompactList}\small\item\em Output a 2-\/digit hexadecimal number. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga4252ab9cc54e1eac3c62534667b472bd}{LCD\+\_\+\+Out\+Char}} (char ch)
+\begin{DoxyCompactList}\small\item\em Output a character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga9e913fcb6d17acf582f200e01ec02ba3}{LCD\+\_\+\+Out\+String}} (char $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Output a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga1aed8b83ed0c8a4871f8da080ff9d74b}{LCD\+\_\+\+Set\+Text\+Color}} (uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em sets the text color \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga6df874d61387bd819c0427f48ef25644}{LCD\+\_\+\+Drawaxes}} (uint16\+\_\+t axis\+Color, uint16\+\_\+t bg\+Color, char $\ast$x\+Label, char $\ast$y\+Label1, uint16\+\_\+t label1\+Color, char $\ast$y\+Label2, uint16\+\_\+t label2\+Color, int32\+\_\+t ymax, int32\+\_\+t ymin)
+\begin{DoxyCompactList}\small\item\em Initializes a plot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga0f75a18942856dae35661a0c2835b5df}{LCD\+\_\+\+Plot\+Point}} (int32\+\_\+t data1, uint16\+\_\+t color1)
+\begin{DoxyCompactList}\small\item\em Plot one point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_gae94ed7a4df800ed7bbb442498c843096}{LCD\+\_\+\+Plot\+Increment}} (void)
+\begin{DoxyCompactList}\small\item\em Moves the plot cursor in time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+LCD on MKII boosterpack. 
+
+Software driver functions for joystick on MKII boosterpack~\newline
+ \href{https://www.ti.com/tool/BOOSTXL-EDUMKII}{\texttt{ https\+://www.\+ti.\+com/tool/\+BOOSTXL-\/\+EDUMKII}} ~\newline
+ Runs with an Educational Booster\+Pack MKII (BOOSTXL-\/\+EDUMKII). This file contains the function prototypes for the software interface to the MKII Booster\+Pack. This board support package (BSP) is an abstraction layer, forming a bridge between the low-\/level hardware and the high-\/level software. The Crystalfontz CFAF128128\+B-\/0145T color 128x128-\/pixel TFT LCD supports display updates up to 20 frames per second (FPS) while only requiring a few lines to control the TFT LCD module through the SPI interface. This module has a color depth of 262K colors and a contrast ratio of 350. The reference designator for the color LCD is LCD1. More information on the color LCD can be found at~\newline
+ \href{https://www.crystalfontz.com}{\texttt{ https\+://www.\+crystalfontz.\+com}} \begin{DoxyVersion}{Version}
+ECE319K v1.\+2 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Daniel Valvano and Jonathan Valvano 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2025 by Jonathan W. Valvano, \href{mailto:valvano@mail.utexas.edu}{\texttt{ valvano@mail.\+utexas.\+edu}}, 
+\end{DoxyCopyright}
+\begin{DoxyWarning}{Warning}
+AS-\/\+IS 
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+For more information see \href{http://users.ece.utexas.edu/~valvano/}{\texttt{ http\+://users.\+ece.\+utexas.\+edu/$\sim$valvano/}} 
+\end{DoxyNote}
+\begin{DoxyDate}{Date}
+December 23, 2024  ~\newline
+ \hypertarget{_l_c_d_8h_MKIILCDpins2}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{MKII LCD pins }\label{_l_c_d_8h_MKIILCDpins2}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Function }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Function }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endhead
+PB9 &SPI1 SCLK &J1.\+7 LCD SPI clock (SPI) ~\newline
+ \\\cline{1-3}
+PB6 &SPI1 CS0 &J2.\+13 LCD SPI CS (SPI) ~\newline
+ \\\cline{1-3}
+PB8 &SPI1 PICO &J2.\+15 LCD SPI data (SPI) ~\newline
+ \\\cline{1-3}
+PB15&GPIO &J2.\+17 LCD !\+RST (digital) ~\newline
+ \\\cline{1-3}
+PA13&GPIO &J4.\+31 LCD RS (digital) ~\newline
+ \\\cline{1-3}
+\end{longtabu}
+
+\end{DoxyDate}

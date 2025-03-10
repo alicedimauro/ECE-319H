@@ -1,0 +1,234 @@
+\hypertarget{group___r_s_l_k}{}\doxysection{RSLK}
+\label{group___r_s_l_k}\index{RSLK@{RSLK}}
+
+
+RSLK Bumper switches.  
+
+
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{_bump_8h}{Bump.\+h}}
+\begin{DoxyCompactList}\small\item\em RSLK Bumper switches. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{_motor_8h}{Motor.\+h}}
+\begin{DoxyCompactList}\small\item\em RSLK dual H-\/bridge driver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___r_s_l_k_ga3e0baa71e3035e91e152c263d26427c2}{Bump\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize bump switches. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___r_s_l_k_ga3bb921bccc5c9f3bbaae177e14a986f9}{Bump\+\_\+\+In}} (void)
+\begin{DoxyCompactList}\small\item\em Read bump switches. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_s_l_k_gadb06fc7f4c3ca40cb6bab543e1a2eac5}{Motor\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize motors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_s_l_k_ga19cfea88b92de3549b4ab9204d4f2a13}{Motor\+\_\+\+Forward}} (uint32\+\_\+t duty\+Left, uint32\+\_\+t duty\+Right)
+\begin{DoxyCompactList}\small\item\em Go forward. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_s_l_k_ga9bfe94b8d20c3e71f3781772bce0772b}{Motor\+\_\+\+Backward}} (uint32\+\_\+t duty\+Left, uint32\+\_\+t duty\+Right)
+\begin{DoxyCompactList}\small\item\em Go backward. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_s_l_k_ga1b23519152fba9fa0f270f35b2221896}{Motor\+\_\+\+Right}} (uint32\+\_\+t duty\+Left, uint32\+\_\+t duty\+Right)
+\begin{DoxyCompactList}\small\item\em Turn right. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_s_l_k_ga589aced68b588fc5095cf96bee364107}{Motor\+\_\+\+Left}} (uint32\+\_\+t duty\+Left, uint32\+\_\+t duty\+Right)
+\begin{DoxyCompactList}\small\item\em Turn left. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RSLK Bumper switches. 
+
+RSLK motor interface.
+
+\hypertarget{group___r_s_l_k_Bump pins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{RSLK Bumper switches}\label{group___r_s_l_k_Bump pins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ TM4C }&\cellcolor{\tableheadbgcolor}\textbf{ MSPM0 }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ TM4C }&\cellcolor{\tableheadbgcolor}\textbf{ MSPM0 }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endhead
+PA5 &PA27 &Left, Bump 0, \\\cline{1-3}
+PF0 &PB15 &Center Left, Bump 1, \\\cline{1-3}
+PB3 &PA28 &Center Right, Bump 2 \\\cline{1-3}
+PC4 &PA31 &Right, Bump 3 \\\cline{1-3}
+\end{longtabu}
+
+
+\hypertarget{group___r_s_l_k_RSLKmotor pins}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{RSLK RSLK motor pins}\label{group___r_s_l_k_RSLKmotor pins}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ TM4C }&\cellcolor{\tableheadbgcolor}\textbf{ MSPM0 }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ TM4C }&\cellcolor{\tableheadbgcolor}\textbf{ MSPM0 }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endhead
+PF2 &PB4 &Motor\+\_\+\+PWML, ML+, IN3, PB.\+4/\+TIMA1\+\_\+\+C0; \\\cline{1-3}
+PF3 &PB1 &Motor\+\_\+\+PWMR, MR+, IN1, PB.\+1/\+TIMA1\+\_\+\+C1; \\\cline{1-3}
+PA3 &PB0 &Motor\+\_\+\+DIR\+\_\+L,ML-\/, IN4, 1 means forward, 0 means backward \\\cline{1-3}
+PA2 &PB16 &Motor\+\_\+\+DIR\+\_\+R,MR-\/, IN2 \\\cline{1-3}
+\end{longtabu}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___r_s_l_k_ga3bb921bccc5c9f3bbaae177e14a986f9}\label{group___r_s_l_k_ga3bb921bccc5c9f3bbaae177e14a986f9}} 
+\index{RSLK@{RSLK}!Bump\_In@{Bump\_In}}
+\index{Bump\_In@{Bump\_In}!RSLK@{RSLK}}
+\doxysubsubsection{\texorpdfstring{Bump\_In()}{Bump\_In()}}
+{\footnotesize\ttfamily uint32\+\_\+t Bump\+\_\+\+In (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Read bump switches. 
+
+Input RSLK bump switches~\newline
+ bit 0 is left~\newline
+ bit 1 is left center~\newline
+ bit 2 is right center~\newline
+ bit 3 is right 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 to 15 in positive logic 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_s_l_k_ga3e0baa71e3035e91e152c263d26427c2}\label{group___r_s_l_k_ga3e0baa71e3035e91e152c263d26427c2}} 
+\index{RSLK@{RSLK}!Bump\_Init@{Bump\_Init}}
+\index{Bump\_Init@{Bump\_Init}!RSLK@{RSLK}}
+\doxysubsubsection{\texorpdfstring{Bump\_Init()}{Bump\_Init()}}
+{\footnotesize\ttfamily void Bump\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize bump switches. 
+
+Initialize RSLK bump switches 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_s_l_k_ga9bfe94b8d20c3e71f3781772bce0772b}\label{group___r_s_l_k_ga9bfe94b8d20c3e71f3781772bce0772b}} 
+\index{RSLK@{RSLK}!Motor\_Backward@{Motor\_Backward}}
+\index{Motor\_Backward@{Motor\_Backward}!RSLK@{RSLK}}
+\doxysubsubsection{\texorpdfstring{Motor\_Backward()}{Motor\_Backward()}}
+{\footnotesize\ttfamily void Motor\+\_\+\+Backward (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{duty\+Left,  }\item[{uint32\+\_\+t}]{duty\+Right }\end{DoxyParamCaption})}
+
+
+
+Go backward. 
+
+Set RSLK motor power backward~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em duty\+Left} & 2 to 99998 us \\
+\hline
+{\em duty\+Right} & 2 to 99998 us \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+period is 10000 us 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_s_l_k_ga19cfea88b92de3549b4ab9204d4f2a13}\label{group___r_s_l_k_ga19cfea88b92de3549b4ab9204d4f2a13}} 
+\index{RSLK@{RSLK}!Motor\_Forward@{Motor\_Forward}}
+\index{Motor\_Forward@{Motor\_Forward}!RSLK@{RSLK}}
+\doxysubsubsection{\texorpdfstring{Motor\_Forward()}{Motor\_Forward()}}
+{\footnotesize\ttfamily void Motor\+\_\+\+Forward (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{duty\+Left,  }\item[{uint32\+\_\+t}]{duty\+Right }\end{DoxyParamCaption})}
+
+
+
+Go forward. 
+
+Set RSLK motor power forward~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em duty\+Left} & 2 to 99998 us \\
+\hline
+{\em duty\+Right} & 2 to 99998 us \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+period is 10000 us 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_s_l_k_gadb06fc7f4c3ca40cb6bab543e1a2eac5}\label{group___r_s_l_k_gadb06fc7f4c3ca40cb6bab543e1a2eac5}} 
+\index{RSLK@{RSLK}!Motor\_Init@{Motor\_Init}}
+\index{Motor\_Init@{Motor\_Init}!RSLK@{RSLK}}
+\doxysubsubsection{\texorpdfstring{Motor\_Init()}{Motor\_Init()}}
+{\footnotesize\ttfamily void Motor\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize motors. 
+
+Initialize RSLK motors 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+period is 10000 us 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_s_l_k_ga589aced68b588fc5095cf96bee364107}\label{group___r_s_l_k_ga589aced68b588fc5095cf96bee364107}} 
+\index{RSLK@{RSLK}!Motor\_Left@{Motor\_Left}}
+\index{Motor\_Left@{Motor\_Left}!RSLK@{RSLK}}
+\doxysubsubsection{\texorpdfstring{Motor\_Left()}{Motor\_Left()}}
+{\footnotesize\ttfamily void Motor\+\_\+\+Left (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{duty\+Left,  }\item[{uint32\+\_\+t}]{duty\+Right }\end{DoxyParamCaption})}
+
+
+
+Turn left. 
+
+Set RSLK motor power left turn~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em duty\+Left} & 2 to 99998 us \\
+\hline
+{\em duty\+Right} & 2 to 99998 us \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+period is 10000 us 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_s_l_k_ga1b23519152fba9fa0f270f35b2221896}\label{group___r_s_l_k_ga1b23519152fba9fa0f270f35b2221896}} 
+\index{RSLK@{RSLK}!Motor\_Right@{Motor\_Right}}
+\index{Motor\_Right@{Motor\_Right}!RSLK@{RSLK}}
+\doxysubsubsection{\texorpdfstring{Motor\_Right()}{Motor\_Right()}}
+{\footnotesize\ttfamily void Motor\+\_\+\+Right (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{duty\+Left,  }\item[{uint32\+\_\+t}]{duty\+Right }\end{DoxyParamCaption})}
+
+
+
+Turn right. 
+
+Set RSLK motor power right turn~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em duty\+Left} & 2 to 99998 us \\
+\hline
+{\em duty\+Right} & 2 to 99998 us \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+period is 10000 us 
+\end{DoxyNote}

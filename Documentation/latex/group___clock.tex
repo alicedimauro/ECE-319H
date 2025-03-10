@@ -1,0 +1,305 @@
+\hypertarget{group___clock}{}\doxysection{Clock}
+\label{group___clock}\index{Clock@{Clock}}
+
+
+Provide functions that initialize the MSPM0 clock module.  
+
+
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{_clock_8h}{Clock.\+h}}
+\begin{DoxyCompactList}\small\item\em Provide functions that initialize the MSPM0 clock module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___clock_ga3d159627b49ae4c7f3a9351e1d3cb3d3}\label{group___clock_ga3d159627b49ae4c7f3a9351e1d3cb3d3}} 
+\#define \mbox{\hyperlink{group___clock_ga3d159627b49ae4c7f3a9351e1d3cb3d3}{OSCFREQ32\+MHZ}}~0
+\begin{DoxyCompactList}\small\item\em using OSCFREQ32\+MHZ Clock\+\_\+\+Init will create 32 MHz bus clock \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___clock_ga5491bd7884ead39ef78539bf8872cb01}\label{group___clock_ga5491bd7884ead39ef78539bf8872cb01}} 
+\#define \mbox{\hyperlink{group___clock_ga5491bd7884ead39ef78539bf8872cb01}{OSCFREQ4\+MHZ}}~1
+\begin{DoxyCompactList}\small\item\em using OSCFREQ4\+MHZ Clock\+\_\+\+Init will create 4 MHz bus clock \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___clock_gad6e8e509995ef7c2959d435cd1dc69c3}{Clock\+\_\+\+Init80\+MHz}} (int enable\+PA14)
+\begin{DoxyCompactList}\small\item\em Initialize clock to 80 MHz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___clock_ga20a9d54a19475c579f9652770abaa9d2}{Clock\+\_\+\+Init40\+MHz}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize clock to 40 MHz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___clock_ga88bfe875e8c76367e3bb05f7fce745db}{Clock\+\_\+\+Init}} (uint32\+\_\+t freq)
+\begin{DoxyCompactList}\small\item\em Initialize clock to 4 or 32 MHz. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___clock_ga0f256511d308343ce429ae2a9aabb29b}{Clock\+\_\+\+Freq}} (void)
+\begin{DoxyCompactList}\small\item\em Returns current clock bus frequency in Hz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___clock_ga03c471a7dd41a6d3fd23149fab515836}{Clock\+\_\+\+Delay}} (uint32\+\_\+t cycles) \+\_\+\+\_\+attribute\+\_\+\+\_\+((noinline))
+\begin{DoxyCompactList}\small\item\em Software implementation of a busy-\/wait delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___clock_gad00b9da3218943c379accd422f86826e}{Clock\+\_\+\+Delay1ms}} (uint32\+\_\+t ms)
+\begin{DoxyCompactList}\small\item\em Software implementation of a busy-\/wait delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___clock_gaeb71ef4b996788e4aa8cda6ef617f58f}{Sys\+Tick\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Sys\+Tick for busy-\/wait delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___clock_ga8bf6781e1bcf2aac3a3a4ab5f686b972}{Sys\+Tick\+\_\+\+Wait}} (uint32\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em Sys\+Tick implementation of a busy-\/wait delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___clock_ga20e5fc17295570c04c35e77a8eedc1b6}{Sys\+Tick\+\_\+\+Wait10ms}} (uint32\+\_\+t t)
+\begin{DoxyCompactList}\small\item\em Sys\+Tick implementation of a busy-\/wait delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___clock_gae7ab7561bd7c200c0f5180d85e801f97}{Timer\+G8\+\_\+\+Init}} (uint32\+\_\+t divider, uint32\+\_\+t prescale)
+\begin{DoxyCompactList}\small\item\em Sys\+Tick for busy-\/wait delay. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provide functions that initialize the MSPM0 clock module. 
+
+\hypertarget{group___clock_Clockpins2}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{Clock pins}\label{group___clock_Clockpins2}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-2}
+\endhead
+PA5 &HFXIN crystal \\\cline{1-2}
+PA6 &HFXOUT crystal \\\cline{1-2}
+PA14 &Possible clock output \\\cline{1-2}
+\end{longtabu}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___clock_ga03c471a7dd41a6d3fd23149fab515836}\label{group___clock_ga03c471a7dd41a6d3fd23149fab515836}} 
+\index{Clock@{Clock}!Clock\_Delay@{Clock\_Delay}}
+\index{Clock\_Delay@{Clock\_Delay}!Clock@{Clock}}
+\doxysubsubsection{\texorpdfstring{Clock\_Delay()}{Clock\_Delay()}}
+{\footnotesize\ttfamily void Clock\+\_\+\+Delay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{cycles }\end{DoxyParamCaption})}
+
+
+
+Software implementation of a busy-\/wait delay. 
+
+Simple delay function which delays about cycles bus cycles. It is implemented with a for-\/loop and is approximate. 
+\begin{DoxyParams}{Parameters}
+{\em cycles} & is the number of bus cycles to wait \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+For a more accurate time delay, you could use the Sys\+Tick module. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___clock_gad00b9da3218943c379accd422f86826e}\label{group___clock_gad00b9da3218943c379accd422f86826e}} 
+\index{Clock@{Clock}!Clock\_Delay1ms@{Clock\_Delay1ms}}
+\index{Clock\_Delay1ms@{Clock\_Delay1ms}!Clock@{Clock}}
+\doxysubsubsection{\texorpdfstring{Clock\_Delay1ms()}{Clock\_Delay1ms()}}
+{\footnotesize\ttfamily void Clock\+\_\+\+Delay1ms (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ms }\end{DoxyParamCaption})}
+
+
+
+Software implementation of a busy-\/wait delay. 
+
+Simple delay function which delays about ms milliseconds. It is implemented with a nested for-\/loop and is approximate. 
+\begin{DoxyParams}{Parameters}
+{\em ms} & is the number of milliseconds to wait \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+For a more accurate time delay, you could use the Sys\+Tick module. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___clock_ga0f256511d308343ce429ae2a9aabb29b}\label{group___clock_ga0f256511d308343ce429ae2a9aabb29b}} 
+\index{Clock@{Clock}!Clock\_Freq@{Clock\_Freq}}
+\index{Clock\_Freq@{Clock\_Freq}!Clock@{Clock}}
+\doxysubsubsection{\texorpdfstring{Clock\_Freq()}{Clock\_Freq()}}
+{\footnotesize\ttfamily uint32\+\_\+t Clock\+\_\+\+Freq (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns current clock bus frequency in Hz. 
+
+Return the current bus clock frequency 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+frequency of the system clock in Hz 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+In this module, the return result will be 3000000, 32000000, 40000000 or 80000000 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___clock_ga88bfe875e8c76367e3bb05f7fce745db}{Clock\+\_\+\+Init()}},\mbox{\hyperlink{group___clock_ga20a9d54a19475c579f9652770abaa9d2}{Clock\+\_\+\+Init40\+MHz()}},\mbox{\hyperlink{group___clock_gad6e8e509995ef7c2959d435cd1dc69c3}{Clock\+\_\+\+Init80\+MHz()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___clock_ga88bfe875e8c76367e3bb05f7fce745db}\label{group___clock_ga88bfe875e8c76367e3bb05f7fce745db}} 
+\index{Clock@{Clock}!Clock\_Init@{Clock\_Init}}
+\index{Clock\_Init@{Clock\_Init}!Clock@{Clock}}
+\doxysubsubsection{\texorpdfstring{Clock\_Init()}{Clock\_Init()}}
+{\footnotesize\ttfamily void Clock\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{freq }\end{DoxyParamCaption})}
+
+
+
+Initialize clock to 4 or 32 MHz. 
+
+Configure the MSPM0 clock to run at 4MHz or 32MHz 
+\begin{DoxyParams}{Parameters}
+{\em freq} & is either OSCFREQ32\+MHZ or OSCFREQ4\+MHZ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Since the crystal is not used, the bus clock will not be accurate 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___clock_ga0f256511d308343ce429ae2a9aabb29b}{Clock\+\_\+\+Freq()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___clock_ga20a9d54a19475c579f9652770abaa9d2}\label{group___clock_ga20a9d54a19475c579f9652770abaa9d2}} 
+\index{Clock@{Clock}!Clock\_Init40MHz@{Clock\_Init40MHz}}
+\index{Clock\_Init40MHz@{Clock\_Init40MHz}!Clock@{Clock}}
+\doxysubsubsection{\texorpdfstring{Clock\_Init40MHz()}{Clock\_Init40MHz()}}
+{\footnotesize\ttfamily void Clock\+\_\+\+Init40\+MHz (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize clock to 40 MHz. 
+
+Configure the MSPM0 clock to run at 40 MHz 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Since the crystal is used, the bus clock will be very accurate 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___clock_ga0f256511d308343ce429ae2a9aabb29b}{Clock\+\_\+\+Freq()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___clock_gad6e8e509995ef7c2959d435cd1dc69c3}\label{group___clock_gad6e8e509995ef7c2959d435cd1dc69c3}} 
+\index{Clock@{Clock}!Clock\_Init80MHz@{Clock\_Init80MHz}}
+\index{Clock\_Init80MHz@{Clock\_Init80MHz}!Clock@{Clock}}
+\doxysubsubsection{\texorpdfstring{Clock\_Init80MHz()}{Clock\_Init80MHz()}}
+{\footnotesize\ttfamily void Clock\+\_\+\+Init80\+MHz (\begin{DoxyParamCaption}\item[{int}]{enable\+PA14 }\end{DoxyParamCaption})}
+
+
+
+Initialize clock to 80 MHz. 
+
+Configure the MSPM0 clock to run at 80 MHz. In ECE319K we will not enable clock output on\+PA14. 
+\begin{DoxyParams}{Parameters}
+{\em enable\+PA14} & 1 means clock output on PA14, 0 means no output on PA14 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Since the crystal is used, the bus clock will be very accurate 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___clock_ga0f256511d308343ce429ae2a9aabb29b}{Clock\+\_\+\+Freq()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___clock_gaeb71ef4b996788e4aa8cda6ef617f58f}\label{group___clock_gaeb71ef4b996788e4aa8cda6ef617f58f}} 
+\index{Clock@{Clock}!SysTick\_Init@{SysTick\_Init}}
+\index{SysTick\_Init@{SysTick\_Init}!Clock@{Clock}}
+\doxysubsubsection{\texorpdfstring{SysTick\_Init()}{SysTick\_Init()}}
+{\footnotesize\ttfamily void Sys\+Tick\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Sys\+Tick for busy-\/wait delay. 
+
+Initialize the 24-\/bit Sys\+Tick timer. 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Call this before using Sys\+Tick\+\_\+\+Wait or Sys\+Tick\+\_\+\+Wait10ms. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___clock_ga8bf6781e1bcf2aac3a3a4ab5f686b972}\label{group___clock_ga8bf6781e1bcf2aac3a3a4ab5f686b972}} 
+\index{Clock@{Clock}!SysTick\_Wait@{SysTick\_Wait}}
+\index{SysTick\_Wait@{SysTick\_Wait}!Clock@{Clock}}
+\doxysubsubsection{\texorpdfstring{SysTick\_Wait()}{SysTick\_Wait()}}
+{\footnotesize\ttfamily void Sys\+Tick\+\_\+\+Wait (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{delay }\end{DoxyParamCaption})}
+
+
+
+Sys\+Tick implementation of a busy-\/wait delay. 
+
+Delay function which delays about delay bus cycles. It is implemented with Sys\+Tick and is accurate. 
+\begin{DoxyParams}{Parameters}
+{\em delay} & is the number of bus cycles to wait \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___clock_ga20e5fc17295570c04c35e77a8eedc1b6}\label{group___clock_ga20e5fc17295570c04c35e77a8eedc1b6}} 
+\index{Clock@{Clock}!SysTick\_Wait10ms@{SysTick\_Wait10ms}}
+\index{SysTick\_Wait10ms@{SysTick\_Wait10ms}!Clock@{Clock}}
+\doxysubsubsection{\texorpdfstring{SysTick\_Wait10ms()}{SysTick\_Wait10ms()}}
+{\footnotesize\ttfamily void Sys\+Tick\+\_\+\+Wait10ms (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{t }\end{DoxyParamCaption})}
+
+
+
+Sys\+Tick implementation of a busy-\/wait delay. 
+
+Delay function which delays about t$\ast$10ms time, assuming the bus clock is 80 MHz. It is implemented with Sys\+Tick and is accurate. 
+\begin{DoxyParams}{Parameters}
+{\em t} & is the time to wait (units 10ms) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___clock_gae7ab7561bd7c200c0f5180d85e801f97}\label{group___clock_gae7ab7561bd7c200c0f5180d85e801f97}} 
+\index{Clock@{Clock}!TimerG8\_Init@{TimerG8\_Init}}
+\index{TimerG8\_Init@{TimerG8\_Init}!Clock@{Clock}}
+\doxysubsubsection{\texorpdfstring{TimerG8\_Init()}{TimerG8\_Init()}}
+{\footnotesize\ttfamily void Timer\+G8\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{divider,  }\item[{uint32\+\_\+t}]{prescale }\end{DoxyParamCaption})}
+
+
+
+Sys\+Tick for busy-\/wait delay. 
+
+Initialize the 16-\/bit G8 timer for continuous counting. The precision is 16 bits. Simply read TIMG8-\/$>$COUNTERREGS.\+CTR for 16 bit time~\newline
+ \hypertarget{group___clock_TimerG8}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\caption{Timer\+G8 examples for 80 MHz clock}\label{group___clock_TimerG8}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ divider}&\cellcolor{\tableheadbgcolor}\textbf{ prescale}&\cellcolor{\tableheadbgcolor}\textbf{ resolution}&\cellcolor{\tableheadbgcolor}\textbf{ range }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ divider}&\cellcolor{\tableheadbgcolor}\textbf{ prescale}&\cellcolor{\tableheadbgcolor}\textbf{ resolution}&\cellcolor{\tableheadbgcolor}\textbf{ range }\\\cline{1-4}
+\endhead
+1 &1 &12.\+5ns &819 us \\\cline{1-4}
+1 &80 &1us &65 ms \\\cline{1-4}
+1 &160 &2us &131 ms \\\cline{1-4}
+5 &160 &10us &655 ms \\\cline{1-4}
+8 &256 &25.\+6us &1.\+7 s \\\cline{1-4}
+\end{longtabu}
+
+\begin{DoxyParams}{Parameters}
+{\em divider} & must be 1 to 8 \\
+\hline
+{\em prescale} & must be 1 to 256 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+resolution is busperiod$\ast$divider$\ast$prescale 
+\end{DoxyNote}

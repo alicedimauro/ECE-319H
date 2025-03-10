@@ -1,0 +1,39 @@
+December 23, 2024 \begin{DoxyAuthor}{Author}
+Jonathan Valvano, PhD 
+
+Daniel Valvano, BS
+\end{DoxyAuthor}
+\hypertarget{index_sec1}{}\doxysection{Overview}\label{index_sec1}
+\begin{DoxyParagraph}{}
+An embedded system is a system that performs a specific task and has a computer embedded inside. A system is comprised of components and interfaces connected for a common purpose. This book is an introduction to embedded systems. Specific topics include the MSPM0+ microcontroller, finite-\/state machines, debugging, fixed-\/point numbers, the design of software in assembly language and C, elementary data structures, programming input/output, interrupts, measurements with analog to digital conversion, graphics, sound production with digital to analog conversion, introduction to networks using serial communication, and real-\/time systems. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+There is a web site accompanying this book \href{http://users.ece.utexas.edu/~valvano/mspm0}{\texttt{ http\+://users.\+ece.\+utexas.\+edu/$\sim$valvano/mspm0}}. Posted here are projects for each of the example programs in the book
+\end{DoxyParagraph}
+\hypertarget{index_sec2}{}\doxysection{Hardware}\label{index_sec2}
+\begin{DoxyParagraph}{}
+The hardware used in these projects include \begin{DoxyItemize}
+\item MSPM0\+G3507 Launch\+Pad (LP-\/\+MSPM0\+G3507) \item Educational Booster\+Pack MKII (BOOSTXL-\/\+EDUMKII) \item LEDs, Switches, slide pot, speaker \item ST7735R or SSD1306 display \item RSLK2 Robot Systems Learning Kit ~\newline
+\end{DoxyItemize}
+These project utilize the MSPM0\+G3507 Launch\+Pad. For more information see~\newline
+ \href{https://www.ti.com/product/LP-MSPM0G3507/part-details/LP-MSPM0G3507}{\texttt{ https\+://www.\+ti.\+com/product/\+LP-\/\+MSPM0\+G3507/part-\/details/\+LP-\/\+MSPM0\+G3507}}~\newline
+  
+\begin{DoxyImage}
+\includegraphics[width=10cm]{Fg01_07_02_LaunchPad.png}
+\doxyfigcaption{TI MSPM0 Launch\+Pad}
+\end{DoxyImage}
+
+\end{DoxyParagraph}
+The Educational Booster\+Pack MKII is simple platform with lots of I/O, shown here with the CC2650 Booster\+Pack. For more information see~\newline
+ \href{https://www.ti.com/tool/BOOSTXL-EDUMKII}{\texttt{ https\+://www.\+ti.\+com/tool/\+BOOSTXL-\/\+EDUMKII}}~\newline
+  
+\begin{DoxyImage}
+\includegraphics[width=10cm]{MKIIBoosterPack.png}
+\doxyfigcaption{TI Educational Booster\+Pack MKII}
+\end{DoxyImage}
+\hypertarget{index_sec3}{}\doxysection{Modules}\label{index_sec3}
+\begin{DoxyParagraph}{}
+The documentation is divided into modules. \begin{DoxyItemize}
+\item ADC contains the analog to digital converter \item Clock contains the MSPM0\+G3507 clock and timers \item DAC contains the digital to analog converter \item Debugging contains dump, TExaS scope, and TExaS logic analyzer \item Display contains the SSD1306 display \item Edge\+Triggered contains edge-\/triggered interrupts \item FIFO contains software a first in first out queue \item Launch\+Pad contains software for the LEDs and switches on the Launch\+Pad \item MKII contains software for I2C module, plus devices on MKII \item PWM contains software for Pulse width modulation \item SPI contains software for synchronous serial communication \item ST7735 contains software for ST7735 display \item Timer contains software for the hardware times \item UART contains software for asynchronous serial communication \end{DoxyItemize}
+
+\end{DoxyParagraph}

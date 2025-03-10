@@ -1,0 +1,57 @@
+\hypertarget{_f_i_f_o_8h}{}\doxysection{inc/\+FIFO.h File Reference}
+\label{_f_i_f_o_8h}\index{inc/FIFO.h@{inc/FIFO.h}}
+
+
+Provide functions for a first in first out queue.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___f_i_f_o_gacac935f876812a013763d9b9a710ce90}{TXFIFOSIZE}}~64
+\begin{DoxyCompactList}\small\item\em TXFIFOSIZE the size of the transmit FIFO, which can hold 0 to TXFIFOSIZE-\/1 elements. The size must be a power of 2. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___f_i_f_o_ga7db362029bfc1133f544334692c6d9cb}{RXFIFOSIZE}}~16
+\begin{DoxyCompactList}\small\item\em RXFIFOSIZE the size of the receive FIFO, which can hold 0 to RXFIFOSIZE-\/1 elements The size must be a power of 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___f_i_f_o_ga12f98aad5544d637df30127479c3ad0a}{Tx\+Fifo\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize FIFO. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___f_i_f_o_gad88cce6fdfe0b28cc009844c3707349c}{Tx\+Fifo\+\_\+\+Put}} (char data)
+\begin{DoxyCompactList}\small\item\em Put FIFO. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{group___f_i_f_o_ga847a7a2b184edc97682f81f6eb920a87}{Tx\+Fifo\+\_\+\+Get}} (void)
+\begin{DoxyCompactList}\small\item\em Get FIFO. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___f_i_f_o_ga6bddd7794716cb6c25fd532aa2402b51}{Tx\+Fifo\+\_\+\+Size}} (void)
+\begin{DoxyCompactList}\small\item\em number of elements in FIFO \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___f_i_f_o_ga6cbc225d9f8a8b4548578117f180d656}{Rx\+Fifo\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize FIFO. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___f_i_f_o_gac964616ddfe5d9ac964a45edaed99035}{Rx\+Fifo\+\_\+\+Put}} (char data)
+\begin{DoxyCompactList}\small\item\em Put FIFO. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{group___f_i_f_o_ga65360c4fc119e55405acc5eac6dcd150}{Rx\+Fifo\+\_\+\+Get}} (void)
+\begin{DoxyCompactList}\small\item\em Get FIFO. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___f_i_f_o_ga926d96cfdd46ff110c52ed6c8a3bd975}{Rx\+Fifo\+\_\+\+Size}} (void)
+\begin{DoxyCompactList}\small\item\em number of elements in FIFO \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provide functions for a first in first out queue. 
+
+Runs on any Microcontroller. Provide functions that initialize a FIFO, put data in, get data out, and return the current size. The file includes two FIFOs using index implementation. ~\newline
+ \begin{DoxyVersion}{Version}
+ECE319K v1.\+2 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Daniel Valvano and Jonathan Valvano 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2023 by Jonathan W. Valvano, \href{mailto:valvano@mail.utexas.edu}{\texttt{ valvano@mail.\+utexas.\+edu}}, 
+\end{DoxyCopyright}
+\begin{DoxyWarning}{Warning}
+AS-\/\+IS 
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+For more information see \href{http://users.ece.utexas.edu/~valvano/}{\texttt{ http\+://users.\+ece.\+utexas.\+edu/$\sim$valvano/}} 
+\end{DoxyNote}
+\begin{DoxyDate}{Date}
+December 23, 2024 
+\end{DoxyDate}

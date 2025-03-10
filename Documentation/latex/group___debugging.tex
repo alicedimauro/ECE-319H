@@ -1,0 +1,298 @@
+\hypertarget{group___debugging}{}\doxysection{Debugging}
+\label{group___debugging}\index{Debugging@{Debugging}}
+
+
+Debugging tools.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___debugging_ga4b13398ed52d152a863c3104dbe64c1e}\label{group___debugging_ga4b13398ed52d152a863c3104dbe64c1e}} 
+\#define \mbox{\hyperlink{group___debugging_ga4b13398ed52d152a863c3104dbe64c1e}{PAout\+Pin0\+Bit0}}~(GPIOA-\/$>$DOUT31\+\_\+0\&1)
+\begin{DoxyCompactList}\small\item\em using PAout\+Pin0\+Bit0 places PA0 output on bit 0 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___debugging_gaa9e79475b029458c786129678df3f43f}\label{group___debugging_gaa9e79475b029458c786129678df3f43f}} 
+\#define \mbox{\hyperlink{group___debugging_gaa9e79475b029458c786129678df3f43f}{PBout\+Pin22\+Bit1}}~(((GPIOB-\/$>$DOUT31\+\_\+0\&(1$<$$<$22))$>$$>$21))
+\begin{DoxyCompactList}\small\item\em using PBout\+Pin22\+Bit1 places PB22 output on bit 1 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___debugging_ga8a498d3a6c2f0a6fdb1b84b9c02fefad}\label{group___debugging_ga8a498d3a6c2f0a6fdb1b84b9c02fefad}} 
+\#define \mbox{\hyperlink{group___debugging_ga8a498d3a6c2f0a6fdb1b84b9c02fefad}{PBout\+Pin26\+Bit2}}~(((GPIOB-\/$>$DOUT31\+\_\+0\&(1$<$$<$26))$>$$>$24))
+\begin{DoxyCompactList}\small\item\em using PBout\+Pin26\+Bit2 places PB26 output on bit 2 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___debugging_ga645e278a06ecca2fc7f2b8316c2b75c7}\label{group___debugging_ga645e278a06ecca2fc7f2b8316c2b75c7}} 
+\#define \mbox{\hyperlink{group___debugging_ga645e278a06ecca2fc7f2b8316c2b75c7}{PBout\+Pin27\+Bit3}}~(((GPIOB-\/$>$DOUT31\+\_\+0\&(1$<$$<$27))$>$$>$24))
+\begin{DoxyCompactList}\small\item\em using PBout\+Pin27\+Bit3 places PB27 output on bit 3 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___debugging_ga588874a1b34d9d2239aec320a4805540}\label{group___debugging_ga588874a1b34d9d2239aec320a4805540}} 
+\#define \mbox{\hyperlink{group___debugging_ga588874a1b34d9d2239aec320a4805540}{PAin\+Pin18\+Bit4}}~(((GPIOA-\/$>$DIN31\+\_\+0\&(1$<$$<$18))$>$$>$14))
+\begin{DoxyCompactList}\small\item\em using PAin\+Pin18\+Bit4 places PA18 input on bit 4 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___debugging_gaa158042fc6e3bfba40432ff8bd2735b9}\label{group___debugging_gaa158042fc6e3bfba40432ff8bd2735b9}} 
+\#define \mbox{\hyperlink{group___debugging_gaa158042fc6e3bfba40432ff8bd2735b9}{PBin\+Pin21\+Bit5}}~(((GPIOB-\/$>$DIN31\+\_\+0\&(1$<$$<$21))$>$$>$16))
+\begin{DoxyCompactList}\small\item\em using PBin\+Pin21\+Bit5 places PA21 input on bit 5 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___debugging_ga014d7638f7e9c12e7c18d13e1171350b}{Debug\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize arrays. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___debugging_ga0660315e28d05833e70ec73d4e4f3851}{Debug\+\_\+\+Dump}} (uint32\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Debugging dump. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___debugging_gafab49bf23ef5439ddfb1fddfee1a1d74}{Debug\+\_\+\+Dump2}} (uint32\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Debugging dump with filter. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___debugging_gab3b184795851185f462f63fadff6f39e}{Debug\+\_\+\+Period}} (uint32\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Initialize arrays. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___debugging_ga184b13e3d3432741bad14d66e25a37b2}{Debug\+\_\+\+Duty}} (uint32\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Initialize arrays. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___debugging_ga41f076689bb56958c9ab9c884379baeb}{TExa\+S\+\_\+\+Launch\+Pad\+Logic}} (void)
+\begin{DoxyCompactList}\small\item\em PB21,PA18,PB27,PB26,PB22,PA0. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___debugging_ga2e9148d56309a480c90427bcdd641f23}{TExa\+S\+\_\+\+PB22\+PA0\+Logic}} (void)
+\begin{DoxyCompactList}\small\item\em PB22,PA0. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___debugging_ga1ba47253c544fb5108edd22beb4ec06b}{TExa\+S\+\_\+\+PA60\+Logic}} (void)
+\begin{DoxyCompactList}\small\item\em PA6-\/\+PA0. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___debugging_ga055be19744698eda16aac6fd89d0659c}{TExa\+S\+\_\+\+PB18\+PB17\+PB16\+PB2\+PB1\+PB0\+Logic}} (void)
+\begin{DoxyCompactList}\small\item\em PB18-\/16 outputs, PB2-\/0 input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___debugging_gacc6b4d7bbc5b9eb0ef524290c81bcaa3}{TExa\+S\+\_\+\+Init}} (ADC12\+\_\+\+Regs $\ast$adc12, uint32\+\_\+t channel, uint8\+\_\+t($\ast$logic)(void))
+\begin{DoxyCompactList}\small\item\em Initialize 12-\/bit ADC0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Debugging tools. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___debugging_ga0660315e28d05833e70ec73d4e4f3851}\label{group___debugging_ga0660315e28d05833e70ec73d4e4f3851}} 
+\index{Debugging@{Debugging}!Debug\_Dump@{Debug\_Dump}}
+\index{Debug\_Dump@{Debug\_Dump}!Debugging@{Debugging}}
+\doxysubsubsection{\texorpdfstring{Debug\_Dump()}{Debug\_Dump()}}
+{\footnotesize\ttfamily uint32\+\_\+t Debug\+\_\+\+Dump (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Debugging dump. 
+
+Records one data and one time into the two arrays. 
+\begin{DoxyParams}{Parameters}
+{\em data} & is value to store in Data\+Buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 for success, 0 for failure (buffers full) 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Initializes your index or pointer 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___debugging_ga014d7638f7e9c12e7c18d13e1171350b}{Debug\+\_\+\+Init()}} \mbox{\hyperlink{group___debugging_gab3b184795851185f462f63fadff6f39e}{Debug\+\_\+\+Period()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___debugging_gafab49bf23ef5439ddfb1fddfee1a1d74}\label{group___debugging_gafab49bf23ef5439ddfb1fddfee1a1d74}} 
+\index{Debugging@{Debugging}!Debug\_Dump2@{Debug\_Dump2}}
+\index{Debug\_Dump2@{Debug\_Dump2}!Debugging@{Debugging}}
+\doxysubsubsection{\texorpdfstring{Debug\_Dump2()}{Debug\_Dump2()}}
+{\footnotesize\ttfamily uint32\+\_\+t Debug\+\_\+\+Dump2 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Debugging dump with filter. 
+
+One first call record data and time. On subsequent calls, only record data and one time only if the data differs from the last recording 
+\begin{DoxyParams}{Parameters}
+{\em data} & is value to store in Data\+Buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 for success, 0 for failure (buffers full) 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Initializes your index or pointer 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___debugging_ga014d7638f7e9c12e7c18d13e1171350b}{Debug\+\_\+\+Init()}} \mbox{\hyperlink{group___debugging_gab3b184795851185f462f63fadff6f39e}{Debug\+\_\+\+Period()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___debugging_ga184b13e3d3432741bad14d66e25a37b2}\label{group___debugging_ga184b13e3d3432741bad14d66e25a37b2}} 
+\index{Debugging@{Debugging}!Debug\_Duty@{Debug\_Duty}}
+\index{Debug\_Duty@{Debug\_Duty}!Debugging@{Debugging}}
+\doxysubsubsection{\texorpdfstring{Debug\_Duty()}{Debug\_Duty()}}
+{\footnotesize\ttfamily uint32\+\_\+t Debug\+\_\+\+Duty (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+
+
+Initialize arrays. 
+
+Calculate duty cycle of the recorded data using mask.~\newline
+ Period is defined as rising edge (low to high) to the next rising edge.~\newline
+ High is defined as rising edge (low to high) to the next falling edge.~\newline
+ Duty cycle is (100$\ast$\+High)/\+Period 
+\begin{DoxyParams}{Parameters}
+{\em mask} & specifies which bit(s) to observe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+period in bus cycles, 0 if there is not enough collected data to calculate period 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Lab 3 extra credit 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___debugging_ga014d7638f7e9c12e7c18d13e1171350b}{Debug\+\_\+\+Init()}} \mbox{\hyperlink{group___debugging_gab3b184795851185f462f63fadff6f39e}{Debug\+\_\+\+Period()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___debugging_ga014d7638f7e9c12e7c18d13e1171350b}\label{group___debugging_ga014d7638f7e9c12e7c18d13e1171350b}} 
+\index{Debugging@{Debugging}!Debug\_Init@{Debug\_Init}}
+\index{Debug\_Init@{Debug\_Init}!Debugging@{Debugging}}
+\doxysubsubsection{\texorpdfstring{Debug\_Init()}{Debug\_Init()}}
+{\footnotesize\ttfamily void Debug\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize arrays. 
+
+Initialize the debugging dump buffers 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Initializes your index or pointer 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___debugging_ga0660315e28d05833e70ec73d4e4f3851}{Debug\+\_\+\+Dump()}} \mbox{\hyperlink{group___debugging_gab3b184795851185f462f63fadff6f39e}{Debug\+\_\+\+Period()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___debugging_gab3b184795851185f462f63fadff6f39e}\label{group___debugging_gab3b184795851185f462f63fadff6f39e}} 
+\index{Debugging@{Debugging}!Debug\_Period@{Debug\_Period}}
+\index{Debug\_Period@{Debug\_Period}!Debugging@{Debugging}}
+\doxysubsubsection{\texorpdfstring{Debug\_Period()}{Debug\_Period()}}
+{\footnotesize\ttfamily uint32\+\_\+t Debug\+\_\+\+Period (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+
+
+Initialize arrays. 
+
+Calculate period of the recorded data using mask 
+\begin{DoxyParams}{Parameters}
+{\em mask} & specifies which bit(s) to observe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+period in bus cycles, 0 if there is not enough collected data to calculate period 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Period is defined as rising edge (low to high) to the next rising edge 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___debugging_ga014d7638f7e9c12e7c18d13e1171350b}{Debug\+\_\+\+Init()}} \mbox{\hyperlink{group___debugging_gab3b184795851185f462f63fadff6f39e}{Debug\+\_\+\+Period()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___debugging_gacc6b4d7bbc5b9eb0ef524290c81bcaa3}\label{group___debugging_gacc6b4d7bbc5b9eb0ef524290c81bcaa3}} 
+\index{Debugging@{Debugging}!TExaS\_Init@{TExaS\_Init}}
+\index{TExaS\_Init@{TExaS\_Init}!Debugging@{Debugging}}
+\doxysubsubsection{\texorpdfstring{TExaS\_Init()}{TExaS\_Init()}}
+{\footnotesize\ttfamily void TExa\+S\+\_\+\+Init (\begin{DoxyParamCaption}\item[{ADC12\+\_\+\+Regs $\ast$}]{adc12,  }\item[{uint32\+\_\+t}]{channel,  }\item[{uint8\+\_\+t($\ast$)(void)}]{logic }\end{DoxyParamCaption})}
+
+
+
+Initialize 12-\/bit ADC0. 
+
+Initialize TExaS scope or logic analyzer~\newline
+ Sends one 8-\/bit data to PC at 10k\+Hz 
+\begin{DoxyParams}{Parameters}
+{\em adc12} & is ADC0 or ADC1 (set to 0 for logic analyzer) \\
+\hline
+{\em channel} & specifies ADC channel 0 to 7 \\
+\hline
+{\em logic} & function that returns an 8-\/bit value with bit 7 set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___debugging_ga41f076689bb56958c9ab9c884379baeb}\label{group___debugging_ga41f076689bb56958c9ab9c884379baeb}} 
+\index{Debugging@{Debugging}!TExaS\_LaunchPadLogic@{TExaS\_LaunchPadLogic}}
+\index{TExaS\_LaunchPadLogic@{TExaS\_LaunchPadLogic}!Debugging@{Debugging}}
+\doxysubsubsection{\texorpdfstring{TExaS\_LaunchPadLogic()}{TExaS\_LaunchPadLogic()}}
+{\footnotesize\ttfamily uint8\+\_\+t TExa\+S\+\_\+\+Launch\+Pad\+Logic (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+PB21,PA18,PB27,PB26,PB22,PA0. 
+
+To configure logic analyzer for PB21,PA18,PB27,PB26,PB22,PA0 call TExa\+S\+\_\+\+Init(0,0,\&\+TExa\+S\+\_\+\+Launch\+Pad\+Logic); 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+8-\/bit PB21,PA18,PB27,PB26,PB22,PA0 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+40 instructions, 2us, 2overhead 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___debugging_gacc6b4d7bbc5b9eb0ef524290c81bcaa3}{TExa\+S\+\_\+\+Init}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___debugging_ga1ba47253c544fb5108edd22beb4ec06b}\label{group___debugging_ga1ba47253c544fb5108edd22beb4ec06b}} 
+\index{Debugging@{Debugging}!TExaS\_PA60Logic@{TExaS\_PA60Logic}}
+\index{TExaS\_PA60Logic@{TExaS\_PA60Logic}!Debugging@{Debugging}}
+\doxysubsubsection{\texorpdfstring{TExaS\_PA60Logic()}{TExaS\_PA60Logic()}}
+{\footnotesize\ttfamily uint8\+\_\+t TExa\+S\+\_\+\+PA60\+Logic (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+PA6-\/\+PA0. 
+
+To configure logic analyzer for PA6-\/\+PA0 outputs call TExa\+S\+\_\+\+Init(0,0,\&\+TExa\+S\+\_\+\+PA60\+Logic); 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+8-\/bit PA6-\/\+PA0 outputs 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+11 instructions, 1.\+5us, 1.\+5\% overhead 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___debugging_gacc6b4d7bbc5b9eb0ef524290c81bcaa3}{TExa\+S\+\_\+\+Init}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___debugging_ga055be19744698eda16aac6fd89d0659c}\label{group___debugging_ga055be19744698eda16aac6fd89d0659c}} 
+\index{Debugging@{Debugging}!TExaS\_PB18PB17PB16PB2PB1PB0Logic@{TExaS\_PB18PB17PB16PB2PB1PB0Logic}}
+\index{TExaS\_PB18PB17PB16PB2PB1PB0Logic@{TExaS\_PB18PB17PB16PB2PB1PB0Logic}!Debugging@{Debugging}}
+\doxysubsubsection{\texorpdfstring{TExaS\_PB18PB17PB16PB2PB1PB0Logic()}{TExaS\_PB18PB17PB16PB2PB1PB0Logic()}}
+{\footnotesize\ttfamily uint8\+\_\+t TExa\+S\+\_\+\+PB18\+PB17\+PB16\+PB2\+PB1\+PB0\+Logic (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+PB18-\/16 outputs, PB2-\/0 input. 
+
+To configure logic analyzer for PB18-\/16 outputs, PB2-\/0 input call TExa\+S\+\_\+\+Init(0,0,\&\+TExa\+S\+\_\+\+PB18\+PB17\+PB16\+PB2\+PB1\+PB0\+Logic); 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+8-\/bit PB18-\/16 outputs, PB2-\/0 input 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___debugging_gacc6b4d7bbc5b9eb0ef524290c81bcaa3}{TExa\+S\+\_\+\+Init}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___debugging_ga2e9148d56309a480c90427bcdd641f23}\label{group___debugging_ga2e9148d56309a480c90427bcdd641f23}} 
+\index{Debugging@{Debugging}!TExaS\_PB22PA0Logic@{TExaS\_PB22PA0Logic}}
+\index{TExaS\_PB22PA0Logic@{TExaS\_PB22PA0Logic}!Debugging@{Debugging}}
+\doxysubsubsection{\texorpdfstring{TExaS\_PB22PA0Logic()}{TExaS\_PB22PA0Logic()}}
+{\footnotesize\ttfamily uint8\+\_\+t TExa\+S\+\_\+\+PB22\+PA0\+Logic (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+PB22,PA0. 
+
+To configure logic analyzer for PB22,PA0 call TExa\+S\+\_\+\+Init(0,0,\&\+TExa\+S\+\_\+\+PB22\+PA0\+Logic); 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+8-\/bit PB22,PA0 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+16 instructions, 1.\+5us, 1.\+5\% overhead 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___debugging_gacc6b4d7bbc5b9eb0ef524290c81bcaa3}{TExa\+S\+\_\+\+Init}} 
+\end{DoxySeeAlso}

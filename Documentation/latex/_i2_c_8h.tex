@@ -1,0 +1,108 @@
+\hypertarget{_i2_c_8h}{}\doxysection{inc/\+I2C.h File Reference}
+\label{_i2_c_8h}\index{inc/I2C.h@{inc/I2C.h}}
+
+
+Software driver functions for I2C and MKII boosterpack.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga84df9a5887b8b8230cfe85d18e53900e}{I2\+C\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize I2C. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_k_i_i_gae4b63e9ef99607a9c10c0888e874b271}{I2\+C\+\_\+\+Recv1}} (int8\+\_\+t slave)
+\begin{DoxyCompactList}\small\item\em Receive one byte. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___m_k_i_i_ga172e587b4c2819de75686b9a4d28795a}{I2\+C\+\_\+\+Recv2}} (int8\+\_\+t slave)
+\begin{DoxyCompactList}\small\item\em Receive two bytes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___m_k_i_i_ga1d619cff836793cfe228756e1ea92a7f}{I2\+C\+\_\+\+Send}} (uint8\+\_\+t slave, uint8\+\_\+t $\ast$p\+Data, uint32\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em write 1 to 8 bytes to I2C. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___m_k_i_i_gafb4ac23cdff5bc9150192fc1c2eb7b4c}{I2\+C\+\_\+\+Send\+Data}} (uint8\+\_\+t slave, uint8\+\_\+t $\ast$p\+Data, uint32\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em send large buffer to I2C. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___m_k_i_i_ga1ebce3db5cd81af24e235b9cb2e12d25}{I2\+C\+\_\+\+Send1}} (int8\+\_\+t slave, uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Send one byte. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___m_k_i_i_gaa8986cab236dfc71dc40bf95db6be59a}{I2\+C\+\_\+\+Send2}} (int8\+\_\+t slave, uint8\+\_\+t data1, uint8\+\_\+t data2)
+\begin{DoxyCompactList}\small\item\em Send two bytes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___m_k_i_i_ga3285b076a1a213e3c569dbcbfc9adae8}{I2\+C\+\_\+\+Send3}} (int8\+\_\+t slave, uint8\+\_\+t data1, uint8\+\_\+t data2, uint8\+\_\+t data3)
+\begin{DoxyCompactList}\small\item\em Send three bytes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_gaf070692463ba19763294b0eeb2a29009}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize OPT3001. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___m_k_i_i_ga3a1b31e846c2e48289cde7e29014a8a5}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+Input}} (void)
+\begin{DoxyCompactList}\small\item\em Input from OPT3001. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga219fb26ad14ee74107bc4bd2e844ee5d}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+Start}} (void)
+\begin{DoxyCompactList}\small\item\em Start OPT3001. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___m_k_i_i_ga1a1c8eb5d0a103574ea72bd2bab8f00f}{I2\+C\+\_\+\+Light\+Sensor\+\_\+\+End}} (uint32\+\_\+t $\ast$light)
+\begin{DoxyCompactList}\small\item\em Finish OPT3001. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga800416ee64fff3d1cabe47b9ca673cd4}{I2\+C\+\_\+\+Temp\+Sensor\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize TMP006. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga47d84de361178a434bf1ff0e3969ebb2}{I2\+C\+\_\+\+Temp\+Sensor\+\_\+\+Input}} (int32\+\_\+t $\ast$sensorV, int32\+\_\+t $\ast$localT)
+\begin{DoxyCompactList}\small\item\em Input from TMP006. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_k_i_i_ga1812b414fa715b7500fdfc040d8e3026}{I2\+C\+\_\+\+Temp\+Sensor\+\_\+\+Start}} (void)
+\begin{DoxyCompactList}\small\item\em Start TMP006. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___m_k_i_i_ga0eafb7c75b865d02ff149ef68caecb29}{I2\+C\+\_\+\+Temp\+Sensor\+\_\+\+End}} (int32\+\_\+t $\ast$sensorV, int32\+\_\+t $\ast$localT)
+\begin{DoxyCompactList}\small\item\em Finish TMP006. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Software driver functions for I2C and MKII boosterpack. 
+
+Light and temperature sensors on MKII~\newline
+ \href{https://www.ti.com/tool/BOOSTXL-EDUMKII}{\texttt{ https\+://www.\+ti.\+com/tool/\+BOOSTXL-\/\+EDUMKII}} ~\newline
+ The TMP006 was discontinued in 2017. Therefore, it is no longer populated on the board. Documentation of the TMP006 is unchanged in this user\textquotesingle{}s guide to accommodate users who still have the device populated on the board~\newline
+
+
+\begin{DoxyVersion}{Version}
+ECE319K v1.\+2 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Daniel Valvano and Jonathan Valvano 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2025 by Jonathan W. Valvano, \href{mailto:valvano@mail.utexas.edu}{\texttt{ valvano@mail.\+utexas.\+edu}}, 
+\end{DoxyCopyright}
+\begin{DoxyWarning}{Warning}
+AS-\/\+IS 
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+For more information see \href{http://users.ece.utexas.edu/~valvano/}{\texttt{ http\+://users.\+ece.\+utexas.\+edu/$\sim$valvano/}} 
+\end{DoxyNote}
+\begin{DoxyDate}{Date}
+December 23, 2024 \hypertarget{_i2_c_8h_MKIIsensorpins2}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{MKII sensor pins }\label{_i2_c_8h_MKIIsensorpins2}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Function}&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Function}&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endhead
+PA27&GPIO &J1.\+8 ambient light (OPT3001) interrupt (digital) ~\newline
+ \\\cline{1-3}
+PB2 &I2\+C1-\/\+SCL&J1.\+9 ambient light (OPT3001) and temperature sensor (TMP006) ~\newline
+ \\\cline{1-3}
+PB3 &I2\+C1-\/\+SDA&J1.\+10 ambient light (OPT3001) and temperature sensor (TMP006) ~\newline
+ \\\cline{1-3}
+PB16&GPIO &J2.\+11 temperature sensor (TMP006) interrupt (digital) ~\newline
+ \\\cline{1-3}
+\end{longtabu}
+\hypertarget{_i2_c_8h_SSD1306_2}{}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{SSD1306 pins }\label{_i2_c_8h_SSD1306_2}\\
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Function}&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pin }&\cellcolor{\tableheadbgcolor}\textbf{ Function}&\cellcolor{\tableheadbgcolor}\textbf{ Description }\\\cline{1-3}
+\endhead
+VCC &Power &+3.\+3V \\\cline{1-3}
+PB2 &I2\+C1-\/\+SCL&J1.\+9 SSD1306 SCL, with 1.\+5k pullup to 3.\+3V \\\cline{1-3}
+PB3 &I2\+C1-\/\+SDA&J1.\+10 SSD1306 SDA \\\cline{1-3}
+GND &GND &Ground \\\cline{1-3}
+\end{longtabu}
+
+\end{DoxyDate}
