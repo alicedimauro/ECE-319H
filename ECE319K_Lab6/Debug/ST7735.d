@@ -1,6 +1,6 @@
 # FIXED
 
-ST7735.o: C:/AliceHub/Texas/Sem2/ECE\ 319H/MSPM0_ValvanoWare/inc/ST7735.c \
+ST7735.o: C:/Git/ECE-319H/inc/ST7735.c \
  C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/msp.h \
  C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/DeviceFamily.h \
  C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/m0p/mspm0g350x.h \
@@ -31,9 +31,8 @@ ST7735.o: C:/AliceHub/Texas/Sem2/ECE\ 319H/MSPM0_ValvanoWare/inc/ST7735.c \
  C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/peripherals/m0p/hw_debugss.h \
  C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/peripherals/m0p/hw_sysctl.h \
  C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/peripherals/m0p/sysctl/hw_sysctl_mspm0g1x0x_g3x0x.h \
- C:/AliceHub/Texas/Sem2/ECE\ 319H/MSPM0_ValvanoWare/inc/ST7735.h \
- C:/AliceHub/Texas/Sem2/ECE\ 319H/MSPM0_ValvanoWare/inc/SPI.h \
- C:/AliceHub/Texas/Sem2/ECE\ 319H/MSPM0_ValvanoWare/inc/Clock.h
+ C:/Git/ECE-319H/inc/ST7735.h C:/Git/ECE-319H/inc/SPI.h \
+ C:/Git/ECE-319H/inc/Clock.h
 C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/msp.h:
 C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/DeviceFamily.h:
 C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/m0p/mspm0g350x.h:
@@ -64,6 +63,6 @@ C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/peripherals/m0p/hw_cpuss.h:
 C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/peripherals/m0p/hw_debugss.h:
 C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/peripherals/m0p/hw_sysctl.h:
 C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/peripherals/m0p/sysctl/hw_sysctl_mspm0g1x0x_g3x0x.h:
-C:/AliceHub/Texas/Sem2/ECE\ 319H/MSPM0_ValvanoWare/inc/ST7735.h:
-C:/AliceHub/Texas/Sem2/ECE\ 319H/MSPM0_ValvanoWare/inc/SPI.h:
-C:/AliceHub/Texas/Sem2/ECE\ 319H/MSPM0_ValvanoWare/inc/Clock.h:
+C:/Git/ECE-319H/inc/ST7735.h:
+C:/Git/ECE-319H/inc/SPI.h:
+C:/Git/ECE-319H/inc/Clock.h:

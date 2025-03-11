@@ -14,6 +14,10 @@
 
     .text
     .align 2
+// Binding for OutDec2
+    .equ myRemainder, 0
+    .align 2
+
 // **test of udivby10**
 // since udivby10 is not AAPCS compliant, we must test it in assembly
 Test_udivby10:
@@ -81,7 +85,7 @@ POP {R4, PC}         // Restore registers and return
 // Input: R0 (call by value) 16-bit unsigned number
 // Output: none
 // Invariables: This function must not permanently modify registers R4 to R11
-OutDec:
+OutDec2:
    PUSH {LR}
 // write this
 
@@ -95,11 +99,25 @@ OutDec:
 // Output: none
 // Invariables: This function must not permanently modify registers R4 to R11
 
-OutDec2:
+OutDec:
    PUSH {LR}
 // write this
+    SUB SP, #4 // Alloate space for remainder
+    CMP R0, #10 // Base case, it's a single digit
+    BLO base
 
-   POP  {PC}
+    BL udivby10
+    STR R1, [SP, #myRemainder]
+
+    BL OutDec
+
+    LDR R0, [SP, #myRemainder]
+
+base:
+    ADDS R0, 0x30 // Convert to ASCII
+    BL OutChar
+    ADD SP, #4 // Deallocate memory
+    POP  {PC}
 
 
 

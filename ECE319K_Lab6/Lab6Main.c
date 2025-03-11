@@ -31,14 +31,14 @@ int main0(void){ // main0
 
 // use main1 for testing
 // does not need ST7735R connected
-int main(void){ // main1
+int main1(void){ // main1
   Clock_Init80MHz(0);
   LaunchPad_Init();
 // Lab6Grader(1) to test SPIOutCommand, no grading
 // Lab6Grader(2) to test SPIOutData, no grading
 // Lab6Grader(3) to test GradeDec2String, no grading
 // Lab6Grader(4) to test all three with grading
-  Lab6Grader(2);
+  Lab6Grader(4);
   while(1){
   }
 }
@@ -50,7 +50,7 @@ uint32_t const TestData[SIZE] ={
 };
 // using main2 for initial test of OutDec
 // does not need ST7735R connected
-int main2(void){
+int main2(void){ // main2
   uint32_t i;
   Clock_Init80MHz(0);
   LaunchPad_Init();
@@ -107,7 +107,7 @@ int main3(void){
 // notice to draw one character, we output 40 pixels
 // and each pixel is a 16bit (2byte) color
 // needs ST7735R connected
-int main4(void){ // main4
+int main(void){ // main4
   Clock_Init80MHz(0);
   LaunchPad_Init();
   ST7735_InitR(INITR_REDTAB);
