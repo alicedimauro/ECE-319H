@@ -31,7 +31,7 @@ int main0(void){ // main0
 
 // use main1 for testing
 // does not need ST7735R connected
-int main1(void){ // main1
+int main(void){ // main1
   Clock_Init80MHz(0);
   LaunchPad_Init();
 // Lab6Grader(1) to test SPIOutCommand, no grading
@@ -107,7 +107,7 @@ int main3(void){
 // notice to draw one character, we output 40 pixels
 // and each pixel is a 16bit (2byte) color
 // needs ST7735R connected
-int main(void){ // main4
+int main4(void){ // main4
   Clock_Init80MHz(0);
   LaunchPad_Init();
   ST7735_InitR(INITR_REDTAB);

@@ -1,18 +1,18 @@
 ******************************************************************************
             TI ARM Clang Linker PC v4.0.1                      
 ******************************************************************************
->> Linked Mon Mar 10 18:46:21 2025
+>> Linked Wed Mar 12 11:11:52 2025
 
 OUTPUT FILE NAME:   <ECE319K_Lab6.out>
-ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00000c09
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00000e8d
 
 
 MEMORY CONFIGURATION
 
          name            origin    length      used     unused   attr    fill
 ----------------------  --------  ---------  --------  --------  ----  --------
-  FLASH                 00000000   00020000  00001340  0001ecc0  R  X
-  SRAM                  20200000   00008000  00000425  00007bdb  RW X
+  FLASH                 00000000   00020000  000011f0  0001ee10  R  X
+  SRAM                  20200000   00008000  0000045c  00007ba4  RW X
   BCR_CONFIG            41c00000   00000080  00000000  00000080  R   
   BSL_CONFIG            41c00100   00000080  00000000  00000080  R   
 
@@ -21,15 +21,15 @@ SEGMENT ALLOCATION MAP
 
 run origin  load origin   length   init length attrs members
 ----------  ----------- ---------- ----------- ----- -------
-00000000    00000000    00001340   00001340    r-x
+00000000    00000000    000011f0   000011f0    r-x
   00000000    00000000    000000c0   000000c0    r-- .intvecs
-  000000c0    000000c0    00000c78   00000c78    r-x .text
-  00000d38    00000d38    000005d0   000005d0    r-- .rodata
-  00001308    00001308    00000038   00000038    r-- .cinit
-20200000    20200000    00000227   00000000    rw-
+  000000c0    000000c0    00000f00   00000f00    r-x .text
+  00000fc0    00000fc0    000001f0   000001f0    r-- .rodata
+  000011b0    000011b0    00000040   00000040    r-- .cinit
+20200000    20200000    0000025c   00000000    rw-
   20200000    20200000    00000200   00000000    rw- .sysmem
-  20200200    20200200    00000016   00000000    rw- .data
-  20200218    20200218    0000000f   00000000    rw- .bss
+  20200200    20200200    0000003c   00000000    rw- .bss
+  2020023c    2020023c    00000020   00000000    rw- .data
 20207e00    20207e00    00000200   00000000    rw-
   20207e00    20207e00    00000200   00000000    rw- .stack
 
@@ -42,65 +42,78 @@ section   page    origin      length       input sections
 .intvecs   0    00000000    000000c0     
                   00000000    000000c0     startup_mspm0g3507_ticlang.o (.intvecs)
 
-.text      0    000000c0    00000c78     
+.text      0    000000c0    00000f00     
                   000000c0    000001b4     Clock.o (.text.Clock_Init80MHz)
-                  00000274    000001a8     ST7735.o (.text.ST7735_DrawChar)
-                  0000041c    00000118     ST7735.o (.text.ST7735_FillRect)
-                  00000534    000000f8     SPI.o (.text.SPI_Init)
-                  0000062c    000000a2     ST7735.o (.text.commandList)
-                  000006ce    00000002     libclang_rt.builtins.a : aeabi_div0.c.obj (.text.__aeabi_idiv0)
-                  000006d0    00000098     ST7735.o (.text.ST7735_InitR)
-                  00000768    00000088     ST7735.o (.text.setAddrWindow)
-                  000007f0    00000084     Lab6Grader.o (.text.TIMG7_IRQHandler)
-                  00000874    0000007c     LaunchPad.o (.text.LaunchPad_Init)
-                  000008f0    0000007c     libc.a : copy_decompress_lzss.c.obj (.text:decompress:lzss)
-                  0000096c    00000048     SPI.o (.text.SPI_OutCommand)
-                  000009b4    00000040     SPI.o (.text.SPI_Reset)
-                  000009f4    00000040     libclang_rt.builtins.a : aeabi_uidivmod.S.obj (.text.__aeabi_uidivmod)
-                  00000a34    0000003c     libc.a : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
-                  00000a70    00000038     LaunchPad.o (.text.ActivatePortA_B)
-                  00000aa8    00000038     SPI.o (.text.SPI_OutData)
-                  00000ae0    00000038     Lab6Main.o (.text.main)
-                  00000b18    00000034     Clock.o (.text.Clock_Delay1ms)
-                  00000b4c    00000034     ST7735.o (.text.ST7735_SetCursor)
-                  00000b80    00000030     ST7735.o (.text.commonInit)
-                  00000bb0    0000002c     ST7735.o (.text.ST7735_FillScreen)
-                  00000bdc    0000002c     UARTbusywait.o (.text.UART_OutChar)
-                  00000c08    00000028     libc.a : boot_cortex_m.c.obj (.text:_c_int00_noargs)
-                  00000c30    00000026     UART.o (.text.UART_OutString)
-                  00000c56    0000001e     ST7735.o (.text.pushColor)
-                  00000c74    0000001c     startup_mspm0g3507_ticlang.o (.text.Default_Handler)
-                  00000c90    0000001c     startup_mspm0g3507_ticlang.o (.text.HardFault_Handler)
-                  00000cac    00000016     libc.a : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
-                  00000cc2    00000012            : memcpy16.S.obj (.text:TI_memcpy_small)
-                  00000cd4    00000012            : copy_decompress_none.c.obj (.text:decompress:none)
-                  00000ce6    00000010     Clock.o (.text.Clock_Delay)
-                  00000cf6    00000010     LaunchPad.o (.text.Delay)
-                  00000d06    00000002     --HOLE-- [fill = 0]
-                  00000d08    0000000c     Clock.o (.text.Clock_Freq)
-                  00000d14    0000000c     Lab6Grader.o (.text.TimerG7_Stop)
-                  00000d20    00000008     libclang_rt.builtins.a : aeabi_memcpy.S.obj (.text.__aeabi_memcpy)
-                  00000d28    00000004     startup_mspm0g3507_ticlang.o (.text.Reset_Handler)
-                  00000d2c    00000004     libc.a : pre_init.c.obj (.text._system_pre_init)
-                  00000d30    00000004            : exit.c.obj (.text:abort)
-                  00000d34    00000004     --HOLE-- [fill = 0]
+                  00000274    000001a4     Lab6Grader.o (.text.Lab6Grader)
+                  00000418    00000188     Lab6GraderWrapper.o (.text)
+                  000005a0    0000013c     Lab6Grader.o (.text.GradeSPIOutData)
+                  000006dc    00000138     Lab6Grader.o (.text.GradeSPIOutCommand)
+                  00000814    000000f4     Lab6Grader.o (.text.GradeDec2String)
+                  00000908    000000e8     UARTbusywait.o (.text.UART_Init)
+                  000009f0    000000a8     Timer.o (.text.TimerG7_IntArm)
+                  00000a98    00000008     libclang_rt.builtins.a : aeabi_memcpy.S.obj (.text.__aeabi_memcpy)
+                  00000aa0    00000088     libc.a : strcmp-armv6m.S.obj (.text:strcmp)
+                  00000b28    00000084     Lab6Grader.o (.text.TIMG7_IRQHandler)
+                  00000bac    0000007c     LaunchPad.o (.text.LaunchPad_Init)
+                  00000c28    0000007c     libc.a : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  00000ca4    00000064     StringConversion.o (.text)
+                  00000d08    00000040     libclang_rt.builtins.a : aeabi_uidivmod.S.obj (.text.__aeabi_uidivmod)
+                  00000d48    0000003c     libc.a : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
+                  00000d84    00000038     LaunchPad.o (.text.ActivatePortA_B)
+                  00000dbc    00000038     BusyWait.o (.text)
+                  00000df4    00000036     UART.o (.text.UART_OutUDec)
+                  00000e2a    00000034     Lab6Grader.o (.text.setUpper)
+                  00000e5e    00000002     libclang_rt.builtins.a : aeabi_div0.c.obj (.text.__aeabi_idiv0)
+                  00000e60    0000002c     UARTbusywait.o (.text.UART_OutChar)
+                  00000e8c    00000028     libc.a : boot_cortex_m.c.obj (.text:_c_int00_noargs)
+                  00000eb4    00000026     UART.o (.text.UART_OutString)
+                  00000eda    00000002     --HOLE-- [fill = 0]
+                  00000edc    0000001c     startup_mspm0g3507_ticlang.o (.text.Default_Handler)
+                  00000ef8    0000001c     startup_mspm0g3507_ticlang.o (.text.HardFault_Handler)
+                  00000f14    0000001a     Lab6Main.o (.text.main)
+                  00000f2e    00000016     libc.a : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
+                  00000f44    00000012            : memcpy16.S.obj (.text:TI_memcpy_small)
+                  00000f56    00000012            : copy_decompress_none.c.obj (.text:decompress:none)
+                  00000f68    00000010     Clock.o (.text.Clock_Delay)
+                  00000f78    00000010     LaunchPad.o (.text.Delay)
+                  00000f88    00000010     Lab6Grader.o (.text.OutCRLF)
+                  00000f98    0000000c     Clock.o (.text.Clock_Freq)
+                  00000fa4    0000000c     Lab6Grader.o (.text.TimerG7_Stop)
+                  00000fb0    00000004     startup_mspm0g3507_ticlang.o (.text.Reset_Handler)
+                  00000fb4    00000004     libc.a : pre_init.c.obj (.text._system_pre_init)
+                  00000fb8    00000004            : exit.c.obj (.text:abort)
+                  00000fbc    00000004     --HOLE-- [fill = 0]
 
-.cinit     0    00001308    00000038     
-                  00001308    00000012     (.cinit..data.load) [load image, compression = lzss]
-                  0000131a    00000002     --HOLE-- [fill = 0]
-                  0000131c    0000000c     (__TI_handler_table)
-                  00001328    00000008     (.cinit..bss.load) [load image, compression = zero_init]
-                  00001330    00000010     (__TI_cinit_table)
+.cinit     0    000011b0    00000040     
+                  000011b0    0000001c     (.cinit..data.load) [load image, compression = lzss]
+                  000011cc    0000000c     (__TI_handler_table)
+                  000011d8    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  000011e0    00000010     (__TI_cinit_table)
 
-.rodata    0    00000d38    000005d0     
-                  00000d38    000004fb     ST7735.o (.rodata.Font)
-                  00001233    0000003b     ST7735.o (.rodata.Rcmd1)
-                  0000126e    0000002b     ST7735.o (.rodata.Rcmd3)
-                  00001299    00000027     Lab6Grader.o (.rodata.str1.29392462771983453771)
-                  000012c0    00000027     Lab6Grader.o (.rodata.str1.86854943644442302081)
-                  000012e7    0000000d     ST7735.o (.rodata.Rcmd2green)
-                  000012f4    0000000d     ST7735.o (.rodata.Rcmd2red)
-                  00001301    00000007     --HOLE-- [fill = 0]
+.rodata    0    00000fc0    000001f0     
+                  00000fc0    0000002f     Lab6Grader.o (.rodata.str1.141042048425628277241)
+                  00000fef    0000002e     Lab6Grader.o (.rodata.str1.11393093594044903871)
+                  0000101d    0000002e     Lab6Grader.o (.rodata.str1.68084602043384903161)
+                  0000104b    00000027     Lab6Grader.o (.rodata.str1.29392462771983453771)
+                  00001072    00000027     Lab6Grader.o (.rodata.str1.86854943644442302081)
+                  00001099    0000001e     Lab6Grader.o (.rodata.str1.123304848784107168131)
+                  000010b7    00000018     Lab6Grader.o (.rodata.str1.179419005293335022381)
+                  000010cf    00000015     Lab6Grader.o (.rodata.str1.116151147016813165611)
+                  000010e4    00000015     Lab6Grader.o (.rodata.str1.123229049810979054831)
+                  000010f9    00000015     Lab6Grader.o (.rodata.str1.171806787679878416081)
+                  0000110e    00000014     Lab6Grader.o (.rodata.str1.182106084710237838491)
+                  00001122    00000012     Lab6Grader.o (.rodata.str1.100701980391796751041)
+                  00001134    00000012     Lab6Grader.o (.rodata.str1.51597153886514805571)
+                  00001146    00000011     Lab6Grader.o (.rodata.str1.157227963165155916961)
+                  00001157    00000011     Lab6Grader.o (.rodata.str1.54928076714665054151)
+                  00001168    0000000e     Lab6Grader.o (.rodata.str1.83990087279344669041)
+                  00001176    0000000c     Lab6Grader.o (.rodata.str1.144555773107442879901)
+                  00001182    0000000a     Lab6Grader.o (.rodata.str1.6127439669120488541)
+                  0000118c    00000008     Lab6Grader.o (.rodata.str1.34477738938601276451)
+                  00001194    00000008     Lab6Grader.o (.rodata.str1.94061867291523735691)
+                  0000119c    00000007     Lab6Grader.o (.rodata.str1.58188008420306910771)
+                  000011a3    00000006     Lab6Grader.o (.rodata.str1.136529213642668650501)
+                  000011a9    00000007     --HOLE-- [fill = 0]
 
 .init_array 
 *          0    00000000    00000000     UNINITIALIZED
@@ -111,22 +124,23 @@ section   page    origin      length       input sections
                   20200000    00000010     libc.a : memory.c.obj (.sysmem)
                   20200010    000001f0     --HOLE--
 
-.data      0    20200200    00000016     UNINITIALIZED
-                  20200200    00000004     Clock.o (.data.BusFreq)
-                  20200204    00000004     Lab6Grader.o (.data.Fail)
-                  20200208    00000004     ST7735.o (.data.StX)
-                  2020020c    00000004     ST7735.o (.data.StY)
-                  20200210    00000002     ST7735.o (.data.StTextColor)
-                  20200212    00000002     ST7735.o (.data._height)
-                  20200214    00000002     ST7735.o (.data._width)
+.bss       0    20200200    0000003c     UNINITIALIZED
+                  20200200    00000010     (.common:myMessage)
+                  20200210    00000010     (.common:yourMessage)
+                  20200220    00000004     Lab6Grader.o (.bss.Score)
+                  20200224    00000004     (.common:GraderData)
+                  20200228    00000004     (.common:GraderGPIO)
+                  2020022c    00000004     (.common:GraderStatus)
+                  20200230    00000004     (.common:GraderTime)
+                  20200234    00000004     (.common:M)
+                  20200238    00000004     (.common:whichbit)
 
-.bss       0    20200218    0000000f     UNINITIALIZED
-                  20200218    00000004     (.common:GraderStatus)
-                  2020021c    00000004     (.common:GraderTime)
-                  20200220    00000004     (.common:whichbit)
-                  20200224    00000001     ST7735.o (.bss.ColStart)
-                  20200225    00000001     ST7735.o (.bss.RowStart)
-                  20200226    00000001     ST7735.o (.bss.TabColor)
+.data      0    2020023c    00000020     UNINITIALIZED
+                  2020023c    00000008     Lab6Main.o (.data.EID1)
+                  20200244    00000008     Lab6Main.o (.data.EID2)
+                  2020024c    00000008     Lab6GraderWrapper.o (.data)
+                  20200254    00000004     Clock.o (.data.BusFreq)
+                  20200258    00000004     Lab6Grader.o (.data.Fail)
 
 .stack     0    20207e00    00000200     UNINITIALIZED
                   20207e00    00000004     libc.a : boot_cortex_m.c.obj (.stack)
@@ -142,17 +156,23 @@ MODULE SUMMARY
 
        Module                         code   ro data   rw data
        ------                         ----   -------   -------
-    .\
-       ST7735.o                       1328   1403      17     
-       Clock.o                        516    0         4      
-       SPI.o                          440    0         0      
-       Lab6Grader.o                   144    78        16     
-       LaunchPad.o                    196    0         0      
-       Lab6Main.o                     56     0         0      
-       UARTbusywait.o                 44     0         0      
-       UART.o                         38     0         0      
+    ..\
+       Lab6GraderWrapper.o            392    0         8      
     +--+------------------------------+------+---------+---------+
-       Total:                         2762   1481      37     
+       Total:                         392    0         8      
+                                                              
+    .\
+       Lab6Grader.o                   1504   489       64     
+       Clock.o                        464    0         4      
+       UARTbusywait.o                 276    0         0      
+       LaunchPad.o                    196    0         0      
+       Timer.o                        168    0         0      
+       StringConversion.o             100    0         0      
+       UART.o                         92     0         0      
+       BusyWait.o                     56     0         0      
+       Lab6Main.o                     26     0         16     
+    +--+------------------------------+------+---------+---------+
+       Total:                         2882   489       84     
                                                               
     .\ticlang\
        startup_mspm0g3507_ticlang.o   60     192       0      
@@ -160,6 +180,7 @@ MODULE SUMMARY
        Total:                         60     192       0      
                                                               
     C:\ti\ccs2000\ccs\tools\compiler\ti-cgt-armllvm_4.0.1.LTS\lib\armv6m-ti-none-eabi/c/libc.a
+       strcmp-armv6m.S.obj            136    0         0      
        copy_decompress_lzss.c.obj     124    0         0      
        autoinit.c.obj                 60     0         0      
        boot_cortex_m.c.obj            40     0         0      
@@ -169,7 +190,7 @@ MODULE SUMMARY
        exit.c.obj                     4      0         0      
        pre_init.c.obj                 4      0         0      
     +--+------------------------------+------+---------+---------+
-       Total:                         290    0         0      
+       Total:                         426    0         0      
                                                               
     C:\ti\ccs2000\ccs\tools\compiler\ti-cgt-armllvm_4.0.1.LTS\lib\armv6m-ti-none-eabi/libclang_rt.builtins.a
        aeabi_uidivmod.S.obj           64     0         0      
@@ -180,21 +201,21 @@ MODULE SUMMARY
                                                               
        Heap:                          0      0         512    
        Stack:                         0      0         512    
-       Linker Generated:              0      54        0      
+       Linker Generated:              0      64        0      
     +--+------------------------------+------+---------+---------+
-       Grand Total:                   3186   1727      1061   
+       Grand Total:                   3834   745       1116   
 
 
 LINKER GENERATED COPY TABLES
 
-__TI_cinit_table @ 00001330 records: 2, size/record: 8, table size: 16
-	.data: load addr=00001308, load size=00000012 bytes, run addr=20200200, run size=00000016 bytes, compression=lzss
-	.bss: load addr=00001328, load size=00000008 bytes, run addr=20200218, run size=0000000f bytes, compression=zero_init
+__TI_cinit_table @ 000011e0 records: 2, size/record: 8, table size: 16
+	.data: load addr=000011b0, load size=0000001c bytes, run addr=2020023c, run size=00000020 bytes, compression=lzss
+	.bss: load addr=000011d8, load size=00000008 bytes, run addr=20200200, run size=0000003c bytes, compression=zero_init
 
 
 LINKER GENERATED HANDLER TABLE
 
-__TI_handler_table @ 0000131c records: 3, size/record: 4, table size: 12
+__TI_handler_table @ 000011cc records: 3, size/record: 4, table size: 12
 	index: 0, handler: __TI_decompress_lzss
 	index: 1, handler: __TI_decompress_none
 	index: 2, handler: __TI_zero_init
@@ -204,64 +225,70 @@ GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name
 
 address   name                          
 -------   ----                          
-00000c75  ADC0_IRQHandler               
-00000c75  ADC1_IRQHandler               
-00000c75  AES_IRQHandler                
-00000a71  ActivatePortA_B               
-20200200  BusFreq                       
-00000d30  C$$EXIT                       
-00000c75  CANFD0_IRQHandler             
-00000ce7  Clock_Delay                   
-00000b19  Clock_Delay1ms                
-00000d09  Clock_Freq                    
+00000edd  ADC0_IRQHandler               
+00000edd  ADC1_IRQHandler               
+00000edd  AES_IRQHandler                
+00000d85  ActivatePortA_B               
+20200254  BusFreq                       
+00000fb8  C$$EXIT                       
+00000edd  CANFD0_IRQHandler             
+00000f69  Clock_Delay                   
+00000f99  Clock_Freq                    
 000000c1  Clock_Init80MHz               
-00000c75  DAC0_IRQHandler               
-00000c75  DMA_IRQHandler                
-00000c75  Default_Handler               
-00000cf7  Delay                         
-00000c75  GROUP0_IRQHandler             
-00000c75  GROUP1_IRQHandler             
-20200218  GraderStatus                  
-2020021c  GraderTime                    
-00000c91  HardFault_Handler             
-00000c75  I2C0_IRQHandler               
-00000c75  I2C1_IRQHandler               
-00000875  LaunchPad_Init                
-00000c75  NMI_Handler                   
-00000c75  PendSV_Handler                
-00000c75  RTC_IRQHandler                
-00000d29  Reset_Handler                 
-00000c75  SPI0_IRQHandler               
-00000c75  SPI1_IRQHandler               
-00000535  SPI_Init                      
-0000096d  SPI_OutCommand                
-00000aa9  SPI_OutData                   
-000009b5  SPI_Reset                     
-00000275  ST7735_DrawChar               
-0000041d  ST7735_FillRect               
-00000bb1  ST7735_FillScreen             
-000006d1  ST7735_InitR                  
-00000b4d  ST7735_SetCursor              
-00000c75  SVC_Handler                   
-20200210  StTextColor                   
-20200208  StX                           
-2020020c  StY                           
-00000c75  SysTick_Handler               
-00000c75  TIMA0_IRQHandler              
-00000c75  TIMA1_IRQHandler              
-00000c75  TIMG0_IRQHandler              
-00000c75  TIMG12_IRQHandler             
-00000c75  TIMG6_IRQHandler              
-000007f1  TIMG7_IRQHandler              
-00000c75  TIMG8_IRQHandler              
-00000cc3  TI_memcpy_small               
-00000d15  TimerG7_Stop                  
-00000c75  UART0_IRQHandler              
-00000c75  UART1_IRQHandler              
-00000c75  UART2_IRQHandler              
-00000c75  UART3_IRQHandler              
-00000bdd  UART_OutChar                  
-00000c31  UART_OutString                
+00000edd  DAC0_IRQHandler               
+00000edd  DMA_IRQHandler                
+0000054c  Dec2String                    
+00000edd  Default_Handler               
+00000f79  Delay                         
+2020023c  EID1                          
+20200244  EID2                          
+00000edd  GROUP0_IRQHandler             
+00000edd  GROUP1_IRQHandler             
+00000815  GradeDec2String               
+000006dd  GradeSPIOutCommand            
+000005a1  GradeSPIOutData               
+20200224  GraderData                    
+20200228  GraderGPIO                    
+2020022c  GraderStatus                  
+20200230  GraderTime                    
+00000ef9  HardFault_Handler             
+00000edd  I2C0_IRQHandler               
+00000edd  I2C1_IRQHandler               
+00000275  Lab6Grader                    
+00000bad  LaunchPad_Init                
+20200234  M                             
+00000edd  NMI_Handler                   
+00000f89  OutCRLF                       
+00000560  OutChar                       
+00000ce0  OutDec                        
+00000edd  PendSV_Handler                
+00000edd  RTC_IRQHandler                
+00000fb1  Reset_Handler                 
+00000edd  SPI0_IRQHandler               
+00000edd  SPI1_IRQHandler               
+00000dbc  SPIOutCommand                 
+00000dd6  SPIOutData                    
+00000edd  SVC_Handler                   
+00000edd  SysTick_Handler               
+00000edd  TIMA0_IRQHandler              
+00000edd  TIMA1_IRQHandler              
+00000edd  TIMG0_IRQHandler              
+00000edd  TIMG12_IRQHandler             
+00000edd  TIMG6_IRQHandler              
+00000b29  TIMG7_IRQHandler              
+00000edd  TIMG8_IRQHandler              
+00000f45  TI_memcpy_small               
+00000ca4  Test_udivby10                 
+000009f1  TimerG7_IntArm                
+00000fa5  TimerG7_Stop                  
+00000edd  UART0_IRQHandler              
+00000edd  UART1_IRQHandler              
+00000edd  UART2_IRQHandler              
+00000edd  UART3_IRQHandler              
+00000909  UART_Init                     
+00000e61  UART_OutChar                  
+00000eb5  UART_OutString                
+00000df5  UART_OutUDec                  
 20208000  __STACK_END                   
 00000200  __STACK_SIZE                  
 00000200  __SYSMEM_SIZE                 
@@ -274,25 +301,25 @@ address   name
 00000000  __TI_ATRegion2_region_sz      
 00000000  __TI_ATRegion2_src_addr       
 00000000  __TI_ATRegion2_trg_addr       
-00001330  __TI_CINIT_Base               
-00001340  __TI_CINIT_Limit              
-00001340  __TI_CINIT_Warm               
-0000131c  __TI_Handler_Table_Base       
-00001328  __TI_Handler_Table_Limit      
-00000a35  __TI_auto_init_nobinit_nopinit
-000008f1  __TI_decompress_lzss          
-00000cd5  __TI_decompress_none          
+000011e0  __TI_CINIT_Base               
+000011f0  __TI_CINIT_Limit              
+000011f0  __TI_CINIT_Warm               
+000011cc  __TI_Handler_Table_Base       
+000011d8  __TI_Handler_Table_Limit      
+00000d49  __TI_auto_init_nobinit_nopinit
+00000c29  __TI_decompress_lzss          
+00000f57  __TI_decompress_none          
 ffffffff  __TI_pprof_out_hndl           
 ffffffff  __TI_prof_data_size           
 ffffffff  __TI_prof_data_start          
 00000000  __TI_static_base__            
-00000cad  __TI_zero_init_nomemset       
-000006cf  __aeabi_idiv0                 
-00000d21  __aeabi_memcpy                
-00000d21  __aeabi_memcpy4               
-00000d21  __aeabi_memcpy8               
-000009f5  __aeabi_uidiv                 
-000009f5  __aeabi_uidivmod              
+00000f2f  __TI_zero_init_nomemset       
+00000e5f  __aeabi_idiv0                 
+00000a99  __aeabi_memcpy                
+00000a99  __aeabi_memcpy4               
+00000a99  __aeabi_memcpy8               
+00000d09  __aeabi_uidiv                 
+00000d09  __aeabi_uidivmod              
 ffffffff  __binit__                     
 UNDEFED   __mpu_init                    
 20207e00  __stack                       
@@ -300,15 +327,23 @@ UNDEFED   __mpu_init
 20200000  __start___llvm_prf_cnts       
 20200000  __stop___llvm_prf_bits        
 20200000  __stop___llvm_prf_cnts        
-00000c09  _c_int00_noargs               
+00000e8d  _c_int00_noargs               
 20200000  _sys_memory                   
 UNDEFED   _system_post_cinit            
-00000d2d  _system_pre_init              
-00000d31  abort                         
+00000fb5  _system_pre_init              
+00000fb9  abort                         
 ffffffff  binit                         
 00000000  interruptVectors              
-00000ae1  main                          
-20200220  whichbit                      
+00000f15  main                          
+000004f8  myDec2String                  
+20200200  myMessage                     
+00000e2b  setUpper                      
+00000aa1  strcmp                        
+00000490  testDec2String                
+00000418  testSPIOutCommand             
+00000454  testSPIOutData                
+20200238  whichbit                      
+20200210  yourMessage                   
 
 
 GLOBAL SYMBOLS: SORTED BY Symbol Address 
@@ -329,88 +364,102 @@ address   name
 000000c1  Clock_Init80MHz               
 00000200  __STACK_SIZE                  
 00000200  __SYSMEM_SIZE                 
-00000275  ST7735_DrawChar               
-0000041d  ST7735_FillRect               
-00000535  SPI_Init                      
-000006cf  __aeabi_idiv0                 
-000006d1  ST7735_InitR                  
-000007f1  TIMG7_IRQHandler              
-00000875  LaunchPad_Init                
-000008f1  __TI_decompress_lzss          
-0000096d  SPI_OutCommand                
-000009b5  SPI_Reset                     
-000009f5  __aeabi_uidiv                 
-000009f5  __aeabi_uidivmod              
-00000a35  __TI_auto_init_nobinit_nopinit
-00000a71  ActivatePortA_B               
-00000aa9  SPI_OutData                   
-00000ae1  main                          
-00000b19  Clock_Delay1ms                
-00000b4d  ST7735_SetCursor              
-00000bb1  ST7735_FillScreen             
-00000bdd  UART_OutChar                  
-00000c09  _c_int00_noargs               
-00000c31  UART_OutString                
-00000c75  ADC0_IRQHandler               
-00000c75  ADC1_IRQHandler               
-00000c75  AES_IRQHandler                
-00000c75  CANFD0_IRQHandler             
-00000c75  DAC0_IRQHandler               
-00000c75  DMA_IRQHandler                
-00000c75  Default_Handler               
-00000c75  GROUP0_IRQHandler             
-00000c75  GROUP1_IRQHandler             
-00000c75  I2C0_IRQHandler               
-00000c75  I2C1_IRQHandler               
-00000c75  NMI_Handler                   
-00000c75  PendSV_Handler                
-00000c75  RTC_IRQHandler                
-00000c75  SPI0_IRQHandler               
-00000c75  SPI1_IRQHandler               
-00000c75  SVC_Handler                   
-00000c75  SysTick_Handler               
-00000c75  TIMA0_IRQHandler              
-00000c75  TIMA1_IRQHandler              
-00000c75  TIMG0_IRQHandler              
-00000c75  TIMG12_IRQHandler             
-00000c75  TIMG6_IRQHandler              
-00000c75  TIMG8_IRQHandler              
-00000c75  UART0_IRQHandler              
-00000c75  UART1_IRQHandler              
-00000c75  UART2_IRQHandler              
-00000c75  UART3_IRQHandler              
-00000c91  HardFault_Handler             
-00000cad  __TI_zero_init_nomemset       
-00000cc3  TI_memcpy_small               
-00000cd5  __TI_decompress_none          
-00000ce7  Clock_Delay                   
-00000cf7  Delay                         
-00000d09  Clock_Freq                    
-00000d15  TimerG7_Stop                  
-00000d21  __aeabi_memcpy                
-00000d21  __aeabi_memcpy4               
-00000d21  __aeabi_memcpy8               
-00000d29  Reset_Handler                 
-00000d2d  _system_pre_init              
-00000d30  C$$EXIT                       
-00000d31  abort                         
-0000131c  __TI_Handler_Table_Base       
-00001328  __TI_Handler_Table_Limit      
-00001330  __TI_CINIT_Base               
-00001340  __TI_CINIT_Limit              
-00001340  __TI_CINIT_Warm               
+00000275  Lab6Grader                    
+00000418  testSPIOutCommand             
+00000454  testSPIOutData                
+00000490  testDec2String                
+000004f8  myDec2String                  
+0000054c  Dec2String                    
+00000560  OutChar                       
+000005a1  GradeSPIOutData               
+000006dd  GradeSPIOutCommand            
+00000815  GradeDec2String               
+00000909  UART_Init                     
+000009f1  TimerG7_IntArm                
+00000a99  __aeabi_memcpy                
+00000a99  __aeabi_memcpy4               
+00000a99  __aeabi_memcpy8               
+00000aa1  strcmp                        
+00000b29  TIMG7_IRQHandler              
+00000bad  LaunchPad_Init                
+00000c29  __TI_decompress_lzss          
+00000ca4  Test_udivby10                 
+00000ce0  OutDec                        
+00000d09  __aeabi_uidiv                 
+00000d09  __aeabi_uidivmod              
+00000d49  __TI_auto_init_nobinit_nopinit
+00000d85  ActivatePortA_B               
+00000dbc  SPIOutCommand                 
+00000dd6  SPIOutData                    
+00000df5  UART_OutUDec                  
+00000e2b  setUpper                      
+00000e5f  __aeabi_idiv0                 
+00000e61  UART_OutChar                  
+00000e8d  _c_int00_noargs               
+00000eb5  UART_OutString                
+00000edd  ADC0_IRQHandler               
+00000edd  ADC1_IRQHandler               
+00000edd  AES_IRQHandler                
+00000edd  CANFD0_IRQHandler             
+00000edd  DAC0_IRQHandler               
+00000edd  DMA_IRQHandler                
+00000edd  Default_Handler               
+00000edd  GROUP0_IRQHandler             
+00000edd  GROUP1_IRQHandler             
+00000edd  I2C0_IRQHandler               
+00000edd  I2C1_IRQHandler               
+00000edd  NMI_Handler                   
+00000edd  PendSV_Handler                
+00000edd  RTC_IRQHandler                
+00000edd  SPI0_IRQHandler               
+00000edd  SPI1_IRQHandler               
+00000edd  SVC_Handler                   
+00000edd  SysTick_Handler               
+00000edd  TIMA0_IRQHandler              
+00000edd  TIMA1_IRQHandler              
+00000edd  TIMG0_IRQHandler              
+00000edd  TIMG12_IRQHandler             
+00000edd  TIMG6_IRQHandler              
+00000edd  TIMG8_IRQHandler              
+00000edd  UART0_IRQHandler              
+00000edd  UART1_IRQHandler              
+00000edd  UART2_IRQHandler              
+00000edd  UART3_IRQHandler              
+00000ef9  HardFault_Handler             
+00000f15  main                          
+00000f2f  __TI_zero_init_nomemset       
+00000f45  TI_memcpy_small               
+00000f57  __TI_decompress_none          
+00000f69  Clock_Delay                   
+00000f79  Delay                         
+00000f89  OutCRLF                       
+00000f99  Clock_Freq                    
+00000fa5  TimerG7_Stop                  
+00000fb1  Reset_Handler                 
+00000fb5  _system_pre_init              
+00000fb8  C$$EXIT                       
+00000fb9  abort                         
+000011cc  __TI_Handler_Table_Base       
+000011d8  __TI_Handler_Table_Limit      
+000011e0  __TI_CINIT_Base               
+000011f0  __TI_CINIT_Limit              
+000011f0  __TI_CINIT_Warm               
 20200000  __start___llvm_prf_bits       
 20200000  __start___llvm_prf_cnts       
 20200000  __stop___llvm_prf_bits        
 20200000  __stop___llvm_prf_cnts        
 20200000  _sys_memory                   
-20200200  BusFreq                       
-20200208  StX                           
-2020020c  StY                           
-20200210  StTextColor                   
-20200218  GraderStatus                  
-2020021c  GraderTime                    
-20200220  whichbit                      
+20200200  myMessage                     
+20200210  yourMessage                   
+20200224  GraderData                    
+20200228  GraderGPIO                    
+2020022c  GraderStatus                  
+20200230  GraderTime                    
+20200234  M                             
+20200238  whichbit                      
+2020023c  EID1                          
+20200244  EID2                          
+20200254  BusFreq                       
 20207e00  __stack                       
 20208000  __STACK_END                   
 ffffffff  __TI_pprof_out_hndl           
@@ -421,4 +470,4 @@ ffffffff  binit
 UNDEFED   __mpu_init                    
 UNDEFED   _system_post_cinit            
 
-[105 symbols]
+[119 symbols]
