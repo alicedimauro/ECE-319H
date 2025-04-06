@@ -1,7 +1,7 @@
 // Lab7HMain.c
 // Runs on MSPM0G3507
 // Lab 7 
-// Your name
+// Alice Di Mauro
 // Last Modified: 12/29/2024
 
 #include <stdio.h>
@@ -18,7 +18,7 @@ extern "C" void __enable_irq(void);
 extern "C" void TIMG12_IRQHandler(void);
 
 // in ECE319H Lab 7, all classes will be statically allocated
-SlidePot Sensor(1500,0); // needs calibration
+SlidePot Sensor(1904,3); // needs calibration
 
 // ****note to ECE319K students****
 // the data sheet says the ADC does not work when clock is 80 MHz
@@ -36,6 +36,21 @@ void OutFix(uint32_t n){
 // output to ST7735 0.000cm to 2.000cm
   
   // write this
+
+    // Create a buffer for the formatted string
+    char str[10];
+
+    // Format the value as "0.000cm" to "2.000cm"
+    // Integer division to get the whole part
+    uint32_t whole = n / 1000;
+    // Modulus to get the fractional part
+    uint32_t fraction = n % 1000;
+
+    // Format the string using sprintf (or snprintf for safety)
+    sprintf(str, "%1d.%03dcm", whole, fraction);
+
+    // Print the formatted string to the LCD
+    ST7735_OutString(str);
 }
 
 // do not use this function in final lab solution
@@ -57,7 +72,7 @@ uint32_t Time;
 // use main1 to test slidepot interface
 // connect slidepot pin 2 to channel 5, PB18
 // Open TExaSdisplay and see slidepot pin2 go from 0 to 3.3V
-int main(void){ // main1
+int main1(void){ // main1
   __disable_irq();
   PLL_Init(); // set bus speed
   LaunchPad_Init();
@@ -169,7 +184,8 @@ void TIMG12_IRQHandler(void){
     GPIOB->DOUTTGL31_0 = GREEN; // toggle PB27 (minimally intrusive debugging)
     Time++;
     // sample
-    
+    uint32_t myData = Sensor.In();
+    Sensor.Save(myData); 
     // store data into mailbox
     // set the semaphore
     GPIOB->DOUTTGL31_0 = GREEN; // toggle PB27 (minimally intrusive debugging)
@@ -178,11 +194,12 @@ void TIMG12_IRQHandler(void){
 uint8_t TExaS_LaunchPadLogicPB27PB26(void){
   return (0x80|((GPIOB->DOUT31_0>>26)&0x03));
 }
+
 // use main5 for final system
 // use scope or logic analyzer to verify real time samples
 // option 1) remove call to TExaS_Init and use a real scope on PB27
 // option 2) use TExaS logic analyzer
-int main5(void){ // main5
+int main(void){ // main5
   __disable_irq();
   PLL_Init(); // set bus speed
   LaunchPad_Init();
@@ -194,6 +211,7 @@ int main5(void){ // main5
   TExaS_Init(0,0,&TExaS_LaunchPadLogicPB27PB26); // PB27 and PB26
   ST7735_PlotClear(0,2000);
     // initialize interrupts on TimerG12 at 30 Hz
+    TimerG12_IntArm(2666666, 2);
  
   Time = 0;
   __enable_irq();
@@ -201,20 +219,23 @@ int main5(void){ // main5
   while(1){
        // complete this
     // wait for semaphore using a call to a method in Sensor
+    Sensor.Sync();
 
-    GPIOB->DOUTTGL31_0 = RED; // toggle PB26 (minimally intrusive debugging)
     GPIOB->DOUTTGL31_0 = RED; // toggle PB26 (minimally intrusive debugging)
     // toggle red LED2 on Port B, PB26
      // convert Data to Position
    // move cursor to top
    // display distance in top row OutFix
 
+    Position = Sensor.Distance();
+    ST7735_SetCursor(0, 0);  // Move cursor to top left
+    OutFix(Position);        // Display distance in fixed-point format
+
     Time++;
     if((Time%15)==0){
       ST7735_PlotPoint(Position);
       ST7735_PlotNextErase(); // data plotted at about 2 Hz
-    }
-    GPIOB->DOUTTGL31_0 = RED; // toggle PB26 (minimally intrusive debugging)
+  }
   }
 }
 
