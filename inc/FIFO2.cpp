@@ -27,6 +27,7 @@
  http://users.ece.utexas.edu/~valvano/
  */
 #include <stdint.h>
+#include <stdio.h>
 
 #include "../inc/FIFO2.h"
 #include "../inc/ST7735.h"
@@ -38,27 +39,39 @@ Queue::Queue(){
   // Constructor - set PutI and GetI as 0. 
   // We are assuming that for an empty Queue, both PutI and GetI will be equal
     // add code here to initialize on creation
+    PutI = 0;
+    GetI = 0;
 }
 
 // To check whether Queue is empty or not
 bool Queue::IsEmpty(void){
-    return false;  // replace this with solution
+    // return false;  // replace this with solution
+    return (PutI == GetI);
 }
 
   // To check whether Queue is full or not
 bool Queue::IsFull(void){
-    return false;  // replace this with solution
+    // return false;  // replace this with solution
+    return (((PutI + 1) % FIFOSIZE) == GetI);
 }
 
   // Inserts an element in queue at rear end
 bool Queue::Put(char x){
-    return false;  // replace this with solution
+    // return false;  // replace this with solution
+    if(IsFull()) return false;
+    Buf[PutI] = x;
+    PutI = (PutI + 1) % FIFOSIZE;
+    return true;
 
 }
 
   // Removes an element in Queue from front end. 
 bool Queue::Get(char *pt){
-    return false;  // replace this with solution
+    // return false;  // replace this with solution
+    if(IsEmpty()) return false;
+    *pt = Buf[GetI];
+    GetI = (GetI + 1) % FIFOSIZE;
+    return true; // Return true or data?
 
 }
 
@@ -70,5 +83,9 @@ bool Queue::Get(char *pt){
 void Queue::Print(void){
     // Finding number of elements in queue  
     // output to ST7735R
-}
 
+    ST7735_SetCursor(0, 0);
+    for (int i = GetI; i < PutI; i++) {
+      printf("%d", Buf[i]);
+    }
+}

@@ -22,6 +22,11 @@
 void IRxmt_Init(void){
     // initialize PA8 as output
     // make PA8 low (IR off)
+    IOMUX->SECCFG.PINCM[PA8INDEX] = 0x40081;
+    GPIOA->DOE31_0 |= (IR);
+    GPIOA->DOUT31_0 &= ~(IR);
+
+
 }
 
 extern "C" void Delay(void);
@@ -44,6 +49,20 @@ void Delay(uint32_t time){
 // if bit=1 no PA8 pulses, 16 times at off for 13.158us, off for 13.158us
 void IRxmt_SendBit(int bit){
    // write this
+    if (bit == 0) {
+        for (int i = 0; i < PulsePerBit; i++) {
+            GPIOA->DOUT31_0 &= ~(IR); // Toggling PA8 for low
+            Delay(IRPULSE); // Splits period in 2 halves for square wave
+            GPIOA->DOUT31_0 |= (IR); // Toggling PA8 for high
+            Delay(IRPULSE); // Splits period in 2 halves for square wave
+        }
+    } else {
+        for (int i = 0; i < PulsePerBit; i++) { // Already cleared
+            Delay(IRPULSE); // Splits period in 2 halves for square wave
+        }
+        Delay(IRPULSE * PulsePerBit); // Keeps PA8 low for the same duration as sending a '0'.
+    }
+// Delay(10 * IRPULSE);
 }
 // output ASCII character to IR transmitter
 // blind cycle synchronization
@@ -52,7 +71,18 @@ void IRxmt_SendBit(int bit){
 // 0 means 38 kHz pulse for 1 bit time
 // 1 means no pulses for 1 bit time
 // should take 10*421.06us = 4.2106ms
+
+
+
 void IRxmt_OutChar(char data){
      // write this
+     IRxmt_SendBit(0); // Send a start bit
+
+     for (int i = 0; i < 8; i++) {
+        int bit = (data >> i) & 1;
+        IRxmt_SendBit(bit); // Send 8 data bits (LSB first)
+     }
+
+     IRxmt_SendBit(1); // Stop bit
 }
 

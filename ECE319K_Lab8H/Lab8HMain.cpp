@@ -82,7 +82,7 @@ int main(void){ // main1R
 // run main1T on transmitter to test IRxmt_SendBit(0);
 // Connect scope to PA8 on transmitter
 //   verify continuous wave is 38 kHz
-//   low time is about 13.158us
+//   low time is about 13.158uss
 //   high time is about 13.158us
 int main1T(void){ // main1T
   __disable_irq();
