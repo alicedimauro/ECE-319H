@@ -6,6 +6,7 @@
 // PA8 GPIO output to IR LED, to other microcontroller IR sensor, PA22 UART2 Rx
 // Spring 2025: message format {0x3C,digit1,digit2,digit3}
 //   where each digit is an ASCII character '0' to '9'
+#include <cstdint>
 #include <stdio.h>
 #include <stdint.h>
 #include <ti/devices/msp/msp.h>
@@ -44,7 +45,7 @@ SlidePot Sensor(1500,0); // copy calibration from Lab 7
 // err should be 0
 Queue FIFO;
 int err,count;
-int main(void){ // main1R
+int main1R(void){ // main1R
   char data = 0; char out;
   bool result;
   __disable_irq();
@@ -188,14 +189,25 @@ int main4R(void){ // main4R
 
 // sampling frequency is 30 Hz
 // should take 4*10*421.06us = 16.84ms
-void TIMG12_IRQHandler(void){uint32_t pos;
+void TIMG12_IRQHandler(void){
+  uint32_t pos;
   if((TIMG12->CPU_INT.IIDX) == 1){ // this will acknowledge
     GPIOB->DOUTTGL31_0 = GREEN; // toggle PB27 (minimally intrusive debugging)
   // increment TransmitCount
+  TransmitCount++;
   // sample 12-bit ADC0 channel 5, slidepot
-    GPIOB->DOUTTGL31_0 = GREEN; // toggle PB27 (minimally intrusive debugging)
+
+
+
+  GPIOB->DOUTTGL31_0 = GREEN; // toggle PB27 (minimally intrusive debugging)
+
   // convert to fixed point distance
+
+
+
   // output 4-frame message
+
+
     GPIOB->DOUTTGL31_0 = GREEN; // toggle PB27 (minimally intrusive debugging)
   }
 }
@@ -213,15 +225,18 @@ int main5T(void){ // main5T
   TransmitCount=0;
   Sensor.Init(); //PB18 = ADC1 channel 5, slidepot
   IRxmt_Init(); // just transmit, PA8, blind synchronization
-      // initialize interrupts on TimerG12 at 30 Hz
- 
+
+  // initialize interrupts on TimerG12 at 30 Hz
+  TimerG12_IntArm(2666666, 2);
+
   __enable_irq();
 
   while(1){
 	  // nothing to do here
   }
 }
-int main5R(void){ // main5R
+int main(void){ // main5R
+  uint32_t buffer[4];
   __disable_irq();
   PLL_Init(); // set bus speed
   LaunchPad_Init();
@@ -232,21 +247,53 @@ int main5R(void){ // main5R
   ST7735_PlotClear(0,2000);
   __enable_irq();
 
-  while(1){uint32_t PositionReceive;
-        // move cursor to top left
+  while(1){
+      uint32_t PositionReceive;
+      // move cursor to top left
+      ST7735_SetCursor(0,0);  // Move cursor to top left
+      
+      
       // wait for first frame
+      while(UART2_InChar() != 0x3C) {}       
+      
+      
+      // Get next 3 ASCII digits
+      PositionReceive = UART2_InChar();
+      if (PositionReceive != 0) {
+        ST7735_OutChar(PositionReceive);
+        buffer[0] = (PositionReceive - 0x30) * 1000;
+      }
+    
+      ST7735_OutChar('.');    // implied
+
+      PositionReceive = UART2_InChar();
+      if (PositionReceive != 0) {
+        ST7735_OutChar(PositionReceive);
+        buffer[1] = (PositionReceive - 0x30) * 100;
+
+      }
+
+      PositionReceive = UART2_InChar();
+      if (PositionReceive != 0) {
+        ST7735_OutChar(PositionReceive);
+        buffer[2] = (PositionReceive - 0x30) * 10;
+    
+      }
+
+      printf(" cm");
+
       // increment ReceiveCount
+      ReceiveCount++;
       GPIOB->DOUTTGL31_0 = RED; // toggle PB26 (minimally intrusive debugging)
-      // receive next three bytes of message
-      // output message
-      // calculate PositionReceive from the message
-    if((ReceiveCount%15)==0){
+
+    PositionReceive = buffer[0] + buffer[1] + buffer[2];
+    // calculate PositionReceive from the message
+ //   if((ReceiveCount%15)==0){
       ST7735_PlotPoint(PositionReceive);
       ST7735_PlotNextErase(); // data plotted at about 2 Hz
-    }
+   // }
+}    
   }
-}
-
 
 
 

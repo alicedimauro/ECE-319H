@@ -66,7 +66,7 @@ uint32_t SlidePot::Convert(uint32_t n){
 // do not use this function in final lab solution
 // it is added just to show you how SLOW floating point in on a Cortex M0+
 float SlidePot::FloatConvert(uint32_t input){
-  return 0.00048828125*input -0.0001812345;
+  return 0.00048828125*input - 0.0001812345;
 }
 
 void SlidePot::Sync(void){
