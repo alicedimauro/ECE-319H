@@ -1,6 +1,6 @@
 # FIXED
 
-LED.o: ../LED.cpp ../../inc/LaunchPad.h \
+I2C.o: ../I2C.cpp ../I2C.h ../../inc/Clock.h \
  C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/msp.h \
  C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/DeviceFamily.h \
  C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/m0p/mspm0g350x.h \
@@ -31,7 +31,8 @@ LED.o: ../LED.cpp ../../inc/LaunchPad.h \
  C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/peripherals/m0p/hw_debugss.h \
  C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/peripherals/m0p/hw_sysctl.h \
  C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/peripherals/m0p/sysctl/hw_sysctl_mspm0g1x0x_g3x0x.h
-../../inc/LaunchPad.h:
+../I2C.h:
+../../inc/Clock.h:
 C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/msp.h:
 C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/DeviceFamily.h:
 C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/m0p/mspm0g350x.h:

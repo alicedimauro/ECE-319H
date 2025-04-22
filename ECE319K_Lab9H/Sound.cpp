@@ -11,7 +11,7 @@
 #include <ti/devices/msp/msp.h>
 
 
-static const uint8_t *soundPtr = NULL;
+// static const uint8_t *soundPtr = NULL;
 static uint32_t soundCount = 0;
 static uint32_t soundIndex = 0;
 static uint32_t period = 0;
@@ -39,15 +39,14 @@ void Sound_Init(void) {
 extern "C" void SysTick_Handler(void);
 void SysTick_Handler(void) { // called at 11 kHz
                              // output one value to DAC if a sound is active
-  if (soundPtr != NULL && soundIndex < soundCount) {
-    DAC5_Out(soundPtr[soundIndex]); // Output sample to DAC
-    soundIndex++;                   // Increment index
-  } else {
-    // Sound finished, stop Systick
-    SysTick->CTRL = 0; // Disable systick
-    soundPtr = NULL;   // Indicate sound is done
+  // if (soundPtr != NULL && soundIndex < soundCount) {
+  //   DAC5_Out(soundPtr[soundIndex]); // Output sample to DAC
+  //   soundIndex++;                   // Increment index
+  // } else {
+  //   // Sound finished, stop Systick
+  //   SysTick->CTRL = 0; // Disable systick
+  //   soundPtr = NULL;   // Indicate sound is done
   }
-}
 
 //******* Sound_Start ************
 // This function does not output to the DAC.
@@ -63,7 +62,7 @@ void Sound_Start(const uint8_t *pt, uint32_t count) {
   __disable_irq();
 
   // Set sound parameters
-  soundPtr = pt;
+  // soundPtr = pt;
   soundCount = count;
   soundIndex = 0;
 

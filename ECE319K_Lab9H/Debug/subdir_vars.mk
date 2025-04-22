@@ -8,6 +8,7 @@ SHELL = cmd.exe
 CPP_SRCS += \
 C:/Git/ECE-319H/inc/Clock.cpp \
 C:/Git/ECE-319H/inc/DAC5.cpp \
+../I2C.cpp \
 ../LED.cpp \
 ../Lab9HMain.cpp \
 C:/Git/ECE-319H/inc/LaunchPad.cpp \
@@ -18,7 +19,8 @@ C:/Git/ECE-319H/inc/SlidePot.cpp \
 ../Sound.cpp \
 ../Switch.cpp \
 C:/Git/ECE-319H/inc/TExaS.cpp \
-C:/Git/ECE-319H/inc/Timer.cpp 
+C:/Git/ECE-319H/inc/Timer.cpp \
+../UART.cpp 
 
 CMD_SRCS += \
 ../mspm0g3507.cmd 
@@ -26,6 +28,7 @@ CMD_SRCS += \
 OBJS += \
 ./Clock.o \
 ./DAC5.o \
+./I2C.o \
 ./LED.o \
 ./Lab9HMain.o \
 ./LaunchPad.o \
@@ -36,11 +39,13 @@ OBJS += \
 ./Sound.o \
 ./Switch.o \
 ./TExaS.o \
-./Timer.o 
+./Timer.o \
+./UART.o 
 
 CPP_DEPS += \
 ./Clock.d \
 ./DAC5.d \
+./I2C.d \
 ./LED.d \
 ./Lab9HMain.d \
 ./LaunchPad.d \
@@ -51,11 +56,13 @@ CPP_DEPS += \
 ./Sound.d \
 ./Switch.d \
 ./TExaS.d \
-./Timer.d 
+./Timer.d \
+./UART.d 
 
 OBJS__QUOTED += \
 "Clock.o" \
 "DAC5.o" \
+"I2C.o" \
 "LED.o" \
 "Lab9HMain.o" \
 "LaunchPad.o" \
@@ -66,11 +73,13 @@ OBJS__QUOTED += \
 "Sound.o" \
 "Switch.o" \
 "TExaS.o" \
-"Timer.o" 
+"Timer.o" \
+"UART.o" 
 
 CPP_DEPS__QUOTED += \
 "Clock.d" \
 "DAC5.d" \
+"I2C.d" \
 "LED.d" \
 "Lab9HMain.d" \
 "LaunchPad.d" \
@@ -81,11 +90,13 @@ CPP_DEPS__QUOTED += \
 "Sound.d" \
 "Switch.d" \
 "TExaS.d" \
-"Timer.d" 
+"Timer.d" \
+"UART.d" 
 
 CPP_SRCS__QUOTED += \
 "C:/Git/ECE-319H/inc/Clock.cpp" \
 "C:/Git/ECE-319H/inc/DAC5.cpp" \
+"../I2C.cpp" \
 "../LED.cpp" \
 "../Lab9HMain.cpp" \
 "C:/Git/ECE-319H/inc/LaunchPad.cpp" \
@@ -96,6 +107,7 @@ CPP_SRCS__QUOTED += \
 "../Sound.cpp" \
 "../Switch.cpp" \
 "C:/Git/ECE-319H/inc/TExaS.cpp" \
-"C:/Git/ECE-319H/inc/Timer.cpp" 
+"C:/Git/ECE-319H/inc/Timer.cpp" \
+"../UART.cpp" 
 
 

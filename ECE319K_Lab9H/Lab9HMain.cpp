@@ -4,6 +4,8 @@
 // Alice Di Mauro and Ravi Shah
 // Last Modified: 12/26/2024
 
+#include "UART.h"
+#include "I2C.h"
 #include <stdio.h>
 #include <stdint.h>
 #include <ti/devices/msp/msp.h>
@@ -20,17 +22,27 @@
 #include "Sound.h"
 #include "images/images.h"
 #include "Sprite.h"
+
+#define IMU_BASE_ADDRESS 0x68
+#define ANGLE_MULTIPLIER 60 // need this to convert IMU vals to a real angle
+
+#define LED0 (1 << 17)
+#define LED1 (1 << 16)
+#define LED2 (1 << 13)
+#define LED3 (1 << 19)
+#define LED4 (1 << 12)
+
 extern "C" void __disable_irq(void);
 extern "C" void __enable_irq(void);
 extern "C" void TIMG12_IRQHandler(void);
 
 
 // Initialize sprites
-Sprite userCar(64, 80, 0, 0, redcar, redCarBlack, 30, 70);
-Sprite bluecar(80, 50, 0, 0, bluecar1, blueCarBlack, 31, 69);
-Sprite orangecar(20, 30, 0, 0, orangecar1, orangeCarBlack, 31, 69);
-Sprite power(80, 50, 0, 0, bolt, blueCarBlack, 20, 30);
-Sprite track(64, 80, 0, 0, road, blueCarBlack, 91, 168);
+// Sprite userCar(64, 80, 0, 0, redcar, redCarBlack, 30, 70);
+// Sprite bluecar(80, 50, 0, 0, bluecar1, blueCarBlack, 31, 69);
+// Sprite orangecar(20, 30, 0, 0, orangecar1, orangeCarBlack, 31, 69);
+// Sprite power(80, 50, 0, 0, bolt, blueCarBlack, 20, 30);
+// Sprite track(64, 80, 0, 0, road, blueCarBlack, 91, 168);
 
 
 // ****note to ECE319K students****
@@ -93,7 +105,7 @@ const char *Phrases[3][2]={
   {Language_English,Language_Spanish}
 };
 // use main1 to observe special characters
-int main(void){ // main1
+int main1(void){ // main1
     char l;
   __disable_irq();
   PLL_Init(); // set bus speed
@@ -235,5 +247,80 @@ int main5(void){ // final main
        // clear semaphore
        // update ST7735R
     // check for end game or level switch
+  }
+}
+
+// main6 - i2c tester
+int main(void) {
+  PLL_Init(); // set bus speed
+  LaunchPad_Init();
+  I2C_Init(); // initialize I2C1
+  LED_Init();
+  UART_Init();
+
+  // enable systick to track time differential
+  uint32_t startTime, stopTime;
+  SysTick->LOAD = 0xFFFFFF;   // max
+  SysTick->VAL = 0;           // any write to current clears it
+  SysTick->CTRL = 0x00000005; // enable SysTick with core clock
+  startTime = SysTick->VAL;
+  stopTime = SysTick->VAL;
+  uint32_t offset = (startTime - stopTime) & 0x0FFFFFF; // in bus cycles
+
+  uint8_t whoami_data = 0;
+  whoami_data = IMU_WhoAmI(IMU_BASE_ADDRESS); // make sure this is 0x67
+
+  IMU_Init(IMU_BASE_ADDRESS); // initialize IMU registers
+  LED_Toggle(LED2);
+
+  whoami_data = 0;
+  whoami_data = IMU_WhoAmI(IMU_BASE_ADDRESS); // KEEP THIS - MUST DO IT TWICE!
+  whoami_data = IMU_WhoAmI(IMU_BASE_ADDRESS); // make sure this is 0x67
+
+  int16_t angular_velocity = 0; // gyroscope data received from IMU (z-axis)
+  float computed_angle = 0;     // angle computed from gyro data
+  float dt = 0.0017;            // default val
+
+  while (1) {
+    startTime = SysTick->VAL;
+    angular_velocity =
+        IMU_Z_Axis(IMU_BASE_ADDRESS); // avg of 3 samples from IMU gyroscope
+    stopTime = SysTick->VAL;
+    dt = (((startTime - stopTime) & 0x0FFFFFF) -
+         offset) * (1.25e-8); // in seconds
+
+    computed_angle += angular_velocity * dt *
+                      ANGLE_MULTIPLIER; // compute angle by integration
+
+    UART_OutString("computed angle: ");
+    UART_OutSDec((int32_t)computed_angle);
+    UART_OutString("\n");
+    LED_Toggle(LED2);
+    Clock_Delay1ms(33); // 30 Hz
+  }
+}
+
+// main7 - LED tester
+int main7(void) {
+  Clock_Init80MHz(0);
+  LaunchPad_Init();
+  LED_Init();
+
+  while (1) {
+    LED_On(LED0);
+    LED_On(LED1);
+    LED_On(LED2);
+    LED_On(LED3);
+    LED_On(LED4);
+
+    Clock_Delay1ms(500); // wait 500ms
+
+    LED_Off(LED0);
+    LED_Off(LED1);
+    LED_Off(LED2);
+    LED_Off(LED3);
+    LED_Off(LED4);
+
+    Clock_Delay1ms(500); // wait 500ms
   }
 }
