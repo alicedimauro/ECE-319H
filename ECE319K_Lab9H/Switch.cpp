@@ -19,5 +19,5 @@ uint32_t Switch_In(void){
     // write this
   uint32_t data = GPIOA->DIN31_0;
   data = ((data>>15)&0x0F); // Read 15-18
-  return data; // returns the four switches status as some value 0-15
+  return data; // returns the four switches status as some value 1,2,4,8
 }

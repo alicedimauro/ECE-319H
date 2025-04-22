@@ -32,7 +32,7 @@ void SysTick_IntArm(uint32_t period, uint32_t priority) {
 void Sound_Init(void) {
   // write this
   DAC5_Init();
-  period = 7726; // 80M/7726 = 11.025kHz
+  period = 7256; // 80M/7256 = 11.025kHz
 }
 
 
