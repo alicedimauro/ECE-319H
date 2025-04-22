@@ -40,7 +40,7 @@ uint32_t Random(uint32_t n){
   return (Random32()>>16)%n;
 }
 
-SlidePot Sensor(1500,0); // copy calibration from Lab 7
+SlidePot Sensor(1904,3); // copy calibration from Lab 7
 
 // games  engine runs at 30Hz
 void TIMG12_IRQHandler(void){uint32_t pos,msg;
@@ -61,25 +61,25 @@ uint8_t TExaS_LaunchPadLogicPB27PB26(void){
   return (0x80|((GPIOB->DOUT31_0>>26)&0x03));
 }
 
-typedef enum {English, Spanish, Portuguese, French} Language_t;
+typedef enum {English, Spanish} Language_t;
 Language_t myLanguage=English;
 typedef enum {HELLO, GOODBYE, LANGUAGE} phrase_t;
 const char Hello_English[] ="Hello";
 const char Hello_Spanish[] ="\xADHola!";
-const char Hello_Portuguese[] = "Ol\xA0";
-const char Hello_French[] ="All\x83";
+// const char Hello_Portuguese[] = "Ol\xA0";
+// const char Hello_French[] ="All\x83";
 const char Goodbye_English[]="Goodbye";
 const char Goodbye_Spanish[]="Adi\xA2s";
-const char Goodbye_Portuguese[] = "Tchau";
-const char Goodbye_French[] = "Au revoir";
+// const char Goodbye_Portuguese[] = "Tchau";
+// const char Goodbye_French[] = "Au revoir";
 const char Language_English[]="English";
 const char Language_Spanish[]="Espa\xA4ol";
-const char Language_Portuguese[]="Portugu\x88s";
-const char Language_French[]="Fran\x87" "ais";
-const char *Phrases[3][4]={
-  {Hello_English,Hello_Spanish,Hello_Portuguese,Hello_French},
-  {Goodbye_English,Goodbye_Spanish,Goodbye_Portuguese,Goodbye_French},
-  {Language_English,Language_Spanish,Language_Portuguese,Language_French}
+// const char Language_Portuguese[]="Portugu\x88s";
+// const char Language_French[]="Fran\x87" "ais";
+const char *Phrases[3][2]={
+  {Hello_English,Hello_Spanish},
+  {Goodbye_English,Goodbye_Spanish},
+  {Language_English,Language_Spanish}
 };
 // use main1 to observe special characters
 int main(void){ // main1
@@ -90,7 +90,7 @@ int main(void){ // main1
   ST7735_InitPrintf();
   ST7735_FillScreen(0x0000);            // set screen to black
   for(int myPhrase=0; myPhrase<= 2; myPhrase++){
-    for(int myL=0; myL<= 3; myL++){
+    for(int myL=0; myL < 2; myL++){
          ST7735_OutString((char *)Phrases[LANGUAGE][myL]);
       ST7735_OutChar(' ');
          ST7735_OutString((char *)Phrases[myPhrase][myL]);
@@ -125,16 +125,20 @@ int main2(void){ // main2
     //note: if you colors are weird, see different options for
     // ST7735_InitR(INITR_REDTAB); inside ST7735_InitPrintf()
   ST7735_FillScreen(ST7735_BLACK);
-  ST7735_DrawBitmap(22, 159, PlayerShip0, 18,8); // player ship bottom
-  ST7735_DrawBitmap(53, 151, Bunker0, 18,5);
-  ST7735_DrawBitmap(42, 159, PlayerShip1, 18,8); // player ship bottom
-  ST7735_DrawBitmap(62, 159, PlayerShip2, 18,8); // player ship bottom
-  ST7735_DrawBitmap(82, 159, PlayerShip3, 18,8); // player ship bottom
-  ST7735_DrawBitmap(0, 9, SmallEnemy10pointA, 16,10);
-  ST7735_DrawBitmap(20,9, SmallEnemy10pointB, 16,10);
-  ST7735_DrawBitmap(40, 9, SmallEnemy20pointA, 16,10);
-  ST7735_DrawBitmap(60, 9, SmallEnemy20pointB, 16,10);
-  ST7735_DrawBitmap(80, 9, SmallEnemy30pointA, 16,10);
+  
+  // Space Invaders Sprites: 
+  // ST7735_DrawBitmap(22, 159, PlayerShip0, 18,8); // player ship bottom
+  // ST7735_DrawBitmap(53, 151, Bunker0, 18,5);
+  // ST7735_DrawBitmap(42, 159, PlayerShip1, 18,8); // player ship bottom
+  // ST7735_DrawBitmap(62, 159, PlayerShip2, 18,8); // player ship bottom
+  // ST7735_DrawBitmap(82, 159, PlayerShip3, 18,8); // player ship bottom
+  // ST7735_DrawBitmap(0, 9, SmallEnemy10pointA, 16,10);
+  // ST7735_DrawBitmap(20,9, SmallEnemy10pointB, 16,10);
+  // ST7735_DrawBitmap(40, 9, SmallEnemy20pointA, 16,10);
+  // ST7735_DrawBitmap(60, 9, SmallEnemy20pointB, 16,10);
+  // ST7735_DrawBitmap(80, 9, SmallEnemy30pointA, 16,10);
+
+  ST7735_DrawBitmap(64, 100, redcar, 30, 70); // Place user car towards middle bottom
 
   for(uint32_t t=500;t>0;t=t-5){
     SmallFont_OutVertical(t,104,6); // top left
@@ -178,16 +182,16 @@ int main4(void){ uint32_t last=0,now;
   while(1){
     now = Switch_In(); // one of your buttons
     if((last == 0)&&(now == 1)){
-      Sound_Shoot(); // call one of your sounds
+      // Sound_Shoot(); // call one of your sounds
     }
     if((last == 0)&&(now == 2)){
-      Sound_Killed(); // call one of your sounds
+      // Sound_Killed(); // call one of your sounds
     }
     if((last == 0)&&(now == 4)){
-      Sound_Explosion(); // call one of your sounds
+      // Sound_Explosion(); // call one of your sounds
     }
     if((last == 0)&&(now == 8)){
-      Sound_Fastinvader1(); // call one of your sounds
+      // Sound_Fastinvader1(); // call one of your sounds
     }
     // modify this to test all your sounds
   }

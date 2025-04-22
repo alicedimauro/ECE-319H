@@ -44,31 +44,29 @@ void Sound_Start(const uint8_t *pt, uint32_t count){
   
 }
 
-void Sound_Shoot(void){
+// Sound emitted when user car runs into another vehicle/object 
+void Sound_Crash(void){
 // write this
-  Sound_Start( shoot, 4080);
+Sound_Start(crashsound, 6438);
+
 }
-void Sound_Killed(void){
+
+// Sound emitted when user car picks up a powerup
+void Sound_Powerup(void){
 // write this
-
-}
-void Sound_Explosion(void){
-// write this
+Sound_Start(powerup, 38493);
 
 }
 
-void Sound_Fastinvader1(void){
+// Sound emitted when user uses a powerup
+void Sound_usePowerup(void){
 
 }
-void Sound_Fastinvader2(void){
+
+// Sound emmitted when user reaches edges of the track
+void Sound_OffSides(void){
+// Write this
+Sound_Start(offsides, 33697);
 
 }
-void Sound_Fastinvader3(void){
 
-}
-void Sound_Fastinvader4(void){
-
-}
-void Sound_Highpitch(void){
-
-}
