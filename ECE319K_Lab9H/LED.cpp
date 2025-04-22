@@ -32,19 +32,19 @@ void LED_Init(void){
 void LED_On(uint32_t data){
     // write this
     // use DOUTSET31_0 register so it does not interfere with other GPIO
-  GPIOA->DOUTSET31_0 = data;
+  GPIOB->DOUTSET31_0 = data;
 }
 
 // data specifies which LED to turn off
 void LED_Off(uint32_t data){
     // write this
     // use DOUTCLR31_0 register so it does not interfere with other GPIO
-  GPIOA->DOUTCLR31_0 = data;
+  GPIOB->DOUTCLR31_0 = data;
 }
 
 // data specifies which LED to toggle
 void LED_Toggle(uint32_t data){
     // write this
     // use DOUTTGL31_0 register so it does not interfere with other GPIO
-  GPIOA->DOUTTGL31_0 = data;
+  GPIOB->DOUTTGL31_0 = data;
 }

@@ -19,9 +19,20 @@
 #include "Switch.h"
 #include "Sound.h"
 #include "images/images.h"
+#include "Sprite.h"
 extern "C" void __disable_irq(void);
 extern "C" void __enable_irq(void);
 extern "C" void TIMG12_IRQHandler(void);
+
+
+// Initialize sprites
+Sprite userCar(64, 80, 0, 0, redcar, redCarBlack, 30, 70);
+Sprite bluecar(80, 50, 0, 0, bluecar1, blueCarBlack, 31, 69);
+Sprite orangecar(20, 30, 0, 0, orangecar1, orangeCarBlack, 31, 69);
+Sprite power(80, 50, 0, 0, bolt, blueCarBlack, 20, 30);
+Sprite track(64, 80, 0, 0, road, blueCarBlack, 91, 168);
+
+
 // ****note to ECE319K students****
 // the data sheet says the ADC does not work when clock is 80 MHz
 // however, the ADC seems to work on my boards at 80 MHz
@@ -138,7 +149,7 @@ int main2(void){ // main2
   // ST7735_DrawBitmap(60, 9, SmallEnemy20pointB, 16,10);
   // ST7735_DrawBitmap(80, 9, SmallEnemy30pointA, 16,10);
 
-  ST7735_DrawBitmap(64, 100, redcar, 30, 70); // Place user car towards middle bottom
+  ST7735_DrawBitmap(64, 80, redcar, 30, 70); // Place user car towards middle bottom
 
   for(uint32_t t=500;t>0;t=t-5){
     SmallFont_OutVertical(t,104,6); // top left
@@ -183,15 +194,19 @@ int main4(void){ uint32_t last=0,now;
     now = Switch_In(); // one of your buttons
     if((last == 0)&&(now == 1)){
       // Sound_Shoot(); // call one of your sounds
+      Sound_Crash();
     }
     if((last == 0)&&(now == 2)){
       // Sound_Killed(); // call one of your sounds
+      Sound_Powerup();
     }
     if((last == 0)&&(now == 4)){
       // Sound_Explosion(); // call one of your sounds
+      Sound_usePowerup();
     }
     if((last == 0)&&(now == 8)){
       // Sound_Fastinvader1(); // call one of your sounds
+      Sound_OffSides();
     }
     // modify this to test all your sounds
   }
