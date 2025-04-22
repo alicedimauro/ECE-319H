@@ -193,7 +193,7 @@ int main3(void){ // main3
   }
 }
 // use main4 to test sound outputs
-int main4(void){ uint32_t last=0,now;
+int main(void){ uint32_t last=0,now;
   __disable_irq();
   PLL_Init(); // set bus speed
   LaunchPad_Init();
@@ -214,12 +214,13 @@ int main4(void){ uint32_t last=0,now;
     }
     if((last == 0)&&(now == 4)){
       // Sound_Explosion(); // call one of your sounds
-      Sound_usePowerup();
+      Sound_usePowerup(); 
     }
     if((last == 0)&&(now == 8)){
       // Sound_Fastinvader1(); // call one of your sounds
       Sound_OffSides();
     }
+    last = now;
     // modify this to test all your sounds
   }
 }
@@ -251,7 +252,7 @@ int main5(void){ // final main
 }
 
 // main6 - i2c tester
-int main(void) {
+int main6(void) {
   PLL_Init(); // set bus speed
   LaunchPad_Init();
   I2C_Init(); // initialize I2C1

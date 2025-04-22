@@ -11,10 +11,10 @@
 #include <ti/devices/msp/msp.h>
 
 
-// static const uint8_t *soundPtr = NULL;
 static uint32_t soundCount = 0;
 static uint32_t soundIndex = 0;
 static uint32_t period = 0;
+static uint32_t *soundPtr; // set to point
 
 void SysTick_IntArm(uint32_t period, uint32_t priority) {
   // write this
@@ -22,7 +22,7 @@ void SysTick_IntArm(uint32_t period, uint32_t priority) {
   SysTick->LOAD = period - 1; // reload value
   SysTick->VAL = 0;           // any write to current clears it
   SCB->SHP[priority] =
-      SCB->SHP[priority] & (~0xC0000000) | 0x40000000; // set priority = 2
+      SCB->SHP[priority] & (~0xC0000000) | (priority << 30); // set priority = 2
   SysTick->CTRL = 0x0007; // enable SysTick with core clock and interrupts
 }
 
@@ -32,21 +32,21 @@ void SysTick_IntArm(uint32_t period, uint32_t priority) {
 void Sound_Init(void) {
   // write this
   DAC5_Init();
-  period = 7256; // 80M/7256 = 11.025kHz
+  period = 7256; // 80M/7256 = 11.025kHz 7272
 }
 
 
 extern "C" void SysTick_Handler(void);
 void SysTick_Handler(void) { // called at 11 kHz
                              // output one value to DAC if a sound is active
-  // if (soundPtr != NULL && soundIndex < soundCount) {
-  //   DAC5_Out(soundPtr[soundIndex]); // Output sample to DAC
-  //   soundIndex++;                   // Increment index
-  // } else {
-  //   // Sound finished, stop Systick
-  //   SysTick->CTRL = 0; // Disable systick
-  //   soundPtr = NULL;   // Indicate sound is done
+  if (soundIndex < soundCount) {
+    DAC5_Out(soundPtr[soundIndex]); // Output sample to DAC
+    soundIndex++;                   // Increment index
+  } else {
+    // Sound finished, stop Systick
+    SysTick->CTRL = 0; // Disable systick
   }
+}
 
 //******* Sound_Start ************
 // This function does not output to the DAC.
@@ -67,7 +67,7 @@ void Sound_Start(const uint8_t *pt, uint32_t count) {
   soundIndex = 0;
 
   // Arm SysTick for sound playback
-  SysTick_IntArm(period, 0);
+  SysTick_IntArm(period, 1); // what priority?
 
   // Enable Interrupts
   __enable_irq();
