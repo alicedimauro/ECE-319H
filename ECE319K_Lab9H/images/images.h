@@ -2687,5 +2687,8 @@ const unsigned short track[] = {
 
 };
 
+// Title page 
+// w = 127, h = 160
+
 
 #endif /* __images_h */

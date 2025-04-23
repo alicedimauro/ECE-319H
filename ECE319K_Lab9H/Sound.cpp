@@ -7,36 +7,33 @@
 #include "../inc/DAC5.h"
 #include "../inc/Timer.h"
 #include "sounds/sounds.h"
+#include <cstdint>
 #include <stdint.h>
 #include <ti/devices/msp/msp.h>
-
-
 static uint32_t soundCount = 0;
 static uint32_t soundIndex = 0;
 static uint32_t period = 0;
-static uint32_t *soundPtr; // set to point
-
+static const uint8_t *soundPtr = 0; // set to point
 void SysTick_IntArm(uint32_t period, uint32_t priority) {
   // write this
   SysTick->CTRL = 0;          // disable SysTick during setup
   SysTick->LOAD = period - 1; // reload value
   SysTick->VAL = 0;           // any write to current clears it
-  SCB->SHP[priority] =
-      SCB->SHP[priority] & (~0xC0000000) | (priority << 30); // set priority = 2
-  SysTick->CTRL = 0x0007; // enable SysTick with core clock and interrupts
+  SCB->SHP[1] = SCB->SHP[1] & (~0xC0000000) | priority; // set priority = 2
+  SysTick->CTRL = 0x07; // enable SysTick with core clock and interrupts
 }
-
 // initialize a 11kHz SysTick, however no sound should be started
 // initialize any global variables
 // Initialize the 5 bit DAC
 void Sound_Init(void) {
   // write this
+  soundIndex = 0;
+  soundPtr = 0;
+  soundCount = 0;
   DAC5_Init();
   period = 7256; // 80M/7256 = 11.025kHz 7272
-  SysTick_IntArm(1,0);
+  SysTick_IntArm(1, 0);
 }
-
-
 extern "C" void SysTick_Handler(void);
 void SysTick_Handler(void) { // called at 11 kHz
                              // output one value to DAC if a sound is active
@@ -48,7 +45,6 @@ void SysTick_Handler(void) { // called at 11 kHz
     SysTick->CTRL = 0; // Disable systick
   }
 }
-
 //******* Sound_Start ************
 // This function does not output to the DAC.
 // Rather, it sets a pointer and counter, and then enables the SysTick
@@ -61,39 +57,32 @@ void SysTick_Handler(void) { // called at 11 kHz
 void Sound_Start(const uint8_t *pt, uint32_t count) {
   // write this
   __disable_irq();
-
   // Set sound parameters
-  // soundPtr = pt;
+  soundPtr = pt;
   soundCount = count;
   soundIndex = 0;
-
   // Arm SysTick for sound playback
   SysTick_IntArm(period, 1); // what priority?
-
   // Enable Interrupts
   __enable_irq();
 }
-
 // Sound emitted when user car runs into another vehicle/object
 void Sound_Crash(void) {
   // write this
   Sound_Start(crashsound, 6438);
 }
-
 // Sound emitted when user car picks up a powerup
 void Sound_Powerup(void) {
   // write this
-  Sound_Start(powerup, 38493);
+  // Sound_Start(powerup, 38493);
 }
-
 // Sound emitted when user uses a powerup
 void Sound_usePowerup(void) {
   // Write this
   Sound_Start(usepowerup, 13212);
 }
-
 // Sound emmitted when user reaches edges of the track
 void Sound_OffSides(void) {
   // Write this
-  Sound_Start(offsides, 33697);
+  // Sound_Start(offsides, 33697);
 }

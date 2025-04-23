@@ -2,7 +2,7 @@
 #include "../inc/ST7735.h"
 #include "Motor.h"
 #include <stdint.h>
-
+#include "Sound.h"
 
 uint32_t M = 1;
 static uint32_t Random32(void) {
@@ -16,9 +16,11 @@ void sprite_update(sprite_t *sprite, int32_t new_x, int32_t new_y) {
   if (new_x < 20) {
     new_x = 20;
     Motor_On();
+    Sound_OffSides();
   } else if (new_x > 130) {
     new_x = 130;
     Motor_On();
+    Sound_OffSides();
   } else {
     Motor_Off();
   }

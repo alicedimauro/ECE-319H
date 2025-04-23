@@ -49,10 +49,11 @@ float dt = 0.001;             // default val
 uint32_t now;
 int32_t currentAngle = 0;
 uint32_t scorecounter = 0;
-uint8_t lives = 3;
+int8_t lives = 3;
 uint8_t powerup_used = 0;
 uint8_t powerup_counter = 0;
 uint8_t hasPowerup = 0;
+uint8_t hasCollided = 0;
 
 sprite_t usercar, othercar1, othercar2, bolt;
 
@@ -119,9 +120,9 @@ void TIMG12_IRQHandler(void) {
 
     // 1) sample IMU
     SampleIMU(); // reads computed angle
-    UART_OutString("computed angle:");
-    UART_OutSDec((int32_t)computed_angle);
-    UART_OutString("\n");
+    // UART_OutString("computed angle:");
+    // UART_OutSDec((int32_t)computed_angle);
+    // UART_OutString("\n");
 
     // 2) read input switches
     now = Switch_In(); // read button state
@@ -136,6 +137,8 @@ void TIMG12_IRQHandler(void) {
         LED_On(LED2);
         LED_On(LED3);
         LED_On(LED4);
+
+        Sound_usePowerup();
 
         othercar1.vy = MAX_VELOCITY * 2;
         othercar2.vy = MAX_VELOCITY * 2;
@@ -259,16 +262,37 @@ void TIMG12_IRQHandler(void) {
     GPIOB->DOUTTGL31_0 = GREEN; // toggle PB27 (minimally intrusive debugging)
   }
 
-  if (checkCollision(&usercar, &othercar1)) {
-    lives--;
-  }
+  // only check for collisions when not using powerup
+  if (!powerup_used) {
+    if (checkCollision(&usercar, &othercar1)) {
+      if (!hasCollided) {
+        Sound_Crash();
+        lives--;
+        hasCollided = 1;
+      }
+    } else {
+      hasCollided = 0;
+    }
 
-  if (checkCollision(&usercar, &othercar2)) {
-    lives--;
-  }
+    if (checkCollision(&usercar, &othercar2)) {
+      if (!hasCollided) {
+        Sound_Crash();
+        lives--;
+        hasCollided = 1;
+      }
+    } else {
+      hasCollided = 0;
+    }
 
-  if (checkCollision(&usercar, &bolt)) {
-    hasPowerup = 1;
+    if (checkCollision(&usercar, &bolt)) {
+      hasPowerup = 1;
+      if (!hasCollided) {
+        Sound_Powerup();
+        hasCollided = 1;
+      }
+    } else {
+      hasCollided = 0;
+    }
   }
 }
 
@@ -279,20 +303,20 @@ uint8_t TExaS_LaunchPadLogicPB27PB26(void) {
 typedef enum { English, Spanish } Language_t;
 Language_t myLanguage = English;
 typedef enum { HELLO, GOODBYE, LANGUAGE } phrase_t;
-const char Hello_English[] = "Hello";
-const char Hello_Spanish[] = "\xADHola!";
+const char Score_English[] = "Score: ";
+const char Score_Spanish[] = "Puntaje: ";
 // const char Hello_Portuguese[] = "Ol\xA0";
 // const char Hello_French[] ="All\x83";
-const char Goodbye_English[] = "Goodbye";
-const char Goodbye_Spanish[] = "Adi\xA2s";
+const char Gameover_English[] = "GAME OVER";
+const char Gameover_Spanish[] = "JUEGO TERMINADO";
 // const char Goodbye_Portuguese[] = "Tchau";
 // const char Goodbye_French[] = "Au revoir";
 const char Language_English[] = "English";
 const char Language_Spanish[] = "Espa\xA4ol";
 // const char Language_Portuguese[]="Portugu\x88s";
 // const char Language_French[]="Fran\x87" "ais";
-const char *Phrases[3][2] = {{Hello_English, Hello_Spanish},
-                             {Goodbye_English, Goodbye_Spanish},
+const char *Phrases[3][2] = {{Score_English, Score_Spanish},
+                             {Gameover_English, Gameover_Spanish},
                              {Language_English, Language_Spanish}};
 // use main1 to observe special characters
 int main1(void) { // main1
@@ -439,7 +463,7 @@ int main(void) { // final main
 
   Clock_Delay1ms(100);
 
-  // Language selection
+  // STEP 2: Language selection
   ST7735_DrawBitmap(0, 159, mainmenu, 127, 160);
   ST7735_SetRotation(1); // Rotate horizontal
   ST7735_DrawBitmap(50, 50, redcar, 11, 25);
@@ -454,7 +478,7 @@ int main(void) { // final main
   ST7735_OutString((char *)Phrases[2][1]); // prints Spanish
 
   // Sampling to check if user selected Engish or Spanish
-  for (uint32_t i = 0; i < 300; i++) {
+  for (uint32_t i = 0; i < 150; i++) {
     uint32_t pos = Sensor.In(); // 0 to 4095
 
     if (pos < 2045) {
@@ -486,6 +510,29 @@ int main(void) { // final main
     // Delay to sample
     Clock_Delay1ms(20);
   }
+
+  // STEP 3: Instructions:
+  ST7735_FillScreen(ST7735_BLACK); // choice is English
+  if (choice == 0) {
+    ST7735_SetTextColor(ST7735_WHITE);
+    ST7735_SetCursor(0, 0);
+    ST7735_OutString("Steer to avoid cars\n");
+    ST7735_OutString("Bolt icon = powerup\n");
+    ST7735_OutString("Stay on the track\n");
+    ST7735_OutString("Goodluck!");
+
+  } else { // choice was Spanish
+    ST7735_SetTextColor(ST7735_WHITE);
+    ST7735_SetCursor(0, 0);
+    ST7735_OutString("Gira para evitar\n");
+    ST7735_OutString("autos\n");
+    ST7735_OutString("Rayo = potenciador\n");
+    ST7735_OutString("Permanece en la\n");
+    ST7735_OutString("pista\n");
+    ST7735_OutString("¡Buena suerte!");
+  }
+
+  Clock_Delay1ms(5000);
 
   // Setup track + initialize user car
   ST7735_FillScreen(ST7735_BLACK);
@@ -558,11 +605,26 @@ int main(void) { // final main
       bolt.needDraw = 0;
     }
 
-    ST7735_SetTextColor(
-        ST7735_BLUE); // Don't highlight Spanish bc English is selected
-    ST7735_SetCursor(0, 0);
-    ST7735_OutString("Lives: ");
-    ST7735_OutUDec(lives);
+    // end game condition
+    if (lives <= 0) {
+      Clock_Delay1ms(1000);
+      __disable_irq();
+      Motor_Off();
+      LED_On(LED0);
+      LED_On(LED1);
+      LED_On(LED2);
+      LED_On(LED3);
+      LED_On(LED4);
+      ST7735_FillScreen(ST7735_BLACK);
+      ST7735_SetTextColor(ST7735_WHITE);
+      ST7735_SetCursor(5, 5);
+      ST7735_OutString((char *)Phrases[1][choice]); // GAME OVER
+      ST7735_SetCursor(5, 6);
+      ST7735_OutString((char *)Phrases[0][choice]); // Score:
+      ST7735_OutUDec(scorecounter);
+      Clock_Delay1ms(5000);
+      break;
+    }
 
     // clear semaphore
     // update ST7735R

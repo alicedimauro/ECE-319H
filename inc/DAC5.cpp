@@ -6,7 +6,6 @@
 #include <ti/devices/msp/msp.h>
 #include "../inc/LaunchPad.h"
 #include "../inc/DAC5.h"
-
 // **************DAC5_Init*********************
 // Initialize 5-bit DAC, called once
 // Input: none
@@ -20,12 +19,9 @@ void DAC5_Init(void){
   IOMUX->SECCFG.PINCM[PA26INDEX] = 0x81; // GPIO output
   IOMUX->SECCFG.PINCM[PA27INDEX] = 0x81; // GPIO output
   IOMUX->SECCFG.PINCM[PA28INDEX] = 0x81; // GPIO output
-
-
   GPIOA->DOE31_0 |=
       ((1 << 24) + (1 << 25) + (1 << 26) + (1 << 27) + (1 << 28));
 }
-
 // **************DAC5_Out*********************
 // output to DAC5
 // Input: 5-bit data, 0 to 31
@@ -34,7 +30,5 @@ void DAC5_Init(void){
 // Note: this solution must be friendly
 void DAC5_Out(uint32_t data){
      // write this
-
-     // write this
-     GPIOA->DOUT31_0 = (GPIOA->DOUT31_0 & (~0x1F000000)) | data;
+     GPIOA->DOUT31_0 = (GPIOA->DOUT31_0 & (~0x1F000000)) | (data << 24);
 }
