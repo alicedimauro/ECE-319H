@@ -19,5 +19,10 @@ void sprite_update(sprite_t* sprite, int32_t new_x, int32_t new_y);
 void sprite_draw(const sprite_t* sprite);
 // Function to update screen
 
+void create_op(sprite_t* sprite);
+// Function to create opponent sprite
+
+void move_opponent(sprite_t* sprite);
+// Function to move opponent sprite based on velocity
 
 #endif

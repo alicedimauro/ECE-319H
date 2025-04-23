@@ -39,14 +39,21 @@
 #define RESET_IMU 4
 #define BRAKE 8
 
+#define MAX_VELOCITY 3
+#define MIN_VELOCITY 1
+
 int16_t angular_velocity = 0; // gyroscope data received from IMU (z-axis)
 float computed_angle = 0;     // angle computed from gyro data
 float dt = 0.001;             // default val
 
-uint32_t last = 0, now;
+uint32_t now;
 int32_t currentAngle = 0;
+uint32_t scorecounter = 0;
+uint8_t lives = 3;
+uint8_t powerup_used = 0;
+uint8_t powerup_counter = 0;
 
-sprite_t usercar;
+sprite_t usercar, othercar1, othercar2, bolt;
 
 extern "C" void __disable_irq(void);
 extern "C" void __enable_irq(void);
@@ -60,13 +67,6 @@ void PLL_Init(void) { // set phase lock loop (PLL)
   // Clock_Init40MHz(); // run this line for 40MHz
   Clock_Init80MHz(0); // run this line for 80MHz
 }
-
-uint32_t M = 1;
-uint32_t Random32(void) {
-  M = 1664525 * M + 1013904223;
-  return M;
-}
-uint32_t Random(uint32_t n) { return (Random32() >> 16) % n; }
 
 SlidePot Sensor(1904, 3); // copy calibration from Lab 7
 
@@ -108,6 +108,9 @@ void ResetIMU(void) { computed_angle = 0; }
 // games  engine runs at 30Hz
 void TIMG12_IRQHandler(void) {
   uint32_t pos, msg;
+
+  scorecounter++; // increment score
+
   if ((TIMG12->CPU_INT.IIDX) == 1) { // this will acknowledge
     GPIOB->DOUTTGL31_0 = GREEN; // toggle PB27 (minimally intrusive debugging)
     GPIOB->DOUTTGL31_0 = GREEN; // toggle PB27 (minimally intrusive debugging)
@@ -121,32 +124,93 @@ void TIMG12_IRQHandler(void) {
 
     // 2) read input switches
     now = Switch_In(); // read button state
-    if ((last == 0) && (now == RESET_IMU)) {
+    if (now == RESET_IMU) {
       ResetIMU(); // reset current angle as 0
-      LED_Toggle(LED4);
     }
     // only one of these can be processed, with powerup > accel > brake
-    if ((last == 0) && (now == POWERUP)) {
-      LED_Toggle(LED0);
-      // show some kind of boost - double current velocity
-    } else if ((last == 0) && (now == ACCEL)) {
-      LED_Toggle(LED1);
+    if (now == POWERUP) {
+      if (powerup_used == 0) {
+        LED_On(LED0);
+        LED_On(LED1);
+        LED_On(LED2);
+        LED_On(LED3);
+        LED_On(LED4);
+        othercar1.vy *= 2;
+        othercar2.vy *= 2;
+        powerup_used = 1;
+        // show some kind of boost - double current velocity
+      }
+    } else if (now == ACCEL) {
       // increment velocity - if velocity is max, stay at max
-    } else if ((last == 0) && (now == BRAKE)) {
-      LED_Toggle(LED2);
-      // decrement velocity - if velocity is zero, stay at zero
-    } else {
-      // decrement velocity (less than brake) - if velocity is zero, stay at
-      // zero
-    }
-    last = now;
-    // 3) move sprites
+      if (othercar1.vy >= MAX_VELOCITY) {
+        othercar1.vy = MAX_VELOCITY;
+      } else {
+        othercar1.vy++;
+      }
 
+      if (othercar2.vy >= MAX_VELOCITY) {
+        othercar2.vy = MAX_VELOCITY;
+      } else {
+        othercar2.vy++;
+      }
+    } else if (now == BRAKE) {
+      // decrement velocity - if velocity is min, keep at min
+      if (othercar1.vy <= MIN_VELOCITY) {
+        othercar1.vy = MIN_VELOCITY;
+      } else {
+        othercar1.vy -= 2;
+      }
+
+      if (othercar2.vy <= MIN_VELOCITY) {
+        othercar2.vy = MIN_VELOCITY;
+      } else {
+        othercar2.vy -= 2;
+      }
+    } else {
+      // decrement velocity (less than brake) - if velocity is min, stay at
+      // min
+      if (othercar1.vy <= MIN_VELOCITY) {
+        othercar1.vy = MIN_VELOCITY;
+      } else {
+        othercar1.vy--;
+      }
+      if (othercar2.vy <= MIN_VELOCITY) {
+        othercar2.vy = MIN_VELOCITY;
+      } else {
+        othercar2.vy--;
+      }
+    }
+    // 3) move sprites
     currentAngle = (int32_t)(computed_angle);
-    if (currentAngle != 0 ) {
+    if (currentAngle != 0) {
       sprite_update(&usercar, usercar.x + computed_angle,
                     usercar.y); // update x coordinate, should increase y later
     }
+
+    // check if powerup time limit
+    if (powerup_used == 1) {
+      if (powerup_counter % 33 == 0) {
+        powerup_used = 0;
+        powerup_counter = 0;
+      } else {
+        powerup_counter++;
+      }
+    }
+
+    // Checking opponent car placements
+    if (scorecounter % 60 == 0) {
+      if (othercar1.y < 0 || othercar1.y > 127) {
+        create_op(&othercar1);
+      }
+    } else if (scorecounter % 60 == 30) {
+      if (othercar2.y < 0 || othercar2.y > 127) {
+        create_op(&othercar2);
+      }
+    }
+
+    // move opponent sprites position based on velocity
+    move_opponent(&othercar1);
+    move_opponent(&othercar2);
 
     // 4) start sounds
     // 5) set semaphore
@@ -322,38 +386,23 @@ int main(void) { // final main
 
   Clock_Delay1ms(100);
 
+  // Language selection
   ST7735_DrawBitmap(0, 159, mainmenu, 127, 160);
   ST7735_SetRotation(1); // Rotate horizontal
   ST7735_DrawBitmap(50, 50, redcar, 11, 25);
 
-  // ADD INSTRUCTION HERE TO TELL USER TO SELECT LEFT FOR ENGLISH AND RIGHT
-  // FOR SPANISH
-  ST7735_SetTextColor(ST7735_GREEN);
-  ST7735_SetCursor(3, 2);
-  ST7735_OutString((char *)"English left");
-  ST7735_SetCursor(2, 4);
-  ST7735_OutString((char *)"Spanish right"); // CHANGE THIS TO SPANISIH
-
-  ST7735_SetCursor(2, 11);
-  ST7735_OutString((char *)Phrases[2][0]); // prints English
-
-  ST7735_SetCursor(12, 11);
-  ST7735_OutString((char *)Phrases[2][1]); // prints Spanish
-
   // Sampling to check if user selected Engish or Spanish
-  for (uint32_t i = 0; i < 200; i++) {
+  for (uint32_t i = 0; i < 300; i++) {
     uint32_t pos = Sensor.In(); // 0 to 4095
 
     if (pos < 2045) {
       choice = 0; // English selected
       // Highlight the word English
 
-      
       ST7735_SetTextColor(ST7735_BLUE);
       ST7735_SetCursor(2, 11);
       ST7735_OutString((char *)Phrases[2][0]); // prints English
 
-      
       ST7735_SetTextColor(
           ST7735_BLACK); // Don't highlight Spanish bc English is selected
       ST7735_SetCursor(12, 11);
@@ -362,7 +411,7 @@ int main(void) { // final main
     } else {
       choice = 1; // Spanish selected
       // Highlight the word Spanish
-      
+
       ST7735_SetTextColor(ST7735_BLUE);
       ST7735_SetCursor(12, 11);
       ST7735_OutString((char *)Phrases[2][1]); // prints Spanish
@@ -376,21 +425,14 @@ int main(void) { // final main
     Clock_Delay1ms(20);
   }
 
+  // Setup track + initialize user car
   ST7735_FillScreen(ST7735_BLACK);
   ST7735_SetRotation(0); // Rotate vertical
   ST7735_DrawBitmap(0, 159, track, 128, 160);
   ST7735_SetRotation(1); // Rotate horizontal
   ST7735_DrawBitmap(70, 110, redcar, 11, 25);
+
   ST7735_SetRotation(0); // Rotate vertical
-
-  // ST7735_DrawBitmap(0, 159, track, 128, 160);
-  // ST7735_SetRotation(1); // Rotate horizontal
-  // ST7735_DrawBitmap(70, 105, redcar, 11, 25);
-
-  // ST7735_SetRotation(0); // Rotate vertical
-  // ST7735_DrawBitmap(0, 159, track, 128, 160);
-  // ST7735_SetRotation(1); // Rotate horizontal
-  // ST7735_DrawBitmap(70, 100, redcar, 11, 25);
 
   Startup_Sequence(); // Race is about to begin
 
@@ -405,6 +447,16 @@ int main(void) { // final main
   usercar.x = 70;
   usercar.y = 110;
 
+  othercar1.w = 11;
+  othercar1.h = 25;
+  othercar1.image = orangecar;
+  othercar1.y = -1; // Hardcode off screen
+
+  othercar2.w = 11;
+  othercar2.h = 25;
+  othercar2.image = bluecar;
+  othercar2.y = -1; // Hardcode off the screen
+
   __enable_irq();
 
   while (1) {
@@ -412,9 +464,37 @@ int main(void) { // final main
     if (usercar.needDraw) {
       ST7735_SetRotation(0); // Rotate vertical
       ST7735_DrawBitmap(0, 159, track, 128, 160);
-      ST7735_SetRotation(1); // Rotate horizontal
-      sprite_draw(&usercar); // Drawcar based on updated position
+      ST7735_SetRotation(1);   // Rotate horizontal
+      sprite_draw(&usercar);   // Drawcar based on updated position
+      sprite_draw(&othercar1); // Drawcar based on updated position
+      sprite_draw(&othercar2); // Drawcar based on updated position
+
       usercar.needDraw = 0;
+    }
+    // wait for semaphore
+    // Opponent #1
+    if (othercar1.needDraw) {
+      ST7735_SetRotation(0); // Rotate vertical
+      ST7735_DrawBitmap(0, 159, track, 128, 160);
+      ST7735_SetRotation(1);   // Rotate horizontal
+      sprite_draw(&usercar);   // Drawcar based on updated position
+      sprite_draw(&othercar1); // Drawcar based on updated position
+      sprite_draw(&othercar2); // Drawcar based on updated position
+
+      othercar1.needDraw = 0;
+    }
+
+    // wait for semaphore
+    // Opponent #2
+    if (othercar2.needDraw) {
+      ST7735_SetRotation(0); // Rotate vertical
+      ST7735_DrawBitmap(0, 159, track, 128, 160);
+      ST7735_SetRotation(1);   // Rotate horizontal
+      sprite_draw(&usercar);   // Drawcar based on updated position
+      sprite_draw(&othercar1); // Drawcar based on updated position
+      sprite_draw(&othercar2); // Drawcar based on updated position
+
+      othercar2.needDraw = 0;
     }
 
     // clear semaphore
