@@ -52,6 +52,7 @@ uint32_t scorecounter = 0;
 uint8_t lives = 3;
 uint8_t powerup_used = 0;
 uint8_t powerup_counter = 0;
+uint8_t hasPowerup = 0;
 
 sprite_t usercar, othercar1, othercar2, bolt;
 
@@ -128,16 +129,22 @@ void TIMG12_IRQHandler(void) {
       ResetIMU(); // reset current angle as 0
     }
     // only one of these can be processed, with powerup > accel > brake
-    if (now == POWERUP) {
+    if (now == POWERUP && hasPowerup == 1) {
       if (powerup_used == 0) {
         LED_On(LED0);
         LED_On(LED1);
         LED_On(LED2);
         LED_On(LED3);
         LED_On(LED4);
-        othercar1.vy *= 2;
-        othercar2.vy *= 2;
+
+        othercar1.vy = MAX_VELOCITY * 2;
+        othercar2.vy = MAX_VELOCITY * 2;
+        bolt.vy = MAX_VELOCITY * 2;
+
         powerup_used = 1;
+        powerup_counter++;
+        hasPowerup = 0;
+
         // show some kind of boost - double current velocity
       }
     } else if (now == ACCEL) {
@@ -153,6 +160,12 @@ void TIMG12_IRQHandler(void) {
       } else {
         othercar2.vy++;
       }
+
+      if (bolt.vy >= MAX_VELOCITY) {
+        bolt.vy = MAX_VELOCITY;
+      } else {
+        bolt.vy++;
+      }
     } else if (now == BRAKE) {
       // decrement velocity - if velocity is min, keep at min
       if (othercar1.vy <= MIN_VELOCITY) {
@@ -166,18 +179,33 @@ void TIMG12_IRQHandler(void) {
       } else {
         othercar2.vy -= 2;
       }
-    } else {
-      // decrement velocity (less than brake) - if velocity is min, stay at
-      // min
-      if (othercar1.vy <= MIN_VELOCITY) {
-        othercar1.vy = MIN_VELOCITY;
+
+      if (bolt.vy <= MIN_VELOCITY) {
+        bolt.vy = MIN_VELOCITY;
       } else {
-        othercar1.vy--;
+        bolt.vy -= 2;
       }
-      if (othercar2.vy <= MIN_VELOCITY) {
-        othercar2.vy = MIN_VELOCITY;
-      } else {
-        othercar2.vy--;
+    } else {
+
+      if (scorecounter % 60 == 0) {
+        // decrement velocity (less than brake) - if velocity is min, stay at
+        // min
+        if (othercar1.vy <= MIN_VELOCITY) {
+          othercar1.vy = MIN_VELOCITY;
+        } else {
+          othercar1.vy--;
+        }
+        if (othercar2.vy <= MIN_VELOCITY) {
+          othercar2.vy = MIN_VELOCITY;
+        } else {
+          othercar2.vy--;
+        }
+
+        if (bolt.vy <= MIN_VELOCITY) {
+          bolt.vy = MIN_VELOCITY;
+        } else {
+          bolt.vy--;
+        }
       }
     }
     // 3) move sprites
@@ -192,6 +220,13 @@ void TIMG12_IRQHandler(void) {
       if (powerup_counter % 33 == 0) {
         powerup_used = 0;
         powerup_counter = 0;
+        othercar1.vy /= 2;
+        othercar2.vy /= 2;
+        LED_Off(LED0);
+        LED_Off(LED1);
+        LED_Off(LED2);
+        LED_Off(LED3);
+        LED_Off(LED4);
       } else {
         powerup_counter++;
       }
@@ -206,11 +241,16 @@ void TIMG12_IRQHandler(void) {
       if (othercar2.y < 0 || othercar2.y > 127) {
         create_op(&othercar2);
       }
+    } else if (scorecounter % 200 == 0) {
+      if (bolt.y < 0 || bolt.y > 127) {
+        create_op(&bolt);
+      }
     }
 
     // move opponent sprites position based on velocity
     move_opponent(&othercar1);
     move_opponent(&othercar2);
+    move_opponent(&bolt);
 
     // 4) start sounds
     // 5) set semaphore
@@ -218,7 +258,20 @@ void TIMG12_IRQHandler(void) {
     // NO LCD OUTPUT IN INTERRUPT SERVICE ROUTINES
     GPIOB->DOUTTGL31_0 = GREEN; // toggle PB27 (minimally intrusive debugging)
   }
+
+  if (checkCollision(&usercar, &othercar1)) {
+    lives--;
+  }
+
+  if (checkCollision(&usercar, &othercar2)) {
+    lives--;
+  }
+
+  if (checkCollision(&usercar, &bolt)) {
+    hasPowerup = 1;
+  }
 }
+
 uint8_t TExaS_LaunchPadLogicPB27PB26(void) {
   return (0x80 | ((GPIOB->DOUT31_0 >> 26) & 0x03));
 }
@@ -391,6 +444,15 @@ int main(void) { // final main
   ST7735_SetRotation(1); // Rotate horizontal
   ST7735_DrawBitmap(50, 50, redcar, 11, 25);
 
+  // Initial formatting
+  ST7735_SetTextColor(ST7735_BLUE);
+  ST7735_SetCursor(2, 11);
+  ST7735_OutString((char *)Phrases[2][0]); // prints English
+
+  ST7735_SetTextColor(ST7735_BLUE);
+  ST7735_SetCursor(12, 11);
+  ST7735_OutString((char *)Phrases[2][1]); // prints Spanish
+
   // Sampling to check if user selected Engish or Spanish
   for (uint32_t i = 0; i < 300; i++) {
     uint32_t pos = Sensor.In(); // 0 to 4095
@@ -416,8 +478,8 @@ int main(void) { // final main
       ST7735_SetCursor(12, 11);
       ST7735_OutString((char *)Phrases[2][1]); // prints Spanish
 
-      ST7735_SetTextColor(
-          ST7735_BLACK); // Don't highlight English because Spanish is selected
+      ST7735_SetTextColor(ST7735_BLACK); // Don't highlight English because
+                                         // Spanish is selected
       ST7735_SetCursor(2, 11);
       ST7735_OutString((char *)Phrases[2][0]); // prints English
     }
@@ -457,45 +519,50 @@ int main(void) { // final main
   othercar2.image = bluecar;
   othercar2.y = -1; // Hardcode off the screen
 
+  bolt.w = 12;
+  bolt.h = 20;
+  bolt.image = powerup;
+  bolt.y = -1; // Hardcode off the screen
+
   __enable_irq();
 
   while (1) {
     // wait for semaphore
-    if (usercar.needDraw) {
-      ST7735_SetRotation(0); // Rotate vertical
-      ST7735_DrawBitmap(0, 159, track, 128, 160);
-      ST7735_SetRotation(1);   // Rotate horizontal
-      sprite_draw(&usercar);   // Drawcar based on updated position
-      sprite_draw(&othercar1); // Drawcar based on updated position
-      sprite_draw(&othercar2); // Drawcar based on updated position
 
+    ST7735_SetRotation(0); // Rotate vertical
+    ST7735_DrawBitmap(0, 159, track, 128, 160);
+    ST7735_SetRotation(1);   // Rotate horizontal
+    sprite_draw(&usercar);   // Drawcar based on updated position
+    sprite_draw(&othercar1); // Drawcar based on updated position
+    sprite_draw(&othercar2); // Drawcar based on updated position
+    sprite_draw(&bolt);      // Drawcar based on updated position
+
+    if (usercar.needDraw) {
       usercar.needDraw = 0;
     }
     // wait for semaphore
     // Opponent #1
     if (othercar1.needDraw) {
-      ST7735_SetRotation(0); // Rotate vertical
-      ST7735_DrawBitmap(0, 159, track, 128, 160);
-      ST7735_SetRotation(1);   // Rotate horizontal
-      sprite_draw(&usercar);   // Drawcar based on updated position
-      sprite_draw(&othercar1); // Drawcar based on updated position
-      sprite_draw(&othercar2); // Drawcar based on updated position
-
       othercar1.needDraw = 0;
     }
 
     // wait for semaphore
     // Opponent #2
     if (othercar2.needDraw) {
-      ST7735_SetRotation(0); // Rotate vertical
-      ST7735_DrawBitmap(0, 159, track, 128, 160);
-      ST7735_SetRotation(1);   // Rotate horizontal
-      sprite_draw(&usercar);   // Drawcar based on updated position
-      sprite_draw(&othercar1); // Drawcar based on updated position
-      sprite_draw(&othercar2); // Drawcar based on updated position
-
       othercar2.needDraw = 0;
     }
+
+    // wait for semaphore
+    // Opponent #2
+    if (bolt.needDraw) {
+      bolt.needDraw = 0;
+    }
+
+    ST7735_SetTextColor(
+        ST7735_BLUE); // Don't highlight Spanish bc English is selected
+    ST7735_SetCursor(0, 0);
+    ST7735_OutString("Lives: ");
+    ST7735_OutUDec(lives);
 
     // clear semaphore
     // update ST7735R

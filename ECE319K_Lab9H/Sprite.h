@@ -25,4 +25,7 @@ void create_op(sprite_t* sprite);
 void move_opponent(sprite_t* sprite);
 // Function to move opponent sprite based on velocity
 
+uint8_t checkCollision(const sprite_t* sprite1, const sprite_t* sprite2);
+// Returns 1 if collision, 0 if not
+
 #endif
