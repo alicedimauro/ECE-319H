@@ -161,7 +161,7 @@ int main4(void) { // main4
 // DACout TExaSdisplay scope uses TimerG7, ADC0 To perform dynamic testing,
 // there can be no breakpoints in your code DACout will be a sine wave with
 // period/frequency depending on which key is pressed
-int main5(void) { // main5
+int main(void) { // main5
   Clock_Init80MHz(0);
   LaunchPad_Init();
   Lab5Grader(2);     // 1=logic analyzer, 2=Scope, 3=grade
@@ -179,7 +179,7 @@ uint32_t last, key;
 // DACout TExaSdisplay scope uses TimerG7, ADC0 To perform dynamic testing,
 // there can be no breakpoints in your code DACout will be a sine wave with
 // period/frequency depending on which key is pressed
-int main(void) { // main6
+int main6(void) { // main6
   Clock_Init80MHz(0);
   LaunchPad_Init();
   Grader_Init();    // execute this line before your code
@@ -279,14 +279,14 @@ void Sound_Start(uint32_t period) {
 
 // Interrupt service routine
 // Executed every 12.5ns*(period)
-void SysTick_Handler1(void) { // Grader SysTick
+void SysTick_Handler(void) { // Grader SysTick
   // write this
   // output one value to DAC
   Index = (Index + 1) & 0x001F; // 4,5,6,7,7,7,6,5,4,3,2,1,1,1,2,3,...
   DAC5_Out(SineWave[Index]);    // output one value each interrupt
 }
 
-void SysTick_Handler(void) { // EC SysTick
+void SysTick_Handler1(void) { // EC SysTick
   // write this
   // output one value to DAC
 

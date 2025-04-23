@@ -5,7 +5,7 @@
  */
 #include <ti/devices/msp/msp.h>
 #include "../inc/LaunchPad.h"
-
+#include "../inc/DAC5.h"
 
 // **************DAC5_Init*********************
 // Initialize 5-bit DAC, called once

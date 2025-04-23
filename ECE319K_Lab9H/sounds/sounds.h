@@ -2,8 +2,8 @@
 // Sound assets based off the original Space Invaders
 // Jonathan Valvano
 // 11/15/2021
-#ifndef __SOUND_H
-#define __SOUND_H
+#ifndef __SOUNDS_H
+#define __SOUNDS_H
 #include <stdint.h>
 
 const unsigned char crashsound[6438] = {

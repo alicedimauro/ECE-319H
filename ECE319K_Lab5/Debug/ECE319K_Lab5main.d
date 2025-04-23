@@ -33,7 +33,7 @@ ECE319K_Lab5main.o: ../ECE319K_Lab5main.c ../../inc/Clock.h \
  C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/peripherals/m0p/hw_debugss.h \
  C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/peripherals/m0p/hw_sysctl.h \
  C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/peripherals/m0p/sysctl/hw_sysctl_mspm0g1x0x_g3x0x.h \
- C:/AliceHub/Texas/Sem2/ECE\ 319H/MSPM0_ValvanoWare/ECE319K_Lab5/MySounds.h
+ C:/Git/ECE-319H/ECE319K_Lab5/MySounds.h
 ../../inc/Clock.h:
 ../../inc/DAC5.h:
 ../../inc/Dump.h:
@@ -71,4 +71,4 @@ C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/peripherals/m0p/hw_cpuss.h:
 C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/peripherals/m0p/hw_debugss.h:
 C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/peripherals/m0p/hw_sysctl.h:
 C:/ti/mspm0_sdk_2_03_00_07/source/ti/devices/msp/peripherals/m0p/sysctl/hw_sysctl_mspm0g1x0x_g3x0x.h:
-C:/AliceHub/Texas/Sem2/ECE\ 319H/MSPM0_ValvanoWare/ECE319K_Lab5/MySounds.h:
+C:/Git/ECE-319H/ECE319K_Lab5/MySounds.h:

@@ -33,6 +33,7 @@ void Sound_Init(void) {
   // write this
   DAC5_Init();
   period = 7256; // 80M/7256 = 11.025kHz 7272
+  SysTick_IntArm(1,0);
 }
 
 
