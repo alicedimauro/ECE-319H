@@ -464,11 +464,15 @@ int main(void) { // final main
   Clock_Delay1ms(100);
 
   // STEP 2: Language selection
-  ST7735_DrawBitmap(0, 159, mainmenu, 127, 160);
+  ST7735_DrawBitmap(0, 159, languageselect, 128, 160);
   ST7735_SetRotation(1); // Rotate horizontal
-  ST7735_DrawBitmap(50, 50, redcar, 11, 25);
+  // ST7735_DrawBitmap(50, 50, redcar, 11, 25);
 
   // Initial formatting
+ ST7735_SetTextColor(ST7735_BLUE);
+ ST7735_SetCursor(2, 9);
+ ST7735_OutString("Select language:");
+
   ST7735_SetTextColor(ST7735_BLUE);
   ST7735_SetCursor(2, 11);
   ST7735_OutString((char *)Phrases[2][0]); // prints English
@@ -508,7 +512,7 @@ int main(void) { // final main
       ST7735_OutString((char *)Phrases[2][0]); // prints English
     }
     // Delay to sample
-    Clock_Delay1ms(20);
+    Clock_Delay1ms(50);
   }
 
   // STEP 3: Instructions:
@@ -519,7 +523,7 @@ int main(void) { // final main
     ST7735_OutString("Steer to avoid cars\n");
     ST7735_OutString("Bolt icon = powerup\n");
     ST7735_OutString("Stay on the track\n");
-    ST7735_OutString("Goodluck!");
+    // ST7735_OutString("Goodluck!");
 
   } else { // choice was Spanish
     ST7735_SetTextColor(ST7735_WHITE);
@@ -529,10 +533,10 @@ int main(void) { // final main
     ST7735_OutString("Rayo = potenciador\n");
     ST7735_OutString("Permanece en la\n");
     ST7735_OutString("pista\n");
-    ST7735_OutString("¡Buena suerte!");
+    // ST7735_OutString("\xAD/Buena suerte!");
   }
 
-  Clock_Delay1ms(5000);
+  Clock_Delay1ms(7000);
 
   // Setup track + initialize user car
   ST7735_FillScreen(ST7735_BLACK);
